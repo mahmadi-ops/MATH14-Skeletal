@@ -89,3 +89,76 @@
 @media print {
     #m14-tutor-fab, #m14-tutor-panel { display: none !important; }
 }
+
+/* --- "PDF" button in the navigation bar ------------------------------
+ *
+ * custom.js inserts an <a class="pdf-button button"> into the navbar, just
+ * before the Prev/Up/Next group. Its neighbours are all flat grey segments,
+ * so the PDF button is filled with the book's own accent instead: these notes
+ * are meant to be completed by hand, and the PDF is the copy students
+ * actually work on, so it should be the thing the eye lands on.
+ *
+ * Colours come from the theme's variables rather than literals, so the button
+ * follows whatever theme the reader has chosen.
+ */
+.ptx-navbar .pdf-button {
+  background-color: var(--primary-color);
+  color: var(--primary-color-white-97);
+  border-color: var(--primary-color);
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  /* Inset from the segmented bar so it reads as its own pill. */
+  margin: 0 8px;
+  padding: 0 14px;
+  min-height: 26px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+.ptx-navbar .pdf-button:hover:not(.disabled) {
+  background-color: var(--primary-color-black-20);
+  border-color: var(--primary-color-black-20);
+  color: var(--primary-color-white-97);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 38%);
+  transform: translateY(-1px);
+}
+
+.ptx-navbar .pdf-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+}
+
+/* Keyboard users get a visible ring that is not the accent colour itself. */
+.ptx-navbar .pdf-button:focus-visible {
+  outline: 3px solid var(--primary-color-white-97);
+  outline-offset: -6px;
+}
+
+/* Motion is decoration here; drop it when the reader has asked for less. */
+@media (prefers-reduced-motion: no-preference) {
+  .ptx-navbar .pdf-button {
+    transition: background-color 120ms ease, box-shadow 120ms ease,
+      transform 120ms ease;
+  }
+}
+
+/* Windows high-contrast mode drops background colours; keep a real border so
+ * the button does not dissolve into the bar. */
+@media (forced-colors: active) {
+  .ptx-navbar .pdf-button {
+    border: 2px solid ButtonText;
+  }
+}
+
+/* The theme sizes .icon for the Material Symbols font; our icon is an inline
+ * SVG, so size it directly and let it take the button's text colour. */
+.ptx-navbar .pdf-button .icon {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+}
+
+.ptx-navbar .pdf-button .icon svg {
+  width: 18px;
+  height: 18px;
+}

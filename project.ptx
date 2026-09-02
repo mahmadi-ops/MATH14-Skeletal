@@ -6,7 +6,15 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" xsl="custom-html.xsl" publication="publication.ptx" />
-    <target name="print" format="pdf" xsl="custom-latex.xsl" />
+    <!-- output-filename is what the "PDF" button in the navbar links to;
+         scripts/build-site.sh copies it next to the web pages.  Do NOT give
+         this target a deploy-dir: that would turn `pretext deploy` into a
+         Pelican site and publish all of output/print instead of one PDF. -->
+    <target name="print" format="pdf" xsl="custom-latex.xsl"
+            publication="publication-print.ptx"
+            output-filename="math14-skeletal-notes.pdf" />
+    <target name="latex" format="latex" xsl="custom-latex.xsl"
+            publication="publication-print.ptx" />
   </targets>
 </project>
 

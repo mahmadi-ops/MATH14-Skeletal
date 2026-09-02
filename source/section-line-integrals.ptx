@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Complementary Modules for MATH 14 -->
+<!-- MATH 14 Skeletal Notes                                                -->
 <!-- Section: Line Integrals                                               -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The construction of the mass integral (the  -->
+<!-- portions, the sum, the limit) is kept up to the point where ds has to -->
+<!-- be traded for dt; that step, both worked examples, and every Concept  -->
+<!-- Check answer are replaced by blank workspace boxes, each preceded by  -->
+<!-- a one-line instruction.  The results are restated in an assemblage so -->
+<!-- that later sections can still cite eq-mass-speed and                  -->
+<!-- eq-scalar-line-integral.  File name and xml:ids are unchanged.        -->
+<!--                                                                       -->
+<!-- Figures: kept in full (the partitioned wire and its video, the two    -->
+<!-- helical/spiral wires and the mass video, the ds-versus-dr diagram,    -->
+<!-- and the square-and-circle wires), since each is either part of a      -->
+<!-- problem statement or the check on a box.  The first-quadrant          -->
+<!-- reflection picture that answered the charged-wire question is         -->
+<!-- replaced by a grid for the student to draw it on.  Captions that      -->
+<!-- stated a numerical answer have been trimmed.                          -->
 <!--                                                                       -->
 <!-- Media wiring (relative to the PreTeXt source root):                   -->
 <!--   Manim videos : videos/*_1080p.mp4                                   -->
 <!--   TikZ figures : embedded inline inside <image><latex-image>          -->
-<!--                                                                       -->
-<!-- REQUIREMENT: the TikZ figures need this in <docinfo> of the main      -->
-<!-- file:                                                                 -->
-<!--   <latex-image-preamble>                                              -->
-<!--     \usepackage{tikz}                                                 -->
-<!--     \usetikzlibrary{arrows.meta}                                      -->
-<!--     \usepackage{pgfplots}                                             -->
-<!--     \pgfplotsset{compat=1.18}                                         -->
-<!--   </latex-image-preamble>                                             -->
-<!--                                                                       -->
-<!-- Accessibility: every image carries a <shortdescription> (alt text)    -->
-<!-- and a long <description> for screen readers.                          -->
+<!--   The TikZ figures need tikz + pgfplots in the <latex-image-preamble> -->
+<!--   of main.ptx.                                                        -->
 
 <section xml:id="sec-line-integrals">
   <title>Line Integrals</title>
@@ -210,90 +217,77 @@
         <m>\sum_k \rho(x_k,y_k,z_k)\,\Delta s_k</m> settles down to the
         line integral <m>\int_C \rho\,ds</m>.
       </caption>
-      <video xml:id="video-wire-partition" width="80%"
+      <video preview="play-button.png" xml:id="video-wire-partition" width="80%"
              source="videos/wire_partition_refine_1080p.mp4"/>
     </figure>
 
     <p>
       Our final task is to write the line element <m>ds</m> in terms of
       <m>dt</m>, so the integral becomes an ordinary integral we can
-      evaluate. Exactly as in <xref ref="eq-line-element-2d"/> of
-      <xref ref="sec-arc-length"/>, the line element
-      is the length of an infinitesimal displacement in <m>\R^3</m>,
-
-    <md>
-      <mrow xml:id="eq-line-element" number="yes">
-        ds=\sqrt{(dx)^2+(dy)^2+(dz)^2},
-      </mrow>
-    </md>
+      evaluate. (Exactly as in <xref ref="eq-line-element-2d"/> of
+      <xref ref="sec-arc-length"/>, write <m>ds</m> as the length of an
+      infinitesimal displacement in <m>\R^3</m>. Substitute it into
+      <xref ref="eq-mass-line-integral"/>, factor <m>dt</m> out of the
+      square root, and recognize what is left under the root as the length
+      of the velocity vector <m>\mathbf{v}(t) = d\mathbf{r}/dt</m>.)
     </p>
 
-    <p>
-      so substituting <xref ref="eq-line-element"/> into
-      <xref ref="eq-mass-line-integral"/> and factoring out <m>dt</m> gives
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$ds =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {substitute into the mass integral and factor out $dt$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$\mathbf{v}(t) =$ \quad so \quad $\lVert\mathbf{v}(t)\rVert =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {mass of the wire $=$};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in four rows, for the line element in terms of dx, dy and dz, for the substitution into the mass integral with dt factored out, for the velocity vector and its length, and for the resulting formula for the mass.</shortdescription>
+      </image>
+    </sidebyside>
 
-    <md>
-      <mrow>
-        \text{mass of the wire} \amp
-          = \int_C \rho\left(x(t),y(t),z(t)\right)\,\frac{ds}{dt}\,dt
-      </mrow>
-      <mrow>
-        \amp = \int_C \rho\left(x(t),y(t),z(t)\right)
-      </mrow>
-      <mrow xml:id="eq-mass-dt" number="yes">
-        \amp \qquad\qquad \times
-          \sqrt{\left(\frac{dx}{dt}\right)^2
-              + \left(\frac{dy}{dt}\right)^2
-              + \left(\frac{dz}{dt}\right)^2}\,dt.
-      </mrow>
-    </md>
-    </p>
+    <assemblage xml:id="assemblage-line-integral-results">
+      <title>Results</title>
+      <p>
+        For a wire <m>C</m> parametrized by
+        <m>\mathbf{r}(t) = \left\langle x(t), y(t), z(t)\right\rangle</m>,
+        <m>a \le t \le b</m>, with velocity
+        <m>\mathbf{v}(t) = d\mathbf{r}/dt</m>, the line element is
 
-    <p>
-      The square root in <xref ref="eq-mass-dt"/> is exactly the length of the
-      velocity vector
+      <md>
+        <mrow xml:id="eq-line-element" number="yes">
+          ds = \left\lVert\mathbf{v}(t)\right\rVert\,dt,
+        </mrow>
+      </md>
+      </p>
+      <p>
+        so the mass of the wire is
 
-    <md>
-      <mrow>
-        \mathbf{v}(t) \amp = \frac{d\mathbf{r}(t)}{dt}
-      </mrow>
-      <mrow>
-        \amp = \left(\frac{dx}{dt}\right)\mathbf{i}
-             + \left(\frac{dy}{dt}\right)\mathbf{j}
-             + \left(\frac{dz}{dt}\right)\mathbf{k}
-      </mrow>
-      <mrow xml:id="eq-velocity" number="yes">
-        \amp = \left\langle \frac{dx}{dt},\ \frac{dy}{dt},\
-                              \frac{dz}{dt}\right\rangle,
-      </mrow>
-    </md>
-    </p>
+      <md>
+        <mrow xml:id="eq-mass-speed" number="yes">
+          \text{mass of the wire}
+            = \int_a^b \rho\left(x(t),y(t),z(t)\right)
+              \left\lVert\mathbf{v}(t)\right\rVert\,dt.
+        </mrow>
+      </md>
+      </p>
+      <p>
+        There is nothing special about density here. In general, a
+        <term>scalar line integral</term> has the form
 
-    <p>
-      so <xref ref="eq-velocity"/> turns <xref ref="eq-mass-dt"/> into the
-      tidy form
-
-    <md>
-      <mrow xml:id="eq-mass-speed" number="yes">
-        \text{mass of the wire}
-          = \int_a^b \rho\left(x(t),y(t),z(t)\right)
-            \left\lVert\mathbf{v}(t)\right\rVert\,dt.
-      </mrow>
-    </md>
-    </p>
-
-    <p>
-      There is nothing special about density here. In general, a
-      <term>scalar line integral</term> has the form
-
-    <md>
-      <mrow xml:id="eq-scalar-line-integral" number="yes">
-        \int_C f\left(x(t),y(t),z(t)\right)\,ds
-          = \int_a^b f\left(x(t),y(t),z(t)\right)
-            \left\lVert\mathbf{v}(t)\right\rVert\,dt,
-      </mrow>
-    </md>
-    </p>
+      <md>
+        <mrow xml:id="eq-scalar-line-integral" number="yes">
+          \int_C f\left(x(t),y(t),z(t)\right)\,ds
+            = \int_a^b f\left(x(t),y(t),z(t)\right)
+              \left\lVert\mathbf{v}(t)\right\rVert\,dt,
+        </mrow>
+      </md>
+      </p>
+    </assemblage>
 
     <p>
       where <m>f</m> is a scalar-valued function and the curve <m>C</m>
@@ -334,115 +328,40 @@
         <m>m=\dfrac{\pi}{2\sqrt{2}}</m> kg, calculate the length <m>l</m> of
         the wire.
       </p>
-    </statement>
+    <p>
+      <em>Solution.</em>
+      (The wire is the piece <m>0 \le t \le b</m> of the helix, where the
+      upper limit <m>b</m> marks where the wire ends and is unknown. Plan:
+      use the given mass in <xref ref="eq-mass-speed"/> to find <m>b</m>,
+      then the length is the arc length up to <m>b</m>. Differentiate
+      <xref ref="eq-helix-param"/> for the speed; write the density along
+      the curve in terms of <m>t</m> <mdash/> the double-angle identity
+      <m>2\sin t\cos t = \sin(2t)</m> and then the half-angle identity
+      <m>\sin^2 u = \tfrac12\left(1 - \cos(2u)\right)</m> make the integral
+      elementary. Solve the resulting equation for <m>b</m>, and say why
+      the solution is the only one. Then compare with
+      <xref ref="fig-helix-wire"/> and <xref ref="fig-helix-wire-video"/>.)
+    </p>
 
-    <solution>
-      <p>
-        The wire occupies the part of the helix with
-        <m>0\le t\le b</m>, where the upper limit <m>b</m> is unknown: it
-        marks where the wire ends. Our plan has two steps. First we use the
-        known mass in <xref ref="eq-mass-speed"/>, which for this wire reads
-        <md>
-          <mrow xml:id="eq-helix-mass" number="yes">
-            m = \int_0^{b} \rho\left(x(t),y(t),z(t)\right)
-                \left\lVert\mathbf{v}(t)\right\rVert\,dt
-          </mrow>
-        </md>
-        to find <m>b</m>; then the length is the arc length
-        <m>l=\int_0^b \lVert\mathbf{v}(t)\rVert\,dt</m>.
-      </p>
-
-      <p>
-        Differentiating <xref ref="eq-helix-param"/> gives
-        <m>\mathbf{v}(t)</m> and its length:
-
-      <md>
-        <mrow>
-          \mathbf{v}(t) \amp = \langle -\sin t,\ \cos t,\ 1\rangle,
-        </mrow>
-        <mrow xml:id="eq-helix-speed" number="yes">
-          \left\lVert\mathbf{v}(t)\right\rVert \amp
-            = \sqrt{\sin^2 t+\cos^2 t+1}=\sqrt{2}.
-        </mrow>
-      </md>
-      </p>
-      <p>
-        Next we write the density along the curve in terms of <m>t</m>,
-        using the double-angle identity <m>2\sin t\cos t=\sin(2t)</m>:
-
-      <md>
-        <mrow>
-          \rho\left(x(t),y(t),z(t)\right) \amp
-            = 4x^2y^2 = 4\cos^2 t\,\sin^2 t
-        </mrow>
-        <mrow xml:id="eq-helix-density" number="yes">
-          \amp = \left(2\sin t\cos t\right)^2 = \sin^2(2t).
-        </mrow>
-      </md>
-      </p>
-      <p>
-        Substituting <xref ref="eq-helix-speed"/> and
-        <xref ref="eq-helix-density"/> into <xref ref="eq-helix-mass"/> and
-        using the half-angle identity
-        <m>\sin^2(2t)=\tfrac{1}{2}\bigl(1-\cos(4t)\bigr)</m>,
-
-      <md>
-        <mrow>
-          m \amp = \sqrt{2}\int_0^{b}\sin^2(2t)\,dt
-             = \frac{1}{\sqrt{2}}\int_0^{b}\bigl(1-\cos(4t)\bigr)\,dt
-        </mrow>
-        <mrow>
-          \amp = \frac{1}{\sqrt{2}}
-                 \left(t-\frac{1}{4}\sin(4t)\right)\bigg|_0^{b}
-        </mrow>
-        <mrow xml:id="eq-helix-mass-b" number="yes">
-          \amp = \frac{1}{\sqrt{2}}
-                 \left(b-\frac{1}{4}\sin(4b)\right).
-        </mrow>
-      </md>
-      </p>
-      <p>
-        Setting <xref ref="eq-helix-mass-b"/> equal to the given mass
-        <m>m=\dfrac{\pi}{2\sqrt{2}}</m> and multiplying both sides by
-        <m>\sqrt{2}</m>,
-
-      <md>
-        <mrow xml:id="eq-helix-b" number="yes">
-          b-\frac{1}{4}\sin(4b)=\frac{\pi}{2}
-          \quad\Longrightarrow\quad b=\frac{\pi}{2},
-        </mrow>
-      </md>
-      </p>
-      <p>
-        since <m>\sin(4\cdot\tfrac{\pi}{2})=\sin(2\pi)=0</m>. (This solution
-        is the only one: the left-hand side has derivative
-        <m>1-\cos(4b)\ge 0</m>, so it is increasing and crosses the value
-        <m>\pi/2</m> exactly once.)
-      </p>
-
-      <p>
-        With <m>b=\pi/2</m> from <xref ref="eq-helix-b"/>, the length of the
-        wire is the arc length from <m>t=0</m> to <m>t=\pi/2</m>. Because the
-        speed in <xref ref="eq-helix-speed"/> is the constant <m>\sqrt{2}</m>,
-
-      <md>
-        <mrow>
-          l \amp = \int_0^{\pi/2}
-                     \left\lVert\mathbf{v}(t)\right\rVert\,dt
-                 = \sqrt{2}\int_0^{\pi/2}dt
-        </mrow>
-        <mrow xml:id="eq-helix-length" number="yes">
-          \amp = \frac{\pi}{\sqrt{2}}\approx 2.22 \text{ meters}.
-        </mrow>
-      </md>
-      </p>
-      <p>
-        The wire<mdash/>a quarter turn of the helix from <m>(1,0,0)</m> up
-        to <m>(0,1,\pi/2)</m><mdash/>is shown in
-        <xref ref="fig-helix-wire"/>, and the accumulation of its mass is
-        animated in <xref ref="fig-helix-wire-video"/>.
-      </p>
-
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,20);
+\draw[gray!35] (0,17) -- (15,17);
+\draw[gray!35] (0,14) -- (15,14);
+\draw[gray!35] (0,8) -- (15,8);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,19.7) {$\mathbf{v}(t) =$ \quad and \quad $\lVert\mathbf{v}(t)\rVert =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,16.7) {$\rho(x(t),y(t),z(t)) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {$m = \displaystyle\int_0^b \cdots =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {solve for $b$ (and why it is the only solution):};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$l =$};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in five rows, for the velocity and speed, for the density along the curve, for the mass integral up to the unknown upper limit, for solving for that limit, and for the length of the wire.</shortdescription>
+      </image>
+    </sidebyside>
       <figure xml:id="fig-helix-wire">
         <caption>
           The helical wire <m>\mathbf{r}(t)=\langle\cos t,\sin t,t\rangle</m>
@@ -495,14 +414,14 @@
       <figure xml:id="fig-helix-wire-video">
         <caption>
           A point traverses the helical wire while the accumulated mass
-          <m>\int_0^t \rho\,\lVert\mathbf{v}\rVert\,d\tau</m> grows to
-          <m>\dfrac{\pi}{2\sqrt{2}}\approx 1.11</m> kg over the length
-          <m>\dfrac{\pi}{\sqrt{2}}\approx 2.22</m> m.
+          <m>\int_0^t \rho\,\lVert\mathbf{v}\rVert\,d\tau</m> grows. Use
+          it to check the mass, the value of <m>b</m>, and the length you
+          found.
         </caption>
-        <video xml:id="video-helix-wire" width="85%"
+        <video preview="play-button.png" xml:id="video-helix-wire" width="85%"
                source="videos/helix_wire_mass_1080p.mp4"/>
       </figure>
-    </solution>
+    </statement>
   </example>
 
   <!-- ================================================================= -->
@@ -538,100 +457,41 @@
         is a piece of information that has to be extracted from the graph.
         Calculate the mass of the wire.
       </p>
-    </statement>
-
-    <solution>
       <p>
-        <term>What the graph supplies.</term> Equation
-        <xref ref="eq-spiral-wire"/> is a formula for every <m>t</m>, but a
-        wire is a finite piece of that curve, and the formula alone does not
-        say which piece. <xref ref="fig-spiral-wire"/> does: the wire starts
-        at the origin, and <m>\mathbf{r}(t) = \mathbf{0}</m> exactly when
-        <m>t=0</m>. So the wire is the piece <m>0 \le t \le b</m>, and the
-        unknown upper limit <m>b</m> is what the given length will pin down.
+        <em>Solution.</em>
+        (Equation <xref ref="eq-spiral-wire"/> is a formula for every
+        <m>t</m>, but a wire is a finite piece of that curve: read off the
+        graph where the wire starts, and say which <m>t</m> that is. The
+        other end, <m>t = b</m>, is what the given length will pin down.
+        Differentiate for the speed and simplify it all the way, as for
+        the paraglider of <xref ref="ex-paraglider"/>. Set the arc length
+        up to <m>b</m> equal to <m>40</m> and solve. Express <m>d</m>, and
+        so <m>\rho</m>, in terms of <m>t</m>. Then compute the mass with
+        <xref ref="eq-mass-speed"/>; something cancels, and it is worth
+        saying in words what that cancellation means for the wire.)
       </p>
 
-      <p>
-        <term>Speed.</term> Differentiating <xref ref="eq-spiral-wire"/>, the
-        first two components by the product rule and the third by the power
-        rule,
-
-      <md>
-        <mrow>
-          \mathbf{v}(t) \amp = \left\langle \cos t - t\sin t,\
-            \sin t + t\cos t,\ \sqrt{2}\,t^{1/2} \right\rangle ,
-        </mrow>
-        <mrow>
-          \left\lVert\mathbf{v}(t)\right\rVert \amp
-            = \sqrt{\left(\cos t - t\sin t\right)^2
-                  + \left(\sin t + t\cos t\right)^2 + 2t}
-        </mrow>
-        <mrow>
-          \amp = \sqrt{1 + t^2 + 2t} = \sqrt{(t+1)^2} = t+1 ,
-        </mrow>
-      </md>
-      </p>
-      <p>
-        where the cross terms <m>\pm 2t\sin t\cos t</m> cancelled and
-        <m>t+1 \gt 0</m>.
-      </p>
-
-      <p>
-        <term>The upper limit.</term> The length of the wire is the arc
-        length from <m>t=0</m> to <m>t=b</m>, and we are told it is
-        <m>40</m>:
-
-      <md>
-        40 = \int_0^b \left\lVert\mathbf{v}(t)\right\rVert \, dt
-           = \int_0^b (t+1)\,dt
-           = \frac{b^2}{2} + b .
-      </md>
-      </p>
-      <p>
-        So <m>b^2 + 2b - 80 = (b+10)(b-8) = 0</m>, and since <m>b \gt 0</m>
-        the wire ends at <m>b = 8</m> seconds.
-      </p>
-
-      <p>
-        <term>The density along the wire.</term> The distance from a point
-        to the <m>z</m>-axis is <m>\sqrt{x^2+y^2}</m>, and along this curve
-
-      <md>
-        <mrow>
-          d \amp = \sqrt{x(t)^2 + y(t)^2}
-                 = \sqrt{t^2\cos^2 t + t^2\sin^2 t} = t ,
-        </mrow>
-        <mrow>
-          \text{so} \quad \rho \amp = \frac{1}{t+1} .
-        </mrow>
-      </md>
-      </p>
-
-      <p>
-        <term>The mass.</term> Now everything collapses: the density is
-        exactly the reciprocal of the speed, so the two factors in
-        <xref ref="eq-mass-speed"/> cancel,
-
-      <md>
-        <mrow>
-          M \amp = \int_0^{8} \rho\left(x(t),y(t),z(t)\right)
-                     \left\lVert\mathbf{v}(t)\right\rVert\,dt
-        </mrow>
-        <mrow>
-          \amp = \int_0^{8} \frac{1}{t+1}\,(t+1)\,dt
-               = \int_0^{8} dt = 8 .
-        </mrow>
-      </md>
-      </p>
-      <p>
-        The wire has mass <m>8</m> kilograms. The cancellation is worth a
-        second look: <m>\rho\,ds = \rho \left\lVert\mathbf{v}\right\rVert dt
-        = dt</m> here, so this wire carries exactly one kilogram for every
-        second of parameter<mdash/>it is heavy and slow near the origin,
-        light and fast far from the <m>z</m>-axis, and the two effects
-        balance perfectly.
-      </p>
-
+      <sidebyside width="97%">
+        <image>
+          <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,20);
+\draw[gray!35] (0,17.5) -- (15,17.5);
+\draw[gray!35] (0,13) -- (15,13);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,2.5) -- (15,2.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,19.7) {what the graph supplies: the wire is $\ \le t \le b$ because};
+\node[anchor=north west, font=\small\itshape] at (0.35,17.2) {$\mathbf{v}(t) =$ \quad and \quad $\lVert\mathbf{v}(t)\rVert =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {the upper limit: $40 = $};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$d =$ \quad so \quad $\rho =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$M =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.2) {what the cancellation means:};
+\end{tikzpicture}
+          </latex-image>
+          <shortdescription>Blank box in six rows, for the starting parameter value read off the graph, for the velocity and speed, for the equation that fixes the upper limit, for the density in terms of t, for the mass integral, and for the meaning of the cancellation.</shortdescription>
+        </image>
+      </sidebyside>
       <figure xml:id="fig-spiral-wire">
         <caption>
           The wire <xref ref="eq-spiral-wire"/>, spiralling outward and
@@ -684,7 +544,7 @@
           </latex-image>
         </image>
       </figure>
-    </solution>
+    </statement>
   </example>
 
   <!-- ================================================================= -->
@@ -732,23 +592,21 @@
           <m>t</m>, <m>C</m>, <m>dt</m>, <m>\mathbf{v}</m> and
           <m>\rho(x,y,z)</m> represent?
         </p>
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$a$, $b$, $t$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$C$, $dt$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$\mathbf{v}$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$\rho(x,y,z)$:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box with four labelled rows, for the meaning of a, b and t, of C and dt, of the velocity vector, and of the density.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-      <answer>
-        <p>
-          <m>t</m> is the parameter along the curve, which we usually read as
-          time, and <m>a</m> and <m>b</m> are its initial and final values,
-          so the wire is traced once as <m>t</m> runs from <m>a</m> to
-          <m>b</m>. The curve <m>C</m> is the wire itself: it is the region
-          of integration, and once the wire is parametrized that region
-          becomes the interval <m>a \le t \le b</m>. The symbol <m>dt</m> is
-          the element of that parameter interval. The vector
-          <m>\mathbf{v}(t) = \mathbf{r}'(t)</m> is the velocity of the point
-          tracing the wire, so <m>\left\lVert\mathbf{v}(t)\right\rVert</m> is
-          its speed and the factor that converts time spent into distance
-          covered. Finally <m>\rho(x,y,z)</m> is the linear mass density,
-          the mass per unit length at the point <m>(x,y,z)</m> of the wire.
-        </p>
-      </answer>
     </exercise>
 
     <exercise xml:id="q-ds-dr">
@@ -764,21 +622,6 @@
           <m>ds</m> and <m>d\mathbf{r}</m> represent, and what happens to
           <m>\Delta s_k</m> and <m>\Delta \mathbf{r}</m> in the limit that
           produces them?
-        </p>
-      </statement>
-      <answer>
-        <p>
-          Both describe an infinitesimal step along the wire, but one is a
-          number and the other is a vector.
-          <m>d\mathbf{r} = \mathbf{v}(t)\,dt</m> is the
-          <em>displacement</em> of that step: it records how far the point
-          moves <em>and in which direction</em>. Its length is the scalar
-          <m>ds = \left\lVert d\mathbf{r} \right\rVert
-             = \left\lVert\mathbf{v}(t)\right\rVert\,dt</m>, the
-          <em>arc length</em> of the step<mdash/>how much wire the step uses
-          up, with no direction attached. Scalar line integrals are built
-          from <m>ds</m>; the vector element <m>d\mathbf{r}</m> is what we
-          will need later, for work integrals.
         </p>
         <figure xml:id="fig-ds-dr">
           <caption>
@@ -893,60 +736,31 @@
             </prefigure>
           </image>
         </figure>
-
         <p>
-          The limit is the passage from <xref ref="fig-ds-dr"/> to those
-          two symbols. Write <m>\Delta t_k = t_k - t_{k-1}</m>. Dividing the displacement
-          by <m>\Delta t_k</m> gives a difference quotient, and letting the
-          two points come together turns it into the derivative:
+          (Say which of the two is a number and which a vector, and what
+          each one records about the step. Then take the limit in
+          <xref ref="fig-ds-dr"/>: divide <m>\Delta\mathbf{r}</m> by
+          <m>\Delta t_k</m> and let the points come together; do the same
+          for the arc, using the fact that the ratio of arc to chord tends to
+          <m>1</m>. Which substitution from earlier in the section is this?)
+        </p>
 
-        <md>
-          <mrow>
-            \frac{\Delta \mathbf{r}}{\Delta t_k}
-              \amp = \frac{\mathbf{r}(t_k)-\mathbf{r}(t_{k-1})}
-                          {\Delta t_k}
-          </mrow>
-          <mrow>
-            \amp \ \xrightarrow[\ \Delta t_k \to 0\ ]{}\
-              \mathbf{r}'(t) = \mathbf{v}(t) ,
-          </mrow>
-          <mrow>
-            \text{so} \quad \Delta \mathbf{r} \amp
-              \ \longrightarrow\ d\mathbf{r} = \mathbf{v}(t)\,dt .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          The arc does the same thing one step behind. In
-          <xref ref="fig-ds-dr"/> the chord cuts across the bend, so
-          <m>\left\lVert\Delta\mathbf{r}\right\rVert
-             \lt \Delta s_k</m>; but as the two points close in, the piece
-          of curve between them becomes indistinguishable from the straight
-          chord, in the sense that their ratio tends to <m>1</m>:
-
-        <md>
-          <mrow>
-            \frac{\Delta s_k}{\left\lVert\Delta\mathbf{r}\right\rVert}
-              \amp \ \longrightarrow\ 1 ,
-          </mrow>
-          <mrow>
-            \text{so} \quad \Delta s_k \amp \ \longrightarrow\ ds
-          </mrow>
-          <mrow>
-            \amp = \left\lVert d\mathbf{r}\right\rVert
-                 = \left\lVert\mathbf{v}(t)\right\rVert\,dt .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          That last equality is exactly the substitution that makes a line
-          integral computable, and it is what
-          <xref ref="eq-line-element"/> records: trading the geometric
-          element <m>ds</m> for <m>\left\lVert\mathbf{v}(t)\right\rVert
-          \,dt</m> is the same move as replacing the arc by its chord in
-          <xref ref="fig-ds-dr"/> and then shrinking it.
-        </p>
-      </answer>
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,11);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {$d\mathbf{r}$ represents \quad / \quad $ds$ represents};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$\dfrac{\Delta\mathbf{r}}{\Delta t_k} \longrightarrow$ \qquad so \qquad $\Delta\mathbf{r} \longrightarrow$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$\Delta s_k \longrightarrow$};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in three rows, for the meaning of the vector and scalar line elements, for the limit of the displacement divided by the time step, and for the limit of the arc length of the step.</shortdescription>
+          </image>
+        </sidebyside>
+      </statement>
     </exercise>
 
     <exercise xml:id="q-units">
@@ -957,17 +771,18 @@
           respectively, then what will the units of <m>\rho(x,y,z)</m> and
           <m>ds</m> be?
         </p>
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {units of $\rho$: \qquad\qquad units of $ds$: \qquad\qquad units of $\rho\,ds$:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box with one row, for the units of the density, of the line element, and of their product.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-      <answer>
-        <p>
-          <m>ds</m> is a length, so it is measured in meters
-          (<m>\text{m}</m>), and <m>\rho</m> is a mass per unit length, so it
-          is measured in kilograms per meter
-          (<m>\text{kg}/\text{m}</m>). The product
-          <m>\rho\,ds</m> is then measured in kilograms, as a contribution to
-          a mass must be.
-        </p>
-      </answer>
     </exercise>
 
     <exercise xml:id="q-integrand">
@@ -978,16 +793,18 @@
           <m>\int_C f(x,y,z)\,ds</m>, what is the scalar function that is
           being integrated (the integrand) along the wire?
         </p>
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {for the mass, $f =$ \qquad\qquad for the length, $f =$};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box with one row, for the integrand of the mass integral and the integrand of the length integral.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-      <answer>
-        <p>
-          For the mass <xref ref="eq-question-mass"/> the integrand is the
-          density, <m>f = \rho</m>. For the length
-          <xref ref="eq-question-length"/> the integrand is the constant
-          function <m>f = 1</m>: the length is the <q>mass</q> of a wire of
-          density one.
-        </p>
-      </answer>
     </exercise>
 
     <figure xml:id="fig-square-circle-wires">
@@ -1086,44 +903,26 @@
           <m>\rho(x,y) = \dfrac{1}{x^2+y^2+1}</m>. <em>Without
           parametrizing</em>, find its mass.
         </p>
+        <p>
+          (What is <m>x^2+y^2</m> <em>along the curve</em>? Then the
+          integrand is a constant, and what is left is the length
+          <xref ref="eq-question-length"/> of the wire.)
+        </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {along $C$, $\rho =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$M = \displaystyle\int_C \rho\,ds =$};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in two rows, for the value of the density along the circle and for the mass as that constant times the length.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-      <answer>
-        <p>
-          <m>M = \dfrac{4\pi}{5} \approx 2.51</m>.
-        </p>
-      </answer>
-      <solution>
-        <p>
-          Every point of the wire lies on the circle of radius <m>2</m>, so
-          <m>x^2+y^2 = 4</m> <em>along the curve</em>, and the density is not
-          really varying at all:
-
-        <md>
-          \rho(x,y) = \frac{1}{x^2+y^2+1} = \frac{1}{4+1} = \frac{1}{5}
-          \qquad \text{at every point of } C .
-        </md>
-        </p>
-        <p>
-          A constant comes out of the integral, and what is left is the
-          length <xref ref="eq-question-length"/> of the wire, namely the
-          circumference <m>2\pi(2) = 4\pi</m>:
-
-        <md>
-          <mrow>
-            M \amp = \int_C \rho \, ds = \frac{1}{5}\int_C ds
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{5}\left(4\pi\right) = \frac{4\pi}{5}
-                 \approx 2.51 .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          This is the one situation in which a line integral needs no
-          parametrization: when the integrand is constant on the curve, the
-          integral is that constant times the length.
-        </p>
-      </solution>
     </exercise>
 
     <exercise xml:id="q-radius-independence">
@@ -1147,27 +946,23 @@
             <p>The mass of the wire decreases as <m>R</m> decreases.</p>
           </li>
         </ol>
-      </statement>
-      <answer>
         <p>
-          Only option A.
+          (Circle your choice and justify it: what is <m>\rho</m> on the
+          circle of radius <m>R</m>, and what does that make <m>M</m>?)
         </p>
-      </answer>
-      <solution>
-        <p>
-          On the circle of radius <m>R</m> we have
-          <m>\sqrt{x^2+y^2} = R</m>, so <m>\rho = 1/R</m> is constant along
-          the wire and
 
-        <md>
-          M = \int_C \rho\, ds = \frac{1}{R}\int_C ds
-            = \frac{1}{R}\left(2\pi R\right) = 2\pi ,
-        </md>
-        </p>
-        <p>
-          independently of <m>R</m>. Only option A is correct.
-        </p>
-      </solution>
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {on the circle, $\rho =$ \qquad so \qquad $M =$};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box with one row, for the density on the circle of radius R and the resulting mass.</shortdescription>
+          </image>
+        </sidebyside>
+      </statement>
     </exercise>
 
     <exercise xml:id="q-square-vs-circle-mass">
@@ -1191,68 +986,31 @@
             <p>The two wires have the same mass.</p>
           </li>
         </ol>
+        <p>
+          (Circle your choice and justify it. On the circle,
+          <m>x^2+y^2</m> is constant, so its mass is that constant times its
+          circumference. For the square you do not need the exact mass: the
+          square is inscribed in the circle, so bound <m>x^2+y^2</m> on the
+          square from above and multiply by its perimeter. Is the bound
+          strict?)
+        </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\draw[gray!35] (0,5.5) -- (15,5.5);
+\draw[gray!35] (0,2) -- (15,2);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$M_{\text{circle}} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.2) {$M_{\text{square}} \lt$};
+\node[anchor=north west, font=\small\itshape] at (0.35,1.7) {conclusion:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in three rows, for the mass of the circular wire, for the upper bound on the mass of the square wire, and for the conclusion.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-      <answer>
-        <p>
-          Only option A.
-        </p>
-      </answer>
-      <solution>
-        <p>
-          <term>The circle.</term> Here <m>\rho(x,y) = x^2+y^2</m> is the
-          square of the distance to the origin, and on a circle of radius
-          <m>R</m> centered at the origin that distance never changes. So
-          <m>\rho = R^2</m> is constant along the wire, it comes out of the
-          integral, and what is left is the circumference:
-
-        <md>
-          <mrow>
-            M_{\text{circle}} \amp = \int_{\text{circle}}
-              \left(x^2+y^2\right) ds
-              = \int_{\text{circle}} R^2 \, ds
-          </mrow>
-          <mrow>
-            \amp = R^2 \left(2\pi R\right) = 2\pi R^3
-          </mrow>
-          <mrow>
-            \amp = 2\pi (2)^3 = 16\pi \approx 50.265 .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          <term>The square.</term> We do not need its mass exactly<mdash/>an
-          upper bound is enough. The square is inscribed in the circle, so
-          every one of its points lies inside or on the circle, which is to
-          say
-
-        <md>
-          x^2+y^2 \le R^2 \qquad \text{on the square.}
-        </md>
-        </p>
-        <p>
-          Replacing the integrand by that upper bound, and using that the
-          square has side <m>R\sqrt{2} = 2\sqrt{2}</m> and hence perimeter
-          <m>\int_{\text{square}} ds = 8\sqrt{2}</m>,
-
-        <md>
-          <mrow>
-            M_{\text{square}} \amp \lt \int_{\text{square}} R^2 \, ds
-              = R^2 \int_{\text{square}} ds
-          </mrow>
-          <mrow>
-            \amp = (2)^2 \left(8\sqrt{2}\right)
-                 = 32\sqrt{2} \approx 45.255 .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          The inequality is strict because <m>x^2+y^2 \lt R^2</m> everywhere
-          on the square except at its four vertices. So the square weighs
-          less than <m>45.3</m> while the circle weighs <m>50.3</m>: the
-          circular wire is heavier, and neither integral had to be
-          parametrized. Only option A is correct.
-        </p>
-      </solution>
     </exercise>
 
     <exercise xml:id="q-charge-symmetry">
@@ -1280,164 +1038,44 @@
             </p>
           </li>
         </ol>
-      </statement>
-      <answer>
         <p>
-          Option C is correct.
-        </p>
-      </answer>
-      <solution>
-        <p>
-          Let us focus on the quarter of each wire lying where <m>x \ge 0</m>
-          and <m>y \ge 0</m>, so that the absolute values disappear and
-
-        <md>
-          \rho(x,y) = \left|x\right| - \left|y\right| = x - y .
-        </md>
-        </p>
-        <p>
-          The line <m>y = x</m> cuts that quarter into two halves, as in
-          <xref ref="fig-charge-quarter"/>. Below the line we have
-          <m>x \gt y</m>, so <m>\rho \gt 0</m> there and the wire carries
-          positive charge; above it <m>x \lt y</m>, so <m>\rho \lt 0</m> and
-          the charge is negative.
-        </p>
-        <p>
-          Now reflect in the line <m>y=x</m>, that is, interchange <m>x</m>
-          and <m>y</m>. This reflection carries each of the two shapes onto
-          itself and it does not change lengths, so it matches the lower half
-          of the quarter with the upper half piece for piece. On
-          corresponding pieces the density is exactly opposite,
-
-        <md>
-          \rho(y,x) = y - x = -\left(x-y\right) = -\rho(x,y) ,
-        </md>
-        </p>
-        <p>
-          so the positive charge on the half below the line is exactly
-          cancelled by the negative charge on the half above it: this quarter
-          of each wire is neutral. The same argument applies to the other
-          three quarters, where the line of reflection is
-          <m>y = \pm x</m> and the density is again <m>\pm(|x|-|y|)</m>.
-          Adding up the four quarters,
-
-        <md>
-          \int_C \left(\left|x\right| - \left|y\right|\right) ds = 0
-        </md>
-        </p>
-        <p>
-          for both the square and the circle. Neither wire is charged
-          overall: each carries exactly as much positive as negative charge.
-          Option C is correct.
+          (Draw the quarter of each wire lying in the first quadrant, where
+          <m>\rho = x - y</m>, together with the line <m>y = x</m>, and mark
+          where the density is positive and where it is negative. Now
+          reflect in that line, that is, interchange <m>x</m> and <m>y</m>:
+          what does the reflection do to each shape, to lengths, and to
+          <m>\rho</m>? Conclude what the charge on that quarter is, and then
+          on the whole wire.)
         </p>
 
-        <figure xml:id="fig-charge-quarter">
-          <caption>
-            The quarter of each wire in the first quadrant, where
-            <m>\rho = x-y</m>. Below the line <m>y=x</m> we have
-            <m>x \geq y</m>, so the density is positive; above it
-            <m>y \geq x</m> and the density is negative; and reflecting in that line matches
-            the two halves of each wire piece for piece while reversing the
-            sign of <m>\rho</m>.
-          </caption>
-          <image xml:id="image-charge-quarter" width="55%">
-            <shortdescription>
-              The first-quadrant quarter of the circular and square wires,
-              split by the line y equals x into a region of positive density
-              and a region of negative density.
-            </shortdescription>
-            <description>
-              <p>
-                The first quadrant of a coordinate grid. A quarter of the
-                circle of radius two runs from the point two comma zero on
-                the x axis up to the point zero comma two on the y axis. The
-                corner of the inscribed square is drawn as two straight
-                segments, one going up the vertical line x equals root two
-                and one going left along the horizontal line y equals root
-                two, meeting at the vertex root two comma root two, which
-                lies on the circle. A dashed line y equals x runs from the
-                origin out through that vertex, cutting both wires into two
-                halves. The region below the dashed line is labeled x greater
-                than y, so the density is positive; the region above it is
-                labeled x less than y, so the density is negative.
-              </p>
-            </description>
-            <prefigure xmlns="https://prefigure.org" label="charge-quarter">
-              <diagram dimensions="(360,360)" margins="5">
-                <definition>R = 2</definition>
-                <definition>h = 1.4142135624</definition>
-                <definition>q(t) = (R*cos(t), R*sin(t))</definition>
-                <coordinates bbox="(-0.35,-0.35,2.75,2.75)" aspect-ratio="1">
-                  <grid-axes xlabel="x" ylabel="y"/>
-
-                  <group at="circle-wire">
-                    <parametric-curve function="q" domain="(0,pi/2)"
-                                      stroke="blue" thickness="3"/>
-                  </group>
-
-                  <group at="square-wire">
-                    <polygon points="[(h,0), (h,h), (0,h)]" closed="no"
-                             stroke="#009E73" thickness="3"/>
-                  </group>
-
-                  <group at="split">
-                    <line endpoints="((0,0), (2.6,2.6))" stroke="black"
-                          thickness="2" dash="6 4"/>
-                    <label anchor="(2.35,2.5)" alignment="nw" offset="(-4,4)"
-                           clear-background="yes">
-                      <m>y=x</m>
-                    </label>
-                  </group>
-
-                  <!-- NB: a "\lt" in a PreFigure label is fatal.  MathJax
-                       writes the rendered "<" into an attribute of its HTML
-                       output and PreFigure then parses that output with an
-                       XML parser, which rejects it ("problem placing the
-                       labels").  "\gt", "\geq" and "\leq" are all safe, so
-                       the two half-planes are described with those. -->
-                  <group at="signs">
-                    <label anchor="(2.35,0.72)" alignment="c"
-                           clear-background="yes">
-                      <m>\rho \geq 0</m>
-                    </label>
-                    <label anchor="(0.72,2.35)" alignment="c"
-                           clear-background="yes">
-                      <m>\rho \leq 0</m>
-                    </label>
-                  </group>
-                </coordinates>
-
-                <annotations>
-                  <annotation ref="figure"
-                              text="The first-quadrant quarter of the circular
-                                    and square wires, split by the line y
-                                    equals x into a positive and a negative
-                                    part">
-                    <annotation ref="grid" text="The coordinate grid"/>
-                    <annotation ref="axes" text="The coordinate axes"/>
-                    <annotation ref="circle-wire"
-                                text="The quarter of the circular wire of
-                                      radius two"
-                                sonify="yes"/>
-                    <annotation ref="square-wire"
-                                text="The corner of the square wire, two
-                                      straight sides meeting at the vertex
-                                      root two comma root two"/>
-                    <annotation ref="split"
-                                text="The line y equals x, which splits each
-                                      wire into a half where the density is
-                                      positive and a half where it is
-                                      negative"/>
-                    <annotation ref="signs"
-                                text="The labels marking where the density is
-                                      positive and where it is negative"/>
-                  </annotation>
-                </annotations>
-              </diagram>
-            </prefigure>
+        <sidebyside widths="46% 46%">
+          <image>
+            <latex-image><![CDATA[
+\begin{tikzpicture}[scale=1.6, >=stealth]
+\draw[gray!30, very thin] (0,0) grid (2.5,2.5);
+\draw[->, thick] (0,0) -- (2.8,0) node[right] {$x$};
+\draw[->, thick] (0,0) -- (0,2.8) node[above] {$y$};
+\foreach \x in {1,2} \draw (\x,-0.06) -- (\x,0.06) node[below=3pt, font=\scriptsize] {$\x$};
+\foreach \y in {1,2} \draw (-0.06,\y) -- (0.06,\y) node[left=3pt, font=\scriptsize] {$\y$};
+\end{tikzpicture}
+]]></latex-image>
+            <shortdescription>Empty first-quadrant grid running from zero to two and a half in each direction, for drawing the quarter of the circular wire, the quarter of the square wire, and the line y equals x.</shortdescription>
           </image>
-        </figure>
-      </solution>
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (7,8);
+\draw[gray!35] (0,5.5) -- (7,5.5);
+\draw[gray!35] (0,3) -- (7,3);
+\node[anchor=north west, font=\small\itshape] at (0.3,7.7) {sign of $\rho$ below and above $y = x$:};
+\node[anchor=north west, font=\small\itshape] at (0.3,5.2) {under the reflection, $\rho(y,x) =$};
+\node[anchor=north west, font=\small\itshape] at (0.3,2.7) {conclusion, and which option(s):};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in three rows, for the sign of the density on either side of the line y equals x, for the effect of the reflection on the density, and for the conclusion.</shortdescription>
+          </image>
+        </sidebyside>
+      </statement>
     </exercise>
   </subsection>
 

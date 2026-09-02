@@ -183,3 +183,96 @@
         }
     } catch (e) {}
 })();
+
+/* ------------------------------------------------------------------ *
+ * "PDF" button in the navigation bar.
+ *
+ * These are skeletal notes, meant to be completed by hand, so the PDF is
+ * the copy students actually work on -- printed, or annotated on an iPad.
+ * PreTeXt has no built-in link to it, so we add one to the navbar, styled
+ * with the theme's own .button classes so it matches Contents / Search /
+ * Prev-Up-Next.
+ *
+ * scripts/build-site.sh puts the PDF next to the HTML pages, and every
+ * chunked page of this book sits at the root of the output directory, so a
+ * bare relative href resolves from all of them. The icon is inline SVG
+ * rather than a Material Symbols codepoint so it cannot come out as tofu if
+ * the icon font is unavailable.
+ * ------------------------------------------------------------------ */
+(function () {
+  var PDF_HREF = "math14-skeletal-notes.pdf";
+  var PDF_TITLE =
+    "Download the whole book as a PDF, to print or annotate — rebuilt " +
+    "whenever new notes are posted";
+
+  function addPdfButton() {
+    var contents = document.querySelector("#ptx-navbar .ptx-navbar-contents");
+    if (!contents) return;
+    if (contents.querySelector(".pdf-button")) return;
+
+    var a = document.createElement("a");
+    a.className = "pdf-button button";
+    a.href = PDF_HREF;
+    a.title = PDF_TITLE;
+    // Open in a new tab so a reader who is midway through a section does not
+    // lose their place to the browser's PDF viewer.
+    a.target = "_blank";
+    a.rel = "noopener";
+
+    var icon = document.createElement("span");
+    icon.className = "icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.innerHTML =
+      '<svg viewBox="0 0 24 24" width="18" height="18" focusable="false" ' +
+      'aria-hidden="true"><path fill="currentColor" d="M6 2h7l5 5v13a2 2 0 0 ' +
+      '1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6.5 1.5V8H17l-4.5-4.5zM12 10.5' +
+      'a.75.75 0 0 0-.75.75v3.19l-1.22-1.22a.75.75 0 1 0-1.06 1.06l2.5 2.5a' +
+      '.75.75 0 0 0 1.06 0l2.5-2.5a.75.75 0 1 0-1.06-1.06l-1.22 1.22v-3.19' +
+      'a.75.75 0 0 0-.75-.75z"/></svg>';
+
+    var name = document.createElement("span");
+    name.className = "name";
+    name.textContent = "PDF";
+
+    a.appendChild(icon);
+    a.appendChild(name);
+
+    // Sit just before the Prev/Up/Next group, which is pinned to the right.
+    var tree = contents.querySelector(".treebuttons");
+    if (tree) {
+      contents.insertBefore(a, tree);
+    } else {
+      contents.appendChild(a);
+    }
+  }
+
+  /* Only offer the button if the PDF is actually there.
+   *
+   * The deployed site always has it, because scripts/build-site.sh puts it
+   * beside the HTML. A local `pretext build web` on its own does not, and a
+   * visible link that 404s is worse than no link, so ask before showing.
+   *
+   * fetch() cannot read file:// URLs (the browser blocks it as cross-origin),
+   * so when the page has been opened straight off disk there is no way to
+   * check; show the button rather than hide it wrongly.
+   */
+  function addPdfButtonIfPresent() {
+    if (window.location.protocol === "file:" || typeof fetch !== "function") {
+      addPdfButton();
+      return;
+    }
+    fetch(PDF_HREF, { method: "HEAD" })
+      .then(function (r) {
+        if (r.ok) addPdfButton();
+      })
+      .catch(function () {
+        /* offline, or no PDF built: leave the navbar as it was */
+      });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", addPdfButtonIfPresent);
+  } else {
+    addPdfButtonIfPresent();
+  }
+})();

@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Path Independence, Conservative Fields, and Potential        -->
+<!-- Functions                                                             -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The definitions, the three theorem          -->
+<!-- statements, and the equivalence square are kept; the three proofs,    -->
+<!-- the gradient of the paraboloid, the four worked examples, and the     -->
+<!-- three Concept Check solutions are replaced by blank workspace boxes,  -->
+<!-- each preceded by a one-line instruction.  File name and xml:ids are   -->
+<!-- unchanged.                                                            -->
+<!--                                                                       -->
+<!-- Figures: every diagram that illustrates a definition or a theorem     -->
+<!-- (the gradient field, simply connected regions, the region D with its  -->
+<!-- curve, the three paths, the split loop, the equivalence square), the  -->
+<!-- two-paths picture of Example I, the video, and the three GeoGebra     -->
+<!-- applets are kept.  The three-step cascade that displayed the          -->
+<!-- potential function of Example III is dropped, since it was the        -->
+<!-- answer.  Captions that stated a numerical answer have been trimmed.   -->
 <section xml:id="section-conservative-fields" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Path Independence, Conservative Fields, and Potential Functions</title>
 
@@ -111,15 +130,22 @@ origin, growing longer at points farther from the origin.
 <p>
 In <xref ref="fig-gradient-field-tikz"/>, you see the scalar-valued
 function <m>z = f(x,y) = x^2 + y^2</m>, which is a function on
-<m>\R^2</m>, and according to <xref ref="eq-gradient-field"/>, its
-gradient is
+<m>\R^2</m>. Compute its gradient according to
+<xref ref="eq-gradient-field"/>, and compare with the arrows in the
+figure.
 </p>
 
-<men xml:id="eq-gradient-paraboloid">
-\nabla f = \frac{\partial f}{\partial x}\mathbf i
-+ \frac{\partial f}{\partial y}\mathbf j
-= 2x\,\mathbf i + 2y\,\mathbf j.
-</men>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\nabla f =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the gradient of x squared plus y squared.</shortdescription>
+</image>
+</sidebyside>
 
 <p>
 The gradient field is visualized in the <m>xy</m>-plane and the value of
@@ -331,42 +357,31 @@ continuous gradient vector <m>\mathbf F = \nabla f</m> on a domain
 </statement>
 <proof>
 <p>
-Assuming that the curve <m>C</m> is parametrised as
-<m>\mathbf r(t) = x(t)\mathbf i + y(t)\mathbf j + z(t)\mathbf k</m>, we
-have
-<m>\mathbf v(t) = \dfrac{d\mathbf r}{dt}
-= \dfrac{dx}{dt}\mathbf i + \dfrac{dy}{dt}\mathbf j
-+ \dfrac{dz}{dt}\mathbf k</m>
-and we can rewrite the line integral as
+(Parametrize <m>C</m> by
+<m>\mathbf r(t) = x(t)\mathbf i + y(t)\mathbf j + z(t)\mathbf k</m>,
+<m>a \le t \le b</m>, and write the line integral in the parametrized
+form <xref ref="eq-work-parametrized"/> with
+<m>\mathbf F = \nabla f</m>. Expand the dot product of the gradient
+with <m>d\mathbf r/dt</m>; the chain rule turns the integrand into a
+single derivative with respect to <m>t</m>, and the Fundamental Theorem
+of Calculus finishes the job.)
 </p>
 
-<md xml:id="eq-ftli-proof">
-<mrow>
-\int_C \mathbf F(x(t),y(t),z(t))\cdot d\mathbf r
-\amp= \int_a^b \nabla f\cdot\frac{d\mathbf r}{dt}\,dt
-</mrow>
-<mrow>
-\amp= \int_a^b
-\left(\frac{\partial f}{\partial x}\mathbf i
-+ \frac{\partial f}{\partial y}\mathbf j
-+ \frac{\partial f}{\partial z}\mathbf k\right)
-</mrow>
-<mrow>
-\amp\qquad \cdot
-\left(\frac{dx}{dt}\mathbf i + \frac{dy}{dt}\mathbf j
-+ \frac{dz}{dt}\mathbf k\right)dt
-</mrow>
-<mrow>
-\amp= \int_a^b
-\left(\frac{\partial f}{\partial x}\frac{dx}{dt}
-+ \frac{\partial f}{\partial y}\frac{dy}{dt}
-+ \frac{\partial f}{\partial z}\frac{dz}{dt}\right)dt
-</mrow>
-<mrow>
-\amp= \int_a^b \frac{df}{dt}\,dt
-= \int_a^b df = f(b) - f(a).
-</mrow>
-</md>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,8.5) -- (15,8.5);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$\displaystyle\int_C \mathbf F\cdot d\mathbf r = \int_a^b \nabla f \cdot \frac{d\mathbf r}{dt}\,dt =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.2) {the integrand is, by the chain rule,};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {so the integral equals};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for expanding the dot product of the gradient with the velocity, for recognizing the integrand as a derivative with respect to t by the chain rule, and for evaluating the integral.</shortdescription>
+</image>
+</sidebyside>
 </proof>
 </theorem>
 
@@ -480,9 +495,9 @@ Animation of the fundamental theorem of line integrals for the field
 <m>(1,0,0)</m> to <m>(1,0,2\pi)</m>: the helix <m>C_1</m> and the
 straight segment <m>C_2</m>. The accumulated value of each line
 integral is tracked as the paths are traced, and both integrals arrive
-at the same value <m>f(B) - f(A) = \frac{1}{\sqrt{1+4\pi^2}} - 1</m>.
+at the same value <m>f(B) - f(A)</m>.
 </caption>
-<video xml:id="video-ftli-path-independence"
+<video preview="play-button.png" xml:id="video-ftli-path-independence"
        source="videos/ftli_path_independence_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -526,70 +541,42 @@ connecting the two points?
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(In <alert>A</alert>, write <m>f = \left(x^2+y^2+z^2\right)^{-1/2}</m>
+and take the three partial derivatives; you should recognize the field.
+In <alert>B</alert>, one way would be to parametrize, exactly as in
+<xref ref="ex-helix-gravity"/>; instead use <xref ref="thm-ftli"/>,
+which needs only the values of <m>f</m> at the two endpoints. In
+<alert>C</alert>, say what <xref ref="thm-ftli"/> tells you about
+<m>C_2</m> without computing anything, and why. The two curves are shown
+in <xref ref="fig-helix-segment-tikz"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,14);
+\draw[gray!35] (0,8.5) -- (15,8.5);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {A. $\mathbf F = \nabla f =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.2) {B. $\displaystyle\int_{C_1} \mathbf F\cdot d\mathbf r = f(1,0,2\pi) - f(1,0,0) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {C. $\displaystyle\int_{C_2} \mathbf F\cdot d\mathbf r =$ \quad because};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three labelled rows, for the gradient field, for the line integral along the helix by the fundamental theorem, and for the line integral along the segment with its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-<em>A.</em> We compute the three partial derivatives of
-<m>f(x,y,z) = \left(x^2+y^2+z^2\right)^{-1/2}</m>:
-</p>
-
-<md>
-<mrow>
-\mathbf F(x,y,z) = \nabla f
-\amp= \frac{\partial f}{\partial x}\mathbf i
-+ \frac{\partial f}{\partial y}\mathbf j
-+ \frac{\partial f}{\partial z}\mathbf k
-</mrow>
-<mrow>
-\amp= -\frac{x}{\left(x^2+y^2+z^2\right)^{3/2}}\,\mathbf i
-- \frac{y}{\left(x^2+y^2+z^2\right)^{3/2}}\,\mathbf j
-</mrow>
-<mrow>
-\amp\quad - \frac{z}{\left(x^2+y^2+z^2\right)^{3/2}}\,\mathbf k.
-</mrow>
-</md>
-
-<p>
-<em>B.</em> Of course, one way would be to calculate the line integral
-using the vector field calculated in part A, exactly as was done in
-<xref ref="ex-helix-gravity"/>; however,
-<xref ref="thm-ftli"/> provides us with a much more efficient way of
-calculating the line integral as follows:
-</p>
-
-<md>
-<mrow xml:id="eq-ftli-helix-value" number="yes">
-\int_{C_1} \mathbf F(x(t),y(t),z(t))\cdot d\mathbf r
-\amp= f(1,0,2\pi) - f(1,0,0)
-</mrow>
-<mrow>
-\amp= \frac{1}{\sqrt{1 + 4\pi^2}} - 1.
-</mrow>
-</md>
-
-<p>
-<em>C.</em> The result is the same as part B<mdash/>and it agrees with
-the direct computation <xref ref="eq-helix-gravity-work"/> of
-<xref ref="ex-helix-gravity"/><mdash/>since the vector field
-<m>\mathbf F(x,y,z) = \nabla f</m> is a conservative field
-(<xref ref="def-conservative-concepts"/>), which means
-that the result of the line integral is independent of the chosen path.
-Note that the line integral is calculated from <m>(1,0,0)</m> to
-<m>(1,0,2\pi)</m> in both cases. The two curves <m>C_1</m> and
-<m>C_2</m> are shown in <xref ref="fig-helix-segment-tikz"/>.
-</p>
-</solution>
 
 <figure xml:id="fig-helix-segment-tikz">
 <caption>
 The two paths of <xref ref="example-ftli-helix"/> joining
 <m>(1,0,0)</m> to <m>(1,0,2\pi)</m>: the helix <m>C_1</m>, parametrized
 by <m>\mathbf r(t) = \cos(t)\mathbf i + \sin(t)\mathbf j + t\mathbf k</m>,
-and the straight segment <m>C_2</m>. Since <m>\mathbf F = \nabla f</m>
-is conservative, both line integrals equal
-<m>\frac{1}{\sqrt{1+4\pi^2}} - 1</m>.
+and the straight segment <m>C_2</m>.
 </caption>
 <image width="75%">
 <shortdescription>
@@ -690,84 +677,37 @@ Use the solution of part (A) to calculate the line integral of
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(In <alert>A</alert>, match the two components of <m>\mathbf F</m> with
+<m>\partial f/\partial x</m> and <m>\partial f/\partial y</m>, one at a
+time. Step I: integrate the first with respect to <m>x</m>, remembering
+that the <q>constant</q> of integration may depend on <m>y</m>. Step II:
+differentiate what you have with respect to <m>y</m>, compare with the
+second component, and solve for that function of <m>y</m>. In
+<alert>B</alert>, say why <xref ref="thm-ftli"/> applies to
+<em>any</em> curve from <m>(0,0)</m> to <m>(1,2)</m>, then evaluate. What
+happens to the arbitrary constant?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,11) -- (15,11);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {Step I: $\dfrac{\partial f}{\partial x} = 2xy+3$, so $f(x,y) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {Step II: $\dfrac{\partial f}{\partial y} = x^2 - 4y$, so};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {A. $f(x,y) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {B. $\displaystyle\int_C \mathbf F\cdot d\mathbf r = f(1,2) - f(0,0) =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for integrating the first component with respect to x, for matching the second component to determine the function of y, for the potential function, and for the line integral by the fundamental theorem.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-
-<solution>
-<p>
-<em>A.</em> In the plane there are two components to match instead of
-three. Writing
-<m>\mathbf F = (2xy+3)\mathbf i + (x^2-4y)\mathbf j
-= \left\langle \dfrac{\partial f}{\partial x},\,
-\dfrac{\partial f}{\partial y}\right\rangle</m>, we take them one at a
-time.
-</p>
-
-<p>
-<em>Step I.</em> Since <m>\dfrac{\partial f}{\partial x} = 2xy + 3</m>,
-we integrate with respect to <m>x</m> (here <m>x</m> is the variable and
-<m>y</m> is constant), so
-</p>
-
-<men xml:id="eq-potential-2d-step1">
-f(x,y) = x^2y + 3x + g(y),
-</men>
-
-<p>
-where the constant of integration <m>g(y)</m> is allowed to depend on
-<m>y</m>.
-</p>
-
-<p>
-<em>Step II.</em> Since <m>\dfrac{\partial f}{\partial y} = x^2 - 4y</m>,
-we differentiate <xref ref="eq-potential-2d-step1"/> with respect to
-<m>y</m>:
-</p>
-
-<md>
-<mrow>
-\frac{\partial}{\partial y}\Big(x^2y + 3x + g(y)\Big)
-\amp= x^2 + \frac{dg}{dy} = x^2 - 4y
-</mrow>
-<mrow>
-\amp\Rightarrow\quad \frac{dg}{dy} = -4y
-\quad\Rightarrow\quad
-g(y) = -2y^2 + C.
-</mrow>
-</md>
-
-<p>
-Putting the two steps together, we conclude
-</p>
-
-<men xml:id="eq-potential-2d-answer">
-f(x,y) = x^2y + 3x - 2y^2 + C.
-</men>
-
-<p>
-<em>B.</em> Since <m>\mathbf F = \nabla f</m>, the field is conservative
-(<xref ref="def-conservative-concepts"/>), so <xref ref="thm-ftli"/>
-applies to <em>any</em> curve <m>C</m> joining <m>(0,0)</m> to
-<m>(1,2)</m>:
-</p>
-
-<md>
-<mrow>
-\int_C \mathbf F\cdot d\mathbf r
-\amp= f(1,2) - f(0,0)
-</mrow>
-<mrow>
-\amp= \big((1)^2(2) + 3(1) - 2(2)^2\big) - \big(0 + 0 - 0\big)
-</mrow>
-<mrow>
-\amp= (2 + 3 - 8) - 0 = -3.
-</mrow>
-</md>
-
-<p>
-Notice that the arbitrary constant <m>C</m> cancels in the difference,
-so it never affects the value of a line integral.
-</p>
-</solution>
 </example>
 
 <example xml:id="example-potential-function">
@@ -793,174 +733,39 @@ Use the solution of part (A) to calculate the line integral from
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(In <alert>A</alert>, match the three components one at a time. Step I:
+integrate the first with respect to <m>x</m>; the constant of
+integration may now depend on <m>y</m> and <m>z</m>. Step II:
+differentiate with respect to <m>y</m> and compare with the second
+component; what does that say about the dependence on <m>y</m>? Step
+III: differentiate with respect to <m>z</m>, compare with the third
+component, and solve. In <alert>B</alert>, apply
+<xref ref="thm-ftli"/> with <m>A(1,0,-2)</m> and <m>B(4,6,3)</m>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,17);
+\draw[gray!35] (0,13.5) -- (15,13.5);
+\draw[gray!35] (0,10) -- (15,10);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,16.7) {Step I: $\dfrac{\partial f}{\partial x} = yz$, so $f(x,y,z) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.2) {Step II: $\dfrac{\partial f}{\partial y} = xz$, so};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {Step III: $\dfrac{\partial f}{\partial z} = xy + 2z$, so};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {A. $f(x,y,z) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {B. $\displaystyle\int_C \mathbf F\cdot d\mathbf r = f(4,6,3) - f(1,0,-2) =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in five rows, for the three steps that match the components of the field to the partial derivatives of f, for the resulting potential function, and for the line integral by the fundamental theorem.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-<em>A.</em> Writing
-<m>\mathbf F = yz\,\mathbf i + xz\,\mathbf j + (xy+2z)\mathbf k
-= \left\langle \dfrac{\partial f}{\partial x},\,
-\dfrac{\partial f}{\partial y},\, \dfrac{\partial f}{\partial z}
-\right\rangle</m>,
-we match the components one at a time; the three steps are summarized
-in <xref ref="fig-potential-steps-prefigure"/>.
-</p>
-
-<p>
-<em>Step I.</em> Since <m>\dfrac{\partial f}{\partial x} = yz</m>, we
-integrate with respect to <m>x</m> (here <m>x</m> is the variable and
-<m>y</m> and <m>z</m> are constants), so
-</p>
-
-<men xml:id="eq-potential-step1">
-f(x,y,z) = xyz + g(y,z),
-</men>
-
-<p>
-where the constant of integration <m>g(y,z)</m> is allowed to depend on
-<m>y</m> and <m>z</m>.
-</p>
-
-<p>
-<em>Step II.</em> Since <m>\dfrac{\partial f}{\partial y} = xz</m>, we
-differentiate <xref ref="eq-potential-step1"/> with respect to
-<m>y</m>:
-</p>
-
-<md>
-<mrow>
-\frac{\partial}{\partial y}\Big(xyz + g(y,z)\Big)
-= xz + \frac{\partial g}{\partial y} = xz
-\quad\Rightarrow\quad
-\frac{\partial g}{\partial y} = 0,
-</mrow>
-</md>
-
-<p>
-so <m>g</m> does <em>not</em> depend on <m>y</m>, and we can write
-<m>g(y,z) = h(z)</m>; that is,
-</p>
-
-<men xml:id="eq-potential-step2">
-f(x,y,z) = xyz + h(z).
-</men>
-
-<p>
-<em>Step III.</em> Since <m>\dfrac{\partial f}{\partial z} = xy + 2z</m>,
-we differentiate <xref ref="eq-potential-step2"/> with respect to
-<m>z</m>:
-</p>
-
-<md>
-<mrow>
-\frac{\partial}{\partial z}\Big(xyz + h(z)\Big)
-\amp= xy + \frac{dh}{dz} = xy + 2z
-</mrow>
-<mrow>
-\amp\Rightarrow\quad \frac{dh}{dz} = 2z
-\quad\Rightarrow\quad
-h(z) = z^2 + C.
-</mrow>
-</md>
-
-<p>
-Putting the three steps together, we conclude
-</p>
-
-<men xml:id="eq-potential-answer">
-f(x,y,z) = xyz + z^2 + C.
-</men>
-
-<p>
-<em>B.</em> By <xref ref="thm-ftli"/>, with <m>A(1,0,-2)</m> and
-<m>B(4,6,3)</m>,
-</p>
-
-<md>
-<mrow>
-\int_C \mathbf F\cdot d\mathbf r
-\amp= f(4,6,3) - f(1,0,-2)
-</mrow>
-<mrow>
-\amp= \big((4)(6)(3) + 3^2\big) - \big((1)(0)(-2) + (-2)^2\big)
-= 81 - 4 = 77.
-</mrow>
-</md>
-
-<figure xml:id="fig-potential-steps-prefigure">
-<caption>
-The three-step cascade for building the potential function of
-<m>\mathbf F = yz\,\mathbf i + xz\,\mathbf j + (xy+2z)\mathbf k</m>.
-Each component of <m>\mathbf F</m> pins down one more piece of
-<m>f</m>, shrinking the unknown <q>constant of integration</q> from
-<m>g(y,z)</m> to <m>h(z)</m> to the true constant <m>C</m>.
-</caption>
-<image width="85%">
-<shortdescription>
-A three-row flow diagram building the potential function step by step.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-potential-steps">
-<diagram dimensions="(460,300)" margins="10">
-<coordinates bbox="(0,0,10,7.2)">
-<rectangle at="ps-box1" lower-left="(0.4,5.4)" dimensions="(4.1,1.4)"
-    stroke="#0072B2" fill="#dbeaf7" thickness="2"/>
-<label at="ps-eq1" anchor="(2.45,6.1)" alignment="c">
-<m>\dfrac{\partial f}{\partial x} = yz</m>
-</label>
-<vector at="ps-arrow1" v="(2.4,0)" tail="(4.7,6.1)" stroke="#009E73"
-    thickness="2"/>
-<label at="ps-arrow1-label" anchor="(5.9,6.35)" alignment="n"
-    color="#009E73">integrate in <m>x</m></label>
-<rectangle at="ps-box1b" lower-left="(7.3,5.4)" dimensions="(2.4,1.4)"
-    stroke="#0072B2" fill="white" thickness="2"/>
-<label at="ps-eq1b" anchor="(8.5,6.1)" alignment="c">
-<m>xyz + g(y,z)</m>
-</label>
-<rectangle at="ps-box2" lower-left="(0.4,3.1)" dimensions="(4.1,1.4)"
-    stroke="#0072B2" fill="#dbeaf7" thickness="2"/>
-<label at="ps-eq2" anchor="(2.45,3.8)" alignment="c">
-<m>\dfrac{\partial f}{\partial y} = xz</m>
-</label>
-<vector at="ps-arrow2" v="(2.4,0)" tail="(4.7,3.8)" stroke="#009E73"
-    thickness="2"/>
-<label at="ps-arrow2-label" anchor="(5.9,4.05)" alignment="n"
-    color="#009E73"><m>\partial g/\partial y = 0</m></label>
-<rectangle at="ps-box2b" lower-left="(7.3,3.1)" dimensions="(2.4,1.4)"
-    stroke="#0072B2" fill="white" thickness="2"/>
-<label at="ps-eq2b" anchor="(8.5,3.8)" alignment="c">
-<m>xyz + h(z)</m>
-</label>
-<rectangle at="ps-box3" lower-left="(0.4,0.8)" dimensions="(4.1,1.4)"
-    stroke="#0072B2" fill="#dbeaf7" thickness="2"/>
-<label at="ps-eq3" anchor="(2.45,1.5)" alignment="c">
-<m>\dfrac{\partial f}{\partial z} = xy + 2z</m>
-</label>
-<vector at="ps-arrow3" v="(2.4,0)" tail="(4.7,1.5)" stroke="#009E73"
-    thickness="2"/>
-<label at="ps-arrow3-label" anchor="(5.9,1.75)" alignment="n"
-    color="#009E73"><m>h'(z) = 2z</m></label>
-<rectangle at="ps-box3b" lower-left="(7.3,0.8)" dimensions="(2.4,1.4)"
-    stroke="#D55E00" fill="#fbe3d0" thickness="2"/>
-<label at="ps-eq3b" anchor="(8.5,1.5)" alignment="c">
-<m>xyz + z^2 + C</m>
-</label>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="A flow diagram with three rows, one for each component of the vector field. Each row starts with a partial derivative condition in a blue box and ends with an updated formula for f. Row one: partial f partial x equals y z leads, by integrating in x, to x y z plus g of y and z. Row two: partial f partial y equals x z forces partial g partial y equals zero, giving x y z plus h of z. Row three: partial f partial z equals x y plus 2 z forces h prime of z equals 2 z, giving the final answer x y z plus z squared plus C in a vermillion box.">
-  <annotation ref="ps-box1" text="Step one. The x component of F says partial f partial x equals y z."/>
-  <annotation ref="ps-box1b" text="Integrating in x gives f equals x y z plus g of y and z, where the constant of integration may depend on y and z."/>
-  <annotation ref="ps-box2" text="Step two. The y component of F says partial f partial y equals x z."/>
-  <annotation ref="ps-box2b" text="Differentiating in y shows g does not depend on y, so f equals x y z plus h of z."/>
-  <annotation ref="ps-box3" text="Step three. The z component of F says partial f partial z equals x y plus 2 z."/>
-  <annotation ref="ps-box3b" text="Solving h prime of z equals 2 z gives h equals z squared plus C, so f equals x y z plus z squared plus C."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
-</image>
-</figure>
-</solution>
 
 <!-- Example 1.4.10 revisited: the same work integral, but now with a    -->
 <!-- potential function and the Fundamental Theorem instead of a         -->
@@ -984,68 +789,38 @@ along the helix <m>\mathbf r(t) = \langle \cos t,\ \sin t,\ t\rangle</m>
 from <m>(1,0,0)</m> to <m>(1,0,2\pi)</m>, by parametrizing the curve.
 Do it again with <xref ref="thm-ftli"/>.
 </p>
-</statement>
-
-<solution>
 <p>
-The field is defined everywhere except at the origin, and the helix
-never passes through the origin, so we may look for a potential
-function. Rather than run the three steps of <xref ref="example-potential-function"/>,
+<em>Solution.</em>
+(First say why looking for a potential function is legitimate here:
+where is the field defined, and does the helix avoid that point? Rather
+than run the three steps of <xref ref="example-potential-function"/>,
 notice that <m>\mathbf F</m> depends only on the distance
-<m>\rho = \lVert\mathbf r\rVert = \sqrt{x^2+y^2+z^2}</m>, and recall that
+<m>\rho = \lVert\mathbf r\rVert = \sqrt{x^2+y^2+z^2}</m>, and that
+<m>\partial\rho/\partial x = x/\rho</m>, and likewise for <m>y</m> and
+<m>z</m>. Guess <m>f = 1/\rho</m> and check <m>\nabla f</m> with the
+chain rule. Then the work needs nothing but <m>\rho</m> at the two
+endpoints. Compare with <xref ref="ex-helix-gravity"/>, and say what
+this calculation never used.)
 </p>
 
-<me>
-\frac{\partial \rho}{\partial x} = \frac{x}{\rho}, \qquad
-\frac{\partial \rho}{\partial y} = \frac{y}{\rho}, \qquad
-\frac{\partial \rho}{\partial z} = \frac{z}{\rho} .
-</me>
-
-<p>
-So for <m>f = \dfrac{1}{\rho}</m> the chain rule gives
-</p>
-
-<md>
-<mrow>
-\nabla f \amp = -\frac{1}{\rho^{2}}
-\left\langle \frac{\partial \rho}{\partial x},\
-             \frac{\partial \rho}{\partial y},\
-             \frac{\partial \rho}{\partial z} \right\rangle
-</mrow>
-<mrow>
-\amp = -\frac{1}{\rho^{2}}\,\frac{\langle x,y,z\rangle}{\rho}
-     = -\frac{\mathbf r}{\lVert\mathbf r\rVert^{3}}
-     = \mathbf F ,
-</mrow>
-</md>
-
-<p>
-so <m>f(x,y,z) = \dfrac{1}{\sqrt{x^2+y^2+z^2}}</m> is a potential
-function for <m>\mathbf F</m>. Now the work needs nothing but the two
-endpoints. At <m>A = (1,0,0)</m> we have <m>\rho = 1</m>, and at
-<m>B = (1,0,2\pi)</m> we have
-<m>\rho = \sqrt{1 + 4\pi^2}</m>, so <xref ref="thm-ftli"/> gives
-</p>
-
-<md>
-<mrow>
-\int_C \mathbf F\cdot d\mathbf r \amp = f(B) - f(A)
-</mrow>
-<mrow>
-\amp = \frac{1}{\sqrt{1+4\pi^{2}}} - \frac{1}{1}
-     = \frac{1}{\sqrt{1+4\pi^{2}}} - 1 \approx -0.84 ,
-</mrow>
-</md>
-
-<p>
-which is <xref ref="eq-helix-gravity-work"/>, obtained there only after
-writing the field along the curve, taking a dot product, and evaluating
-an integral by substitution. The potential function did all of that work
-at once. Notice also what the calculation never used: the helix itself.
-Any other path from <m>(1,0,0)</m> to <m>(1,0,2\pi)</m> that avoids the
-origin gives the same <m>-0.84</m>.
-</p>
-</solution>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,14);
+\draw[gray!35] (0,11) -- (15,11);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {why a potential function may exist:};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {for $f = 1/\rho$: \quad $\nabla f =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$\rho$ at $A$ and at $B$; \quad $\displaystyle\int_C \mathbf F\cdot d\mathbf r = f(B) - f(A) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {what was never used, and what that means for other paths:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the justification that a potential exists, for the gradient of one over rho, for the work from the endpoint values, and for the remark about path independence.</shortdescription>
+</image>
+</sidebyside>
+</statement>
 </example>
 
 </subsection>
@@ -1068,91 +843,41 @@ differentiable function <m>f</m>.
 </statement>
 <proof>
 <p>
-<alert>First, we prove that a gradient field is conservative;</alert> we
-assume that <m>\mathbf F = \nabla f</m> for a differentiable function
-<m>f</m>. If <m>C</m> is any piecewise smooth curve in <m>D</m> running
-from <m>A</m> to <m>B</m>, then <xref ref="thm-ftli"/> gives
+(<alert>Gradient implies conservative</alert>: assume
+<m>\mathbf F = \nabla f</m> and apply <xref ref="thm-ftli"/> to any
+piecewise smooth curve from <m>A</m> to <m>B</m>; what does the answer
+depend on? <alert>Conservative implies gradient</alert>: fix a point
+<m>A_0</m> of <m>D</m> and <em>define</em> <m>f(x,y,z)</m> as the line
+integral of <m>\mathbf F</m> from <m>A_0</m> to <m>(x,y,z)</m> along any
+curve in <m>D</m>; say why connectedness and path independence make this
+definition meaningful. To show <m>\partial f/\partial x = M</m>, compare
+<m>f(x+h,y,z)</m> with <m>f(x,y,z)</m> by travelling along the straight
+segment <m>L_h</m> from <m>(x,y,z)</m> to <m>(x+h,y,z)</m>, which lies
+in <m>D</m> because <m>D</m> is open; parametrize <m>L_h</m>, so that
+the difference quotient becomes an average of <m>M</m> over the segment,
+and let <m>h \to 0</m> using the continuity of <m>M</m>. The other two
+partials are the same argument.)
 </p>
 
-<md>
-\int_C \mathbf F\cdot d\mathbf r = f(B) - f(A),
-</md>
-
-<p>
-which depends only on the endpoints <m>A</m> and <m>B</m>, and not on
-the curve <m>C</m> joining them. The line integral is therefore
-path-independent in <m>D</m>, which is to say that <m>\mathbf F</m> is
-conservative on <m>D</m> (<xref ref="def-conservative-concepts"/>).
-</p>
-
-<p>
-<alert>Next, we prove that a conservative field is a gradient
-field;</alert> we assume that <m>\mathbf F</m> is conservative on
-<m>D</m>, and we build a potential function for it. Fix a point
-<m>A_0</m> of <m>D</m>. Because <m>D</m> is connected, every point
-<m>(x,y,z)</m> of <m>D</m> can be joined to <m>A_0</m> by a curve lying
-in <m>D</m>; and because <m>\mathbf F</m> is conservative, the value of
-the line integral along such a curve does not depend on which one we
-choose. We may therefore define
-</p>
-
-<men xml:id="eq-potential-construction">
-f(x,y,z) = \int_{A_0}^{(x,y,z)} \mathbf F\cdot d\mathbf r ,
-</men>
-
-<p>
-the integral being taken along any curve in <m>D</m> from <m>A_0</m> to
-<m>(x,y,z)</m>. It remains to check that <m>\nabla f = \mathbf F</m>.
-</p>
-
-<p>
-Fix a point <m>(x,y,z)</m> of <m>D</m>. Since <m>D</m> is open, there is
-a <m>\delta &gt; 0</m> such that every point within distance
-<m>\delta</m> of <m>(x,y,z)</m> also lies in <m>D</m>. For
-<m>0 &lt; |h| &lt; \delta</m>, let <m>L_h</m> be the straight segment
-from <m>(x,y,z)</m> to <m>(x+h,y,z)</m>, which then lies in <m>D</m>.
-Following a curve from <m>A_0</m> to <m>(x,y,z)</m> and then travelling
-along <m>L_h</m> produces a curve in <m>D</m> from <m>A_0</m> to
-<m>(x+h,y,z)</m>, so <xref ref="eq-potential-construction"/> gives
-</p>
-
-<md>
-f(x+h,y,z) - f(x,y,z) = \int_{L_h} \mathbf F\cdot d\mathbf r .
-</md>
-
-<p>
-Parametrizing <m>L_h</m> by
-<m>\mathbf r(t) = (x+t)\mathbf i + y\mathbf j + z\mathbf k</m> with
-<m>0 \le t \le h</m> gives <m>d\mathbf r = \mathbf i\,dt</m>, so that
-<m>\mathbf F\cdot d\mathbf r = M(x+t,y,z)\,dt</m> and
-</p>
-
-<md>
-\frac{f(x+h,y,z) - f(x,y,z)}{h}
-  = \frac{1}{h}\int_0^h M(x+t,y,z)\,dt .
-</md>
-
-<p>
-The right-hand side is the average value of <m>M</m> along the segment
-from <m>(x,y,z)</m> to <m>(x+h,y,z)</m>. As <m>h \to 0</m> that segment
-shrinks down to the single point <m>(x,y,z)</m>, and since <m>M</m> is
-continuous its values on the segment all approach <m>M(x,y,z)</m>; so
-their average does too. Therefore
-<m>\dfrac{\partial f}{\partial x} = M</m>. Repeating the argument with
-segments in the <m>\mathbf j</m> and <m>\mathbf k</m> directions gives
-<m>\dfrac{\partial f}{\partial y} = N</m> and
-<m>\dfrac{\partial f}{\partial z} = P</m>. Hence
-</p>
-
-<md>
-\nabla f = M\mathbf i + N\mathbf j + P\mathbf k = \mathbf F ,
-</md>
-
-<p>
-and <m>f</m> is differentiable because its partial derivatives
-<m>M</m>, <m>N</m>, and <m>P</m> are continuous on <m>D</m>. So
-<m>\mathbf F</m> is the gradient field of <m>f</m>.
-</p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,18);
+\draw[gray!35] (0,14.5) -- (15,14.5);
+\draw[gray!35] (0,11) -- (15,11);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,17.7) {gradient $\Rightarrow$ conservative:};
+\node[anchor=north west, font=\small\itshape] at (0.35,14.2) {conservative $\Rightarrow$ gradient: define $f(x,y,z) =$ \quad (why this makes sense)};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {$f(x+h,y,z) - f(x,y,z) = \displaystyle\int_{L_h} \mathbf F\cdot d\mathbf r =$ \quad (parametrize $L_h$)};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$\dfrac{f(x+h,y,z) - f(x,y,z)}{h} =$ \qquad $\xrightarrow{\,h\to 0\,}$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {the other two partials, and why $f$ is differentiable:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in five rows, for the easy direction of the proof, for the definition of the potential function as a line integral, for the difference of its values along a short segment, for the difference quotient and its limit, and for the remaining partial derivatives.</shortdescription>
+</image>
+</sidebyside>
 </proof>
 </theorem>
 
@@ -1259,79 +984,31 @@ The field <m>\mathbf F</m> is conservative on <m>D</m>.
 </statement>
 <proof>
 <p>
-<alert>First, we prove that (2) implies (1);</alert> we assume that
-<m>\mathbf F</m> is conservative.
-Then, as shown in <xref ref="fig-loop-split-prefigure"/>, we can think
-about any loop as <m>C = C_1 \cup C_2</m>, where <m>C_1</m> goes from
-<m>A</m> to <m>B</m> and <m>C_2</m> returns from <m>B</m> to <m>A</m>.
-Reversing the orientation of <m>C_2</m> produces the curve
-<m>-C_2</m>, and <m>C_1</m> and <m>-C_2</m> both connect <m>A</m> to
-<m>B</m>. Since <m>\mathbf F</m> is conservative, path independence
-gives
-<m>\int_{C_1} \mathbf F\cdot d\mathbf r
-= \int_{-C_2} \mathbf F\cdot d\mathbf r</m>,
-and therefore
+(<alert>(2) implies (1)</alert>: split any loop as
+<m>C = C_1 \cup C_2</m>, with <m>C_1</m> from <m>A</m> to <m>B</m> and
+<m>C_2</m> from <m>B</m> back to <m>A</m>, as in
+<xref ref="fig-loop-split-prefigure"/>. Reversing <m>C_2</m> gives a
+second path <m>-C_2</m> from <m>A</m> to <m>B</m>; what does path
+independence say about <m>\int_{C_1}</m> and <m>\int_{-C_2}</m>, and
+how is <m>\int_{-C_2}</m> related to <m>\int_{C_2}</m>? Add up.
+<alert>(1) implies (2)</alert>: take any two paths <m>C_1</m>,
+<m>C_2</m> from <m>A</m> to <m>B</m>, build a loop out of them, and
+apply the assumption to it.)
 </p>
 
-<md xml:id="eq-loop-computation">
-<mrow>
-\oint_C \mathbf F\cdot d\mathbf r
-\amp= \int_{C_1} \mathbf F\cdot d\mathbf r
-+ \int_{C_2} \mathbf F\cdot d\mathbf r
-</mrow>
-<mrow>
-\amp= \int_{-C_2} \mathbf F\cdot d\mathbf r
-+ \int_{C_2} \mathbf F\cdot d\mathbf r
-</mrow>
-<mrow>
-\amp= -\int_{C_2} \mathbf F\cdot d\mathbf r
-+ \int_{C_2} \mathbf F\cdot d\mathbf r
-</mrow>
-<mrow>
-\amp= 0.
-</mrow>
-</md>
-
-<p>
-Hence <m>\oint_C \mathbf F\cdot d\mathbf r = 0</m> for any loop
-<m>C</m>.
-</p>
-
-<p>
-<alert>Next, we prove that (1) implies (2);</alert> we assume that
-<m>\oint_C \mathbf F\cdot d\mathbf r = 0</m> around every loop in
-<m>D</m>. Let <m>A</m> and <m>B</m> be any two points of <m>D</m>, and
-let <m>C_1</m> and <m>C_2</m> be any two paths in <m>D</m> from
-<m>A</m> to <m>B</m>. Travelling along <m>C_1</m> from <m>A</m> to
-<m>B</m> and then back along <m>-C_2</m> from <m>B</m> to <m>A</m>
-traces a loop <m>C = C_1 \cup (-C_2)</m> in <m>D</m>, so the assumption
-applies to it:
-</p>
-
-<md xml:id="eq-loop-converse">
-<mrow>
-0 \amp= \oint_C \mathbf F\cdot d\mathbf r
-</mrow>
-<mrow>
-\amp= \int_{C_1} \mathbf F\cdot d\mathbf r
-+ \int_{-C_2} \mathbf F\cdot d\mathbf r
-</mrow>
-<mrow>
-\amp= \int_{C_1} \mathbf F\cdot d\mathbf r
-- \int_{C_2} \mathbf F\cdot d\mathbf r .
-</mrow>
-</md>
-
-<p>
-Therefore
-<m>\int_{C_1} \mathbf F\cdot d\mathbf r
-= \int_{C_2} \mathbf F\cdot d\mathbf r</m>. Since <m>C_1</m> and
-<m>C_2</m> were arbitrary paths joining <m>A</m> to <m>B</m>, and
-<m>A</m> and <m>B</m> were arbitrary points of <m>D</m>, the line
-integral of <m>\mathbf F</m> is path-independent in <m>D</m>; that is,
-<m>\mathbf F</m> is conservative on <m>D</m>
-(<xref ref="def-conservative-concepts"/>).
-</p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,6) -- (15,6);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {(2) $\Rightarrow$ (1): \quad $\displaystyle\oint_C \mathbf F\cdot d\mathbf r = \int_{C_1} \mathbf F\cdot d\mathbf r + \int_{C_2} \mathbf F\cdot d\mathbf r =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {(1) $\Rightarrow$ (2): \quad the loop $C = C_1 \cup (-C_2)$ gives \quad $0 =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for each direction of the proof of the loop property.</shortdescription>
+</image>
+</sidebyside>
 </proof>
 </theorem>
 
@@ -1559,78 +1236,35 @@ answer to the previous part. Justify your answer fully.
 </p>
 </li>
 </ol>
+<p>
+(Read the parametrization and the field off
+<xref ref="fig-vf-helix-work"/>, and find the parameter values of
+<m>A</m> and <m>B</m>. For part 1, write <m>\mathbf F(\mathbf r(t))</m>
+and <m>\mathbf v(t)</m>, dot them, and integrate. For part 2, decide
+whether <m>\mathbf F</m> is conservative <mdash/> where is it defined,
+and can you find a potential function? <mdash/> and if so evaluate
+<m>f(B) - f(A)</m>. Then explain, from the picture, why the two answers
+agree.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,12.5) -- (15,12.5);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {$A = \mathbf r(\;\;)$, $B = \mathbf r(\;\;)$};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.2) {1. $\mathbf F(\mathbf r(t)) =$ \quad $\mathbf v(t) =$ \quad $\mathbf F\cdot\mathbf v =$ \quad $W =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {2. is $\mathbf F$ conservative? \quad potential $f =$ \quad $W = f(B) - f(A) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {why the two agree, from the picture:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the parameter values of the endpoints, for the direct computation of the work, for the fundamental-theorem computation with its justification, and for the geometric explanation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-The work is <m>0</m>, by either method.
-</p>
-</answer>
-<solution>
-<p>
-<term>Directly.</term> On the helix
-<m>\mathbf{r}(t)=\left\langle \cos t,\ \sin t,\ t/2\right\rangle</m> the
-point <m>A=(1,0,0)</m> is <m>t=0</m> and <m>B=(1,0,\pi)</m> is
-<m>t=2\pi</m>, since <m>z=t/2</m>. Along the curve
-</p>
-
-<md>
-<mrow>
-\mathbf{F}\bigl(\mathbf{r}(t)\bigr) \amp
-  = \left\langle -\cos t,\ \sin t,\ 0\right\rangle ,
-</mrow>
-<mrow>
-\mathbf{v}(t) \amp
-  = \left\langle -\sin t,\ \cos t,\ \tfrac12\right\rangle ,
-</mrow>
-<mrow>
-\mathbf{F}\cdot\mathbf{v} \amp
-  = \cos t\sin t + \sin t\cos t = \sin(2t).
-</mrow>
-</md>
-
-<p>
-Hence
-</p>
-
-<md>
-W = \int_0^{2\pi}\sin(2t)\,dt
-  = \left[-\tfrac12\cos(2t)\right]_0^{2\pi} = 0 .
-</md>
-
-<p>
-<term>By the fundamental theorem.</term> Yes, it applies. The field
-<m>\mathbf{F}=\left\langle -x,\ y,\ 0\right\rangle</m> is defined and
-smooth on all of <m>\R^3</m>, which is open and simply connected
-(<xref ref="def-conservative-concepts"/>), and its
-mixed partials match:
-<m>\partial(-x)/\partial y = 0 = \partial(y)/\partial x</m>, and the
-<m>z</m>-component is <m>0</m> while neither of the others involves
-<m>z</m>. So <m>\mathbf{F}</m> is conservative, with potential
-</p>
-
-<md>
-f(x,y,z) = \frac{y^2-x^2}{2},
-\qquad \nabla f = \left\langle -x,\ y,\ 0\right\rangle .
-</md>
-
-<p>
-Therefore, by <xref ref="eq-ftli"/>,
-</p>
-
-<md>
-W = f(B) - f(A) = f(1,0,\pi) - f(1,0,0)
-  = \left(-\tfrac12\right) - \left(-\tfrac12\right) = 0 ,
-</md>
-
-<p>
-which agrees with the direct computation. The reason is visible in the
-picture: <m>A</m> and <m>B</m> differ only in <m>z</m>, and the potential
-does not involve <m>z</m> at all, so climbing costs nothing. The work
-gained on the stretches where <m>\mathbf{F}</m> and <m>\mathbf{v}</m> make
-an acute angle is given back exactly on the stretches where the angle is
-obtuse.
-</p>
-</solution>
 </exercise>
 
 <figure xml:id="fig-vf-helix-work">
@@ -1665,62 +1299,29 @@ on some parts of the trip and taken back on others.
 Compute the line integral of the vector field along the line segment shown
 in <xref ref="fig-vf-segment"/>.
 </p>
+<p>
+(Read the field and the endpoints off <xref ref="fig-vf-segment"/>.
+Before parametrizing anything, test whether the field is conservative,
+and look for a potential function by inspection. If you find one, the
+segment never needs to be parametrized.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {is $\mathbf F$ conservative?};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {potential: $f(x,y,z) =$ \qquad check $\nabla f =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\displaystyle\int_C \mathbf F\cdot d\mathbf r = f(B) - f(A) =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for testing whether the field is conservative, for a potential function and its check, and for the line integral from the endpoint values.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<m>\displaystyle \int_C \mathbf{F}\cdot d\mathbf{r}
-  = 1 + \frac{4\sqrt2}{3} \approx 2.886 .</m>
-</p>
-</answer>
-<solution>
-<p>
-The field <m>\mathbf{F}=\tfrac13\left\langle z,\ z,\ x+y\right\rangle</m> is
-conservative: it is smooth on all of <m>\R^3</m> and
-</p>
-
-<md>
-<mrow>
-\frac{\partial}{\partial y}\left(\frac{z}{3}\right) \amp = 0
-  = \frac{\partial}{\partial x}\left(\frac{z}{3}\right),
-</mrow>
-<mrow>
-\frac{\partial}{\partial z}\left(\frac{z}{3}\right) \amp = \frac13
-  = \frac{\partial}{\partial x}\left(\frac{x+y}{3}\right)
-  = \frac{\partial}{\partial y}\left(\frac{x+y}{3}\right).
-</mrow>
-</md>
-
-<p>
-A potential is found by inspection:
-</p>
-
-<md>
-<mrow xml:id="eq-segment-potential" number="yes">
-f(x,y,z) \amp = \frac{(x+y)z}{3},
-</mrow>
-<mrow>
-\nabla f \amp = \left\langle \frac{z}{3},\ \frac{z}{3},\
-  \frac{x+y}{3}\right\rangle = \mathbf{F} .
-</mrow>
-</md>
-
-<p>
-So there is no need to parametrize the segment at all. By
-<xref ref="eq-ftli"/>, with <m>A=(0,1,-1)</m> and
-<m>B=(1,2\sqrt2,2)</m>,
-</p>
-
-<md>
-<mrow>
-\int_C \mathbf{F}\cdot d\mathbf{r} \amp = f(B)-f(A)
-  = \frac{\left(1+2\sqrt2\right)(2)}{3} - \frac{(0+1)(-1)}{3}
-</mrow>
-<mrow>
-\amp = \frac{2+4\sqrt2}{3} + \frac13
-     = 1 + \frac{4\sqrt2}{3} \approx 2.886 .
-</mrow>
-</md>
-</solution>
 </exercise>
 
 <figure xml:id="fig-vf-segment">
@@ -1763,44 +1364,27 @@ parametrized as
 \mathbf{r}(t)=\left\langle \frac{\ln(t)}{\ln(2)},\ t^{3/2},\
 t\cos(\pi t)\right\rangle .
 </md>
+<p>
+(First check the endpoints: evaluate <m>\mathbf r(1)</m> and
+<m>\mathbf r(2)</m> and compare with <xref ref="fig-vf-segment"/>. Then
+decide whether you need to differentiate <m>t\cos(\pi t)</m> at all, and
+say why. Compare your answer with <xref ref="q-vf-segment"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\mathbf r(1) =$ \qquad $\mathbf r(2) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {$\displaystyle\int_C \mathbf F\cdot d\mathbf r =$ \qquad because};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, for the two endpoints of the curve and for the value of the line integral with its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<m>\displaystyle \int_C \mathbf{F}\cdot d\mathbf{r}
-  = 1 + \frac{4\sqrt2}{3} \approx 2.886</m>, exactly as in
-<xref ref="q-vf-segment"/>.
-</p>
-</answer>
-<solution>
-<p>
-First check the endpoints. At <m>t=1</m>,
-<m>\mathbf{r}(1)=\left\langle 0,\ 1,\ \cos\pi\right\rangle=(0,1,-1)=A</m>,
-and at <m>t=2</m>,
-<m>\mathbf{r}(2)=\left\langle 1,\ 2\sqrt2,\ 2\cos 2\pi\right\rangle
-=(1,2\sqrt2,2)=B</m>. So this curve joins the same two points as the
-segment of <xref ref="fig-vf-segment"/>.
-</p>
-<p>
-Computing <m>\int_C\mathbf{F}\cdot d\mathbf{r}</m> directly here would mean
-differentiating <m>t\cos(\pi t)</m> and <m>t^{3/2}</m> and integrating the
-resulting mess. There is no need: the field is the same conservative field
-as before, with the same potential <xref ref="eq-segment-potential"/>,
-so the integral
-depends only on the endpoints:
-</p>
-
-<md>
-\int_C \mathbf{F}\cdot d\mathbf{r} = f(B) - f(A)
-  = 1 + \frac{4\sqrt2}{3} \approx 2.886 .
-</md>
-
-<p>
-This is the same number as in <xref ref="q-vf-segment"/>, and that is the
-whole point: for a conservative field the path between two points is
-irrelevant. A wildly complicated path and a straight segment cost exactly
-the same.
-</p>
-</solution>
 </exercise>
 
 <figure xml:id="fig-vf-curve">

@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Complementary Modules for MATH 14 -->
+<!-- MATH 14 Skeletal Notes                                                -->
 <!-- Section: Arc Length of a Curve                                        -->
 <!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The setup of the arc-length construction    -->
+<!-- (the curve, the chords, the Pythagorean relation) and the boxed       -->
+<!-- results are kept; the passage from the chord sum to the integral, and -->
+<!-- every example and activity solution, is replaced by a blank workspace -->
+<!-- box preceded by a one-line instruction.  File name and xml:ids are    -->
+<!-- unchanged, so the assignments and the next section cross-reference    -->
+<!-- this one exactly as before.                                           -->
+<!--                                                                       -->
+<!-- Figures: all kept in full (two PreFigure diagrams of the construction, -->
+<!-- three space curves in TikZ, one parabola shadow, and every video);    -->
+<!-- none of them is something a student would draw, and each one is the   -->
+<!-- check on the computation done in the box above it.  Captions that     -->
+<!-- stated a numerical answer have been trimmed.                          -->
+<!--                                                                       -->
 <!-- Media wiring (relative to the PreTeXt source root):                   -->
-<!--   Manim videos : videos/*_1080p.mp4                          -->
+<!--   Manim videos : videos/*_1080p.mp4                                   -->
 <!--   PreFigure    : embedded inline inside <image><prefigure> ...        -->
 <!--   TikZ figures : embedded inline inside <image><latex-image> ...      -->
-<!--                                                                       -->
-<!-- REQUIREMENT: the TikZ figures need this in <docinfo> of the main      -->
-<!-- file (see the note accompanying this file):                           -->
-<!--   <latex-image-preamble>                                              -->
-<!--     \usepackage{tikz}                                                 -->
-<!--     \usetikzlibrary{arrows.meta}                                      -->
-<!--     \usepackage{pgfplots}                                             -->
-<!--     \pgfplotsset{compat=1.18}                                         -->
-<!--   </latex-image-preamble>                                             -->
+<!--   The TikZ figures need tikz + pgfplots in the <latex-image-preamble> -->
+<!--   of main.ptx.                                                        -->
 <!--                                                                       -->
 <!-- Notation: vectors are written with angle brackets, <a,b>, and their   -->
 <!-- lengths with double bars, ||v||.                                      -->
-<!--                                                                       -->
-<!-- Accessibility: every image carries a <shortdescription> (alt text)    -->
-<!-- and a long <description> for screen readers.                          -->
-
 <section xml:id="sec-arc-length">
   <title>Arc Length of a Curve</title>
 
@@ -280,75 +284,33 @@
     </figure>
 
     <p>
-      We approximate the arc length <m>S</m> by summing <m>\Delta s_k</m>
-      as <m>k</m> changes from <m>1</m> to the number of divisions
-      <m>n</m>:
-
-    <me>
-      S \approx \sum_{k=1}^{n}\Delta s_k
-        = \sum_{k=1}^{n}
-          \sqrt{\left(\Delta x_k\right)^{2}+\left(\Delta y_k\right)^{2}}.
-    </me>
+      Now build the arc length from the chords. (Approximate <m>S</m> by
+      the sum of the chord lengths <xref ref="eq-chord-pythagoras"/> and
+      let <m>n \to \infty</m>. The result has no variable of integration
+      yet: divide and multiply each term by
+      <m>\Delta t_k = t_k - t_{k-1}</m>, so that in the limit the
+      difference quotients become derivatives and the sum becomes an
+      integral over time. Finally, recognize the square root that appears
+      as the length of a vector you already know.)
     </p>
 
-    <p>
-      The inscribed polygon hugs the curve more and more closely as the
-      chords get shorter, so we recover the exact length in the limit:
-
-    <md>
-      <mrow>
-        S \amp = \lim_{n\to\infty}\sum_{k=1}^{n}\Delta s_k
-             = \lim_{n\to\infty}\sum_{k=1}^{n}
-               \sqrt{\left(\Delta x_k\right)^{2}+\left(\Delta y_k\right)^{2}}
-      </mrow>
-      <mrow>
-        S \amp = \int_C ds
-             = \int_C \sqrt{\left(dx\right)^{2}+\left(dy\right)^{2}}.
-      </mrow>
-    </md>
-    </p>
-
-    <p>
-      This is a fine formula, but it is not yet something we can evaluate:
-      there is no variable of integration. To bring the parameter <m>t</m>
-      into the picture, we divide and multiply by
-      <m>\Delta t_k=t_k-t_{k-1}</m>:
-
-    <me>
-      S \approx \sum_{k=1}^{n}\Delta s_k
-        = \sum_{k=1}^{n}
-          \sqrt{\left(\frac{\Delta x_k}{\Delta t_k}\right)^{2}
-              + \left(\frac{\Delta y_k}{\Delta t_k}\right)^{2}}\;
-          \Delta t_k.
-    </me>
-    </p>
-
-    <p>
-      We then take <m>\lim\limits_{n\to\infty}</m> to find the exact arc
-      length. Each difference quotient turns into a derivative, and the
-      sum turns into an integral over time:
-
-    <md>
-      <mrow>
-        S \amp = \lim_{n\to\infty}\sum_{k=1}^{n}
-               \sqrt{\left(\frac{\Delta x_k}{\Delta t_k}\right)^{2}
-                   + \left(\frac{\Delta y_k}{\Delta t_k}\right)^{2}}\;
-               \Delta t_k
-      </mrow>
-      <mrow>
-        \amp = \int_{t=a}^{t=b}
-               \sqrt{\left(\frac{dx}{dt}\right)^{2}
-                   + \left(\frac{dy}{dt}\right)^{2}}\,dt
-             = \int_{t=a}^{t=b}
-               \left\lVert\mathbf{v}(t)\right\rVert\,dt,
-      </mrow>
-    </md>
-    </p>
-
-    <p>
-      where in the last step we recognized the square root as the length of
-      the velocity vector, that is, as the object's speed.
-    </p>
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,16);
+\draw[gray!35] (0,12.5) -- (15,12.5);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,15.7) {$S \approx$ sum of the chords:};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.2) {the limit $n \to \infty$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {divide and multiply by $\Delta t_k$, then take the limit again:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {the square root is:};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in four rows, for the chord sum approximating the arc length, for its limit, for the version with each term divided and multiplied by the time step and its limit as an integral, and for identifying the square root as the speed.</shortdescription>
+      </image>
+    </sidebyside>
 
     <assemblage xml:id="assemblage-arc-length-2d-results">
       <title>Results</title>
@@ -396,41 +358,35 @@
         length <m>\dfrac{\pi}{2}</m>. The point of this example is to see
         the formula reproduce it.)
       </p>
-    </statement>
+    <p>
+      <em>Solution.</em>
+      (Parametrize the quarter circle as in
+      <xref ref="eq-unit-circle-param"/>, restricting <m>t</m> to the first
+      quadrant. Differentiate to get <m>\mathbf{v}(t)</m> and its length;
+      something pleasant happens to the speed. Then apply
+      <xref ref="eq-arc-length-2d"/>. Say what the arc length swept out up
+      to time <m>t</m> is, and compare with
+      <xref ref="fig-quarter-circle-video"/> and
+      <xref ref="fig-quarter-circle-tikz"/>.)
+    </p>
 
-    <solution>
-      <p>
-        We can parametrize the quarter circle as
-        <me>\mathbf{r}(t)=\left\langle\cos t,\ \sin t\right\rangle,
-            \qquad 0\le t\le\frac{\pi}{2}.</me>
-        Differentiating, the velocity vector and its length are
-
-      <md>
-        <mrow>\mathbf{v}(t) \amp
-              = \left\langle-\sin t,\ \cos t\right\rangle,</mrow>
-        <mrow>\left\lVert\mathbf{v}(t)\right\rVert \amp
-              = \sqrt{\sin^2 t+\cos^2 t}=1.</mrow>
-      </md>
-      </p>
-      <p>
-        The speed is constant and equal to <m>1</m>, so the arc length is
-        simply the elapsed time:
-
-      <me>
-        S = \int_C ds
-          = \int_0^{\pi/2}\left\lVert\mathbf{v}(t)\right\rVert\,dt
-          = \int_0^{\pi/2} 1\,dt = \frac{\pi}{2},
-      </me>
-      </p>
-      <p>
-        as expected. Notice a useful by-product: because the speed is
-        <m>1</m>, the arc length swept out up to time <m>t</m> is
-        <m>s(t)=t</m> exactly. The motion is shown in
-        <xref ref="fig-quarter-circle-video"/>, the position and velocity
-        vectors in <xref ref="fig-quarter-circle-prefigure"/>, and a snapshot
-        of the partially swept arc in <xref ref="fig-quarter-circle-tikz"/>.
-      </p>
-
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,5.5) -- (15,5.5);
+\draw[gray!35] (0,2.5) -- (15,2.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$\mathbf{r}(t) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$\mathbf{v}(t) =$ \quad and \quad $\lVert\mathbf{v}(t)\rVert =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.2) {$S =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.2) {arc length swept out up to time $t$:};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in four rows, for the parametrization of the quarter circle, for the velocity vector and the speed, for the arc-length integral, and for the arc length swept out up to time t.</shortdescription>
+      </image>
+    </sidebyside>
       <figure xml:id="fig-quarter-circle-video">
         <caption>
           The point
@@ -439,7 +395,7 @@
           to <m>\pi/2</m>; the accumulated arc length <m>s(t)=t</m> reaches
           <m>\pi/2\approx 1.5708</m>.
         </caption>
-        <video xml:id="video-quarter-circle" width="80%"
+        <video preview="play-button.png" xml:id="video-quarter-circle" width="80%"
                source="videos/quarter_circle_arclength_1080p.mp4"/>
       </figure>
 
@@ -579,7 +535,7 @@
           </latex-image>
         </image>
       </figure>
-    </solution>
+    </statement>
   </example>
 
   <!-- ================================================================= -->
@@ -662,104 +618,43 @@
           <p>Calculate the distance travelled by the paraglider.</p>
         </li>
       </ol>
-    </statement>
+    <p>
+      <em>Solution.</em>
+      (In <alert>A</alert>, set the <m>z</m>-coordinate to zero and solve
+      for <m>t</m>. In <alert>B</alert>, differentiate each component
+      <mdash/> the first two need the product rule <mdash/> and then
+      simplify <m>\left\lVert\mathbf{v}(t)\right\rVert</m> all the way: the
+      cross terms cancel, the sines and cosines combine, and what is under
+      the root is a perfect square. In <alert>C</alert>, apply
+      <xref ref="eq-arc-length-3d"/> over the flight time you found in
+      <alert>A</alert>. Then compare with <xref ref="fig-paraglider-video"/>
+      and <xref ref="fig-paraglider-tikz"/>.)
+    </p>
 
-    <solution>
-      <p>
-        <term>Part A.</term> The paraglider reaches the ground when the
-        <m>z</m>-coordinate vanishes:
-        <md>
-          <mrow>
-            9\sqrt{8}-\frac{\sqrt{8}}{3}\,t^{3/2} \amp = 0
-          </mrow>
-          <mrow>
-            \Longrightarrow\quad t^{3/2} \amp = 27
-          </mrow>
-          <mrow>
-            \Longrightarrow\quad t \amp = 27^{2/3}=9.
-          </mrow>
-        </md>
-        So it takes <m>9</m> units of time to land.
-      </p>
-
-      <p>
-        <term>Part B.</term> We differentiate each component. The first two
-        require the product rule, and for the third,
-        <m>\deriv{}{t}\left(-\frac{\sqrt{8}}{3}t^{3/2}\right)
-           =-\frac{\sqrt{8}}{3}\cdot\frac{3}{2}\,t^{1/2}
-           =-\frac{\sqrt{8}}{2}\,t^{1/2}=-\sqrt{2}\,t^{1/2}</m>. Hence
-
-      <md>
-        <mrow>
-          \mathbf{v}(t) \amp = \frac{d\mathbf{r}(t)}{dt}
-        </mrow>
-        <mrow>
-          \amp = \left\langle \cos t-t\sin t,\ \sin t+t\cos t,\
-                                -\sqrt{2}\,t^{1/2}\right\rangle.
-        </mrow>
-      </md>
-      </p>
-      <p>
-        Its length simplifies neatly: the cross terms
-        <m>\pm 2t\sin t\cos t</m> cancel, the squared sines and cosines
-        combine, and the last component contributes
-        <m>(-\sqrt{2}\,t^{1/2})^2=2t</m>:
-
-      <md>
-        <mrow>
-          \left\lVert\mathbf{v}(t)\right\rVert \amp
-            = \sqrt{(\cos t-t\sin t)^2+(\sin t+t\cos t)^2+2t}
-        </mrow>
-        <mrow>
-          \amp = \sqrt{\left(\cos^2 t+\sin^2 t\right)
-                     + t^2\left(\sin^2 t+\cos^2 t\right) + 2t}
-        </mrow>
-        <mrow>
-          \amp = \sqrt{t^2+2t+1}=\sqrt{(t+1)^2}=t+1,
-        </mrow>
-      </md>
-      </p>
-      <p>
-        where the last equality uses <m>t+1&gt;0</m>. So the paraglider's
-        speed grows linearly: it starts at <m>1</m> and reaches <m>10</m> at
-        touchdown.
-      </p>
-
-      <p>
-        <term>Part C.</term> The distance travelled is the arc length
-        <xref ref="eq-arc-length-3d"/> of the
-        path, that is, speed integrated over the <m>9</m> units of flight
-        time:
-
-      <md>
-        <mrow>
-          S \amp = \int_0^{9}\left\lVert\mathbf{v}(t)\right\rVert\,dt
-               = \int_0^{9}(t+1)\,dt
-        </mrow>
-        <mrow>
-          \amp = \left[\frac{t^2}{2}+t\right]_0^{9}
-               = \frac{81}{2}+9=49.5.
-        </mrow>
-      </md>
-      </p>
-      <p>
-        The descending spiral, together with its endpoints
-        <m>\left\langle 0,0,9\sqrt{8}\right\rangle</m> and
-        <m>\left\langle 9\cos 9,\,9\sin 9,\,0\right\rangle</m>, is animated
-        in <xref ref="fig-paraglider-video"/> and shown in
-        <xref ref="fig-paraglider-tikz"/>.
-      </p>
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,18);
+\draw[gray!35] (0,14.5) -- (15,14.5);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,17.7) {A. time to reach the ground:};
+\node[anchor=north west, font=\small\itshape] at (0.35,14.2) {B. $\mathbf{v}(t) =$ \quad and \quad $\lVert\mathbf{v}(t)\rVert =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {C. $S =$};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in three labelled rows, for the landing time, for the velocity vector and the simplified speed, and for the arc-length integral giving the distance travelled.</shortdescription>
+      </image>
+    </sidebyside>
 
       <figure xml:id="fig-paraglider-video">
         <caption>
           The paraglider spirals down from
-          <m>\left\langle 0,0,9\sqrt{8}\right\rangle</m> to
-          <m>\left\langle 9\cos 9,\,9\sin 9,\,0\right\rangle</m>. Because
-          the speed is
-          <m>\left\lVert\mathbf{v}(t)\right\rVert=t+1</m>, the total
-          distance travelled is <m>S=49.5</m>.
+          <m>\left\langle 0,0,9\sqrt{8}\right\rangle</m> to the ground. Use
+          it to check the landing time and the distance travelled that you
+          found.
         </caption>
-        <video xml:id="video-paraglider" width="85%"
+        <video preview="play-button.png" xml:id="video-paraglider" width="85%"
                source="videos/paraglider_arclength_1080p.mp4"/>
       </figure>
 
@@ -815,7 +710,7 @@
           </latex-image>
         </image>
       </figure>
-    </solution>
+    </statement>
   </example>
 
   <!-- ================================================================= -->
@@ -917,43 +812,35 @@
           <em>Suggestion.</em> Use <m>y</m> itself as the parameter, and say
           why that is smarter than using <m>x</m>.
         </p>
-      </statement>
-
-      <solution>
         <p>
-          A point lies on <m>C</m> exactly when it satisfies both equations at
-          once. Substituting <m>z = x+1</m> from the plane into the equation of
-          the cone eliminates <m>z</m>:
-
-        <md>
-          <mrow>
-            (x+1)^2 \amp = x^2 + y^2
-          </mrow>
-          <mrow>
-            \Longrightarrow\quad x^2 + 2x + 1 \amp = x^2 + y^2
-          </mrow>
-          <mrow>
-            \Longrightarrow\quad \amp \boxed{\,y^2 = 2x+1\,} .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          So the shadow of <m>C</m> in the <m>xy</m>-plane is the parabola
-          <m>y^2 = 2x+1</m>, that is, <m>x = \frac{y^2-1}{2}</m>
-          (<xref ref="fig-cone-plane-shadow"/>). Solving for <m>x</m> rather
-          than for <m>y</m> is the key move: <m>x</m> is a
-          <em>single-valued</em> function of <m>y</m>, so taking <m>y = t</m>
-          as the parameter captures the whole curve at once, whereas
-          parametrizing by <m>x</m> would force the two branches
-          <m>y = \pm\sqrt{2x+1}</m> and split the problem in half. Since
-          <m>z = x+1</m>,
-
-        <men xml:id="eq-cone-plane-param">
-          \mathbf{r}(t) = \left\langle \frac{t^2-1}{2},\ \ t,\ \
-          \frac{t^2+1}{2} \right\rangle , \qquad t \in \R .
-        </men>
+          <em>Solution.</em>
+          (A point lies on <m>C</m> exactly when it satisfies both equations
+          at once: substitute the plane into the cone to eliminate <m>z</m>.
+          What is left is the shadow of <m>C</m> in the <m>xy</m>-plane,
+          shown in <xref ref="fig-cone-plane-shadow"/>; solve it for
+          <m>x</m>, take <m>y = t</m>, and say why parametrizing by <m>x</m>
+          instead would split the curve in two. Recover <m>z</m> from the
+          plane. Then check <m>\mathbf{r}(t)</m> on <m>S_1</m> and on
+          <m>S_2</m> separately, including the sign of <m>z</m>.)
         </p>
 
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,11) -- (15,11);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {eliminate $z$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {why $y = t$ rather than $x = t$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$\mathbf{r}(t) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {check on $S_1$ (with the sign of $z$), and on $S_2$:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in four rows, for eliminating z between the two surfaces, for the reason to use y as the parameter, for the vector parametrization, and for the checks on the cone and on the plane.</shortdescription>
+          </image>
+        </sidebyside>
         <figure xml:id="fig-cone-plane-shadow">
           <caption>
             The shadow of <m>C</m> in the <m>xy</m>-plane is the parabola
@@ -1018,28 +905,7 @@
             </prefigure>
           </image>
         </figure>
-
-        <p>
-          <em>Check on <m>S_1</m>:</em>
-
-        <md>
-          <mrow>
-            x^2 + y^2 \amp = \frac{t^4 - 2t^2 + 1}{4} + t^2
-                          = \frac{t^4 + 2t^2 + 1}{4}
-          </mrow>
-          <mrow>
-            \amp = \left( \frac{t^2+1}{2} \right)^{2} = z^2 ,
-          </mrow>
-        </md>
-        </p>
-        <p>
-          and <m>z = \frac{t^2+1}{2} \gt 0</m> for all <m>t</m>, so the entire
-          curve lies on the upper nappe <m>z \ge 0</m>.
-          <em>Check on <m>S_2</m>:</em>
-          <m>z - x = \frac{t^2+1}{2} - \frac{t^2-1}{2} = 1</m>, so
-          <m>z = x+1</m>.
-        </p>
-      </solution>
+      </statement>
     </task>
 
     <!-- ............................................................... -->
@@ -1053,150 +919,42 @@
           it <em>exactly</em>. Then give a decimal approximation to four
           places.
         </p>
+        <p>
+          <em>Solution.</em>
+          (Find the parameter values of <m>P</m> and <m>Q</m> from your
+          parametrization in <xref ref="task-cone-plane-parametrize"/>, then
+          differentiate it to get <m>\mathbf{v}(t)</m> and the speed. The
+          integrand is even, so integrate over half the interval and double.
+          Substitute <m>u = \sqrt{2}\,t</m> to bring the integrand to the
+          form <m>\sqrt{1+u^2}</m>; evaluate <m>\int\sqrt{1+u^2}\,du</m> by
+          parts against <m>1</m> <mdash/> the integral reproduces itself, so
+          solve for it, and use <m>\int \frac{du}{\sqrt{1+u^2}} = \sinh^{-1}u
+          = \ln\!\left(u + \sqrt{1+u^2}\right)</m>. Record the antiderivative:
+          you will need it again in the next task. Finish with a sanity
+          check against the straight-line distance from <m>P</m> to
+          <m>Q</m>.)
+        </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,20);
+\draw[gray!35] (0,17) -- (15,17);
+\draw[gray!35] (0,13.5) -- (15,13.5);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,2.5) -- (15,2.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,19.7) {$t$ at $P$ and at $Q$; \quad $\mathbf{v}(t) =$ \quad $\lVert\mathbf{v}(t)\rVert =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,16.7) {$S = \displaystyle\int \cdots$, after the substitution $u = \sqrt{2}\,t$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.2) {$\displaystyle\int \sqrt{1+u^2}\,du =$ \quad (by parts; solve for the integral)};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {apply the limits: $S =$ \quad exactly, and to four decimal places};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.2) {sanity check:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in five rows, for the parameter values of the endpoints with the velocity and speed, for the arc-length integral after the substitution, for the antiderivative of the square root of one plus u squared found by parts, for the exact and decimal values of the length, and for the sanity check.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-
-      <answer>
-        <p>
-          <md>
-            <mrow>
-              S \amp = \sqrt{3} + \frac{\sqrt{2}}{2}
-                       \ln\!\left( \sqrt{2} + \sqrt{3} \right)
-            </mrow>
-            <mrow>
-              \amp = \sqrt{3}
-                     + \frac{1}{\sqrt{2}}\sinh^{-1}\!\left(\sqrt{2}\right)
-                   \approx 2.5425 .
-            </mrow>
-          </md>
-        </p>
-      </answer>
-
-      <solution>
-        <p>
-          First locate the endpoints: <m>x = 0</m> means
-          <m>\frac{t^2-1}{2} = 0</m>, so <m>t = \pm 1</m>, giving
-          <m>\mathbf{r}(-1) = (0,-1,1) = P</m> and
-          <m>\mathbf{r}(1) = (0,1,1) = Q</m>. Differentiating the
-          parametrization <xref ref="eq-cone-plane-param"/> componentwise
-          gives the velocity vector
-
-        <md>
-          <mrow>
-            \mathbf{v}(t) \amp = \left\langle t,\, 1,\, t \right\rangle ,
-          </mrow>
-          <mrow>
-            \left\lVert\mathbf{v}(t)\right\rVert \amp
-              = \sqrt{t^2 + 1 + t^2} = \sqrt{1 + 2t^2} .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          Hence, using the evenness of the integrand,
-
-        <md>
-          <mrow>
-            S \amp = \int_{-1}^{1}
-                       \left\lVert\mathbf{v}(t)\right\rVert \, dt
-                   = \int_{-1}^{1} \sqrt{1+2t^2} \, dt
-          </mrow>
-          <mrow>
-            \amp = 2\int_{0}^{1} \sqrt{1+2t^2} \, dt .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          The integrand is not quite of the form <m>\sqrt{a^2+u^2}</m>, so
-          first substitute <m>u = \sqrt{2}\,t</m>, <m>du = \sqrt{2}\,dt</m>,
-          which sends <m>t : 0 \to 1</m> to <m>u : 0 \to \sqrt{2}</m>:
-
-        <md>
-          <mrow>
-            S \amp = \frac{2}{\sqrt{2}}
-                     \int_{0}^{\sqrt{2}} \sqrt{1+u^2} \, du
-          </mrow>
-          <mrow>
-            \amp = \sqrt{2} \int_{0}^{\sqrt{2}} \sqrt{1+u^2} \, du .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          Now evaluate <m>I = \int \sqrt{1+u^2}\,du</m>. Integrating by parts
-          against <m>1</m> reproduces the original integral, which lets us
-          solve for it: with <m>u^2 = (1+u^2) - 1</m> in the numerator,
-
-        <md>
-          <mrow>
-            I \amp = u\sqrt{1+u^2}
-                     - \int \frac{u^2}{\sqrt{1+u^2}} \, du
-          </mrow>
-          <mrow>
-            \amp = u\sqrt{1+u^2}
-                   - \int \frac{(1+u^2) - 1}{\sqrt{1+u^2}} \, du
-          </mrow>
-          <mrow>
-            \amp = u\sqrt{1+u^2} - I
-                   + \int \frac{du}{\sqrt{1+u^2}} .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          The last integral is <m>\sinh^{-1} u</m>, so
-          <m>2I = u\sqrt{1+u^2} + \sinh^{-1} u</m>, that is,<fn>
-          The inverse hyperbolic sine is a logarithm in disguise. Setting
-          <m>w = \sinh y = \frac{e^{y} - e^{-y}}{2}</m> and multiplying
-          through by <m>2e^{y}</m> gives
-          <m>\left(e^{y}\right)^2 - 2we^{y} - 1 = 0</m>, a quadratic in
-          <m>e^{y}</m>. The quadratic formula gives
-          <m>e^{y} = w \pm \sqrt{w^2+1}</m>, and only the <m>+</m> sign keeps
-          <m>e^{y}</m> positive, so
-          <m>\sinh^{-1} w = y = \ln\!\left(w + \sqrt{1+w^2}\right)</m>.
-          </fn>
-
-        <md>
-          <mrow xml:id="eq-sqrt-antiderivative" number="yes">
-            \int \sqrt{1+u^2} \, du \amp = \frac{u}{2}\sqrt{1+u^2}
-          </mrow>
-          <mrow>
-            \amp \quad + \frac{1}{2}
-                   \ln\!\left( u + \sqrt{1+u^2} \right) + C .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          The substitution <m>u = \sinh w</m> gives the same antiderivative:
-          it turns the integral into <m>\int \cosh^2 w \, dw</m>. The
-          trigonometric substitution <m>u = \tan\theta</m> works too, but it
-          leads to <m>\int \sec^3\theta \, d\theta</m>, which needs the same
-          solve-for-<m>I</m> trick anyway.
-        </p>
-        <p>
-          Finally apply the limits. At <m>u = \sqrt{2}</m> we have
-          <m>\sqrt{1+u^2} = \sqrt{3}</m>, and everything vanishes at
-          <m>u = 0</m>:
-
-        <md>
-          <mrow>
-            S \amp = \sqrt{2}\left[ \frac{u}{2}\sqrt{1+u^2}
-                     + \frac{1}{2}\ln\!\left( u + \sqrt{1+u^2} \right)
-                     \right]_{0}^{\sqrt{2}}
-          </mrow>
-          <mrow>
-            \amp = \sqrt{2}\left[ \frac{\sqrt{2}}{2}\sqrt{3}
-                   + \frac{1}{2}\ln\!\left( \sqrt{2} + \sqrt{3} \right)
-                   \right]
-          </mrow>
-          <mrow>
-            \amp = \sqrt{3} + \frac{\sqrt{2}}{2}
-                   \ln\!\left( \sqrt{2} + \sqrt{3} \right)
-                 \approx 2.5425 .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          Sanity check: the straight-line distance from <m>P</m> to <m>Q</m> is
-          <m>2</m>, and <m>2.5425 \gt 2</m>, as an arc must be.
-        </p>
-      </solution>
     </task>
 
     <!-- ............................................................... -->
@@ -1209,76 +967,37 @@
           the exact length of <m>C</m> from <m>V</m> to the point
           <m>\left(\frac{3}{2},\, 2,\, \frac{5}{2}\right)</m>.
         </p>
+        <p>
+          <em>Solution.</em>
+          (Which value of <m>t</m> gives <m>V</m>? Start the integral
+          there: <m>s(t) = \int_{\,\cdot}^{\,t}
+          \left\lVert\mathbf{v}(\tau)\right\rVert\,d\tau</m>, evaluated
+          with the antiderivative from
+          <xref ref="task-cone-plane-arc-length"/>. Check that
+          <m>s'(t) = \left\lVert\mathbf{v}(t)\right\rVert</m>. Then find the
+          <m>t</m> of the given point and evaluate <m>s</m> there; the
+          logarithm simplifies, because <m>3 + 2\sqrt{2}</m> is a perfect
+          square.)
+        </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,12) -- (15,12);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {$V = \mathbf{r}(\;\;)$, so $s(t) = $};
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$s(t)$ evaluated:};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {check $s'(t)$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$t$ at the given point, and $s$ there:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in four rows, for the parameter value of the vertex and the arc-length integral from it, for the evaluated arc-length function, for the derivative check, and for the parameter value of the given point with the length up to it.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-
-      <answer>
-        <p>
-          <md>
-            s(2) = 3 + \frac{\sqrt{2}}{2}\ln\!\left( 1 + \sqrt{2} \right)
-                 \approx 3.6232 .
-          </md>
-        </p>
-      </answer>
-
-      <solution>
-        <p>
-          The vertex <m>V</m> is <m>\mathbf{r}(0)</m> in
-          <xref ref="eq-cone-plane-param"/>, so measuring arc length
-          from <m>V</m> means starting the integral at <m>0</m> and
-          applying the antiderivative <xref ref="eq-sqrt-antiderivative"/>:
-
-        <md>
-          <mrow>
-            s(t) \amp = \int_{0}^{t}
-                          \left\lVert\mathbf{v}(\tau)\right\rVert \, d\tau
-                      = \int_{0}^{t} \sqrt{1 + 2\tau^2} \, d\tau
-          </mrow>
-          <mrow>
-            \amp = \frac{t}{2}\sqrt{1+2t^2}
-                   + \frac{\sqrt{2}}{4}
-                     \ln\!\left( \sqrt{2}\,t + \sqrt{1+2t^2} \right) ,
-          </mrow>
-        </md>
-        </p>
-        <p>
-          which is also written
-
-        <md>
-          s(t) = \frac{t}{2}\sqrt{1+2t^2}
-                 + \frac{\sqrt{2}}{4}\sinh^{-1}\!\left(\sqrt{2}\,t\right) .
-        </md>
-        </p>
-        <p>
-          One can verify
-          <m>s'(t) = \sqrt{1+2t^2}
-             = \left\lVert\mathbf{v}(t)\right\rVert</m>, as it must be. The
-          point <m>\left(\frac{3}{2}, 2, \frac{5}{2}\right)</m> corresponds to
-          <m>t = 2</m>, since <m>y = t = 2</m> and then
-          <m>\frac{t^2-1}{2} = \frac{3}{2}</m> and
-          <m>\frac{t^2+1}{2} = \frac{5}{2}</m>. Therefore
-
-        <md>
-          <mrow>
-            s(2) \amp = \frac{2}{2}\sqrt{1+8}
-                        + \frac{\sqrt{2}}{4}
-                          \ln\!\left( 2\sqrt{2} + 3 \right)
-          </mrow>
-          <mrow>
-            \amp = 3 + \frac{\sqrt{2}}{4}
-                       \ln\!\left( 3 + 2\sqrt{2} \right) .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          Because <m>3 + 2\sqrt{2} = \left( 1 + \sqrt{2} \right)^{2}</m>, the
-          logarithm halves:
-
-        <md>
-          s(2) = 3 + \frac{\sqrt{2}}{2}\ln\!\left( 1 + \sqrt{2} \right)
-               \approx 3.6232 .
-        </md>
-        </p>
-      </solution>
     </task>
   </activity>
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication>
+
+  <!-- ============================================================== -->
+  <!-- Publication file for the "print" (PDF) and "latex" targets     -->
+  <!-- only.  Keep it identical to publication.ptx apart from the      -->
+  <!-- comments; in particular the <version include="..."/> list below -->
+  <!-- must be kept in step with the one in publication.ptx, so that   -->
+  <!-- the solutions released on the web are also released in the PDF. -->
+  <!-- ============================================================== -->
+
+  <!-- the directories the CLI used implicitly before this file existed;
+       they are resolved relative to the source file, hence the ../ -->
+  <source>
+    <directories external="../assets" generated="../generated-assets"/>
+
+    <!-- ============================================================== -->
+    <!-- SHOWING AND HIDING SOLUTIONS                                   -->
+    <!--                                                                -->
+    <!-- Every <solution> that can be switched off carries a component  -->
+    <!-- name.  The list in <version include="..."> below is what gets  -->
+    <!-- built: a name in the list means those solutions appear, a name -->
+    <!-- left out means they are dropped.  The problems themselves are  -->
+    <!-- never affected - only the solutions come and go.               -->
+    <!--                                                                -->
+    <!--   hw1-solutions ... hw10-solutions                             -->
+    <!--       the worked solutions carried inside the auto-graded      -->
+    <!--       exercises of "Assignments and Review Problems", one name -->
+    <!--       per assignment.  After an assignment's due date, add its -->
+    <!--       name to the list and rebuild: the solutions then appear  -->
+    <!--       printed beneath each of that assignment's problems.      -->
+    <!--                                                                -->
+    <!--   review1-solutions ... review4-solutions                     -->
+    <!--       the worked solutions beneath the review problems in the  -->
+    <!--       same chapter, one name per review set                    -->
+    <!--                                                                -->
+    <!-- To hide EVERY solution, put a name that nothing uses:          -->
+    <!--     <version include="none"/>                                  -->
+    <!-- Do NOT delete the <version> line to hide things: with no list  -->
+    <!-- at all PreTeXt keeps every component, which shows them all.    -->
+    <!--                                                                -->
+    <!-- In the review sets the component name sits on the *contents*   -->
+    <!-- of each <solution>, not on the <solution> itself, so that the  -->
+    <!-- element survives even when its contents are switched off.  It  -->
+    <!-- has to: see the comment at the top of source/review1-practice  -->
+    <!-- .ptx.  Switching a name on and off here works exactly the same -->
+    <!-- way regardless.                                                -->
+    <!-- ============================================================== -->
+    <!-- <version include="hw1-solutions hw2-solutions hw3-solutions
+                      hw4-solutions hw5-solutions hw6-solutions
+                      hw7-solutions hw8-solutions hw9-solutions
+                      hw10-solutions review1-solutions review2-solutions
+                      review3-solutions review4-solutions"/> -->
+    <!-- <version include="hw1-solutions review1-solutions"/> -->
+    <version include="none"/>
+  </source>
+
+  <!-- Table of contents down to subsections, so the sidebar lists every
+       subsection of the book, not only chapters and sections. -->
+  <common>
+    <tableofcontents level="3"/>
+  </common>
+
+</publication>

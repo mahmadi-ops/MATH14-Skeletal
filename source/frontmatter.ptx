@@ -12,6 +12,7 @@
     <titlepage-items/>
   </titlepage>
 
+  <xi:include href="preface-skeletal.ptx" />
   <xi:include href="introduction.ptx" />
   <xi:include href="subsec-brain-map.ptx" />
 

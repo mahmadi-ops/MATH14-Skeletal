@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes: the preface that explains what a skeletal   -->
+<!-- section is and how to work with it.  Included from frontmatter.ptx  -->
+<!-- ahead of the original preface and the brain map.                    -->
+<preface xml:id="preface-skeletal" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>How to Use These Notes</title>
+
+  <p>
+    These are <term>skeletal</term> notes. Every section carries the
+    definitions, the statements of the theorems, and the outline of each
+    example and each proof <mdash /> but the details are left blank, and we
+    fill them in together in class. What you are holding is the scaffolding
+    of the course; the mathematics gets written into it as we do it.
+  </p>
+
+  <p>
+    Wherever a derivation, a solution, or a sketch belongs, there is a
+    blank box, and in front of it a short parenthetical instruction saying
+    what has to be done there <mdash /> which formula to reach for, what to
+    watch out for, what to conclude <mdash /> but not how to do it. The
+    figures, the animations, and the interactive applets that follow a box
+    are the check on what you wrote in it.
+  </p>
+
+  <p>
+    So bring them with you. Before each class, print the section we are
+    about to cover, or download it and annotate it on a tablet <mdash /> the
+    <q>PDF</q> button in the navigation bar gives you the whole book as one
+    file to print from. That file is rebuilt every time new notes are
+    posted, so download a fresh copy rather than printing from an old one.
+    Then complete the blanks in class as we work through the material. A
+    page you filled in yourself is worth more later than any set of notes
+    handed to you finished.
+  </p>
+
+  <p>
+    Everything else in this book is unchanged from the completed notes: the
+    assignments, with their answer boxes and the AI tutor, and the review
+    problem sets are all in
+    <xref ref="ch-problems" text="title"/>, exactly as described in the
+    preface that follows.
+  </p>
+</preface>

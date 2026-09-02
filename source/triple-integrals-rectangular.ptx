@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Triple Integrals in Rectangular Coordinates                 -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The meaning of the triple integral and the  -->
+<!-- two region types with their iterated integrals are kept; the three    -->
+<!-- worked examples, the location of the Concept Check solid, and the six -->
+<!-- Concept Check answers are replaced by blank workspace boxes, each     -->
+<!-- preceded by a one-line instruction.  File name and xml:ids are        -->
+<!-- unchanged.                                                            -->
+<!--                                                                       -->
+<!-- Figures: the two TikZ solids, the column video and every GeoGebra     -->
+<!-- applet are kept.  The projection of the tetrahedron and the three     -->
+<!-- projections of the wedge, which are the regions the student has to    -->
+<!-- find, become empty grids to sketch on (same ids, so the references    -->
+<!-- still resolve).                                                       -->
 <section xml:id="section-triple-integrals-rectangular" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Triple Integrals in Rectangular Coordinates</title>
 
@@ -79,51 +95,32 @@ Calculate the triple integral
 tetrahedron shown in <xref ref="fig-triple-tetra-tikz"/>, bounded by
 the coordinate planes and the plane <m>z = 1 - x - y</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Begin by describing the projection <m>D</m> of the tetrahedron into
+the <m>xy</m>-plane; sketch it on
+<xref ref="fig-triple-tetra-base-prefigure"/>. Then describe <m>E</m>
+in the form of Case I, with <m>z</m> running from the floor to the
+plane, and evaluate the iterated integral from the inside out.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,8) -- (15,8);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$D = \{(x,y) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {$E = \{(x,y,z) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\displaystyle\iiint_E z\,dV = \int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the description of the projection, for the description of the solid, and for the iterated integral and its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-Let us begin by describing the projection <m>D</m> (shown in
-<xref ref="fig-triple-tetra-base-prefigure"/>) and the region
-<m>E</m>:
-</p>
-
-<md>
-<mrow>
-D \amp= \{(x,y) : 0 \le x \le 1,\ 0 \le y \le -x+1\},
-</mrow>
-<mrow>
-E \amp= \{(x,y,z) : 0 \le x \le 1,\ 0 \le y \le -x+1,\
-0 \le z \le 1-x-y\}.
-</mrow>
-</md>
-
-<p>
-We then calculate the triple integral as follows:
-</p>
-
-<md>
-<mrow>
-\iiint_E z\,dV
-\amp= \int_0^1\!\!\int_0^{1-x}\!\!\int_0^{1-x-y} z\,dz\,dy\,dx
-= \int_0^1\!\!\int_0^{1-x}
-\left[\frac{z^2}{2}\right]_{z=0}^{z=1-x-y} dy\,dx
-</mrow>
-<mrow>
-\amp= \frac12\int_0^1\!\!\int_0^{1-x}(1-x-y)^2\,dy\,dx
-</mrow>
-<mrow>
-\amp= \frac12\int_0^1
-\left[-\frac{(1-x-y)^3}{3}\right]_{y=0}^{y=1-x} dx
-</mrow>
-<mrow>
-\amp= \frac16\int_0^1 (1-x)^3\,dx
-= \frac16\left[-\frac{(1-x)^4}{4}\right]_0^1
-= \frac{1}{24}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-triple-tetra-tikz">
 <caption>
@@ -199,51 +196,22 @@ The base triangle D in the x y plane is shaded.
 
 <figure xml:id="fig-triple-tetra-base-prefigure">
 <caption>
-The projection <m>D</m> of the tetrahedron into the
-<m>xy</m>-plane: the triangle <m>0 \le x \le 1</m>,
-<m>0 \le y \le 1 - x</m>. A vertical arrow at a fixed <m>(x,y)</m> in
-<m>D</m> corresponds to the inner <m>z</m>-integration from
-<m>z = 0</m> up to <m>z = 1-x-y</m>.
+Sketch the projection <m>D</m> of the tetrahedron into the
+<m>xy</m>-plane. At a fixed <m>(x,y)</m> in <m>D</m>, the inner
+<m>z</m>-integration runs up a vertical arrow from the floor to the
+plane.
 </caption>
 <image width="50%">
-<shortdescription>
-The triangular projection D with legs on the coordinate axes.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-triple-tetra-base">
-<diagram dimensions="(320,290)" margins="10">
-<coordinates bbox="(-0.3,-0.3,1.5,1.35)">
-<axes at="tt-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-<polygon at="tt-D" fill="#fbe3d0" stroke="none" closed="yes"
-    points="((0,0),(1,0),(0,1))"/>
-<line at="tt-hyp" endpoints="((1,0),(0,1))" stroke="#0072B2"
-    thickness="3"/>
-<line at="tt-leg1" endpoints="((0,0),(1,0))" stroke="#555555"
-    thickness="2"/>
-<line at="tt-leg2" endpoints="((0,0),(0,1))" stroke="#555555"
-    thickness="2"/>
-<point at="tt-1" p="(1,0)" fill="black" alignment="s">
-<m>1</m>
-</point>
-<point at="tt-1y" p="(0,1)" fill="black" alignment="w">
-<m>1</m>
-</point>
-<label at="tt-D-label" anchor="(0.28,0.28)" alignment="c">
-<m>D</m>
-</label>
-<label at="tt-hyp-label" anchor="(0.62,0.62)" alignment="ne"
-    color="#0072B2"><m>y = 1 - x</m></label>
-<label at="tt-O" anchor="(-0.06,-0.06)" alignment="sw">
-<m>0</m>
-</label>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="A right triangle in the x y plane with legs along the axes from zero to one and hypotenuse y equals one minus x, drawn in blue. The triangle is shaded tan and labeled D.">
-  <annotation ref="tt-D" text="The projection D of the tetrahedron: the triangle with vertices at the origin, one comma zero, and zero comma one."/>
-  <annotation ref="tt-hyp" text="The hypotenuse y equals one minus x."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
+<latex-image><![CDATA[
+\begin{tikzpicture}[scale=2.2, >=stealth]
+\draw[gray!30, very thin] (-0.25,-0.25) grid[step=0.25] (1.25,1.25);
+\draw[->, thick] (-0.25,0) -- (1.4,0) node[right] {$x$};
+\draw[->, thick] (0,-0.25) -- (0,1.4) node[above] {$y$};
+\foreach \x in {0.5,1} \draw (\x,-0.03) -- (\x,0.03) node[below=3pt, font=\scriptsize] {$\x$};
+\foreach \y in {0.5,1} \draw (-0.03,\y) -- (0.03,\y) node[left=3pt, font=\scriptsize] {$\y$};
+\end{tikzpicture}
+]]></latex-image>
+<shortdescription>Empty coordinate grid, marked at one half and one on each axis, for sketching the projection of the tetrahedron.</shortdescription>
 </image>
 </figure>
 
@@ -262,7 +230,7 @@ column runs from <m>z = 0</m> up to the surface <m>z = 1 - x^2</m>
 (the inner integral), and the column then sweeps across <m>D</m> (the
 two outer integrals).
 </caption>
-<video xml:id="video-triple-column"
+<video preview="play-button.png" xml:id="video-triple-column"
        source="videos/triple_column_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -321,111 +289,38 @@ coordinate planes. Then, evaluate two out of the three integrals.
 <em>Question:</em> How many more triple integrals can you think of for
 computing such a volume? (Three more; six in total.)
 </p>
+<p>
+<em>Solution.</em>
+(For each order, the two outer variables describe a projection of
+<m>R</m> into a coordinate plane, and the 3D figure gives the limits of
+the innermost variable. Sketch the three projections on
+<xref ref="fig-triple-projections-prefigure"/>. In <alert>A</alert>,
+project into the <m>xy</m>-plane. In <alert>B</alert>, project into the
+<m>xz</m>-plane; solve the cylinder for <m>x</m>. In <alert>C</alert>,
+project into the <m>yz</m>-plane: which surface does a ray in the
+<m>x</m>-direction reach first, the plane or the cylinder? The answer
+depends on where <m>(y,z)</m> is, so the projection splits along a
+curve, and two integrals are needed. Evaluate two of the three, and
+check that they agree.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,20);
+\draw[gray!35] (0,14) -- (15,14);
+\draw[gray!35] (0,8) -- (15,8);
+\node[anchor=north west, font=\small\itshape] at (0.35,19.7) {A. $\displaystyle\iiint_R dz\,dx\,dy = \int\!\!\int\!\!\int$};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {B. $\displaystyle\iiint_R dy\,dx\,dz = \int\!\!\int\!\!\int$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {C. $\displaystyle\iiint_R dx\,dy\,dz =$ \quad (the split: $R_1 =$ \quad $R_2 =$)};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three labelled rows, one for each order of integration, with room to set up and evaluate the iterated integrals.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<title>Part A</title>
-<p>
-For the order <m>dz\,dx\,dy</m>, we project into the
-<m>xy</m>-plane (the triangle on the left in
-<xref ref="fig-triple-projections-prefigure"/>):
-<m>0 \le y \le 1</m>, <m>0 \le x \le 1-y</m>, and the 3D figure gives
-<m>0 \le z \le 1 - x^2</m>. Hence
-</p>
-
-<md>
-<mrow>
-\int_{y=0}^{1}\!\!\int_{x=0}^{1-y}\!\!\int_{z=0}^{1-x^2}
-dz\,dx\,dy
-\amp= \int_0^1\!\!\int_0^{1-y}\left(1 - x^2\right)dx\,dy
-</mrow>
-<mrow>
-\amp= \int_0^1\left[x - \frac{x^3}{3}\right]_{x=0}^{x=1-y} dy
-</mrow>
-<mrow>
-\amp= \int_0^1\left[(1-y) - \frac{(1-y)^3}{3}\right]dy
-</mrow>
-<mrow>
-\amp= \left[y - \frac{y^2}{2} + \frac{(1-y)^4}{12}\right]_0^1
-</mrow>
-<mrow>
-\amp= \left(1 - \frac12\right) - \frac{1}{12} = \frac{5}{12}.
-</mrow>
-</md>
-</solution>
-
-<solution>
-<title>Part B</title>
-<p>
-For the order <m>dy\,dx\,dz</m>, we project into the
-<m>xz</m>-plane (the middle region in
-<xref ref="fig-triple-projections-prefigure"/>): <m>0 \le z \le 1</m>,
-<m>0 \le x \le \sqrt{1-z}</m>, and the 3D figure gives the limits of
-the last variable: <m>0 \le y \le 1-x</m>. Hence
-</p>
-
-<md>
-<mrow>
-\int_{z=0}^{1}\!\!\int_{x=0}^{\sqrt{1-z}}\!\!\int_{y=0}^{1-x}
-dy\,dx\,dz
-\amp= \int_0^1\!\!\int_0^{\sqrt{1-z}}(1-x)\,dx\,dz
-</mrow>
-<mrow>
-\amp= \int_0^1\left[x - \frac{x^2}{2}\right]_{x=0}^{x=\sqrt{1-z}} dz
-</mrow>
-<mrow>
-\amp= \int_0^1\left[(1-z)^{1/2} - \tfrac12(1-z)\right]dz
-</mrow>
-<mrow>
-\amp= \left[-\tfrac23(1-z)^{3/2}
-+ \tfrac14(1-z)^2\right]_0^1
-</mrow>
-<mrow>
-\amp= 0 - \left(-\frac23 + \frac14\right) = \frac{5}{12}.
-</mrow>
-</md>
-</solution>
-
-<solution>
-<title>Part C</title>
-<p>
-For the order <m>dx\,dy\,dz</m>, we project into the
-<m>yz</m>-plane (the region on the right in
-<xref ref="fig-triple-projections-prefigure"/>). This time the
-projection must be split by the curve <m>z = 1-(1-y)^2</m> into
-</p>
-
-<md>
-<mrow>
-R_1 \amp= \{(y,z) : 0 \le y \le 1,\ 0 \le z \le 1-(1-y)^2\},
-</mrow>
-<mrow>
-R_2 \amp= \{(y,z) : 0 \le y \le 1,\ 1-(1-y)^2 \le z \le 1\},
-</mrow>
-</md>
-
-<p>
-with <m>0 \le x \le 1-y</m> on <m>R_1</m> (the plane is reached
-first) and <m>0 \le x \le \sqrt{1-z}</m> on <m>R_2</m> (the cylinder
-is reached first). Hence
-</p>
-
-<md>
-<mrow>
-\iiint_R dx\,dy\,dz
-\amp= \int_{y=0}^{1}\!\!\int_{z=0}^{1-(1-y)^2}
-\!\!\int_{x=0}^{1-y} dx\,dz\,dy
-</mrow>
-<mrow>
-\amp\quad + \int_{y=0}^{1}\!\!\int_{z=1-(1-y)^2}^{1}
-\!\!\int_{x=0}^{\sqrt{1-z}} dx\,dz\,dy
-</mrow>
-<mrow>
-\amp= \frac14 + \frac16 = \frac{5}{12}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-triple-wedge-tikz">
 <caption>
@@ -518,108 +413,48 @@ one.
 
 <figure xml:id="fig-triple-projections-prefigure">
 <caption>
-The three projections of the solid <m>R</m>. Left: into the
+Sketch the three projections of the solid <m>R</m>. Left: into the
 <m>xy</m>-plane (order <m>dz\,dx\,dy</m>). Middle: into the
 <m>xz</m>-plane (order <m>dy\,dx\,dz</m>). Right: into the
-<m>yz</m>-plane (order <m>dx\,dy\,dz</m>), which the curve
-<m>z = 1-(1-y)^2</m> splits into <m>R_1</m> and <m>R_2</m>.
+<m>yz</m>-plane (order <m>dx\,dy\,dz</m>); mark the curve that splits it
+into <m>R_1</m> and <m>R_2</m>.
 </caption>
 <sidebyside widths="31% 31% 31%">
 <image>
-<shortdescription>
-The x y projection: a right triangle with hypotenuse y equals one minus x.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-proj-xy">
-<diagram dimensions="(210,200)" margins="10">
-<coordinates bbox="(-0.3,-0.3,1.45,1.35)">
-<axes at="pxy-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-<polygon at="pxy-D" fill="#fbe3d0" stroke="none" closed="yes"
-    points="((0,0),(1,0),(0,1))"/>
-<line at="pxy-hyp" endpoints="((1,0),(0,1))" stroke="#0072B2"
-    thickness="3"/>
-<label at="pxy-label" anchor="(0.6,0.6)" alignment="ne"
-    color="#0072B2"><m>y = 1-x</m></label>
-<point at="pxy-1" p="(1,0)" fill="black" alignment="s">
-<m>1</m>
-</point>
-<point at="pxy-1y" p="(0,1)" fill="black" alignment="w">
-<m>1</m>
-</point>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="The x y projection: a right triangle with legs from zero to one along both axes and hypotenuse y equals one minus x.">
-  <annotation ref="pxy-D" text="The triangular projection into the x y plane."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
+<latex-image><![CDATA[
+\begin{tikzpicture}[scale=2.2, >=stealth]
+\draw[gray!30, very thin] (-0.25,-0.25) grid[step=0.25] (1.25,1.25);
+\draw[->, thick] (-0.25,0) -- (1.4,0) node[right] {$x$};
+\draw[->, thick] (0,-0.25) -- (0,1.4) node[above] {$y$};
+\draw (1,-0.03) -- (1,0.03) node[below=3pt, font=\scriptsize] {$1$};
+\draw (-0.03,1) -- (0.03,1) node[left=3pt, font=\scriptsize] {$1$};
+\end{tikzpicture}
+]]></latex-image>
+<shortdescription>Empty x y grid for sketching the projection of the solid into the x y plane.</shortdescription>
 </image>
 <image>
-<shortdescription>
-The x z projection: the region under a parabola.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-proj-xz">
-<diagram dimensions="(210,200)" margins="10">
-<definition>par(t) = (t, 1 - t^2)</definition>
-<coordinates bbox="(-0.3,-0.3,1.45,1.35)">
-<axes at="pxz-axes" xlabel="x" ylabel="z" decorations="no" arrows="1"/>
-<polygon at="pxz-D" fill="#fbe3d0" stroke="none" closed="yes"
-    points="((0,0),(1,0),(0.995,0.00997),(0.98,0.0396),(0.95,0.0975),(0.9,0.19),(0.85,0.2775),(0.8,0.36),(0.75,0.4375),(0.7,0.51),(0.65,0.5775),(0.6,0.64),(0.55,0.6975),(0.5,0.75),(0.45,0.7975),(0.4,0.84),(0.35,0.8775),(0.3,0.91),(0.25,0.9375),(0.2,0.96),(0.15,0.9775),(0.1,0.99),(0.05,0.9975),(0,1))"/>
-<parametric-curve at="pxz-par" function="par" domain="(0,1)"
-    stroke="#0072B2" thickness="3"/>
-<label at="pxz-label" anchor="(0.68,0.72)" alignment="ne"
-    color="#0072B2"><m>z = 1-x^2</m></label>
-<point at="pxz-1" p="(1,0)" fill="black" alignment="s">
-<m>1</m>
-</point>
-<point at="pxz-1z" p="(0,1)" fill="black" alignment="w">
-<m>1</m>
-</point>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="The x z projection: the region under the parabola z equals one minus x squared in the first quadrant.">
-  <annotation ref="pxz-D" text="The projection into the x z plane, bounded above by the parabola."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
+<latex-image><![CDATA[
+\begin{tikzpicture}[scale=2.2, >=stealth]
+\draw[gray!30, very thin] (-0.25,-0.25) grid[step=0.25] (1.25,1.25);
+\draw[->, thick] (-0.25,0) -- (1.4,0) node[right] {$x$};
+\draw[->, thick] (0,-0.25) -- (0,1.4) node[above] {$z$};
+\draw (1,-0.03) -- (1,0.03) node[below=3pt, font=\scriptsize] {$1$};
+\draw (-0.03,1) -- (0.03,1) node[left=3pt, font=\scriptsize] {$1$};
+\end{tikzpicture}
+]]></latex-image>
+<shortdescription>Empty x z grid for sketching the projection of the solid into the x z plane.</shortdescription>
 </image>
 <image>
-<shortdescription>
-The y z projection: the unit square split into two regions by a curve.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-proj-yz">
-<diagram dimensions="(210,200)" margins="10">
-<definition>cur(t) = (t, 1 - (1-t)^2)</definition>
-<coordinates bbox="(-0.3,-0.3,1.45,1.35)">
-<axes at="pyz-axes" xlabel="y" ylabel="z" decorations="no" arrows="1"/>
-<rectangle at="pyz-D" lower-left="(0,0)" dimensions="(1,1)"
-    fill="#fbe3d0" stroke="#555555" thickness="1"/>
-<parametric-curve at="pyz-cur" function="cur" domain="(0,1)"
-    stroke="#0072B2" thickness="3"/>
-<label at="pyz-R1" anchor="(0.62,0.3)" alignment="c">
-<m>R_1</m>
-</label>
-<label at="pyz-R2" anchor="(0.28,0.82)" alignment="c">
-<m>R_2</m>
-</label>
-<label at="pyz-label" anchor="(0.98,0.55)" alignment="se"
-    color="#0072B2"><m>z = 1-(1-y)^2</m></label>
-<point at="pyz-1" p="(1,0)" fill="black" alignment="s">
-<m>1</m>
-</point>
-<point at="pyz-1z" p="(0,1)" fill="black" alignment="w">
-<m>1</m>
-</point>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="The y z projection: the unit square split by the curve z equals one minus the square of one minus y into a lower region R 1 and an upper region R 2.">
-  <annotation ref="pyz-D" text="The unit square projection into the y z plane."/>
-  <annotation ref="pyz-cur" text="The curve z equals one minus the square of one minus y, which separates R 1 from R 2 and forces the split into two integrals."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
+<latex-image><![CDATA[
+\begin{tikzpicture}[scale=2.2, >=stealth]
+\draw[gray!30, very thin] (-0.25,-0.25) grid[step=0.25] (1.25,1.25);
+\draw[->, thick] (-0.25,0) -- (1.4,0) node[right] {$y$};
+\draw[->, thick] (0,-0.25) -- (0,1.4) node[above] {$z$};
+\draw (1,-0.03) -- (1,0.03) node[below=3pt, font=\scriptsize] {$1$};
+\draw (-0.03,1) -- (0.03,1) node[left=3pt, font=\scriptsize] {$1$};
+\end{tikzpicture}
+]]></latex-image>
+<shortdescription>Empty y z grid for sketching the projection of the solid into the y z plane and the curve that splits it.</shortdescription>
 </image>
 </sidebyside>
 </figure>
@@ -661,34 +496,25 @@ Assume that the density (mass per unit volume) is given by
 <m>\rho(x,y,z) = x</m>. Evaluate the mass <m>M</m> of the solid
 <m>R</m> of <xref ref="fig-triple-wedge-tikz"/>.
 </p>
-</statement>
-</example>
-
-<solution>
 <p>
-Using the mass formula <xref ref="eq-mass-triple"/> with the same
-limits as in Part A of <xref ref="example-triple-order"/>:
+<em>Solution.</em>
+(Use the mass formula <xref ref="eq-mass-triple"/> with the same limits
+as in Part A of <xref ref="example-triple-order"/>.)
 </p>
 
-<md>
-<mrow>
-M \amp= \int_{y=0}^{1}\!\!\int_{x=0}^{1-y}\!\!\int_{z=0}^{1-x^2}
-x\,dz\,dx\,dy
-= \int_0^1\!\!\int_0^{1-y} x\left(1 - x^2\right)dx\,dy
-</mrow>
-<mrow>
-\amp= \int_0^1\left[\frac{x^2}{2}
-- \frac{x^4}{4}\right]_{x=0}^{x=1-y} dy
-= \int_0^1\left[\frac{(1-y)^2}{2}
-- \frac{(1-y)^4}{4}\right]dy
-</mrow>
-<mrow>
-\amp= \left[-\frac{(1-y)^3}{6}
-+ \frac{(1-y)^5}{20}\right]_0^1
-= \frac16 - \frac1{20} = \frac{7}{60}.
-</mrow>
-</md>
-</solution>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$M = \displaystyle\iiint_R x\,dV = \int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for setting up and evaluating the mass integral.</shortdescription>
+</image>
+</sidebyside>
+</statement>
+</example>
 
 </subsection>
 
@@ -706,13 +532,26 @@ integrand on the region, not to integrate.
 </p>
 
 <p>
-It is worth locating <m>E</m> first. The two surfaces meet where
-<m>x^2+y^2 = 1+\sqrt{1-x^2-y^2}</m>; writing <m>u = x^2+y^2</m> this is
-<m>u-1 = \sqrt{1-u}</m>, hence <m>u^2 = u</m> and <m>u = 1</m>. So
-<m>E</m> sits over the unit disk <m>x^2+y^2 \le 1</m>, and for each
-<m>(x,y)</m> there, <m>z</m> runs from <m>x^2+y^2</m> up to
-<m>1+\sqrt{1-x^2-y^2}</m>.
+It is worth locating <m>E</m> first. Find where the two surfaces meet
+(set the two expressions for <m>z</m> equal and write
+<m>u = x^2+y^2</m>), and describe <m>E</m>: over which region of the
+<m>xy</m>-plane does it sit, and between which surfaces does <m>z</m>
+run?
 </p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {the surfaces meet where:};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$E = \{(x,y,z) :$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for finding where the paraboloid and the sphere meet and one for the description of the solid.</shortdescription>
+</image>
+</sidebyside>
 
 <exercise xml:id="q-triple-sign-one">
 <title>The sign of an integral, without calculating</title>
@@ -735,26 +574,23 @@ region bounded by <m>z=x^2+y^2</m> and
 <p>
 <em>Hint</em>: begin by determining the limits of integration.
 </p>
+<p>
+(Compare the integrand with the upper surface of <m>E</m>: what sign
+does it have at every point of the solid, and where does it vanish?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {answer, and why:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for the sign of the integral and its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<term>B</term>, negative.
-</p>
-<p>
-The upper surface of <m>E</m> is <m>z = 1+\sqrt{1-x^2-y^2}</m>, so every
-point of <m>E</m> satisfies
-<m>z \le 1+\sqrt{1-x^2-y^2}</m>, that is
-</p>
-<me>
-z-\sqrt{1-x^2-y^2}-1 \le 0 .
-</me>
-<p>
-The integrand is exactly the (signed) vertical distance from a point of
-<m>E</m> up to the sphere, so it is never positive, and it vanishes only
-on the cap itself, a surface of zero volume. An integrand that is
-negative on the interior of the solid gives a negative integral.
-</p>
-</answer>
 </exercise>
 
 <exercise xml:id="q-triple-mass-density-one">
@@ -769,15 +605,22 @@ in <xref ref="fig-triple-paraboloid-sphere"/>?
 <li><p>Yes</p></li>
 <li><p>No</p></li>
 </ol>
-</statement>
-<answer>
 <p>
-<term>B</term>, no. Mass is never negative, so a mass density must
-satisfy <m>f \ge 0</m>. As we just saw, this <m>f</m> is negative
-throughout the interior of <m>E</m>. A region carrying it would have
-negative mass.
+(What sign must a mass density have?)
 </p>
-</answer>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {answer, and why:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for the answer and its justification.</shortdescription>
+</image>
+</sidebyside>
+</statement>
 </exercise>
 
 <exercise xml:id="q-triple-charge-density">
@@ -792,20 +635,23 @@ graphed in <xref ref="fig-triple-paraboloid-sphere"/>?
 <li><p>Yes</p></li>
 <li><p>No</p></li>
 </ol>
+<p>
+(What is different about charge? What would the integral of
+<xref ref="q-triple-sign-one"/> then mean?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {answer, and why:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for the answer and its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<term>A</term>, yes. Charge comes in both signs, so a charge density is
-free to be negative; there is nothing wrong with a body that is
-negatively charged everywhere. The triple integral of
-<xref ref="q-triple-sign-one"/> is then the total charge, and its
-negative sign says the body carries a net negative charge.
-</p>
-<p>
-This is the whole difference between the two questions: the mathematics
-is identical, and only the physical meaning of the sign changes.
-</p>
-</answer>
 </exercise>
 
 <exercise xml:id="q-triple-sign-two">
@@ -826,25 +672,23 @@ region bounded by <m>z=x^2+y^2</m> and
 <li><p>Negative</p></li>
 <li><p>Zero</p></li>
 </ol>
+<p>
+(Over which disk does <m>E</m> sit? Use that to bound <m>x^2+y^2</m>,
+and so the integrand, on all of <m>E</m>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {answer, and why:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for the sign of the integral and its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<term>A</term>, positive.
-</p>
-<p>
-The solid lies over the unit disk, so <m>x^2+y^2 \le 1</m> at every point
-of <m>E</m>, and therefore
-</p>
-<me>
-2-x^2-y^2 \ge 2-1 = 1 \gt 0 .
-</me>
-<p>
-The integrand is at least <m>1</m> on all of <m>E</m>, so the integral is
-positive<mdash/>in fact it is at least the volume of <m>E</m>. Note that
-no antiderivative was needed: only the projection of <m>E</m> onto the
-<m>xy</m>-plane.
-</p>
-</answer>
 </exercise>
 
 <exercise xml:id="q-triple-mass-density-two">
@@ -859,21 +703,23 @@ per unit volume) over the region <m>E</m>, which is graphed in
 <li><p>Yes</p></li>
 <li><p>No</p></li>
 </ol>
+<p>
+(Bound <m>f</m> on <m>E</m>. Would the same formula do on a larger
+region?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {answer, and why:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for the answer and its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<term>A</term>, yes. On <m>E</m> we have <m>1 \le 2-x^2-y^2 \le 2</m>, so
-<m>f</m> is positive there and can be read as a density: the solid is
-densest along its axis and lightest near the rim, where the two surfaces
-meet. Its mass would be the integral of
-<xref ref="q-triple-sign-two"/>.
-</p>
-<p>
-Beware of the phrase <q>over the region <m>E</m></q>. The same formula
-would not do on a larger region: outside the cylinder
-<m>x^2+y^2 = 2</m> it turns negative.
-</p>
-</answer>
 </exercise>
 
 <figure xml:id="fig-triple-paraboloid-sphere">
@@ -907,35 +753,28 @@ the two cylinders <m>y=x^2</m> and <m>y=\sqrt{x}</m> and the two planes
 <m>z=0</m> and <m>z=\frac13(x+y+1)</m>. See
 <xref ref="fig-triple-two-cylinders"/>.
 </p>
+<p>
+(The two cylinders are vertical walls standing on two curves of the
+<m>xy</m>-plane; where do the curves cross, and which is on top in
+between? That gives the shadow <m>D</m>. The floor and the ceiling give
+the limits of <m>z</m>. Set up the integral, and note what the
+innermost integration returns.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$D = \{(x,y) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$V = \int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the shadow of the solid and one for the triple integral with limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-The two cylinders are vertical walls standing on the curves <m>y=x^2</m>
-and <m>y=\sqrt{x}</m> of the <m>xy</m>-plane, and those curves cross at
-<m>x=0</m> and <m>x=1</m>. Between them <m>\sqrt{x} \ge x^2</m>, so the
-shadow of the solid is
-</p>
-<me>
-D = \left\{(x,y) : 0 \le x \le 1,\ x^2 \le y \le \sqrt{x}\right\} ,
-</me>
-<p>
-which is the region of <xref ref="fig-triple-two-cylinders"/> lying
-between the two walls. The floor is <m>z=0</m> and the ceiling is the
-plane, so
-</p>
-<me>
-V = \int_{0}^{1}\!\!\int_{x^2}^{\sqrt{x}}\!\!\int_{0}^{\frac13(x+y+1)}
-    dz\,dy\,dx .
-</me>
-<p>
-Carrying it out is quick, since the innermost integral just returns the
-height of the ceiling:
-</p>
-<me>
-V = \frac13\int_{0}^{1}\!\!\int_{x^2}^{\sqrt{x}} (x+y+1)\,dy\,dx
-  = \frac{19}{90} \approx 0.211 .
-</me>
-</answer>
 </exercise>
 
 <figure xml:id="fig-triple-two-cylinders">

@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Green's Theorem in the Plane                                 -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The definitions of divergence and curl, the -->
+<!-- two statements of Green's theorem, and the component test with the   -->
+<!-- curl determinant are kept; the flux and circulation computations     -->
+<!-- around the small rectangle, the proof of the tangential form, and the -->
+<!-- four worked examples are replaced by blank workspace boxes, each      -->
+<!-- preceded by a one-line instruction.  File name and xml:ids are        -->
+<!-- unchanged, so the assignments and the later sections still cite       -->
+<!-- eq-flux-density, eq-div-def, eq-curl-def, eq-green-normal,           -->
+<!-- eq-green-tangential and eq-component-test-3d.                        -->
+<!--                                                                       -->
+<!-- Figures: all kept (the two small rectangles, the four field plots,   -->
+<!-- the proof region, the unit circle, the tilted square and every        -->
+<!-- video); each is the check on the box above it.  Captions that stated  -->
+<!-- a value or a substitution have been trimmed.                          -->
 <section xml:id="section-greens-theorem" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Green's Theorem in the Plane</title>
 
@@ -114,33 +132,32 @@ A rectangle in a vector field with a differently colored outward arrow through e
 </figure>
 
 <p>
-Let us evaluate the flux through each side, assuming the field is
-nearly constant along each side:
+Evaluate the flux through each side, assuming the field is nearly
+constant along each side: on each side take the outward component of
+<m>\mathbf{F}</m> times the length of the side, with <m>\mathbf{F}</m>
+evaluated at the side's corner shown in the figure. Then add the four
+contributions, pair the parallel sides, and use the linear
+approximations
+<m>M(x+\Delta x, y) - M(x,y) \approx \frac{\partial M}{\partial x}\,\Delta x</m>
+and <m>N(x, y+\Delta y) - N(x,y) \approx \frac{\partial N}{\partial y}\,\Delta y</m>
+to write the net flow rate.
 </p>
 
-<md>
-<mrow>\text{Top:} \amp\quad
-\mathbf{F}(x, y+\Delta y) \cdot \mathbf{j}\, \Delta x
-= N(x, y+\Delta y)\, \Delta x</mrow>
-<mrow>\text{Bottom:} \amp\quad
-\mathbf{F}(x, y) \cdot (-\mathbf{j})\, \Delta x
-= -N(x, y)\, \Delta x</mrow>
-<mrow>\text{Right:} \amp\quad
-\mathbf{F}(x+\Delta x, y) \cdot \mathbf{i}\, \Delta y
-= M(x+\Delta x, y)\, \Delta y</mrow>
-<mrow>\text{Left:} \amp\quad
-\mathbf{F}(x, y) \cdot (-\mathbf{i})\, \Delta y
-= -M(x, y)\, \Delta y.</mrow>
-</md>
-
-<p>
-The net flow rate is approximately
-</p>
-
-<me>
-\left( \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}
-\right) \Delta x\, \Delta y.
-</me>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,11);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {Top: \qquad Bottom: \qquad Right: \qquad Left:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {top $+$ bottom $\approx$ \qquad\qquad right $+$ left $\approx$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {net flow rate $\approx$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the flux through each of the four sides, for the sums over the two pairs of parallel sides, and for the net flow rate out of the rectangle.</shortdescription>
+</image>
+</sidebyside>
 
 <p>
 Note that this is an approximation, since we are assuming the velocity
@@ -195,7 +212,7 @@ its area, converges to the divergence
 <m>\partial M/\partial x + \partial N/\partial y</m> as the rectangle
 shrinks.
 </caption>
-<video xml:id="video-divergence"
+<video preview="play-button.png" xml:id="video-divergence"
        source="videos/divergence_flux_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -224,56 +241,35 @@ physically.
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(Apply <xref ref="eq-div-def"/> to each field, and say what the sign
+of the result means for the gas at every point. The two fields are
+drawn in <xref ref="fig-div-fields"/>; does the picture agree?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {A. $\nabla\cdot\mathbf F =$ \qquad meaning:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {B. $\nabla\cdot\mathbf F =$ \qquad meaning:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two labelled rows, one for the divergence of each field with its physical meaning.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
 
-<solution xml:id="solution-divergence-fields">
-<p>
-<em>Part A.</em> Using <xref ref="eq-div-def"/>,
-</p>
-
-<me>
-\nabla \cdot \mathbf{F}
-= \left( \frac{\partial}{\partial x}\,\mathbf{i}
-+ \frac{\partial}{\partial y}\,\mathbf{j} \right)
-\cdot \left( 2x\,\mathbf{i} + 2y\,\mathbf{j} \right)
-= 2 + 2 = 4 \gt 0.
-</me>
-
-<p>
-Note that for every point on the <m>xy</m>-plane we have found that
-<m>\nabla \cdot \mathbf{F} \gt 0</m>, which means that the gas is
-expanding, since there is a positive flux density at every point
-<m>(x,y)</m>. The field is shown on the left in
-<xref ref="fig-div-fields"/>.
-</p>
-
-<p>
-<em>Part B.</em> Again by <xref ref="eq-div-def"/>,
-</p>
-
-<me>
-\nabla \cdot \mathbf{F}
-= \frac{\partial}{\partial x} \left( \frac{-y}{x^2+y^2} \right)
-+ \frac{\partial}{\partial y} \left( \frac{x}{x^2+y^2} \right)
-= \frac{2xy}{(x^2+y^2)^2} - \frac{2xy}{(x^2+y^2)^2} = 0.
-</me>
-
-<p>
-Note that for every point on the <m>xy</m>-plane we have found that
-<m>\nabla \cdot \mathbf{F} = 0</m>, which means that the gas is neither
-expanding nor compressing. This rotating field is shown on the right in
-<xref ref="fig-div-fields"/>.
-</p>
-</solution>
-
 <figure xml:id="fig-div-fields">
 <caption>
-Left: the field <m>2x\,\mathbf{i} + 2y\,\mathbf{j}</m> flows away from
-the origin; its divergence is <m>4</m> at every point (the gas
-expands). Right: the field <m>\dfrac{-y\,\mathbf{i} +
-x\,\mathbf{j}}{x^2+y^2}</m> circulates around the origin; its
-divergence is <m>0</m> (the gas neither expands nor compresses).
+Left: the field <m>2x\,\mathbf{i} + 2y\,\mathbf{j}</m>, which flows
+away from the origin. Right: the field <m>\dfrac{-y\,\mathbf{i} +
+x\,\mathbf{j}}{x^2+y^2}</m>, which circulates around the origin.
+Compare with the divergences you computed.
 </caption>
 <sidebyside widths="46% 46%" valign="middle">
 <image>
@@ -434,49 +430,29 @@ A rectangle in a vector field with differently colored arrows tracing a counterc
 </figure>
 
 <p>
-We begin by computing the flow rates along each edge, i.e. top, bottom,
-left, and right:
+Compute the flow rate along each edge, taking the component of
+<m>\mathbf{F}</m> in the direction of travel (counterclockwise) times
+the length of the edge, with <m>\mathbf{F}</m> evaluated at the corner
+shown in the figure. Sum the flows along the two pairs of parallel
+edges, using the same linear approximations as for the divergence, and
+divide by the area of the rectangle to get the circulation density.
 </p>
 
-<md>
-<mrow>\text{Top:} \amp\quad
-\mathbf{F}(x, y+\Delta y) \cdot (-\mathbf{i})\, \Delta x
-= -M(x, y+\Delta y)\, \Delta x</mrow>
-<mrow>\text{Bottom:} \amp\quad
-\mathbf{F}(x, y) \cdot \mathbf{i}\, \Delta x
-= M(x, y)\, \Delta x</mrow>
-<mrow>\text{Right:} \amp\quad
-\mathbf{F}(x+\Delta x, y) \cdot \mathbf{j}\, \Delta y
-= N(x+\Delta x, y)\, \Delta y</mrow>
-<mrow>\text{Left:} \amp\quad
-\mathbf{F}(x, y) \cdot (-\mathbf{j})\, \Delta y
-= -N(x, y)\, \Delta y.</mrow>
-</md>
-
-<p>
-Then we sum up the flow across the parallel edges:
-</p>
-
-<md>
-<mrow>\text{Top and bottom:} \amp\quad
--\big( M(x, y+\Delta y) - M(x,y) \big) \Delta x
-\approx -\left( \frac{\partial M}{\partial y}\, \Delta y \right)
-\Delta x</mrow>
-<mrow>\text{Right and left:} \amp\quad
-\big( N(x+\Delta x, y) - N(x,y) \big) \Delta y
-\approx \left( \frac{\partial N}{\partial x}\, \Delta x \right)
-\Delta y.</mrow>
-</md>
-
-<p>
-Finally, after summing the flow rates above and taking the limit as
-<m>\Delta x, \Delta y \to 0</m>, for the circulation density we get
-</p>
-
-<me>
-\frac{\text{circulation around rectangle}}{\text{rectangle area}}
-\approx \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}.
-</me>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,11);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {Top: \qquad Bottom: \qquad Right: \qquad Left:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {top $+$ bottom $\approx$ \qquad\qquad right $+$ left $\approx$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\dfrac{\text{circulation around rectangle}}{\text{rectangle area}} \approx$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the flow along each of the four edges, for the sums over the two pairs of parallel edges, and for the circulation density.</shortdescription>
+</image>
+</sidebyside>
 
 <p>
 This quantity is denoted by
@@ -514,7 +490,7 @@ rectangle, divided by its area, converges to the <m>k</m>-component of
 curl. A paddle wheel placed in the fluid spins counterclockwise where
 the curl is positive.
 </caption>
-<video xml:id="video-curl"
+<video preview="play-button.png" xml:id="video-curl"
        source="videos/curl_circulation_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -541,54 +517,34 @@ Calculate the curl in each case and explain what it means physically.
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(Identify <m>M</m> and <m>N</m>, apply <xref ref="eq-curl-def"/>, and
+say what a paddle wheel placed in the fluid would do. The two fields
+are drawn in <xref ref="fig-curl-fields"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {A. $\operatorname{curl}\mathbf F\cdot\mathbf k =$ \qquad the paddle wheel:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {B. $\operatorname{curl}\mathbf F\cdot\mathbf k =$ \qquad the paddle wheel:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two labelled rows, one for the k component of the curl of each field with its physical meaning.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
 
-<solution xml:id="solution-curl-fields">
-<p>
-<em>Part A.</em> In this case we have <m>M = 2x</m> and <m>N = 2y</m>,
-and hence by <xref ref="eq-curl-def"/>,
-</p>
-
-<me>
-\operatorname{curl} \mathbf{F} \cdot \mathbf{k}
-= \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-= 0 - 0 = 0.
-</me>
-
-<p>
-This means that if we place the paddle wheel at any point
-<m>(x,y)</m>, the fluid flow will not rotate it: the radial field on
-the left of <xref ref="fig-curl-fields"/> has no circulation.
-</p>
-
-<p>
-<em>Part B.</em> In this case we have <m>M = -2y</m> and
-<m>N = 2x</m>, and hence
-</p>
-
-<me>
-\operatorname{curl} \mathbf{F} \cdot \mathbf{k}
-= \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-= 2 + 2 = 4.
-</me>
-
-<p>
-This means that if we place the paddle wheel at any point
-<m>(x,y)</m>, we see that the fluid flow causes it to rotate in the
-counterclockwise direction, since the <m>k</m>-component of curl is
-positive. See the right of <xref ref="fig-curl-fields"/>.
-</p>
-</solution>
-
 <figure xml:id="fig-curl-fields">
 <caption>
-Left: the radial field <m>2x\,\mathbf{i} + 2y\,\mathbf{j}</m> has
-<m>\operatorname{curl}\mathbf{F}\cdot\mathbf{k} = 0</m>: a paddle wheel
-does not spin. Right: the rotational field
-<m>-2y\,\mathbf{i} + 2x\,\mathbf{j}</m> has
-<m>\operatorname{curl}\mathbf{F}\cdot\mathbf{k} = 4</m>: a paddle wheel
-spins counterclockwise everywhere.
+Left: the radial field <m>2x\,\mathbf{i} + 2y\,\mathbf{j}</m>. Right:
+the rotational field <m>-2y\,\mathbf{i} + 2x\,\mathbf{j}</m>. Compare
+with the curls you computed: would a paddle wheel spin in each?
 </caption>
 <sidebyside widths="46% 46%" valign="middle">
 <image>
@@ -707,12 +663,9 @@ of curl} \,\cdot\, \mathbf{k} \text{ over } R}.
 
 <proof xml:id="proof-green-tangential">
 <p>
-Write <m>\mathbf{F} = M\,\mathbf{i} + N\,\mathbf{j}</m>. Both sides of
-<xref ref="eq-green-tangential"/> split into two pieces, one carrying
-<m>M</m> and one carrying <m>N</m>, so it is enough to prove the two
-separate statements
-</p>
-
+(Both sides of <xref ref="eq-green-tangential"/> split into a piece
+carrying <m>M</m> and a piece carrying <m>N</m>, so it is enough to
+prove the two statements
 <md>
 <mrow xml:id="eq-green-two" number="yes">
 \oint_C M\,dx \amp = -\iint_R \frac{\partial M}{\partial y}\,dA ,
@@ -721,95 +674,42 @@ separate statements
 \oint_C N\,dy \amp = \iint_R \frac{\partial N}{\partial x}\,dA ,
 </mrow>
 </md>
-
-<p>
-and add them. Note the minus sign in the first: it is the whole reason the
-curl carries one.
+and add them. <em>Step 1</em>: for a region of the kind in
+<xref ref="sec-general-regions-case1"/>, shown in
+<xref ref="fig-green-proof-prefigure"/>, say why the vertical sides
+contribute nothing to <m>\oint_C M\,dx</m>, write the bottom and top
+contributions as integrals in <m>x</m> (mind the direction of travel
+along the top), and compare with the double integral done in the
+<m>y</m>-direction first, where the Fundamental Theorem of Calculus
+evaluates the inner integral. <em>Step 2</em>: read <m>R</m> the other
+way, as in <xref ref="sec-general-regions-case2"/>, and repeat for
+<m>N</m>; say why no minus sign appears this time. <em>Step 3</em>:
+say what to do with a region that cannot be described both ways, and
+why the cuts cancel; <xref ref="fig-green-proof-video"/> shows the
+idea. Finally, explain how <xref ref="thm-green-normal"/> follows by
+applying the tangential form to the field
+<m>\langle -N, M\rangle</m>.)
 </p>
 
-<p>
-<em>Step 1: the <m>M</m> statement, on a region cut by vertical lines.</em>
-Suppose first that <m>R</m> is a region of the kind studied in
-<xref ref="sec-general-regions-case1"/>,
-</p>
-
-<me>
-R = \left\{(x,y) : a \le x \le b,\ f_2(x) \le y \le f_1(x)\right\} ,
-</me>
-
-<p>
-so that <m>C</m> is made of the bottom curve <m>y = f_2(x)</m> travelled
-left to right, the top curve <m>y = f_1(x)</m> travelled right to left, and
-possibly two vertical segments at <m>x=a</m> and <m>x=b</m>. This is the
-picture in <xref ref="fig-green-proof-prefigure"/>. On the vertical
-segments <m>x</m> never changes, so <m>dx = 0</m> and they contribute
-nothing to <m>\oint_C M\,dx</m>. What is left is
-</p>
-
-<md>
-<mrow>
-\oint_C M\,dx
-\amp = \int_a^b M\bigl(x,f_2(x)\bigr)\,dx
-+ \int_b^a M\bigl(x,f_1(x)\bigr)\,dx
-</mrow>
-<mrow>
-\amp = -\int_a^b \Bigl[M\bigl(x,f_1(x)\bigr)
-- M\bigl(x,f_2(x)\bigr)\Bigr] dx ,
-</mrow>
-</md>
-
-<p>
-the sign appearing because the top is travelled backwards. Meanwhile, doing
-the double integral in the <m>y</m>-direction first and applying the
-Fundamental Theorem of Calculus to the inner integral,
-</p>
-
-<md>
-<mrow>
-\iint_R \frac{\partial M}{\partial y}\,dA
-\amp = \int_a^b\left[\int_{f_2(x)}^{f_1(x)}
-\frac{\partial M}{\partial y}\,dy\right] dx
-</mrow>
-<mrow>
-\amp = \int_a^b \Bigl[M\bigl(x,f_1(x)\bigr)
-- M\bigl(x,f_2(x)\bigr)\Bigr] dx .
-</mrow>
-</md>
-
-<p>
-The two agree up to the minus sign, which is the first line of
-<xref ref="eq-green-two"/>.
-</p>
-
-<p>
-<em>Step 2: the <m>N</m> statement.</em> Now read <m>R</m> the other way,
-as in <xref ref="sec-general-regions-case2"/>, with
-<m>c \le y \le d</m> and <m>g_1(y) \le x \le g_2(y)</m>. On the horizontal
-parts of the boundary <m>dy = 0</m>, and the same computation with the
-roles of <m>x</m> and <m>y</m> exchanged gives the second line of
-<xref ref="eq-green-two"/>. Here the right-hand curve is travelled upwards,
-in the direction of increasing <m>y</m>, which is why no minus sign
-appears. Adding the two lines proves the theorem for a region that can be
-described both ways.
-</p>
-
-<p>
-<em>Step 3: general regions.</em> A region that cannot be described both
-ways at once is cut into finitely many pieces that can, exactly as in
-<xref ref="sec-general-regions-case1"/>, and the theorem is applied to each
-piece. Each cut is travelled twice, once for the piece on either side, and
-in opposite directions, so those two line integrals cancel. What survives
-is the integral around the original curve <m>C</m>, while the double
-integrals add up to the integral over <m>R</m>.
-</p>
-
-<p>
-Finally, <xref ref="thm-green-normal"/> is the same theorem in disguise:
-applying <xref ref="eq-green-tangential"/> to the rotated field
-<m>\left\langle -N, M \right\rangle</m> turns the circulation into the
-outward flux and the <m>\mathbf{k}</m>-component of the curl into the
-divergence.
-</p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,20);
+\draw[gray!35] (0,14) -- (15,14);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,19.7) {Step 1: $\displaystyle\oint_C M\,dx =$ \qquad and \qquad $\displaystyle\iint_R \frac{\partial M}{\partial y}\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {Step 2: $\displaystyle\oint_C N\,dy =$ \qquad and \qquad $\displaystyle\iint_R \frac{\partial N}{\partial x}\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {Step 3: general regions};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the normal form from the tangential form, applied to $\langle -N, M\rangle$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the M statement on a region cut by vertical lines, for the N statement, for the extension to general regions, and for deriving the normal form from the tangential form.</shortdescription>
+</image>
+</sidebyside>
 </proof>
 </theorem>
 
@@ -887,7 +787,7 @@ cells and add the circulation around each one. Every interior edge is
 travelled twice, once in each direction, so the inside cancels in pairs and
 only the circulation around <m>C</m> is left.
 </caption>
-<video xml:id="video-green-proof-idea"
+<video preview="play-button.png" xml:id="video-green-proof-idea"
        source="videos/green_proof_idea_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -902,104 +802,48 @@ closed curve <m>C</m> is the unit circle centered at the origin.
 Convince yourself of the two forms of Green's theorem by applying them
 to this example.
 </p>
+<p>
+<em>Solution.</em>
+(Parametrize the circle, write <m>M</m>, <m>N</m>, <m>dx</m> and
+<m>dy</m> in terms of <m>t</m>, and compute the four partial
+derivatives. For the normal form <xref ref="eq-green-normal"/>,
+evaluate the line integral <m>\oint_C M\,dy - N\,dx</m> and the double
+integral of the divergence separately and compare; for the tangential
+form <xref ref="eq-green-tangential"/>, do the same with
+<m>\oint_C M\,dx + N\,dy</m> and the curl. Both double integrals reduce
+to the area of the disk. The field is shown in
+<xref ref="fig-green-circle"/>; compare with
+<xref ref="fig-green-circle-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,18);
+\draw[gray!35] (0,14.5) -- (15,14.5);
+\draw[gray!35] (0,12) -- (15,12);
+\draw[gray!35] (0,6) -- (15,6);
+\node[anchor=north west, font=\small\itshape] at (0.35,17.7) {$\mathbf r(t) =$ \qquad $M =$ \quad $N =$ \quad $dx =$ \quad $dy =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,14.2) {$\dfrac{\partial M}{\partial x} =$ \quad $\dfrac{\partial M}{\partial y} =$ \quad $\dfrac{\partial N}{\partial x} =$ \quad $\dfrac{\partial N}{\partial y} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {normal form: $\displaystyle\oint_C M\,dy - N\,dx =$ \qquad $\displaystyle\iint_R \Big(\frac{\partial M}{\partial x} + \frac{\partial N}{\partial y}\Big)dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {tangential form: $\displaystyle\oint_C M\,dx + N\,dy =$ \qquad $\displaystyle\iint_R \Big(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\Big)dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the parametrization with M, N, dx and dy, for the four partial derivatives, for the two sides of the normal form, and for the two sides of the tangential form.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
 
-<solution xml:id="solution-green-circle">
-<p>
-We begin by noticing that the unit circle can be parametrized as
-</p>
-
-<me>
-C: \quad \mathbf{r}(t) = (\cos t)\,\mathbf{i} + (\sin t)\,\mathbf{j},
-\qquad 0 \le t \le 2\pi.
-</me>
-
-<p>
-After substituting the parametrized equations <m>x(t) = \cos t</m> and
-<m>y(t) = \sin t</m> into the vector field, we get
-<m>\mathbf{F} = (\cos t - \sin t)\,\mathbf{i} + (\cos t)\,\mathbf{j}</m>,
-and thus
-</p>
-
-<md>
-<mrow>M = \cos t - \sin t, \amp\qquad dx = d(\cos t) = -\sin t\, dt,</mrow>
-<mrow>N = \cos t, \amp\qquad dy = d(\sin t) = \cos t\, dt,</mrow>
-</md>
-
-<p>
-with the partial derivatives
-</p>
-
-<me>
-\frac{\partial M}{\partial x} = 1, \qquad
-\frac{\partial M}{\partial y} = -1, \qquad
-\frac{\partial N}{\partial x} = 1, \qquad
-\frac{\partial N}{\partial y} = 0.
-</me>
-
-<p>
-For the first form of Green's theorem,
-<xref ref="eq-green-normal"/>, we have
-</p>
-
-<md>
-<mrow>\oint_C M\, dy - N\, dx
-\amp= \int_0^{2\pi} (\cos t - \sin t)(\cos t\, dt)
-- (\cos t)(-\sin t\, dt)</mrow>
-<mrow>\amp= \int_0^{2\pi} \cos^2 t\, dt = \pi,</mrow>
-</md>
-
-<p>
-while the double integral gives the same value:
-</p>
-
-<me>
-\iint_R \left( \frac{\partial M}{\partial x}
-+ \frac{\partial N}{\partial y} \right) dx\, dy
-= \iint_R (1 + 0)\, dx\, dy
-= \text{area inside the unit circle} = \pi.
-</me>
-
-<p>
-Whereas the second form of Green's theorem,
-<xref ref="eq-green-tangential"/>, can be verified as follows:
-</p>
-
-<md>
-<mrow>\oint_C M\, dx + N\, dy
-\amp= \int_0^{2\pi} (\cos t - \sin t)(-\sin t\, dt)
-+ (\cos t)(\cos t\, dt)</mrow>
-<mrow>\amp= \int_0^{2\pi} (-\sin t \cos t + 1)\, dt = 2\pi,</mrow>
-</md>
-
-<p>
-and
-</p>
-
-<me>
-\iint_R \left( \frac{\partial N}{\partial x}
-- \frac{\partial M}{\partial y} \right) dx\, dy
-= \iint_R \big( 1 - (-1) \big)\, dx\, dy
-= 2 \iint_R dx\, dy = 2\pi.
-</me>
-
-<p>
-The field and the curve are shown in <xref ref="fig-green-circle"/>;
-note that the field has a positive (counterclockwise) circulation,
-which we calculated above to be <m>2\pi</m>. Watch both computations
-side by side in <xref ref="fig-green-circle-video"/>.
-</p>
-</solution>
-
 <figure xml:id="fig-green-circle-video">
 <caption>
-Both forms of Green's theorem verified for
+Both forms of Green's theorem for
 <m>\mathbf{F} = (x-y)\,\mathbf{i} + x\,\mathbf{j}</m> on the unit
-circle: the outward flux equals <m>\pi</m> and the counterclockwise
-circulation equals <m>2\pi</m>.
+circle, computed side by side. Use it to check your values of the
+outward flux and the counterclockwise circulation.
 </caption>
-<video xml:id="video-green-circle"
+<video preview="play-button.png" xml:id="video-green-circle"
        source="videos/green_unit_circle_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -1071,95 +915,48 @@ where <m>C</m> is the boundary of the square with vertices
 integral to make the limits of integration numbers as opposed to
 functions.
 </p>
+<p>
+<em>Solution.</em>
+(Identify <m>M</m> and <m>N</m> and compute
+<m>\partial N/\partial x - \partial M/\partial y</m>. Use the
+tangential form <xref ref="eq-green-tangential"/> to turn the line
+integral into a double integral over the square <m>R</m>. Write the
+equations of the four sides of the square; they suggest the
+substitution <m>u</m>, <m>v</m> that turns <m>R</m> into a rectangle
+with constant limits, as in <xref ref="fig-green-diamond"/>. Solve for
+<m>x</m> and <m>y</m>, compute the Jacobian, and evaluate. Compare with
+<xref ref="fig-green-diamond-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,16);
+\draw[gray!35] (0,13) -- (15,13);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,15.7) {$M =$ \quad $N =$ \qquad $\dfrac{\partial N}{\partial x} - \dfrac{\partial M}{\partial y} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$\displaystyle\oint_C M\,dx + N\,dy = \iint_R$};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {the four sides: \qquad so $u =$ \quad $v =$ \qquad and $R$ becomes};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$x =$ \quad $y =$ \qquad $\dfrac{\partial(x,y)}{\partial(u,v)} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {evaluate:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in five rows, for M, N and the curl, for the double integral given by Green's theorem, for the substitution suggested by the sides, for the inverse and the Jacobian, and for the evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-green-diamond">
-<p>
-In this example we have
-</p>
-
-<me>
-M(x,y) = \frac{1}{x+y}, \qquad N(x,y) = \frac{-1}{x+y},
-</me>
-
-<p>
-and thus
-</p>
-
-<me>
-\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}
-= \frac{1}{(x+y)^2} - \frac{-1}{(x+y)^2}
-= \frac{2}{(x+y)^2}.
-</me>
-
-<p>
-Then we can use the tangential form of Green's theorem,
-<xref ref="eq-green-tangential"/>, to evaluate the line integral:
-</p>
-
-<me>
-\oint_C M\, dx + N\, dy
-= \iint_R \left( \frac{\partial N}{\partial x}
-- \frac{\partial M}{\partial y} \right) dx\, dy
-= \iint_R \frac{2}{(x+y)^2}\, dx\, dy.
-</me>
-
-<p>
-The region <m>R</m> is the square bounded by the four lines
-<m>y = x + 1</m>, <m>y = x - 1</m>, <m>y = -x + 1</m>, and
-<m>y = -x + 3</m>, so the natural substitution uses the boundary
-expressions:
-</p>
-
-<me>
-u = x + y, \qquad v = y - x,
-</me>
-
-<p>
-under which the region becomes the rectangle
-<m>1 \le u \le 3</m>, <m>-1 \le v \le 1</m>. Solving for <m>x</m> and
-<m>y</m> gives <m>x = \tfrac{u-v}{2}</m>, <m>y = \tfrac{u+v}{2}</m>,
-so the Jacobian is
-</p>
-
-<me>
-\frac{\partial(x,y)}{\partial(u,v)}
-= \begin{vmatrix}
-\tfrac{1}{2} \amp -\tfrac{1}{2} \\
-\tfrac{1}{2} \amp \tfrac{1}{2}
-\end{vmatrix}
-= \frac{1}{2}.
-</me>
-
-<p>
-Therefore
-</p>
-
-<md>
-<mrow>\iint_R \frac{2}{(x+y)^2}\, dx\, dy
-\amp= \int_{-1}^{1} \int_1^3 \frac{2}{u^2} \cdot \frac{1}{2}\,
-du\, dv
-= \int_{-1}^{1} \left[ -\frac{1}{u} \right]_1^3 dv</mrow>
-<mrow>\amp= \int_{-1}^{1} \frac{2}{3}\, dv = \frac{4}{3}.</mrow>
-</md>
-
-<p>
-Green's theorem converted the line integral into a double integral,
-and the substitution<mdash/>exactly the technique of the previous
-section<mdash/>made its limits constant. See
-<xref ref="fig-green-diamond-video"/> for the animation.
-</p>
-</solution>
 
 <figure xml:id="fig-green-diamond-video">
 <caption>
 Green's theorem turns the line integral around the tilted square into
-a double integral of <m>2/(x+y)^2</m>, and the substitution
-<m>u = x+y</m>, <m>v = y-x</m> straightens the square into a rectangle
-with constant limits.
+a double integral, and a substitution straightens the square into a
+rectangle with constant limits. Compare with your substitution.
 </caption>
-<video xml:id="video-green-diamond"
+<video preview="play-button.png" xml:id="video-green-diamond"
        source="videos/green_diamond_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -1167,9 +964,8 @@ with constant limits.
 <figure xml:id="fig-green-diamond">
 <caption>
 The square <m>C</m> with vertices <m>(1,0)</m>, <m>(2,1)</m>,
-<m>(1,2)</m>, <m>(0,1)</m> (left) and the corresponding rectangle
-<m>1 \le u \le 3</m>, <m>-1 \le v \le 1</m> under <m>u = x+y</m>,
-<m>v = y-x</m> (right).
+<m>(1,2)</m>, <m>(0,1)</m> (left) and the corresponding rectangle in
+the <m>uv</m>-plane (right).
 </caption>
 <sidebyside widths="48% 44%" valign="middle">
 <image>
@@ -1319,64 +1115,34 @@ Using Green's theorem, confirm your answer to part B.
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(In <alert>A</alert>, read <m>M</m> and <m>N</m> off the differential
+form. In <alert>B</alert>, treat <m>\mathbf{F}</m> as a field in space
+with <m>P = 0</m> and compute the curl by
+<xref ref="eq-curl-cross-product"/>. In <alert>C</alert>, apply the
+tangential form <xref ref="eq-green-tangential"/> to any simple closed
+curve, and say what the result confirms. Compare with
+<xref ref="fig-conservative-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {A. $\mathbf F(x,y) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {B. $\nabla\times\mathbf F =$ \qquad so};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {C. $\displaystyle\oint_C 4x^3y\,dx + x^4\,dy = \iint_D$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three labelled rows, for the vector field, for its curl and the conclusion of the component test, and for the circulation by Green's theorem.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-conservative-green">
-<p>
-<em>Part A.</em> The vector field is
-</p>
-
-<me>
-\mathbf{F}(x,y) = M(x,y)\,\mathbf{i} + N(x,y)\,\mathbf{j}
-= 4x^3 y\,\mathbf{i} + x^4\,\mathbf{j}.
-</me>
-
-<p>
-<em>Part B.</em> Treating <m>\mathbf{F}</m> as a field in space with
-<m>P = 0</m> in <xref ref="eq-curl-cross-product"/>,
-</p>
-
-<me>
-\nabla \times \mathbf{F} =
-\begin{vmatrix}
-\mathbf{i} \amp \mathbf{j} \amp \mathbf{k} \\
-\dfrac{\partial}{\partial x} \amp \dfrac{\partial}{\partial y} \amp
-\dfrac{\partial}{\partial z} \\
-M \amp N \amp 0
-\end{vmatrix}
-= \left( \frac{\partial N}{\partial x}
-- \frac{\partial M}{\partial y} \right) \mathbf{k}
-= \left( \frac{\partial}{\partial x}(x^4)
-- \frac{\partial}{\partial y}(4x^3 y) \right) \mathbf{k}
-= \left( 4x^3 - 4x^3 \right)\mathbf{k} = \mathbf{0},
-</me>
-
-<p>
-and hence the vector field is conservative.
-</p>
-
-<p>
-<em>Part C.</em> Using the tangential form of Green's theorem,
-<xref ref="eq-green-tangential"/>, for any simple closed curve
-<m>C</m> enclosing a region <m>D</m>:
-</p>
-
-<md>
-<mrow>\oint_C 4x^3 y\, dx + x^4\, dy
-\amp= \iint_D \left( \frac{\partial N}{\partial x}
-- \frac{\partial M}{\partial y} \right) dx\, dy</mrow>
-<mrow>\amp= \iint_D \left( \frac{\partial}{\partial x}(x^4)
-- \frac{\partial}{\partial y}(4x^3 y) \right) dx\, dy = 0.</mrow>
-</md>
-
-<p>
-The circulation of a conservative field around <em>every</em> closed
-curve vanishes, which confirms part B. The animation in
-<xref ref="fig-conservative-video"/> shows the field and several closed
-loops, all with zero circulation.
-</p>
-</solution>
 
 <figure xml:id="fig-conservative-video">
 <caption>
@@ -1384,7 +1150,7 @@ The conservative field <m>4x^3 y\,\mathbf{i} + x^4\,\mathbf{j} =
 \nabla(x^4 y)</m> has zero curl, so by Green's theorem its circulation
 around every closed curve is zero.
 </caption>
-<video xml:id="video-conservative"
+<video preview="play-button.png" xml:id="video-conservative"
        source="videos/conservative_zero_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>

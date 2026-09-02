@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Triple Integrals in Spherical Coordinates                   -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The definition of the coordinates, the two  -->
+<!-- assemblages of conversion formulas and the general spherical          -->
+<!-- iterated integral are kept; the sphere equation, the five worked      -->
+<!-- examples, the volume element and the closing exercise are replaced by -->
+<!-- blank workspace boxes, each preceded by a one-line instruction.  The  -->
+<!-- volume element is restated so that the assignments can still cite    -->
+<!-- eq-dv-spherical.  File name and xml:ids are unchanged.                -->
+<!--                                                                       -->
+<!-- Figures: all kept (the coordinate diagram, the wedge applet, the ice  -->
+<!-- cream cone and its video, the shifted sphere, the half disk and the   -->
+<!-- cone-and-plane solid); each is the check on the box above it.         -->
+<!-- Captions that stated a spherical equation or a numerical answer have  -->
+<!-- been trimmed.                                                         -->
 <section xml:id="section-triple-integrals-spherical" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Triple Integrals in Spherical Coordinates</title>
 
@@ -139,28 +156,22 @@ y = r\sin\theta = \rho\sin\phi\sin\theta,
 
 <p>
 Spheres and cones have particularly simple equations in spherical
-coordinates. For a sphere centered at the origin with radius <m>R</m>,
-we have
+coordinates. Substitute <xref ref="eq-spherical-to-rect"/> into the
+equation of a sphere of radius <m>R</m> centered at the origin,
+<m>x^2 + y^2 + z^2 = R^2</m>, and simplify.
 </p>
 
-<md>
-<mrow>
-x^2 + y^2 + z^2 = R^2
-\amp\Rightarrow
-(\rho\sin\phi\cos\theta)^2 + (\rho\sin\phi\sin\theta)^2
-+ (\rho\cos\phi)^2 = R^2
-</mrow>
-<mrow>
-\amp\Rightarrow
-\rho^2\left(\cos^2\theta + \sin^2\theta\right)\sin^2\phi
-+ \rho^2\cos^2\phi = R^2
-</mrow>
-<mrow>
-\amp\Rightarrow
-\rho^2\sin^2\phi + \rho^2\cos^2\phi = R^2
-\Rightarrow \rho^2 = R^2 \Rightarrow \rho = R.
-</mrow>
-</md>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$x^2+y^2+z^2 = R^2 \ \Rightarrow$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for converting the equation of a sphere centered at the origin to spherical coordinates.</shortdescription>
+</image>
+</sidebyside>
 
 <example xml:id="example-spherical-shifted-sphere">
 <title>Example I</title>
@@ -169,39 +180,26 @@ x^2 + y^2 + z^2 = R^2
 Find the equation of the sphere <m>x^2 + y^2 + (z-1)^2 = 1</m> in
 spherical coordinates.
 </p>
-</statement>
-</example>
-
-<solution>
 <p>
-Substituting the spherical expressions
-<xref ref="eq-spherical-to-rect"/> for <m>x</m>, <m>y</m>, and
-<m>z</m>:
+<em>Solution.</em>
+(Substitute <xref ref="eq-spherical-to-rect"/>, expand the square, and
+use <m>\sin^2\phi + \cos^2\phi = 1</m>; a factor of <m>\rho</m>
+cancels.)
 </p>
 
-<md>
-<mrow>
-x^2 + y^2 + (z-1)^2 = 1
-\amp\Rightarrow
-(\rho\sin\phi\cos\theta)^2 + (\rho\sin\phi\sin\theta)^2
-+ (\rho\cos\phi - 1)^2 = 1
-</mrow>
-<mrow>
-\amp\Rightarrow
-\rho^2\left(\cos^2\theta + \sin^2\theta\right)\sin^2\phi
-+ \rho^2\cos^2\phi - 2\rho\cos\phi + 1 = 1
-</mrow>
-<mrow>
-\amp\Rightarrow
-\rho^2\sin^2\phi + \rho^2\cos^2\phi - 2\rho\cos\phi = 0
-</mrow>
-<mrow>
-\amp\Rightarrow
-\rho^2 = 2\rho\cos\phi
-\Rightarrow \rho = 2\cos\phi.
-</mrow>
-</md>
-</solution>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,7);
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$x^2+y^2+(z-1)^2 = 1 \ \Rightarrow$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for converting the equation of the shifted sphere to spherical coordinates.</shortdescription>
+</image>
+</sidebyside>
+</statement>
+</example>
 
 <example xml:id="example-spherical-cones">
 <title>Example II</title>
@@ -211,17 +209,25 @@ What are the equations of the two cones
 <m>z = \sqrt{x^2+y^2}</m> and <m>z = -\sqrt{x^2+y^2}</m> in spherical
 coordinates?
 </p>
+<p>
+<em>Solution.</em>
+(What angle does each cone make with the positive <m>z</m>-axis? Confirm
+algebraically by substituting <xref ref="eq-spherical-to-rect"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {upper cone: \qquad\qquad lower cone:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for the spherical equations of the two cones.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-The upper cone makes a <m>45^\circ</m> angle with the positive
-<m>z</m>-axis, so every point on it has <m>\phi = \pi/4</m>; likewise
-the lower cone is <m>\phi = 3\pi/4</m>. (Algebraically:
-<m>\rho\cos\phi = \rho\sin\phi</m> forces <m>\tan\phi = 1</m>.)
-</p>
-</solution>
 
 <assemblage xml:id="assemblage-conversion-formulas">
 <title>Coordinate Conversion Formulas</title>
@@ -261,19 +267,38 @@ dV = dx\,dy\,dz
 The volume element <m>dV</m> in spherical coordinates is illustrated
 in <xref ref="fig-spherical-element-tikz"/>: a spherical wedge with
 radial side <m>d\rho</m>, one arc side <m>\rho\,d\phi</m>, and the
-other arc side <m>\rho\sin\phi\,d\theta</m>, so
+other arc side <m>\rho\sin\phi\,d\theta</m>. Say where each of the
+three edge lengths comes from, and multiply them to get <m>dV</m>.
 </p>
 
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the three edges:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$dV =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the three edge lengths of the spherical wedge and one for the volume element.</shortdescription>
+</image>
+</sidebyside>
+
+<assemblage xml:id="assemblage-dv-spherical">
+<title>The Spherical Volume Element</title>
+<p>
 <men xml:id="eq-dv-spherical">
 dV = \rho^2\sin\phi\ d\rho\,d\phi\,d\theta.
 </men>
+</p>
+</assemblage>
 
 <figure xml:id="fig-spherical-element-tikz">
 <caption>
 The spherical volume element (spherical wedge), with sliders for the
 three increments. Its three mutually perpendicular sides have lengths
-<m>d\rho</m>, <m>\rho\,d\phi</m>, and <m>\rho\sin\phi\,d\theta</m>,
-so <m>dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta</m>.
+<m>d\rho</m>, <m>\rho\,d\phi</m>, and <m>\rho\sin\phi\,d\theta</m>.
 </caption>
 <interactive geogebra="tkybvufd"
              width="100%" aspect="600:500" design-width="600"
@@ -329,53 +354,36 @@ f\!\left(\rho\sin\phi\cos\theta,\ \rho\sin\phi\sin\theta,\
 Find the volume of the <q>ice cream cone</q> <m>D</m> cut from the
 solid sphere <m>\rho \le 1</m> by the cone <m>\phi = \pi/3</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Plot the ice cream cone, shown in <xref ref="fig-icecream-tikz"/>, and
+describe it by the ranges of <m>\theta</m>, <m>\phi</m> and
+<m>\rho</m>. Then use <xref ref="eq-volume-triple"/> and
+<xref ref="eq-triple-spherical"/> with <m>f = 1</m>, and compare with
+<xref ref="fig-spherical-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {$D = \{(\rho,\theta,\phi) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$V = \displaystyle\iiint_D \rho^2\sin\phi\ d\rho\,d\phi\,d\theta =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the spherical description of the ice cream cone and one for the volume integral and its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-We begin by plotting the ice cream cone
-(<xref ref="fig-icecream-tikz"/>). Next, we identify the region of
-integration, which will provide us with the integration limits:
-</p>
-
-<me>
-D = \left\{(\rho,\theta,\phi) : 0\le\theta\le 2\pi,\
-0\le\phi\le\frac{\pi}{3},\ 0\le\rho\le 1\right\}.
-</me>
-
-<p>
-Thus, by <xref ref="eq-volume-triple"/> and
-<xref ref="eq-triple-spherical"/>, the volume of the ice cream cone can
-be evaluated as follows:
-</p>
-
-<md>
-<mrow>
-V = \iiint_D \rho^2\sin\phi\ d\rho\,d\phi\,d\theta
-\amp= \int_0^{2\pi}\!\!\int_0^{\pi/3}\!\!\int_0^1
-\rho^2\sin\phi\ d\rho\,d\phi\,d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{2\pi}\!\!\int_0^{\pi/3}
-\left[\frac{\rho^3}{3}\right]_0^1 \sin\phi\ d\phi\,d\theta
-= \int_0^{2\pi}\!\!\int_0^{\pi/3}
-\frac13\sin\phi\ d\phi\,d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{2\pi}\left[-\frac13\cos\phi\right]_0^{\pi/3} d\theta
-= \int_0^{2\pi}\left(-\frac16 + \frac13\right)d\theta
-= \frac16(2\pi) = \frac{\pi}{3}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-icecream-tikz">
 <caption>
 The <q>ice cream cone</q> of
 <xref ref="example-spherical-icecream"/>: the region inside the
-sphere <m>\rho = 1</m> and above the cone <m>\phi = \pi/3</m>. Its
-volume is <m>\frac{\pi}{3}</m>.
+sphere <m>\rho = 1</m> and above the cone <m>\phi = \pi/3</m>.
 </caption>
 <image width="60%">
 <shortdescription>
@@ -454,7 +462,7 @@ axis, and restricting <m>0\le\rho\le 1</m>,
 <m>0\le\phi\le\pi/3</m> fills out the ice cream cone of
 <xref ref="example-spherical-icecream"/>.
 </caption>
-<video xml:id="video-spherical-icecream"
+<video preview="play-button.png" xml:id="video-spherical-icecream"
        source="videos/spherical_icecream_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -478,68 +486,42 @@ coordinates:
 \!\!\int_{2-\sqrt{4-x^2-y^2}}^{2+\sqrt{4-x^2-y^2}}
 \left(x^2+y^2+z^2\right)^{3/2} dz\,dy\,dx.
 </me>
+<p>
+<em>Solution.</em>
+(Read the solid off the limits: the <m>z</m>-limits are the two halves
+of a sphere; which one, and where is its center? It is shown in
+<xref ref="fig-shifted-sphere-tikz"/>. Convert its equation to
+spherical coordinates as in <xref ref="example-spherical-shifted-sphere"/>,
+and describe the solid by the ranges of <m>\theta</m>, <m>\phi</m> and
+<m>\rho</m>; the integrand is a power of <m>\rho</m>. Then apply
+<xref ref="eq-triple-spherical"/>; the <m>\phi</m>-integral is a
+substitution.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,14);
+\draw[gray!35] (0,11.5) -- (15,11.5);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {the solid: \qquad in spherical coordinates: $\rho =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,11.2) {limits: \qquad\qquad integrand: $(x^2+y^2+z^2)^{3/2} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$= \displaystyle\int\!\!\int\!\!\int$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {evaluate:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for identifying the solid and its spherical equation, for the limits and the integrand, for the spherical iterated integral, and for its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-We begin by converting the integration limits and the integrand to
-spherical coordinates. The limits describe the solid sphere
-<m>x^2 + y^2 + (z-2)^2 = 4</m> of radius <m>2</m> centered at
-<m>(0,0,2)</m>, shown in <xref ref="fig-shifted-sphere-tikz"/>:
-</p>
-
-<md>
-<mrow>
-z = 2 \pm\sqrt{4-x^2-y^2}
-\amp\Rightarrow
-\rho\cos\phi = 2 \pm\sqrt{4 - \rho^2\sin^2\phi}
-</mrow>
-<mrow>
-\amp\Rightarrow
-(\rho\cos\phi - 2)^2 = 4 - \rho^2\sin^2\phi
-</mrow>
-<mrow>
-\amp\Rightarrow
-\rho^2 = 4\rho\cos\phi
-\Rightarrow \rho = 4\cos\phi.
-</mrow>
-</md>
-
-<p>
-Note that <m>z = 2+\sqrt{4-x^2-y^2}</m> is the upper hemisphere and
-<m>z = 2-\sqrt{4-x^2-y^2}</m> is the lower hemisphere. In spherical
-coordinates the solid is <m>0\le\rho\le 4\cos\phi</m>,
-<m>0\le\phi\le\frac{\pi}{2}</m>, <m>0\le\theta\le 2\pi</m>, and the
-integrand is
-<m>\left(x^2+y^2+z^2\right)^{3/2} = \left(\rho^2\right)^{3/2}
-= \rho^3</m>. Thus <xref ref="eq-triple-spherical"/> gives:
-</p>
-
-<md>
-<mrow>
-\int_0^{2\pi}\!\!\int_0^{\pi/2}\!\!\int_0^{4\cos\phi}
-\left(\rho^2\right)^{3/2}\rho^2\sin\phi\ d\rho\,d\phi\,d\theta
-\amp= \int_0^{2\pi}\!\!\int_0^{\pi/2}\!\!\int_0^{4\cos\phi}
-\rho^5\sin\phi\ d\rho\,d\phi\,d\theta
-</mrow>
-<mrow>
-\amp= \frac{4^6}{6}\int_0^{2\pi}\!\!\int_0^{\pi/2}
-\cos^6\phi\,\sin\phi\ d\phi\,d\theta
-</mrow>
-<mrow>
-\amp= -\frac{4^6}{42}\int_0^{2\pi}
-\Big[\cos^7\phi\Big]_0^{\pi/2}\,d\theta
-= \frac{4096\pi}{21}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-shifted-sphere-tikz">
 <caption>
 The sphere <m>x^2 + y^2 + (z-2)^2 = 4</m> of
-<xref ref="example-spherical-convert"/>, which in spherical
-coordinates is <m>\rho = 4\cos\phi</m>. It sits on the
+<xref ref="example-spherical-convert"/>. It sits on the
 <m>xy</m>-plane, touching the origin.
 </caption>
 <image width="55%">
@@ -620,46 +602,42 @@ Re-write (do not evaluate) the following integral in
 \!\!\int_{\sqrt{x^2+y^2}}^{1}
 \left(x^2+y^2\right) dz\,dy\,dx.
 </me>
+<p>
+<em>Solution.</em>
+(Read the <m>xy</m>-projection off the outer two limits, shown in
+<xref ref="fig-halfdisk-prefigure"/>, and describe it in polar
+coordinates. The <m>z</m>-limits run from a cone up to a plane; the
+solid is shown in <xref ref="fig-cone-plane-tikz"/>. For the
+cylindrical form, convert the cone and the integrand and use
+<xref ref="eq-triple-cylindrical"/>. For the spherical form, the cone
+is a fixed <m>\phi</m>, and the plane <m>z = 1</m> becomes an upper
+limit on <m>\rho</m> that depends on <m>\phi</m>; convert the integrand
+and use <xref ref="eq-triple-spherical"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {projection: \qquad cone: \qquad plane:};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {cylindrical: $\displaystyle\int\!\!\int\!\!\int$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {spherical: $\displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the projection and the bounding surfaces in the new coordinates, for the cylindrical form of the integral, and for the spherical form.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-The <m>xy</m>-projection is the lower half disk
-<m>y \le 0</m>, <m>x^2+y^2\le 1</m> (shown in
-<xref ref="fig-halfdisk-prefigure"/>), so
-<m>\pi \le \theta \le 2\pi</m> and <m>0 \le r \le 1</m>. In
-<m>z</m>, the solid runs from the cone <m>z = \sqrt{x^2+y^2}</m>
-(that is, <m>z = r</m>) up to the plane <m>z = 1</m>; the solid is
-shown in <xref ref="fig-cone-plane-tikz"/>. Since
-<m>x^2 + y^2 = r^2</m>, the cylindrical form
-<xref ref="eq-triple-cylindrical"/> is
-</p>
-
-<me>
-\int_{\pi}^{2\pi}\!\!\int_0^1\!\!\int_r^1 r^2\, r\,dz\,dr\,d\theta.
-</me>
-
-<p>
-For the spherical form, the cone is <m>\phi = \pi/4</m>, and the
-plane <m>z = 1</m> becomes <m>\rho\cos\phi = 1</m>, that is,
-<m>\rho = \sec\phi</m>. With
-<m>x^2 + y^2 = r^2 = \rho^2\sin^2\phi</m>,
-<xref ref="eq-triple-spherical"/> gives
-</p>
-
-<me>
-\int_{\pi}^{2\pi}\!\!\int_0^{\pi/4}\!\!\int_0^{\sec\phi}
-\left(\rho^2\sin^2\phi\right)\rho^2\sin\phi\
-d\rho\,d\phi\,d\theta.
-</me>
-</solution>
 
 <figure xml:id="fig-halfdisk-prefigure">
 <caption>
 The <m>xy</m>-projection of the solid in
 <xref ref="example-spherical-rewrite"/>: the lower half of the unit
-disk, described by <m>\pi\le\theta\le 2\pi</m>, <m>0\le r\le 1</m>.
+disk.
 </caption>
 <image width="45%">
 <shortdescription>
@@ -699,9 +677,8 @@ The lower half of the unit disk, shaded.
 <figure xml:id="fig-cone-plane-tikz">
 <caption>
 The solid of <xref ref="example-spherical-rewrite"/>: over the lower
-half disk, between the cone <m>z = \sqrt{x^2+y^2}</m> (spherical
-<m>\phi = \pi/4</m>) and the plane <m>z = 1</m> (spherical
-<m>\rho = \sec\phi</m>).
+half disk, between the cone <m>z = \sqrt{x^2+y^2}</m> and the plane
+<m>z = 1</m>.
 </caption>
 <image width="60%">
 <shortdescription>
@@ -775,12 +752,20 @@ one. The straight edge of the cap lies over the x axis.
 Calculate the volume of the region inside <m>\rho = 2\cos\phi</m> and
 below <m>z = \sqrt{x^2+y^2}</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {the region, in spherical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$V =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the spherical description of the region and one for the volume integral and its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<m>\dfrac{\pi}{3}</m>.
-</p>
-</answer>
 </exercise>
 
 </subsection>

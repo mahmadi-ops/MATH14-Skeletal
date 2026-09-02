@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Triple Integrals in Cylindrical Coordinates                 -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The coordinate relations and the general    -->
+<!-- cylindrical iterated integral are kept; the volume element, the       -->
+<!-- worked example, and the eight Concept Check setups are replaced by    -->
+<!-- blank workspace boxes, each preceded by a one-line instruction.  The  -->
+<!-- volume element itself is restated so that later sections and the      -->
+<!-- assignments can still cite eq-dv-cylindrical.  File name and xml:ids  -->
+<!-- are unchanged.                                                        -->
+<!--                                                                       -->
+<!-- Figures: all kept.  Each Concept Check task keeps its GeoGebra solid  -->
+<!-- as the only content of its solution, so that the student sets the     -->
+<!-- integral up from the description alone and then opens the solid to    -->
+<!-- check the picture, as the introduction to the Concept Check asks.     -->
+<!-- Captions that stated a numerical answer have been trimmed.            -->
 <section xml:id="section-triple-integrals-cylindrical" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Triple Integrals in Cylindrical Coordinates</title>
 
@@ -104,14 +121,32 @@ and a vertical segment of length z connects the projection to P.
 Before calculating triple integrals in cylindrical coordinates, we
 need to figure out the volume element <m>dV</m> in this new set of
 coordinates. Remember from <xref ref="eq-polar-area-element"/> that the
-area element <m>dA</m> in polar
-coordinates is <m>r\,dr\,d\theta</m>; stacking it through a height
-<m>dz</m> gives the cylindrical volume element
+area element <m>dA</m> in polar coordinates is <m>r\,dr\,d\theta</m>.
+Stack it through a height <m>dz</m>, and write down the cylindrical
+volume element. (The applet below builds the element one edge at a
+time; check your answer against the three edge lengths.)
 </p>
 
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$dV = dA\,dz =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the cylindrical volume element.</shortdescription>
+</image>
+</sidebyside>
+
+<assemblage xml:id="assemblage-dv-cylindrical">
+<title>The Cylindrical Volume Element</title>
+<p>
 <men xml:id="eq-dv-cylindrical">
 dV = r\,dr\,d\theta\,dz.
 </men>
+</p>
+</assemblage>
 
 <interactive geogebra="qjpb9re8"
              width="80%" aspect="60:49"
@@ -131,12 +166,8 @@ lengthen while the radial and vertical edges stay fixed.
 </p>
 
 <p>
-Up close the block is essentially a rectangular box with edge lengths
-<m>dr</m>, <m>r\,d\theta</m>, and <m>dz</m>, so multiplying the three
-edges gives:
-<me>
-dV = dr \cdot r\,d\theta \cdot dz = r\,dr\,d\theta\,dz.
-</me>
+Up close the block is essentially a rectangular box. What are its three
+edge lengths, and what does multiplying them give?
 </p>
 
 </instructions>
@@ -191,77 +222,43 @@ the plane <m>z = 4</m>, and above the paraboloid
 point is proportional to its distance from the axis of the cylinder,
 find the mass of the solid.
 </p>
+<p>
+<em>Solution.</em>
+(Begin by plotting the region, shown in
+<xref ref="fig-cylindrical-solid-tikz"/>. Write the cylinder and the
+paraboloid in cylindrical coordinates, and describe <m>E</m> with
+<m>z</m> running from the paraboloid up to the plane. Turn the
+description of the density into a formula <mdash/> distance from the
+axis is a familiar quantity in these coordinates. Then compute the mass
+by <xref ref="eq-mass-triple"/> and <xref ref="eq-triple-cylindrical"/>,
+and compare with <xref ref="fig-cylindrical-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,12.5) -- (15,12.5);
+\draw[gray!35] (0,10) -- (15,10);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {cylinder: \qquad paraboloid: $z =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.2) {$E = \{(r,\theta,z) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {density: $\delta(x,y,z) =$ \qquad so $\delta(r,\theta,z) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$m = \displaystyle\iiint_E \delta\,dV = \int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the cylindrical equations of the bounding surfaces, for the description of the solid, for the density in cylindrical coordinates, and for the mass integral and its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-Let us begin by plotting the region of integration
-(<xref ref="fig-cylindrical-solid-tikz"/>). Note that the equation of
-the cylinder in cylindrical coordinates is <m>r = 1</m>, and the
-equation of the paraboloid is
-</p>
-
-<me>
-z = 1 - x^2 - y^2
-= 1 - \left(r^2\cos^2\theta + r^2\sin^2\theta\right) = 1 - r^2.
-</me>
-
-<p>
-Therefore, the limits of integration can be written as
-</p>
-
-<me>
-E = \left\{(r,\theta,z)\ \middle|\ 0\le\theta\le 2\pi,\
-0 \le r \le 1,\ 1 - r^2 \le z \le 4\right\},
-</me>
-
-<p>
-since the projection into the <m>xy</m>-plane is a circle of radius
-<m>1</m> and the height of the solid is bounded between the paraboloid
-<m>z = 1 - r^2</m> and <m>z = 4</m>. Since we know that the density
-<m>\delta(x,y,z)</m> of the solid is proportional to the distance from
-the axis of the cylinder, we have
-</p>
-
-<me>
-\delta(x,y,z) = K\sqrt{x^2 + y^2},
-</me>
-
-<p>
-and since <m>r = \sqrt{x^2+y^2}</m>, in cylindrical coordinates
-<m>\delta(r,\theta,z) = Kr</m>. Thus, by <xref ref="eq-mass-triple"/>
-and <xref ref="eq-triple-cylindrical"/>, we can compute the mass of the
-solid as follows:
-</p>
-
-<md>
-<mrow>
-m = \iiint_E K\sqrt{x^2+y^2}\,dV
-\amp= \int_0^{2\pi}\!\!\int_0^1\!\!\int_{1-r^2}^{4}
-(Kr)\,r\,dz\,dr\,d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{2\pi}\!\!\int_0^1
-Kr^2\left[4 - \left(1 - r^2\right)\right]dr\,d\theta
-</mrow>
-<mrow>
-\amp= K\int_0^{2\pi}\!d\theta\int_0^1\left(3r^2 + r^4\right)dr
-</mrow>
-
-<mrow>
-\amp= 2\pi K\left[r^3 + \frac{r^5}{5}\right]_0^1
-= \frac{12\pi K}{5}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-cylindrical-solid-tikz">
 <caption>
 The solid of <xref ref="example-cylindrical-mass"/>: inside the
-cylinder <m>r = 1</m>, above the paraboloid <m>z = 1 - r^2</m>, and
-below the plane <m>z = 4</m>. Its mass, with density
-<m>\delta = Kr</m>, is <m>\frac{12\pi K}{5}</m>.
+cylinder <m>x^2+y^2 = 1</m>, above the paraboloid
+<m>z = 1 - x^2 - y^2</m>, and below the plane <m>z = 4</m>.
 </caption>
 <image width="60%">
 <shortdescription>
@@ -352,14 +349,12 @@ plane <m>z = 4</m>, and how it sweeps around the axis, is animated in
 <figure xml:id="fig-cylindrical-video">
 <caption>
 Animation of the cylindrical setup for
-<xref ref="example-cylindrical-mass"/>. The solid is assembled from
-the cylinder <m>r = 1</m>, the plane <m>z = 4</m>, and the paraboloid
-floor <m>z = 1 - r^2</m>; a column at <m>(r,\theta)</m> runs from
-<m>z = 1-r^2</m> up to <m>z = 4</m>, and sweeps through the solid as
-<m>\theta</m> goes around the axis, illustrating
+<xref ref="example-cylindrical-mass"/>. A column at <m>(r,\theta)</m>
+runs from the paraboloid floor up to the plane <m>z = 4</m>, and sweeps
+through the solid as <m>\theta</m> goes around the axis, illustrating
 <m>dV = r\,dz\,dr\,d\theta</m>.
 </caption>
-<video xml:id="video-cylindrical-column"
+<video preview="play-button.png" xml:id="video-cylindrical-column"
        source="videos/cylindrical_column_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -393,20 +388,24 @@ The volume of the region bounded above by the paraboloid <m>z = 5-x^2-y^2</m>, b
 by the plane <m>z=0</m>, and on the side by the cylinder
 <m>x^2+y^2=4</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-a"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_0^{2}\!\!\int_0^{\,5-r^2} r\,dz\,dr\,d\theta
-  = 2\pi\int_0^2 \left(5r - r^3\right)dr = 12\pi .
-</me>
-<p>
-The cylinder is <m>r=2</m> and the paraboloid is <m>z = 5-r^2</m>;
-they meet at <m>z=1</m>, which is where the wall of the cylinder
-stops.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-a">
 <caption>
@@ -434,19 +433,24 @@ The volume of the region bounded below by the paraboloid
 <m>z = \frac14\left(x^2+y^2\right)</m> and above by the plane
 <m>z=1</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-b"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_0^{2}\!\!\int_{r^2/4}^{1} r\,dz\,dr\,d\theta
-  = 2\pi\int_0^2 \left(r - \frac{r^3}{4}\right)dr = 2\pi .
-</me>
-<p>
-The paraboloid is <m>z = r^2/4</m>, and it meets <m>z=1</m> at
-<m>r=2</m>, which fixes the outer limit of <m>r</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-b">
 <caption>
@@ -474,20 +478,24 @@ The volume of the region bounded above by the paraboloid
 <m>z = \frac14\left(x^2+y^2\right)</m>, below by the plane <m>z=0</m>,
 and on the side by the cylinder <m>x^2+y^2=4</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-c"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_0^{2}\!\!\int_0^{\,r^2/4} r\,dz\,dr\,d\theta
-  = 2\pi\int_0^2 \frac{r^3}{4}\,dr = 2\pi .
-</me>
-<p>
-This solid and the one of <xref ref="task-cyl-b"/> together fill the
-cylinder <m>r \le 2</m>, <m>0 \le z \le 1</m>, whose volume is
-<m>4\pi</m><mdash/>which is why both answers are <m>2\pi</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-c">
 <caption>
@@ -514,21 +522,24 @@ the reset icon in the corner to return to the original view.
 The volume of the region bounded below by the lower half of the sphere
 <m>x^2+y^2+(z-1)^2=4</m> and above by the plane <m>z=1</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-d"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_0^{2}\!\!\int_{1-\sqrt{4-r^2}}^{1}
-      r\,dz\,dr\,d\theta
-  = 2\pi\int_0^2 r\sqrt{4-r^2}\,dr = \frac{16\pi}{3} .
-</me>
-<p>
-The sphere has center <m>(0,0,1)</m> and radius <m>2</m>, so its lower
-half is <m>z = 1-\sqrt{4-r^2}</m> and the answer is the volume
-<m>\frac23\pi(2)^3</m> of a hemisphere of radius <m>2</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-d">
 <caption>
@@ -555,20 +566,24 @@ the reset icon in the corner to return to the original view.
 The volume of the region bounded by the cone <m>z^2 = \frac14\left(x^2+y^2\right)</m>
 and the planes <m>z=1</m> and <m>z=-1</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-e"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = 2\int_0^{2\pi}\!\!\int_0^{2}\!\!\int_{r/2}^{1} r\,dz\,dr\,d\theta
-  = 4\pi\int_0^2 \left(r - \frac{r^2}{2}\right)dr = \frac{8\pi}{3} .
-</me>
-<p>
-The cone is <m>z = \pm r/2</m>, and a point lies inside its upper half
-when <m>z \ge r/2</m>. The solid is two cones of radius <m>2</m> and
-height <m>1</m>, each of volume <m>\frac13\pi(2)^2(1)</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-e">
 <caption>
@@ -595,22 +610,24 @@ the reset icon in the corner to return to the original view.
 The volume of the region bounded by the hyperboloid of one sheet
 <m>x^2+y^2-z^2=4</m> and the planes <m>z=3</m> and <m>z=-3</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-f"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_{-3}^{3}\!\!\int_0^{\sqrt{z^2+4}}
-      r\,dr\,dz\,d\theta
-  = \pi\int_{-3}^{3}\left(z^2+4\right)dz = 42\pi .
-</me>
-<p>
-Here it pays to integrate <m>r</m> first: the wall is
-<m>r = \sqrt{z^2+4}</m>, one formula for every <m>z</m>, while slicing
-the other way would take two pieces. The waist has radius <m>2</m> and
-the caps radius <m>\sqrt{13}</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-f">
 <caption>
@@ -637,22 +654,24 @@ the reset icon in the corner to return to the original view.
 The volume of the region bounded by the cone <m>z^2 = \frac14\left(x^2+y^2\right)</m>
 and the planes <m>z=2</m> and <m>z=-1</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-g"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_{0}^{2}\!\!\int_0^{2z} r\,dr\,dz\,d\theta
-    + \int_0^{2\pi}\!\!\int_{-1}^{0}\!\!\int_0^{-2z} r\,dr\,dz\,d\theta
-  = 12\pi .
-</me>
-<p>
-The same cone as in <xref ref="task-cyl-e"/>, cut at different heights:
-a piece of radius <m>4</m> and height <m>2</m> and one of radius
-<m>2</m> and height <m>1</m>, of volumes <m>\frac{32\pi}{3}</m> and
-<m>\frac{4\pi}{3}</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-g">
 <caption>
@@ -680,20 +699,24 @@ The volume of the region bounded above by the cone <m>z = 5-\sqrt{x^2+y^2}</m>, 
 by the plane <m>z=0</m>, and on the side by the cylinder
 <m>x^2+y^2=4</m>.
 </p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {the bounding surfaces in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V = \displaystyle\int\!\!\int\!\!\int$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the bounding surfaces in cylindrical coordinates and one for the triple integral with its limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 <solution>
 <p>
-The bounding surfaces are the ones drawn in <xref ref="fig-cyl-h"/>, and
-in cylindrical coordinates
-</p>
-<me>
-V = \int_0^{2\pi}\!\!\int_0^{2}\!\!\int_0^{\,5-r} r\,dz\,dr\,d\theta
-  = 2\pi\int_0^2 \left(5r - r^2\right)dr = \frac{44\pi}{3} .
-</me>
-<p>
-The cone is <m>z = 5-r</m>, which is <m>3</m> at the wall <m>r=2</m>.
-Compare <xref ref="task-cyl-a"/>: the same picture with <m>5-r</m> in
-place of <m>5-r^2</m>.
+The solid is shown below. Compare it with the picture you formed from
+the description before setting up the integral.
 </p>
 <figure xml:id="fig-cyl-h">
 <caption>

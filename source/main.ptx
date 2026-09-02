@@ -26,7 +26,7 @@
 </docinfo>
 
   <book xml:id="math14">
-    <title>MATH 14: Calculus and Analytic Geometry IV</title>
+    <title>MATH 14<ndash/>Skeletal Notes</title>
     <xi:include href="frontmatter.ptx" />
 
     <chapter xml:id="ch-curves-and-fields">

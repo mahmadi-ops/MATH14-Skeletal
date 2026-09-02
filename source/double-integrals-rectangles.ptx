@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Double and Iterated Integrals Over Rectangles               -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The Riemann-sum reminder, the one-box and   -->
+<!-- four-box estimates, the double-integral definition, both worked       -->
+<!-- examples, the Fubini check, and the Concept Check answers are         -->
+<!-- replaced by blank workspace boxes, each preceded by a one-line        -->
+<!-- instruction.  The definition of the double integral is restated in   -->
+<!-- an assemblage so that later sections can still cite                   -->
+<!-- eq-double-integral-def.  Fubini's theorem is kept.  File name and     -->
+<!-- xml:ids are unchanged.                                                -->
+<!--                                                                       -->
+<!-- Figures: the Riemann-sum diagram, every GeoGebra applet, the video    -->
+<!-- and the surface of Example II are kept; the applets are the           -->
+<!-- statements of the Concept Check questions.  Captions that stated a    -->
+<!-- numerical answer have been trimmed.                                   -->
 <section xml:id="section-double-integrals-rectangles" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Double and Iterated Integrals Over Rectangles</title>
 
@@ -17,24 +34,23 @@ As shown in <xref ref="fig-riemann-1d-prefigure"/>, to calculate the
 area under <m>y = f(x)</m> from <m>x = a</m> to <m>x = b</m>, we divide
 the interval <m>(a,b)</m> into <m>n</m> subintervals and then let the
 number of subintervals (which is the same as the number of rectangles)
-approach infinity:
+approach infinity. Write the area as such a limit, and then as the
+definite integral it defines.
 </p>
 
-<me>
-\text{Area} = \lim_{n\to\infty}
-\Big[\Delta x\, f(x_1^*) + \Delta x\, f(x_2^*)
-+ \cdots + \Delta x\, f(x_n^*)\Big].
-</me>
-
-<p>
-We also learned that the definite integral of <m>f(x)</m> from
-<m>x = a</m> to <m>x = b</m> is equal to this area:
-</p>
-
-<me>
-\int_{x=a}^{x=b} f(x)\,dx
-= \lim_{\Delta x\to 0}\sum_{i=1}^{n} f(x_i^*)\,\Delta x.
-</me>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {Area $= \displaystyle\lim_{n\to\infty}$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$\displaystyle\int_{x=a}^{x=b} f(x)\,dx =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the area as a limit of a sum of rectangle areas and one for the definite integral as the same limit.</shortdescription>
+</image>
+</sidebyside>
 
 <figure xml:id="fig-riemann-1d-prefigure">
 <caption>
@@ -173,20 +189,31 @@ outline lies behind the surface.
 </figure>
 
 <p>
-To estimate that volume, we can use the point <m>(1,1)</m> in the middle
-to find the height of the cuboid and come up with a very bad estimate of
-the desired volume.
+To estimate that volume, use the point <m>(1,1)</m> in the middle of
+<m>R</m> to find the height of a single cuboid standing on <m>R</m>, and
+compute this (very bad) estimate of the desired volume.
 </p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$V \approx f(1,1)\,\Delta A =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the one-box estimate of the volume.</shortdescription>
+</image>
+</sidebyside>
 
 <figure xml:id="fig-volume-one-box-geogebra">
 <caption>
 A first, very rough estimate of the volume under
 <m>z = x^2 + y + 5</m> over the square <m>R = [0,2]\times[0,2]</m>: a
-single cuboid whose height <m>f(1,1) = 7</m> is sampled at the center of
-the square, giving the estimate
-<m>V \approx f(1,1)\,\Delta A = 7\cdot 4 = 28</m>. Turn the picture
-around: seen from any direction, part of the box sticks out above the
-surface and part of the volume under the surface is left uncovered.
+single cuboid whose height is sampled at the center of the square. Turn
+the picture around: seen from any direction, part of the box sticks out
+above the surface and part of the volume under the surface is left
+uncovered.
 </caption>
 <!-- the construction, and the colours, of the applet of
      fig-double-integral-geogebra, held at one division in each
@@ -206,23 +233,32 @@ center of <m>R</m>.
 
 <p>
 We can improve the estimate by splitting the region into more squares.
-For instance, we can split the region into four squares to achieve a
-better approximation for the desired volume, as shown in
+Split <m>R</m> into four squares, sample <m>f</m> at the center of each,
+and add up the four cuboids, as shown in
 <xref ref="fig-volume-four-boxes-geogebra"/>. Similar to finding the area
 under <m>f(x)</m>, if we let the number of splittings go to infinity,
 our estimation becomes exact, i.e., we find the exact desired volume.
 The refinement process is animated in <xref ref="fig-riemann-boxes-video"/>.
 </p>
 
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$f\!\left(\tfrac12,\tfrac12\right) =$ \quad $f\!\left(\tfrac12,\tfrac32\right) =$ \quad $f\!\left(\tfrac32,\tfrac12\right) =$ \quad $f\!\left(\tfrac32,\tfrac32\right) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$V \approx$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the four sampled heights and one for the four-box estimate of the volume.</shortdescription>
+</image>
+</sidebyside>
+
 <figure xml:id="fig-volume-four-boxes-geogebra">
 <caption>
 Splitting <m>R</m> into four squares improves the estimate. Each cuboid
-uses the value of <m>f</m> at the center of its square:
-<m>f\!\left(\tfrac12,\tfrac12\right) = 5.75</m>,
-<m>f\!\left(\tfrac12,\tfrac32\right) = 6.75</m>,
-<m>f\!\left(\tfrac32,\tfrac12\right) = 7.75</m>, and
-<m>f\!\left(\tfrac32,\tfrac32\right) = 8.75</m>, giving
-<m>V \approx (5.75 + 6.75 + 7.75 + 8.75)\cdot 1 = 29</m>. Turn the
+uses the value of <m>f</m> at the center of its square. Turn the
 picture around: each box now has to match the surface over a quarter of
 <m>R</m> instead of over all of it, as the single box of
 <xref ref="fig-volume-one-box-geogebra"/> does.
@@ -272,25 +308,29 @@ scroll to zoom.
 </figure>
 
 <p>
-In the Riemann sum notation, the approximation of the volume using
-<m>n</m> small rectangles is
+Write the approximation of the volume in Riemann-sum notation, using
+<m>n</m> divisions in <m>x</m> and <m>m</m> in <m>y</m>, and then the
+exact volume as a limit. (Each box contributes its base area
+<m>\Delta A_{ij} = \Delta x_i\,\Delta y_j</m> times the height of the
+surface at a sample point.)
 </p>
 
-<me>
-\text{Volume} \approx \sum_{j=1}^{m}\sum_{i=1}^{n}
-f(x_i, y_j)\,\Delta A_{ij}
-= \sum_{j=1}^{m}\sum_{i=1}^{n} f(x_i, y_j)\,\Delta x_i\,\Delta y_j,
-</me>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {Volume $\approx$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {Volume $=$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the double Riemann sum approximating the volume and one for its limit.</shortdescription>
+</image>
+</sidebyside>
 
-<p>
-and the exact volume is
-</p>
-
-<me>
-\text{Volume} = \lim_{m\to\infty}\lim_{n\to\infty}
-\sum_{j=1}^{m}\sum_{i=1}^{n} f(x_i, y_j)\,\Delta x_i\,\Delta y_j.
-</me>
-
+<assemblage xml:id="assemblage-double-integral-def">
+<title>The Double Integral Over a Rectangle</title>
 <p>
 The result of the above limit is defined as <term>the double integral
 over a rectangular region</term> and is denoted as
@@ -301,20 +341,24 @@ over a rectangular region</term> and is denoted as
 \quad\text{or}\quad
 \iint_R f(x,y)\,dx\,dy.
 </men>
+</assemblage>
 
 <p>
-For instance, in the example above, we have
+For instance, in the example above, write the volume as a double
+integral, with its limits.
 </p>
 
-<md>
-<mrow>
-\text{Volume} \amp= \iint_R f(x,y)\,dA
-\ \text{ or }\ \iint_R f(x,y)\,dx\,dy
-</mrow>
-<mrow>
-\amp= \int_0^2\!\!\int_0^2 \left(x^2 + y + 5\right)\,dx\,dy.
-</mrow>
-</md>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {Volume $= \displaystyle\iint_R f(x,y)\,dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the volume of the example written as a double integral with limits.</shortdescription>
+</image>
+</sidebyside>
 
 <p>
 Next, we will study how to calculate such integrals.
@@ -326,10 +370,10 @@ Animation of the Riemann-sum definition of the double integral. The
 region <m>R = [0,2]\times[0,2]</m> is split into <m>1</m>, then
 <m>4</m>, then <m>16</m>, then <m>64</m> squares, and a cuboid is
 built over each square with height sampled at its center. The
-displayed estimate approaches the exact volume
-<m>\iint_R (x^2+y+5)\,dA = \frac{88}{3} \approx 29.33</m>.
+displayed estimate approaches the exact volume, which you will compute
+in <xref ref="example-iterated-rectangle"/>.
 </caption>
-<video xml:id="video-riemann-boxes"
+<video preview="play-button.png" xml:id="video-riemann-boxes"
        source="videos/riemann_boxes_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -347,43 +391,28 @@ displayed estimate approaches the exact volume
 Calculate the double integral
 <m>\displaystyle\int_0^2\!\!\int_0^2 \left(x^2 + y + 5\right)\,dx\,dy</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Integrate with respect to <m>x</m> first, treating <m>y</m> as a
+constant and using FTC II; the result is a function of <m>y</m>. Then
+integrate that with respect to <m>y</m>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\displaystyle\int_0^2 \left(x^2+y+5\right)dx =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$\displaystyle\int_0^2 \Big(\quad\Big)\,dy =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the inner integral with respect to x and one for the outer integral with respect to y.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-To calculate the double integral
-</p>
-
-<me>
-\int_0^2\!\!\int_0^2 \left(x^2 + y + 5\right)\,dx\,dy
-</me>
-
-<p>
-we first use FTC II to integrate with respect to <m>x</m>:
-</p>
-
-<md>
-<mrow>
-\int_0^2 \left(x^2 + y + 5\right)dx
-\amp= \left.\left(\frac{x^3}{3} + xy + 5x\right)\right|_0^2
-</mrow>
-<mrow>
-\amp= \frac{8}{3} + 2y + 10 = 2y + \frac{38}{3},
-</mrow>
-</md>
-
-<p>
-which gives us a function of <m>y</m>, and then we integrate it with
-respect to <m>y</m>:
-</p>
-
-<me>
-\int_0^2 \left(2y + \frac{38}{3}\right)dy
-= \left.\left(y^2 + \frac{38}{3}y\right)\right|_0^2
-= 4 + \frac{76}{3} = \frac{88}{3}.
-</me>
-</solution>
 
 <p>
 In calculating double integrals, the following theorem can be very
@@ -409,31 +438,24 @@ If <m>f(x,y)</m> is continuous throughout the rectangular region
 <p>
 Therefore, if the integrand satisfies the conditions of
 <xref ref="thm-fubini"/>, we can change the order of integration as in
-<xref ref="eq-fubini-rectangle"/>. For the previous
-example, we can first integrate over <m>y</m>:
+<xref ref="eq-fubini-rectangle"/>. Check this on the previous example:
+integrate over <m>y</m> first, then over <m>x</m>, and compare with the
+result of <xref ref="example-iterated-rectangle"/>.
 </p>
 
-<me>
-\int_0^2 \left(x^2 + y + 5\right)dy
-= \left.\left(x^2 y + \frac{y^2}{2} + 5y\right)\right|_0^2
-= 2x^2 + 12.
-</me>
-
-<p>
-Then, we integrate this function of <m>x</m>:
-</p>
-
-<me>
-\int_0^2 \left(2x^2 + 12\right)dx
-= \left.\left(\frac{2}{3}x^3 + 12x\right)\right|_0^2
-= \frac{16}{3} + 24 = \frac{88}{3},
-</me>
-
-<p>
-which gives us the same result, i.e.,
-<m>\displaystyle\int_0^2\!\!\int_0^2 \left(x^2+y+5\right)dx\,dy
-= \frac{88}{3}</m>.
-</p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\displaystyle\int_0^2 \left(x^2+y+5\right)dy =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$\displaystyle\int_0^2 \Big(\quad\Big)\,dx =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the inner integral with respect to y and one for the outer integral with respect to x.</shortdescription>
+</image>
+</sidebyside>
 
 </subsection>
 
@@ -448,97 +470,41 @@ which gives us the same result, i.e.,
 Calculate the double integral
 <m>\displaystyle\int_0^2\!\!\int_0^1 \frac{x}{1+xy}\,dx\,dy</m>.
 </p>
+<p>
+<em>Solution.</em>
+(By <xref ref="thm-fubini"/> you may integrate over <m>y</m> first,
+with <m>x</m> held constant; the substitution <m>u = 1 + xy</m> does
+it. The result is a function of <m>x</m> involving a logarithm, which
+needs integration by parts, <m>\int u\,dv = uv - \int v\,du</m>; in
+the leftover integral, write the numerator as
+<m>(1 + 2x) - 1</m>. The surface is shown in
+<xref ref="fig-substitution-surface-tikz"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {$\displaystyle\int_0^2 \frac{x}{1+xy}\,dy =$ \quad ($u = 1+xy$)};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {$\displaystyle\int \ln(1+2x)\,dx =$ \quad (by parts)};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$\displaystyle\int_0^2\!\!\int_0^1 \frac{x}{1+xy}\,dx\,dy =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the inner integral by substitution, for the antiderivative of the logarithm by parts, and for the value of the double integral.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-Using Fubini's theorem, <xref ref="thm-fubini"/>, we first integrate
-over <m>y</m>,
-which means that <m>x</m> is considered to be a constant. As our
-<term>substitution</term>, we choose <m>u = 1 + xy</m> and
-<m>du = x\,dy</m>:
-</p>
-
-<me>
-\int \frac{x}{1+xy}\,dy = \int\frac{du}{u}
-= \ln|u| + C = \ln|1+xy| + C,
-</me>
-
-<me>
-\int_0^2 \frac{x}{1+xy}\,dy
-= \Big.\ln|1+xy|\Big|_{y=0}^{y=2}
-= \ln|1+2x| - \ln(1) = \ln|1+2x|.
-</me>
-
-<p>
-Next, we integrate <m>\ln(1+2x)</m> with respect to <m>x</m> using the
-method of <term>integration by parts</term>
-<m>\left(\int u\,dv = uv - \int v\,du\right)</m>. We make the
-following choices for the integration by parts:
-</p>
-
-<md>
-<mrow>
-u = \ln(1+2x) \amp\Rightarrow du = \frac{2}{1+2x}\,dx,
-</mrow>
-<mrow>
-dv = dx \amp\Rightarrow v = x.
-</mrow>
-</md>
-
-<p>
-Therefore,
-</p>
-
-<md>
-<mrow>
-\int \ln(1+2x)\,dx
-\amp= x\ln(1+2x) - \int\frac{2x}{1+2x}\,dx
-</mrow>
-<mrow>
-\amp= x\ln(1+2x) - \int\frac{1+2x-1}{1+2x}\,dx
-</mrow>
-<mrow>
-\amp= x\ln(1+2x) - \int\left(1 - \frac{1}{1+2x}\right)dx
-</mrow>
-<mrow>
-\amp= x\ln(1+2x) - x + \frac{1}{2}\ln(1+2x) + C,
-</mrow>
-</md>
-
-<p>
-and hence
-</p>
-
-<md>
-<mrow>
-\int_0^2\!\!\int_0^1 \frac{x}{1+xy}\,dx\,dy
-\amp= \int_0^1 \ln|1+2x|\,dx
-</mrow>
-<mrow>
-\amp= \left.\left(x\ln(1+2x) - x
-+ \frac{1}{2}\ln(1+2x)\right)\right|_0^1
-</mrow>
-<mrow>
-\amp= \frac{3}{2}\ln(3) - 1.
-</mrow>
-</md>
-
-<p>
-The surface <m>z = \dfrac{x}{1+xy}</m> whose volume over
-<m>[0,1]\times[0,2]</m> we just computed is shown in
-<xref ref="fig-substitution-surface-tikz"/>.
-</p>
-</solution>
 
 <figure xml:id="fig-substitution-surface-tikz">
 <caption>
 The surface <m>z = \dfrac{x}{1+xy}</m> over the rectangle
 <m>0 \le x \le 1</m>, <m>0 \le y \le 2</m>. The double integral of
 <xref ref="example-iterated-substitution"/> is the volume between this
-surface and the shaded base rectangle, and equals
-<m>\frac{3}{2}\ln 3 - 1 \approx 0.648</m>.
+surface and the shaded base rectangle.
 </caption>
 <image width="75%">
 <shortdescription>
@@ -630,20 +596,24 @@ Write down a double integral for computing the volume inside the sphere
 <m>x^2+y^2+z^2=1</m> and above the region <m>R</m>. See
 <xref ref="fig-ws-sphere-over-square"/>.
 </p>
-</statement>
-<answer>
 <p>
-Above <m>R</m> the sphere has upper half <m>z=\sqrt{1-x^2-y^2}</m>, and
-<m>R</m> lies well inside the unit disk, so that square root is defined
-on all of <m>R</m>. The solid is exactly the one of
-<xref ref="fig-volume-solid-geogebra"/> with a different ceiling, so
+(Which half of the sphere is the ceiling, and is its formula defined on
+all of <m>R</m>? The solid is the one of
+<xref ref="fig-volume-solid-geogebra"/> with a different ceiling.)
 </p>
-<me>
-V = \iint_R \sqrt{1-x^2-y^2}\,dA
-  = \int_{-1/2}^{1/2}\!\!\int_{-1/2}^{1/2}
-    \sqrt{1-x^2-y^2}\,dx\,dy .
-</me>
-</answer>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$V = \displaystyle\iint_R \cdots\, dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the double integral with limits giving the volume under the sphere.</shortdescription>
+</image>
+</sidebyside>
+</statement>
 </exercise>
 
 <figure xml:id="fig-ws-sphere-over-square">
@@ -685,35 +655,28 @@ are helpful in answering this question.
 <li><p><m>\displaystyle\iint_R (y-x)\,dA \lt 0</m></p></li>
 <li><p><m>\displaystyle\iint_R (y-x)\,dA \gt 0</m></p></li>
 </ol>
+<p>
+(Circle the correct statements and justify each. Where does the plane
+<m>z = x</m> lie above the <m>xy</m>-plane over <m>R</m>, and where
+below? What does the symmetry of <m>R</m> about the line <m>x = 0</m>
+do to the two signed volumes? Then treat <m>y - x</m> the same way,
+using <xref ref="fig-ws-plane-y-minus-x"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\displaystyle\iint_R x\,dA$: \quad sign, and why};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$\displaystyle\iint_R (y-x)\,dA$: \quad sign, and why};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, for the sign of the integral of x over the square with its justification, and for the sign of the integral of y minus x with its justification.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-<term>B</term> and <term>D</term> are the correct statements.
-</p>
-<p>
-For <term>B</term>: the plane <m>z=x</m> of
-<xref ref="fig-ws-plane-x"/> lies above the <m>xy</m>-plane on the half
-of <m>R</m> where <m>x \gt 0</m> and the same distance below it on the
-half where <m>x \lt 0</m>, because <m>R</m> is symmetric about the line
-<m>x=0</m>. The two signed volumes cancel, so
-<m>\iint_R x\,dA = 0</m>. In symbols, replacing <m>x</m> by <m>-x</m>
-carries <m>R</m> to itself and changes the sign of the integrand.
-</p>
-<p>
-For <term>D</term>: the same argument applies to <m>y</m>, so
-<m>\iint_R y\,dA = 0</m> as well, and therefore
-</p>
-<me>
-\iint_R (y-x)\,dA = \iint_R y\,dA - \iint_R x\,dA = 0 - 0 = 0 .
-</me>
-<p>
-<xref ref="fig-ws-plane-y-minus-x"/> shows this directly: the plane
-<m>z=y-x</m> cuts <m>R</m> along the diagonal <m>y=x</m>, and the wedge
-above that diagonal is congruent to the wedge below it. Statements
-<term>A</term>, <term>C</term>, <term>E</term> and <term>F</term> all
-claim a nonzero sign, so all four are false.
-</p>
-</answer>
 </exercise>
 
 <figure xml:id="fig-ws-plane-x">
@@ -767,25 +730,24 @@ Write a double integral for computing the volume of the region bounded by
 the blue plane and the orange plane as graphed in
 <xref ref="fig-ws-plane-x"/>.
 </p>
+<p>
+(Volume is unsigned, so the integrand is the <em>distance</em> between
+the two planes, not the signed height. How does this differ from
+<xref ref="q-di-signs"/>?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$V = \displaystyle\iint_R \cdots\, dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the double integral giving the volume between the plane z equals x and the square.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-The blue plane is the square <m>R</m> at height <m>z=0</m> and the orange
-plane is <m>z=x</m>. Volume is unsigned, so the integrand is the
-<em>distance</em> between the two planes, namely <m>|x|</m>:
-</p>
-<me>
-V = \iint_R |x|\,dA
-  = \int_{-1/2}^{1/2}\!\!\int_{-1/2}^{1/2} |x|\,dx\,dy
-  = 2\int_{-1/2}^{1/2}\!\!\int_{0}^{1/2} x\,dx\,dy
-  = \frac14 .
-</me>
-<p>
-Note how this differs from <xref ref="q-di-signs"/>: there the integrand
-was <m>x</m> and the answer was <m>0</m>, because the piece below the
-<m>xy</m>-plane counted negatively.
-</p>
-</answer>
 </exercise>
 
 <exercise xml:id="q-di-volume-plane-y-minus-x">
@@ -796,22 +758,25 @@ Write a double integral for computing the volume of the region bounded by
 the blue plane and the orange plane as graphed in
 <xref ref="fig-ws-plane-y-minus-x"/>.
 </p>
+<p>
+(As before, the integrand is the distance between the two planes. The
+diagonal <m>y = x</m> splits <m>R</m> into two halves; what does the
+symmetry noted in <xref ref="q-di-signs"/> let you do with the absolute
+value?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$V = \displaystyle\iint_R \cdots\, dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box with one row, for the double integral giving the volume between the plane z equals y minus x and the square.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-As before the integrand is the distance between the two planes:
-</p>
-<me>
-V = \iint_R |y-x|\,dA
-  = \int_{-1/2}^{1/2}\!\!\int_{-1/2}^{1/2} |y-x|\,dx\,dy
-  = \frac13 .
-</me>
-<p>
-Splitting at the diagonal <m>y=x</m> removes the absolute value: by the
-symmetry noted in <xref ref="q-di-signs"/> the two halves contribute
-equally, so <m>V = 2\iint_{y \ge x} (y-x)\,dA</m>.
-</p>
-</answer>
 </exercise>
 
 </subsection>

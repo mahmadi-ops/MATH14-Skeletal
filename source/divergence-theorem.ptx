@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: The Divergence Theorem                                       -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The definition of divergence in 3D and the  -->
+<!-- statement of the divergence theorem are kept; the proof and the four  -->
+<!-- worked examples are replaced by blank workspace boxes, each preceded  -->
+<!-- by a one-line instruction.  File name and xml:ids are unchanged.      -->
+<!--                                                                       -->
+<!-- Figures: all kept (the two field plots, the proof solid, the radial   -->
+<!-- field on the sphere, and every video); each is the check on the box   -->
+<!-- above it.  Captions that stated a divergence or a flux have been      -->
+<!-- trimmed.                                                              -->
 <section xml:id="section-divergence-theorem" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>The Divergence Theorem</title>
 
@@ -87,80 +100,52 @@ determine whether the gas is expanding or compressing.
 </li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(Compute the divergence of each field with <xref ref="eq-div-3d"/> and
+read off the sign. Two of the fields are drawn in
+<xref ref="fig-div3d-fields"/>. In <alert>D</alert>, write
+<m>\rho^2 = x^2 + y^2 + z^2</m> and use the quotient rule; the three
+terms combine. What does the answer say about a field whose arrows all
+point outward? Compare with <xref ref="fig-div3d-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,14);
+\draw[gray!35] (0,11.5) -- (15,11.5);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {A. $\nabla\cdot\mathbf F =$ \qquad so the gas is};
+\node[anchor=north west, font=\small\itshape] at (0.35,11.2) {B. $\nabla\cdot\mathbf F =$ \qquad so the gas is};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {C. $\nabla\cdot\mathbf F =$ \qquad so the gas is};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {D. $\nabla\cdot\mathbf F =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four labelled rows, one for the divergence of each field with its interpretation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
 
-<solution xml:id="solution-divergence-3d">
-<p>
-We calculate the divergence of the given vector fields in each case
-using <xref ref="eq-div-3d"/>.
-</p>
-
-<p>
-<em>Part A.</em>
-<m>\mathbf{F} = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}
-\Rightarrow \nabla \cdot \mathbf{F} = 1 + 1 + 1 = 3 \gt 0</m>: the gas
-is expanding, at the same rate at every point. This radial field is
-shown on the left in <xref ref="fig-div3d-fields"/>.
-</p>
-
-<p>
-<em>Part B.</em>
-<m>\mathbf{F} = -x\,\mathbf{i} - y\,\mathbf{j} - z\,\mathbf{k}
-\Rightarrow \nabla \cdot \mathbf{F} = -3 \lt 0</m>: the gas is being
-compressed; the field is the reverse of the one in part A, with all
-arrows pointing toward the origin.
-</p>
-
-<p>
-<em>Part C.</em>
-<m>\mathbf{F} = -y\,\mathbf{i} + x\,\mathbf{j}
-\Rightarrow \nabla \cdot \mathbf{F} = 0 + 0 + 0 = 0</m>: the gas is
-neither expanding nor being compressed<mdash/>this field rotates
-rigidly about the <m>z</m>-axis, as on the right in
-<xref ref="fig-div3d-fields"/>.
-</p>
-
-<p>
-<em>Part D.</em> Writing <m>\rho^2 = x^2 + y^2 + z^2</m>, a direct
-computation with the quotient rule gives
-</p>
-
-<me>
-\nabla \cdot \mathbf{F}
-= \frac{3\,(x^2+y^2+z^2)^{3/2} - 3\,(x^2+y^2+z^2)^{3/2}}
-{(x^2+y^2+z^2)^3} = 0.
-</me>
-
-<p>
-Again, the gas is neither expanding nor being compressed: even though
-the arrows point outward, they weaken with distance at exactly the
-rate that preserves volume. (This is the field of a point charge in
-electrostatics.) The animation in <xref ref="fig-div3d-video"/> shows
-all four fields.
-</p>
-</solution>
-
 <figure xml:id="fig-div3d-video">
 <caption>
-Four velocity fields and their divergences: expanding
-(<m>\nabla\cdot\mathbf{F} = 3</m>), compressing
-(<m>\nabla\cdot\mathbf{F} = -3</m>), rotating
-(<m>\nabla\cdot\mathbf{F} = 0</m>), and the inverse-square field
-(<m>\nabla\cdot\mathbf{F} = 0</m>).
+Four velocity fields: expanding, compressing, rotating, and the
+inverse-square field. Compare with the divergences you computed.
 </caption>
-<video xml:id="video-div3d"
+<video preview="play-button.png" xml:id="video-div3d"
        source="videos/divergence_3d_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
 
 <figure xml:id="fig-div3d-fields">
 <caption>
-Left: the field <m>x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}</m>
-points radially outward and expands the gas
-(<m>\nabla\cdot\mathbf{F} = 3</m>). Right: the field
-<m>-y\,\mathbf{i} + x\,\mathbf{j}</m> rotates about the
-<m>z</m>-axis without expansion (<m>\nabla\cdot\mathbf{F} = 0</m>).
+Left: the field <m>x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}</m>,
+which points radially outward. Right: the field
+<m>-y\,\mathbf{i} + x\,\mathbf{j}</m>, which rotates about the
+<m>z</m>-axis.
 </caption>
 <image xml:id="image-div3d-fields" width="97%">
 <shortdescription>
@@ -268,17 +253,9 @@ dV}_{\text{triple integral of the divergence over } D}.
 
 <proof xml:id="proof-divergence">
 <p>
-Write <m>\mathbf{F} = M\,\mathbf{i} + N\,\mathbf{j} + P\,\mathbf{k}</m>.
-Both sides of <xref ref="eq-divergence-theorem"/> break into three pieces
-along the three components: by <xref ref="eq-div-3d"/> the right-hand side
-is the sum of the integrals of
-<m>\dfrac{\partial M}{\partial x}</m>, <m>\dfrac{\partial N}{\partial y}</m>
-and <m>\dfrac{\partial P}{\partial z}</m>, and the left-hand side is the
-sum of the fluxes of <m>M\,\mathbf{i}</m>, <m>N\,\mathbf{j}</m> and
-<m>P\,\mathbf{k}</m>. So it is enough to prove the three separate
-statements
-</p>
-
+(Write <m>\mathbf{F} = M\,\mathbf{i} + N\,\mathbf{j} + P\,\mathbf{k}</m>.
+Both sides of <xref ref="eq-divergence-theorem"/> break into three
+pieces along the three components, so it is enough to prove
 <md>
 <mrow xml:id="eq-divthm-three" number="yes">
 \iint_S M\,\mathbf{i} \cdot \hat{\mathbf{n}}\, d\sigma
@@ -293,98 +270,42 @@ statements
 \amp = \iiint_D \frac{\partial P}{\partial z}\, dV ,
 </mrow>
 </md>
-
-<p>
-and add them. We prove the third; the other two are the same argument
-with the axes renamed.
+and add them; prove the third, the other two being the same argument
+with the axes renamed. <em>Step 1</em>: suppose <m>D</m> is simple in
+the <m>z</m>-direction, as in <xref ref="sec-triple-case1"/>, with
+floor <m>z = u_1(x,y)</m>, cap <m>z = u_2(x,y)</m> and shadow
+<m>R</m>, so that its boundary is the cap <m>S_2</m>, the floor
+<m>S_1</m> and the vertical wall <m>S_3</m> of
+<xref ref="fig-divthm-proof-tikz"/>. Say why the wall contributes
+nothing. On the cap, use <xref ref="eq-flux-param"/> for a graph to
+find <m>\mathbf{k}\cdot\hat{\mathbf{n}}\,d\sigma</m>; on the floor the
+outward normal points the other way. Write the flux as two double
+integrals over <m>R</m>. <em>Step 2</em>: evaluate the triple integral
+of <m>\partial P/\partial z</m> by integrating in <m>z</m> first, as in
+<xref ref="eq-triple-iterated"/>, with the Fundamental Theorem of
+Calculus on the inner integral, and compare. <em>Step 3</em>: say what
+to do with a solid that is not simple in all three directions, and why
+the cut surfaces cancel; <xref ref="fig-divthm-proof-video"/> shows
+the idea.)
 </p>
 
-<p>
-<em>Step 1: a solid that is simple in the <m>z</m>-direction.</em> Suppose
-first that <m>D</m> can be described as in
-<xref ref="sec-triple-case1"/>, that is
-</p>
-
-<me>
-D = \left\{(x,y,z) : (x,y) \in R,\ u_1(x,y) \le z \le u_2(x,y)\right\} ,
-</me>
-
-<p>
-where <m>R</m> is the shadow of <m>D</m> in the <m>xy</m>-plane and
-<m>u_1 \le u_2</m> are smooth. Its boundary <m>S</m> then falls into three
-pieces, drawn in <xref ref="fig-divthm-proof-tikz"/>: the cap
-<m>S_2</m> where <m>z = u_2(x,y)</m>, the floor <m>S_1</m> where
-<m>z = u_1(x,y)</m>, and the vertical wall <m>S_3</m> standing over the
-boundary of <m>R</m>.
-</p>
-
-<p>
-On the wall the outward normal is horizontal, so
-<m>\mathbf{k} \cdot \hat{\mathbf{n}} = 0</m> and <m>S_3</m> contributes
-nothing. On the cap the outward normal points upward, and for a graph
-<m>z = u_2(x,y)</m> we already know from
-<xref ref="eq-flux-param"/> that
-<m>\hat{\mathbf{n}}\, d\sigma
-= \left\langle -\dfrac{\partial u_2}{\partial x},\
--\dfrac{\partial u_2}{\partial y},\ 1 \right\rangle dx\, dy</m>, so that
-<m>\mathbf{k} \cdot \hat{\mathbf{n}}\, d\sigma = dx\, dy</m>. On the floor
-the outward normal points downward, which flips the sign, and
-<m>\mathbf{k} \cdot \hat{\mathbf{n}}\, d\sigma = -dx\, dy</m>. Hence
-</p>
-
-<md>
-<mrow>
-\iint_S P\,\mathbf{k} \cdot \hat{\mathbf{n}}\, d\sigma
-\amp = \iint_{S_2} P\,\mathbf{k} \cdot \hat{\mathbf{n}}\, d\sigma
-+ \iint_{S_1} P\,\mathbf{k} \cdot \hat{\mathbf{n}}\, d\sigma
-</mrow>
-<mrow>
-\amp = \iint_R P\bigl(x,y,u_2(x,y)\bigr) dx\, dy
-</mrow>
-<mrow>
-\amp \qquad - \iint_R P\bigl(x,y,u_1(x,y)\bigr) dx\, dy .
-</mrow>
-</md>
-
-<p>
-<em>Step 2: the triple integral.</em> Integrating first in <m>z</m>, as in
-<xref ref="eq-triple-iterated"/>, and using the Fundamental Theorem of
-Calculus on the inner integral,
-</p>
-
-<md>
-<mrow>
-\iiint_D \frac{\partial P}{\partial z}\, dV
-\amp = \iint_R \left[\int_{u_1(x,y)}^{u_2(x,y)}
-\frac{\partial P}{\partial z}\, dz\right] dx\, dy
-</mrow>
-<mrow>
-\amp = \iint_R \Bigl[P\bigl(x,y,u_2(x,y)\bigr)
-- P\bigl(x,y,u_1(x,y)\bigr)\Bigr] dx\, dy ,
-</mrow>
-</md>
-
-<p>
-which is exactly what Step 1 produced. So the third statement of
-<xref ref="eq-divthm-three"/> holds for such a solid. Running the same
-argument with <m>D</m> viewed as simple in the <m>x</m>-direction gives
-the first statement, and in the <m>y</m>-direction the second. Adding the
-three proves the theorem for any solid that is simple in all three
-directions.
-</p>
-
-<p>
-<em>Step 3: general solids.</em> A solid that is not simple in all three
-directions is cut into finitely many pieces that are, exactly as a region
-of the plane was cut in <xref ref="sec-general-regions-case1"/>. Apply the
-theorem to each piece and add. Every cut surface is shared by two
-neighbouring pieces, and it carries opposite outward normals as seen from
-the two sides, so the two flux contributions differ only in sign and
-cancel. What survives on the left is the flux through the original
-boundary <m>S</m>, and the volume integrals simply add up to the integral
-over <m>D</m>. This is the same bookkeeping that made the loop property of
-<xref ref="section-conservative-fields"/> work, one dimension up.
-</p>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,20);
+\draw[gray!35] (0,16.5) -- (15,16.5);
+\draw[gray!35] (0,10) -- (15,10);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,19.7) {Step 1: on the wall $S_3$, \qquad on the cap $S_2$, $\mathbf k\cdot\hat{\mathbf n}\,d\sigma =$ \qquad on the floor $S_1$, $\mathbf k\cdot\hat{\mathbf n}\,d\sigma =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,16.2) {$\displaystyle\iint_S P\,\mathbf k\cdot\hat{\mathbf n}\,d\sigma =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {Step 2: $\displaystyle\iiint_D \frac{\partial P}{\partial z}\,dV =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {Step 3: general solids};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the contributions of the wall, cap and floor, for the flux of P k written as double integrals over the shadow, for the triple integral done in the z direction first, and for the extension to general solids.</shortdescription>
+</image>
+</sidebyside>
 </proof>
 </theorem>
 
@@ -486,7 +407,7 @@ one. Every interior face is shared by two boxes and carries opposite
 outward normals, so the inside cancels in pairs and only the flux through
 <m>S</m> is left.
 </caption>
-<video xml:id="video-divthm-proof-idea"
+<video preview="play-button.png" xml:id="video-divthm-proof-idea"
        source="videos/divergence_proof_idea_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -501,44 +422,34 @@ Use the divergence theorem to compute the flux of the vector field
 <m>\mathbf{F} = x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}</m>
 through the sphere <m>x^2 + y^2 + z^2 = 1</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Compute <m>\nabla\cdot\mathbf F</m>, and then the right-hand side of
+<xref ref="eq-divergence-theorem"/> is a constant times a volume you
+know. The field is shown in <xref ref="fig-divthm-sphere"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$\nabla\cdot\mathbf F =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\displaystyle\iint_S \mathbf F\cdot\hat{\mathbf n}\,d\sigma = \iiint_D \nabla\cdot\mathbf F\,dV =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the divergence and one for the flux as a triple integral.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-divthm-sphere">
-<p>
-We calculate the right-hand side of the divergence theorem,
-<xref ref="eq-divergence-theorem"/>. Since
-<m>\nabla \cdot \mathbf{F} = 3</m>,
-</p>
-
-<me>
-\iiint_D \nabla \cdot \mathbf{F}\, dV
-= 3 \iiint_D dV
-= 3\, (\text{volume of the sphere})
-= 3 \left( \frac{4}{3}\pi \right) = 4\pi.
-</me>
-
-<p>
-Therefore,
-</p>
-
-<me>
-\iint_S \mathbf{F} \cdot \hat{\mathbf{n}}\, d\sigma
-= \iiint_D \nabla \cdot \mathbf{F}\, dV = 4\pi,
-</me>
-
-<p>
-with no parametrization, no cross product, and no double integral in
-sight: the field and its outward-pointing flux are shown in
-<xref ref="fig-divthm-sphere"/>.
-</p>
-</solution>
 
 <figure xml:id="fig-divthm-sphere">
 <caption>
 The radial field <m>\mathbf{F} = x\,\mathbf{i} + y\,\mathbf{j} +
-z\,\mathbf{k}</m> crossing the unit sphere. By the divergence theorem
-the outward flux is <m>3 \times \text{volume} = 4\pi</m>.
+z\,\mathbf{k}</m> crossing the unit sphere. Compare with the outward
+flux you found.
 </caption>
 <image xml:id="image-divthm-sphere" width="65%">
 <shortdescription>
@@ -610,49 +521,37 @@ integrating<mdash/>a full page of work that produced
 <m>\tfrac{4\pi}{3}</m>. Recompute this flux using the divergence
 theorem.
 </p>
+<p>
+<em>Solution.</em>
+(Compute the divergence; then <xref ref="eq-divergence-theorem"/>
+with <m>D</m> the unit ball reduces the flux to a volume. Compare with
+the long computation, and with <xref ref="fig-divthm-sphere-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$\nabla\cdot\mathbf F =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\displaystyle\iint_S \mathbf F\cdot\hat{\mathbf n}\,d\sigma = \iiint_D \nabla\cdot\mathbf F\,dV =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the divergence and one for the flux as a triple integral.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-divthm-sphere-zyx">
-<p>
-The divergence is
-</p>
-
-<me>
-\nabla \cdot \mathbf{F}
-= \frac{\partial z}{\partial x} + \frac{\partial y}{\partial y}
-+ \frac{\partial x}{\partial z} = 0 + 1 + 0 = 1,
-</me>
-
-<p>
-so by <xref ref="eq-divergence-theorem"/>, with <m>S</m> the unit
-sphere and <m>D</m> the unit ball <m>x^2 + y^2 + z^2 \le 1</m>,
-</p>
-
-<me>
-\iint_S \mathbf{F} \cdot \hat{\mathbf{n}}\, d\sigma
-= \iiint_D \nabla \cdot \mathbf{F}\, dV
-= \iiint_D dV
-= \text{volume of the sphere}
-= \frac{4\pi}{3}(1)^3 = \frac{4\pi}{3},
-</me>
-
-<p>
-in agreement with the long computation<mdash/>in one line. Watch the
-two sphere computations side by side in
-<xref ref="fig-divthm-sphere-video"/>.
-</p>
-</solution>
 
 <figure xml:id="fig-divthm-sphere-video">
 <caption>
 The divergence theorem converts the flux integrals of
 <m>x\,\mathbf{i} + y\,\mathbf{j} + z\,\mathbf{k}</m> and
 <m>z\,\mathbf{i} + y\,\mathbf{j} + x\,\mathbf{k}</m> through the unit
-sphere into triple integrals: <m>3 \cdot \tfrac{4\pi}{3} = 4\pi</m>
-and <m>1 \cdot \tfrac{4\pi}{3} = \tfrac{4\pi}{3}</m>.
+sphere into triple integrals. Use it to check both of your answers.
 </caption>
-<video xml:id="video-divthm-sphere"
+<video preview="play-button.png" xml:id="video-divthm-sphere"
        source="videos/divthm_sphere_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -670,56 +569,41 @@ solid region <m>E</m> enclosed by the paraboloid
 <m>z = 1 - x^2 - y^2</m> and the plane <m>z = 0</m>, this time using
 the divergence theorem.
 </p>
+<p>
+<em>Solution.</em>
+(In <xref ref="example-paraboloid-flux"/> this flux took two surface
+integrals. Compute the divergence, then apply
+<xref ref="eq-divergence-theorem"/> with the solid <m>E</m> described
+in cylindrical coordinates. Compare with the two-piece computation, and
+with <xref ref="fig-divthm-paraboloid-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$\nabla\cdot\mathbf F =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$E$ in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {$\displaystyle\iint_S \mathbf F\cdot\hat{\mathbf n}\,d\sigma = \iiint_E \nabla\cdot\mathbf F\,dV =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the divergence, for the cylindrical description of the solid, and for the flux as a triple integral.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-divthm-paraboloid">
-<p>
-In <xref ref="example-paraboloid-flux"/> we computed this flux by
-splitting <m>S</m> into the cap <m>S_1</m> and the disk <m>S_2</m>,
-finding a normal vector for each piece, and evaluating two surface
-integrals. With the divergence theorem the whole computation collapses.
-The divergence is
-</p>
-
-<me>
-\nabla \cdot \mathbf{F}
-= \frac{\partial y}{\partial x} + \frac{\partial x}{\partial y}
-+ \frac{\partial z}{\partial z} = 0 + 0 + 1 = 1,
-</me>
-
-<p>
-so by <xref ref="eq-divergence-theorem"/>, using cylindrical
-coordinates for the solid <m>E</m>
-(<m>0 \le z \le 1 - r^2</m>, <m>0 \le r \le 1</m>),
-</p>
-
-<md>
-<mrow>\iint_S \mathbf{F} \cdot \hat{\mathbf{n}}\, d\sigma
-\amp= \iiint_E \nabla \cdot \mathbf{F}\, dV
-= \iiint_E dV
-= \int_0^{2\pi}\!\! \int_0^1\!\! \int_0^{1-r^2} r\, dz\, dr\,
-d\theta</mrow>
-<mrow>\amp= 2\pi \int_0^1 (1 - r^2)\, r\, dr
-= 2\pi \left( \frac{1}{2} - \frac{1}{4} \right)
-= \frac{\pi}{2},</mrow>
-</md>
-
-<p>
-which agrees with the two-piece surface computation. Whenever the
-surface is closed and the divergence is simple, the divergence theorem
-is the tool of choice; see <xref ref="fig-divthm-paraboloid-video"/>.
-</p>
-</solution>
 
 <figure xml:id="fig-divthm-paraboloid-video">
 <caption>
 The flux of <m>y\,\mathbf{i} + x\,\mathbf{j} + z\,\mathbf{k}</m>
 through the closed paraboloid-and-disk surface: the divergence theorem
-replaces two surface integrals with one triple integral whose value is
-<m>\pi/2</m>.
+replaces two surface integrals with one triple integral. Compare its
+value with yours.
 </caption>
-<video xml:id="video-divthm-paraboloid"
+<video preview="play-button.png" xml:id="video-divthm-paraboloid"
        source="videos/divthm_paraboloid_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>

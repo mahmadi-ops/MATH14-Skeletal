@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Double Integrals Over General Regions and Area by Double     -->
+<!-- Integration                                                           -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The two region types, the area formula and  -->
+<!-- the reverse-order remark are kept; the four worked examples and the   -->
+<!-- two Concept Check answers are replaced by blank workspace boxes, each -->
+<!-- preceded by a one-line instruction.  File name and xml:ids are        -->
+<!-- unchanged.                                                            -->
+<!--                                                                       -->
+<!-- Figures: the two region diagrams with their strips, the strip video,  -->
+<!-- the tetrahedron, the reverse-order picture, the symmetry picture of   -->
+<!-- Method 2, the area region, and the two GeoGebra/PreFigure statements  -->
+<!-- of the Concept Check are kept.  The base of the tetrahedron, which is -->
+<!-- the region of integration the student has to find, becomes an empty  -->
+<!-- grid to sketch on.  Captions that stated a numerical answer have been -->
+<!-- trimmed.                                                              -->
 <section xml:id="section-double-integrals-general-regions" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Double Integrals Over General Regions and Area by Double Integration</title>
 
@@ -28,51 +46,32 @@ Calculate the following double integral,
 where
 <m>R = \{(x,y) : 0 \le x \le 1,\ (-2x^2+2x) \le y \le (x^3+1)\}</m>.
 </p>
-</statement>
-</example>
-
-<solution>
 <p>
-The region <m>R</m> is shown in
-<xref ref="fig-case1-region-prefigure"/>. Since for each fixed
-<m>x</m> the variable <m>y</m> runs from the lower curve
-<m>f_2(x) = -2x^2+2x</m> to the upper curve <m>f_1(x) = x^3+1</m>, we
-integrate along the green vertical strips first. We can re-write the
-integral as
+<em>Solution.</em>
+(The region is shown in <xref ref="fig-case1-region-prefigure"/>. For
+each fixed <m>x</m>, <m>y</m> runs from the lower curve to the upper
+curve, so integrate along the vertical strips first: write the iterated
+integral with its limits, do the inner integral, and then the outer
+one.)
 </p>
 
-<md>
-<mrow>
-\int_0^1\!\!\int_{-2x^2+2x}^{x^3+1}
-\left(2xy+1\right)\,dy\,dx
-\amp= \int_0^1\left(\Big.\left(xy^2 + y\right)
-\Big|_{-2x^2+2x}^{x^3+1}\right)dx
-</mrow>
-<mrow>
-\amp= \int_0^1\Big[\left(x(x^3+1)^2 + x^3 + 1\right)
-</mrow>
-<mrow>
-\amp\qquad - \left(x(-2x^2+2x)^2 - 2x^2 + 2x\right)\Big]\,dx
-</mrow>
-<mrow>
-\amp= \int_0^1\Big[\left(x^7 + 2x^4 + x + x^3 + 1\right)
-</mrow>
-<mrow>
-\amp\qquad - \left(4x^5 - 8x^4 + 4x^3 - 2x^2 + 2x\right)\Big]\,dx
-</mrow>
-<mrow>
-\amp= \left.\left(\frac{x^8}{8} + \frac{2}{5}x^5 + \frac{x^2}{2}
-+ \frac{x^4}{4} + x\right.\right.
-</mrow>
-<mrow>
-\amp\qquad \left.\left. - \frac{2}{3}x^6 + \frac{8}{5}x^5 - x^4
-+ \frac{2}{3}x^3 - x^2\right)\right|_0^1
-</mrow>
-<mrow>
-\amp= \frac{15}{8}.
-</mrow>
-</md>
-</solution>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,10) -- (15,10);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$\displaystyle\iint_R (2xy+1)\,dx\,dy = \int_{\quad}^{\quad}\!\!\int_{\quad}^{\quad} \cdots$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {inner integral:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {outer integral:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the iterated integral with its limits, for the inner integral, and for the outer integral.</shortdescription>
+</image>
+</sidebyside>
+</statement>
+</example>
 
 <figure xml:id="fig-case1-region-prefigure">
 <caption>
@@ -155,33 +154,31 @@ Calculate the following double integral,
 where
 <m>R = \{(x,y) : 0.1 \le y \le 0.5,\ y^2 \le x \le y^{1/3}\}</m>.
 </p>
-</statement>
-</example>
-
-<solution>
 <p>
-The region <m>R</m> is shown in
-<xref ref="fig-case2-region-prefigure"/>. This time, for each fixed
-<m>y</m>, the variable <m>x</m> runs along a horizontal strip from
-<m>g_1(y) = y^2</m> to <m>g_2(y) = y^{1/3}</m>, so we integrate with
-respect to <m>x</m> first:
+<em>Solution.</em>
+(The region is shown in <xref ref="fig-case2-region-prefigure"/>. This
+time, for each fixed <m>y</m>, <m>x</m> runs along a horizontal strip
+from the left curve to the right curve, so integrate with respect to
+<m>x</m> first.)
 </p>
 
-<md>
-<mrow>
-\int_{0.1}^{0.5}\!\!\int_{y^2}^{y^{1/3}} x^2 y\,dx\,dy
-\amp= \int_{0.1}^{0.5}
-\left[\left.\left(\frac{1}{3}x^3 y\right)\right|_{y^2}^{y^{1/3}}
-\right]dy
-= \frac{1}{3}\int_{0.1}^{0.5}\left(y^2 - y^7\right)dy
-</mrow>
-<mrow>
-\amp= \frac{1}{3}\left.\left(\frac{y^3}{3}
-- \frac{y^8}{8}\right)\right|_{0.1}^{0.5}
-= 0.013615.
-</mrow>
-</md>
-</solution>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {$\displaystyle\iint_R x^2 y\,dx\,dy = \int_{\quad}^{\quad}\!\!\int_{\quad}^{\quad} \cdots$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {inner integral:};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {outer integral:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the iterated integral with its limits, for the inner integral, and for the outer integral.</shortdescription>
+</image>
+</sidebyside>
+</statement>
+</example>
 
 <figure xml:id="fig-case2-region-prefigure">
 <caption>
@@ -253,10 +250,10 @@ Animation of iterated integration over a general region. For the
 region of <xref ref="example-case1-vertical"/>, a vertical strip at
 position <m>x</m> has height <m>f_1(x) - f_2(x)</m>; as the strip
 sweeps from <m>x = 0</m> to <m>x = 1</m>, the outer integral
-accumulates the strip contributions, arriving at
-<m>\iint_R (2xy+1)\,dA = \frac{15}{8}</m>.
+accumulates the strip contributions. Use it to check your answer to
+that example.
 </caption>
-<video xml:id="video-strip-sweep"
+<video preview="play-button.png" xml:id="video-strip-sweep"
        source="videos/strip_sweep_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -274,58 +271,34 @@ accumulates the strip contributions, arriving at
 Find the volume of the tetrahedron bounded by the planes
 <m>x + 2y + z = 2</m>, <m>x = 2y</m>, <m>x = 0</m> and <m>z = 0</m>.
 </p>
+<p>
+<em>Solution.</em>
+(<xref ref="fig-tetrahedron-tikz"/> shows the tetrahedron. First find
+the region of integration, the base of the tetrahedron in the
+<m>xy</m>-plane: sketch it on <xref ref="fig-tetrahedron-base-prefigure"/>,
+with the lines that bound it and a typical vertical strip, and describe
+it in the form of Case I. Then the volume is the integral over that
+region of the height of the top plane, solved for <m>z</m>. Set up the
+iterated integral and evaluate.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,10) -- (15,10);
+\draw[gray!35] (0,7) -- (15,7);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$R = \{(x,y) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {height of the top plane: $z =$ \qquad so $V = \displaystyle\iint_R$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {evaluate:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the description of the base region, for the height of the top plane and the double integral, and for its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-<xref ref="fig-tetrahedron-tikz"/> shows the tetrahedron <m>T</m>
-bounded by the planes <m>x + 2y + z = 2</m>, <m>x = 2y</m>,
-<m>x = 0</m> and <m>z = 0</m>. To find the volume of the tetrahedron
-<m>T</m>, we first need to figure out the region of integration.
-<xref ref="fig-tetrahedron-base-prefigure"/> shows the region of
-integration, i.e., the base of the tetrahedron. Therefore, our region
-of integration is
-</p>
-
-<me>
-R = \left\{(x,y) : 0 \le x \le 1,\
-\frac{x}{2} \le y \le \left(1 - \frac{x}{2}\right)\right\}.
-</me>
-
-<p>
-For the volume <m>V</m> of the tetrahedron, we integrate the height
-<m>z = 2 - x - 2y</m> of the top plane over <m>R</m>:
-</p>
-
-<md>
-<mrow>
-V \amp= \iint_R (2 - x - 2y)\,dx\,dy
-</mrow>
-<mrow>
-\amp= \int_0^1\!\!\int_{x/2}^{1 - x/2} (2 - x - 2y)\,dy\,dx
-</mrow>
-<mrow>
-\amp= \int_0^1\left[\left.\left(2y - xy - y^2\right)
-\right|_{y=x/2}^{y=1-x/2}\right]dx
-</mrow>
-<mrow>
-\amp= \int_0^1\left(2\left(1-\frac{x}{2}\right)
-- x\left(1-\frac{x}{2}\right)
-- \left(1-\frac{x}{2}\right)^2\right.
-</mrow>
-<mrow>
-\amp\qquad \left. - 2\left(\frac{x}{2}\right)
-+ x\left(\frac{x}{2}\right)
-+ \left(\frac{x}{2}\right)^2\right)dx
-</mrow>
-<mrow>
-\amp= \int_0^1\left(x^2 - 2x + 1\right)dx
-= \left.\left(\frac{x^3}{3} - x^2 + x\right)\right|_0^1
-= \frac{1}{3}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-tetrahedron-tikz">
 <caption>
@@ -412,72 +385,21 @@ the vertical face x equals two y are labeled with arrows.
 
 <figure xml:id="fig-tetrahedron-base-prefigure">
 <caption>
-The region of integration for <xref ref="example-tetrahedron"/>: the
-base of the tetrahedron in the <m>xy</m>-plane, bounded below by
-<m>y = x/2</m> and above by <m>x + 2y = 2</m> (or <m>y = 1 - x/2</m>)
-for <m>0 \le x \le 1</m>. A typical vertical strip is drawn in blue.
+Sketch the region of integration for <xref ref="example-tetrahedron"/>:
+the base of the tetrahedron in the <m>xy</m>-plane, with the lines that
+bound it and a typical vertical strip.
 </caption>
 <image width="60%">
-<shortdescription>
-The triangular base of the tetrahedron in the x y plane.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-tetrahedron-base">
-<diagram dimensions="(460,300)" margins="10">
-<definition>top(t) = (t, 1 - t/2)</definition>
-<definition>bot(t) = (t, t/2)</definition>
-<definition>topsc(t) = 1 - t/2</definition>
-<definition>botsc(t) = t/2</definition>
-<coordinates bbox="(-0.35,-0.55,2.75,1.55)">
-<axes at="tb-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-<area-between-curves at="tb-region" function1="botsc" function2="topsc"
-    domain="(0,1)" fill="#fbe3d0" stroke="none"/>
-<vector at="tb-strip" v="(0,1.85)" tail="(0.4,-0.45)" stroke="#D55E00"
-    thickness="3"/>
-<parametric-curve at="tb-top" function="top" domain="(0,1)"
-    stroke="#0072B2" thickness="3"/>
-<parametric-curve at="tb-bot" function="bot" domain="(0,1)"
-    stroke="#009E73" thickness="3"/>
-<line at="tb-left" endpoints="((0,0),(0,1))" stroke="#555555"
-    thickness="3"/>
-<point at="tb-upper" p="(0.4,0.8)" fill="#0072B2"/>
-<point at="tb-lower" p="(0.4,0.2)" fill="#009E73"/>
-<point at="tb-corner" p="(1,0.5)" fill="black" alignment="e">
-<m>\left(1,\tfrac12\right)</m>
-</point>
-<point at="tb-one" p="(0,1)" fill="black" alignment="w">
-<m>1</m>
-</point>
-<label at="tb-top-label" anchor="(0.02,1.18)" alignment="ne"
-    color="#0072B2">
-<m>x + 2y = 2</m>
-</label>
-<label at="tb-bot-label" anchor="(0.78,0.24)" alignment="se"
-    color="#009E73">
-<m>y = x/2</m>
-</label>
-<label at="tb-origin" anchor="(-0.06,-0.06)" alignment="sw">
-<m>0</m>
-</label>
-<rectangle at="tb-legend" lower-left="(1.38,0.55)" dimensions="(1.32,0.75)"
-    stroke="black" fill="white" thickness="1"/>
-<point at="tb-leg-upper" p="(1.5,1.1)" fill="#0072B2"/>
-<label at="tb-leg-upper-label" anchor="(1.58,1.1)" alignment="e"
-    color="#0072B2">upper bound for <m>y</m></label>
-<point at="tb-leg-lower" p="(1.5,0.75)" fill="#009E73"/>
-<label at="tb-leg-lower-label" anchor="(1.58,0.75)" alignment="e"
-    color="#009E73">lower bound for <m>y</m></label>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="A triangle in the x y plane with vertices at the origin, at zero comma one on the y axis, and at one comma one half. The upper edge, in blue, is the line x plus two y equals two; the lower edge, in green, is the line y equals x over two; the left edge lies on the y axis. A vermillion vertical arrow at x equals zero point four runs from the very bottom of the graph to near the top, crossing the lower edge at a green point and the upper edge at a blue point. A legend box explains that the blue point is the upper bound for y and the green point is the lower bound for y.">
-  <annotation ref="tb-region" text="The base of the tetrahedron: the region of integration R, shaded tan."/>
-  <annotation ref="tb-strip" text="A vertical arrow at a fixed x, running from below the region to above it. It enters the region at the lower bound and leaves it at the upper bound."/>
-  <annotation ref="tb-lower" text="The green intersection point with the line y equals x over 2: the lower bound for y."/>
-  <annotation ref="tb-upper" text="The blue intersection point with the line x plus 2 y equals 2: the upper bound for y."/>
-  <annotation ref="tb-legend" text="Legend: the blue point marks the upper bound for y and the green point marks the lower bound for y."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
+<latex-image><![CDATA[
+\begin{tikzpicture}[scale=2.2, >=stealth]
+\draw[gray!30, very thin] (-0.25,-0.25) grid[step=0.25] (1.5,1.25);
+\draw[->, thick] (-0.25,0) -- (1.6,0) node[right] {$x$};
+\draw[->, thick] (0,-0.25) -- (0,1.35) node[above] {$y$};
+\foreach \x in {0.5,1} \draw (\x,-0.03) -- (\x,0.03) node[below=3pt, font=\scriptsize] {$\x$};
+\foreach \y in {0.5,1} \draw (-0.03,\y) -- (0.03,\y) node[left=3pt, font=\scriptsize] {$\y$};
+\end{tikzpicture}
+]]></latex-image>
+<shortdescription>Empty coordinate grid, marked at one half and one on each axis, for sketching the base of the tetrahedron and a vertical strip.</shortdescription>
 </image>
 </figure>
 
@@ -577,93 +499,64 @@ Calculate the area of the region <m>R</m> shown in
 <m>x = y - y^3</m>, on the left by <m>x = -1</m>, and by the parabola
 <m>y = (x+1)^2</m>.
 </p>
+<p>
+<em>Solution.</em>
+(<alert>Method 1.</alert> Split <m>R</m> at the <m>x</m>-axis into
+<m>R_1</m> below and <m>R_2</m> above, as in
+<xref ref="fig-area-region-prefigure"/>, and describe each with
+horizontal strips; on <m>R_2</m> the left boundary is the parabola,
+solved for <m>x</m>. Then the area is
+<xref ref="eq-area-double-integral"/> over each piece; the two outer
+integrals can be combined before evaluating.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,10) -- (15,10);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$R_1 =$ \qquad\qquad $R_2 =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {Area $= \displaystyle\iint_{R_1} dx\,dy + \iint_{R_2} dx\,dy =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the descriptions of the two subregions and one for the area computed as the sum of two iterated integrals.</shortdescription>
+</image>
+</sidebyside>
+
+<p>
+(<alert>Method 2, using symmetry.</alert> The curve <m>x = y - y^3</m>
+is odd, so rotating it by <m>180^\circ</m> about the origin maps it
+onto itself. In <xref ref="fig-area-symmetry-prefigure"/>, which piece
+does that rotation carry onto which? Swap them, so that the region
+becomes the unit square <m>[-1,0]\times[-1,0]</m> together with the
+strip between the parabola and the <m>y</m>-axis, and add the two
+areas.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {why the two pieces $A$ have the same area:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {Area $=$ square $+$ strip $=$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the symmetry argument and one for the area as the square plus the strip.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<title>Method 1</title>
-<p>
-We split the region <m>R</m> into two regions <m>R_1</m> and
-<m>R_2</m> as follows:
-</p>
-
-<md>
-<mrow>
-R_1 \amp= \{(x,y) : -1 \le y \le 0,\ -1 \le x \le y - y^3\},
-</mrow>
-<mrow>
-R_2 \amp= \{(x,y) : 0 \le y \le 1,\ \sqrt{y} - 1 \le x \le y - y^3\}.
-</mrow>
-</md>
-
-<p>
-Note that on <m>R_2</m>, the left boundary is the parabola
-<m>y = (x+1)^2</m>, solved for <m>x</m> as <m>x = \sqrt{y} - 1</m>.
-Then
-</p>
-
-<md>
-<mrow>
-\text{Area} \amp= \iint_R dx\,dy
-= \iint_{R_1} dx\,dy + \iint_{R_2} dx\,dy
-</mrow>
-<mrow>
-\amp= \int_{-1}^{0}\!\!\int_{-1}^{y-y^3} dx\,dy
-+ \int_{0}^{1}\!\!\int_{\sqrt y - 1}^{y-y^3} dx\,dy
-</mrow>
-<mrow>
-\amp= \int_{-1}^{0}\left(y - y^3 + 1\right)dy
-+ \int_{0}^{1}\left(y - y^3 - \sqrt y + 1\right)dy
-</mrow>
-<mrow>
-\amp= \int_{-1}^{1}\left(y - y^3 + 1\right)dy
-- \int_{0}^{1}\sqrt y\,dy
-</mrow>
-<mrow>
-\amp= \left.\left(\frac{y^2}{2} - \frac{y^4}{4} + y\right)
-\right|_{-1}^{1}
-- \left.\left(\frac{2}{3}y^{3/2}\right)\right|_0^1
-= 2 - \frac{2}{3} = \frac{4}{3}.
-</mrow>
-</md>
-</solution>
-
-<solution>
-<title>Method 2 (using symmetry)</title>
-<p>
-The curve <m>x = y - y^3</m> is <em>odd</em>: rotating it by
-<m>180^\circ</m> about the origin maps it onto itself. As shown in
-<xref ref="fig-area-symmetry-prefigure"/>, this rotation carries the
-piece <m>A</m> that the curve cuts <em>out of</em> the unit square
-<m>[-1,0]\times[-1,0]</m> exactly onto the piece <m>A</m> that the
-curve adds <em>to the right of</em> the <m>y</m>-axis for
-<m>0 \le y \le 1</m>. These two pieces therefore have the same area,
-and swapping one for the other turns the region into the unit square
-(of area <m>1</m>) together with the strip between the parabola
-<m>y = (x+1)^2</m> and the <m>y</m>-axis. Hence
-</p>
-
-<md>
-<mrow>
-\text{Area} \amp= \underbrace{1}_{\text{square}}
-+ \underbrace{\int_0^1 \big(0 - (\sqrt y - 1)\big)\,dy}_{\text{strip}}
-= 1 + \int_0^1\left(1 - \sqrt y\right)dy
-</mrow>
-<mrow>
-\amp= 1 + \left.\left(y - \frac{2}{3}y^{3/2}\right)\right|_0^1
-= 1 + \frac{1}{3} = \frac{4}{3}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-area-symmetry-prefigure">
 <caption>
 Method 2: since <m>x = y - y^3</m> is odd, the piece <m>A</m> removed
 from the unit square (below the <m>x</m>-axis) is congruent to the
 piece <m>A</m> added to the right of the <m>y</m>-axis (above it).
-The area is therefore the area of the square, <m>1</m>, plus the area
-<m>\frac13</m> of the green strip between the parabola
-<m>y = (x+1)^2</m> and the <m>y</m>-axis.
+The area is therefore the area of the square plus the area of the green
+strip between the parabola <m>y = (x+1)^2</m> and the <m>y</m>-axis.
 </caption>
 <image width="65%">
 <shortdescription>
@@ -803,35 +696,31 @@ Set up a double integral for computing the volume of the region bounded by
 the cylinder <m>x^2+(y-1)^2=1</m> and the sphere
 <m>x^2+y^2+z^2=1</m>. See <xref ref="fig-ws-cylinder-sphere"/>.
 </p>
+<p>
+(The solid is the part of the ball inside the cylinder: what are its
+floor and ceiling, and so its height over a point of the shadow? The
+region of integration is the shadow of the solid, the set of points
+inside both circles <m>x^2+y^2=1</m> and <m>x^2+(y-1)^2=1</m>; find
+where the circles cross, and describe the region as in
+<xref ref="sec-general-regions-case1"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {height of the solid over $(x,y)$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {the circles cross at: \qquad so $D = \{(x,y) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$V = \displaystyle\iint_D \cdots\, dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the height of the solid, for the crossing points and the description of the region of integration, and for the double integral with limits.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-The solid is the part of the ball that lies inside the cylinder. It is
-bounded below by <m>z=-\sqrt{1-x^2-y^2}</m> and above by
-<m>z=\sqrt{1-x^2-y^2}</m>, so its height over a point of the region of
-integration is <m>2\sqrt{1-x^2-y^2}</m>.
-</p>
-<p>
-The region of integration <m>D</m> is the shadow of the solid: the points
-lying inside both circles <m>x^2+y^2=1</m> and <m>x^2+(y-1)^2=1</m>.
-Those circles cross where <m>\sqrt{1-x^2}=1-\sqrt{1-x^2}</m>, that is at
-<m>x=\pm\frac{\sqrt3}{2}</m>, <m>y=\frac12</m>. Between those values of
-<m>x</m>, the lower boundary of <m>D</m> is the cylinder and the upper
-boundary is the sphere, so
-</p>
-<me>
-V = \iint_D 2\sqrt{1-x^2-y^2}\,dA
-  = \int_{-\sqrt3/2}^{\sqrt3/2}\!\!
-    \int_{1-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
-    2\sqrt{1-x^2-y^2}\;dy\,dx .
-</me>
-<p>
-This is a region of the kind this section is about: <m>D</m> is bounded
-above and below by the graphs of functions of <m>x</m>, which is
-<xref ref="sec-general-regions-case1"/>. In polar coordinates the same
-integral becomes far friendlier still.
-</p>
-</answer>
 </exercise>
 
 <figure xml:id="fig-ws-cylinder-sphere">
@@ -865,51 +754,32 @@ Set up a double integral for computing the area of the region bounded by
 the blue curve and the red curve, which are graphed in
 <xref ref="fig-ws-arcsin-region"/>.
 </p>
+<p>
+(Identify the two curves: the red one as <m>x</m> in terms of
+<m>y</m>, and the blue one as an arc of a circle whose radius you can
+read off the endpoints. Slice the region horizontally; note that the
+right end of a slice changes when <m>y</m> passes <m>\frac{\pi}{2}</m>,
+so two integrals are needed. Set them up using
+<xref ref="eq-area-double-integral"/>. Then look at what comes out: one
+integrand is odd, and what remains is a familiar area.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {red curve: $x =$ \qquad blue curve: $x^2+y^2 =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$A = \displaystyle\int\!\!\int dx\,dy + \int\!\!\int dx\,dy =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {what it comes to, and why:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the equations of the two curves, for the area as two iterated integrals, and for the value with its explanation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-The red curve is <m>y=\sin^{-1}(x)</m>, that is <m>x=\sin y</m> for
-<m>-\frac{\pi}{2} \le y \le \frac{\pi}{2}</m>, and the blue curve is the
-half of the circle <m>x^2+y^2=R^2</m>, <m>R^2 = 1+\frac{\pi^2}{4}</m>,
-that runs counterclockwise from <m>(1,\frac{\pi}{2})</m> to
-<m>(-1,-\frac{\pi}{2})</m>. Those two endpoints are the ends of the red
-curve, and they are antipodal on the circle.
-</p>
-<p>
-Slice the region horizontally. For <m>-\frac{\pi}{2} \le y \le
-\frac{\pi}{2}</m> a slice runs from the circle on the left to the red
-curve on the right; above <m>y=\frac{\pi}{2}</m> it runs from the circle
-to the circle. Since area is given by
-<xref ref="eq-area-double-integral"/>,
-</p>
-<md>
-<mrow>
-A \amp = \int_{-\pi/2}^{\pi/2}\!\!\int_{-\sqrt{R^2-y^2}}^{\ \sin y}
-        dx\,dy
-      + \int_{\pi/2}^{R}\!\!\int_{-\sqrt{R^2-y^2}}^{\ \sqrt{R^2-y^2}}
-        dx\,dy
-</mrow>
-<mrow>
-\amp = \int_{-\pi/2}^{\pi/2}\left(\sin y + \sqrt{R^2-y^2}\right) dy
-     + \int_{\pi/2}^{R} 2\sqrt{R^2-y^2}\,dy .
-</mrow>
-</md>
-<p>
-It is worth seeing what comes out. The first integrand contains
-<m>\sin y</m>, which is odd, so it contributes nothing, and what is left
-is exactly the integral of <m>2\sqrt{R^2-y^2}</m> over
-<m>-R \le y \le R</m>, cut into two pieces. The area is therefore half
-the area of the disk:
-</p>
-<me>
-A = \frac{\pi R^2}{2}
-  = \frac{\pi}{2}\left(1+\frac{\pi^2}{4}\right) \approx 5.447 .
-</me>
-<p>
-The wiggle of the red curve costs nothing, because it bulges as far to
-one side of the diameter through its endpoints as it does to the other.
-</p>
-</answer>
 </exercise>
 
 <figure xml:id="fig-ws-arcsin-region">

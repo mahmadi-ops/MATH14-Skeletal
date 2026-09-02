@@ -1,0 +1,77 @@
+name: Build and Deploy
+on:
+  # Runs on pushes to main.  Claude Code's settings do not affect the built
+  # book, so a push that touches nothing else does not rebuild the site; a
+  # push that changes these files alongside anything else still builds.
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - '.claude/**'
+  # Runs on demand
+  workflow_dispatch:
+
+# Only one deploy at a time: every run ends by force-pushing gh-pages, so a
+# new push cancels the older run instead of racing it, and what goes live is
+# always the most recent commit.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    # Same image as .devcontainer/devcontainer.json, so a local build and a CI
+    # build use the same pretext, prefigure, latex and sagemath.
+    container: pretextbook/pretext-full:1.9
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: setup git config
+        run: |
+          git config --global --add safe.directory $(pwd)
+          git config user.name "${{ github.actor }} via GitHub Actions"
+          git config user.email "${{ github.actor }}@github_actions.no_reply"
+
+      - name: install deps
+        run: pip install -r requirements.txt --break-system-packages
+
+      - name: initialize prefigure
+        run: prefig init
+
+      - name: check pretext
+        run: pretext --version
+
+      # Builds the web target and the print target, and drops the PDF next to
+      # the HTML pages so the navbar's "PDF" button resolves.  `pretext deploy`
+      # then copies output/web wholesale to the staging area.
+      #
+      # extra_mem_top/bot: the PDF holds hundreds of tikz pictures (every
+      # workspace box, plus the pgfplots surfaces), whose paths are token
+      # lists in TeX's main memory.  At xelatex's default ceiling the print
+      # run can die mid-book with "TeX capacity exceeded" and ship a
+      # truncated PDF (the page-count guard in scripts/build-site.sh catches
+      # it).  Kpathsea reads these two values from the environment at
+      # runtime, no format rebuild needed.
+      - name: build site (web + PDF)
+        run: scripts/build-site.sh
+        env:
+          extra_mem_top: "50000000"
+          extra_mem_bot: "20000000"
+
+      - name: run deploy
+        run: pretext deploy --no-push
+
+      - name: push gh-pages branch
+        run: git push origin gh-pages --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

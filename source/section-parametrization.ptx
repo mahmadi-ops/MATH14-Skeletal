@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Complementary Modules for MATH 14                                     -->
+<!-- MATH 14 Skeletal Notes                                                -->
 <!-- Section: Parametrization of Curves                                    -->
 <!--                                                                       -->
-<!-- Ported from the MATH 13 notes (chapter "Parametrization"), sections    -->
-<!-- "Parametric Equations", "Some Examples of Parametrizing Curves" and    -->
-<!-- "Intersection Points versus Collision Points"; the projectile-motion   -->
-<!-- section is deliberately omitted.  The closing subsection on curves in  -->
-<!-- space is new.                                                         -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  Definitions, the numbered results that are  -->
+<!-- cited later, and problem statements are kept; every derivation and    -->
+<!-- solution is replaced by a blank workspace box preceded by a one-line  -->
+<!-- instruction.  File names and xml:ids are unchanged, so the            -->
+<!-- assignments and review problems cross-reference this section exactly  -->
+<!-- as before.                                                            -->
 <!--                                                                       -->
-<!-- Figure conventions: plane curves are drawn with PreFigure (annotated   -->
-<!-- for screen readers); space curves are drawn with TikZ/pgfplots, which  -->
-<!-- needs the tikz + pgfplots preamble already present in main.ptx.        -->
+<!-- Figures: the pictures that introduce an idea (the general trajectory, -->
+<!-- the unit circle with its parameter marked, the no-collision picture,  -->
+<!-- and the three space curves, which nobody could draw by hand) are kept -->
+<!-- in full.  The plots that answer an exercise (the parabola from the    -->
+<!-- table, the segment, the ellipse, the shifted circle, the collision    -->
+<!-- picture) become empty grids to draw on, and the table of points has   -->
+<!-- its x and y columns left blank.                                       -->
+<!--                                                                       -->
+<!-- Plane curves are drawn with PreFigure (annotated for screen readers); -->
+<!-- space curves with TikZ/pgfplots, which needs the tikz + pgfplots      -->
+<!-- preamble already present in main.ptx.                                 -->
 
 <section xml:id="sec-parametrization">
   <title>Parametrization of Curves</title>
@@ -66,6 +76,11 @@
       which are known as the parametric equations. This section reviews that
       language and then extends it to curves in space, where it becomes the
       main tool for everything that follows.
+    </p>
+    <p>
+      <em>These are skeletal notes: the definitions, theorems, and problem
+      statements are given, and blank boxes are left wherever a derivation, a
+      solution, or a sketch belongs, so that you can fill them in by hand.</em>
     </p>
   </introduction>
 
@@ -205,133 +220,56 @@
     </figure>
 
     <p>
-      As an example, consider <m>x = t</m> and <m>y = t^2</m>. Let us
-      calculate some of the points <m>(x,y)</m>.
+      As an example, consider <m>x = t</m> and <m>y = t^2</m>. Fill in
+      <xref ref="table-parabola-points"/>, plot the seven points on the grid
+      below, and join them. (Then eliminate the parameter to name the curve,
+      and mark on your sketch the direction in which it is traced as
+      <m>t</m> increases.)
     </p>
 
     <table xml:id="table-parabola-points">
       <title>Points on the curve <m>x=t</m>, <m>y=t^2</m></title>
-      <tabular halign="center" top="minor" left="minor">
-        <row header="yes" bottom="minor">
+      <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+        <row header="yes" bottom="major">
           <cell><m>t</m></cell>
-          <cell><m>-3</m></cell>
-          <cell><m>-2</m></cell>
-          <cell><m>-1</m></cell>
-          <cell><m>0</m></cell>
-          <cell><m>1</m></cell>
-          <cell><m>2</m></cell>
-          <cell><m>3</m></cell>
-        </row>
-        <row>
           <cell><m>x</m></cell>
-          <cell><m>-3</m></cell>
-          <cell><m>-2</m></cell>
-          <cell><m>-1</m></cell>
-          <cell><m>0</m></cell>
-          <cell><m>1</m></cell>
-          <cell><m>2</m></cell>
-          <cell><m>3</m></cell>
-        </row>
-        <row>
           <cell><m>y</m></cell>
-          <cell><m>9</m></cell>
-          <cell><m>4</m></cell>
-          <cell><m>1</m></cell>
-          <cell><m>0</m></cell>
-          <cell><m>1</m></cell>
-          <cell><m>4</m></cell>
-          <cell><m>9</m></cell>
         </row>
+        <row><cell><m>-3</m></cell><cell></cell><cell></cell></row>
+        <row><cell><m>-2</m></cell><cell></cell><cell></cell></row>
+        <row><cell><m>-1</m></cell><cell></cell><cell></cell></row>
+        <row><cell><m>0</m></cell><cell></cell><cell></cell></row>
+        <row><cell><m>1</m></cell><cell></cell><cell></cell></row>
+        <row><cell><m>2</m></cell><cell></cell><cell></cell></row>
+        <row><cell><m>3</m></cell><cell></cell><cell></cell></row>
       </tabular>
     </table>
 
-    <p>
-      Plotting these points and connecting them, we recognize the parabola
-      <m>y = x^2</m>, traced from left to right as <m>t</m> increases from
-      <m>-3</m> to <m>3</m>. See <xref ref="fig-parabola-parametric"/>.
-    </p>
-
-    <figure xml:id="fig-parabola-parametric">
-      <caption>
-        The curve <m>x = t</m>, <m>y = t^2</m> is the parabola
-        <m>y = x^2</m>. The marked points correspond to the integer values
-        <m>t = -3, \dots, 3</m> from
-        <xref ref="table-parabola-points"/>, and the arrow shows the
-        direction of increasing <m>t</m>.
-      </caption>
-      <image xml:id="image-parabola-parametric" width="60%">
-        <shortdescription>
-          The parabola y equals x squared with seven marked points and an
-          arrow showing that it is traced from left to right.
-        </shortdescription>
-        <description>
-          <p>
-            The parabola y equals x squared drawn on a coordinate grid for x
-            between minus three and three. Seven dots on the curve mark the
-            points obtained from the integer parameter values t equals minus
-            three through three, namely minus three comma nine, minus two
-            comma four, minus one comma one, the origin, one comma one, two
-            comma four, and three comma nine. An arrowhead partway up the
-            right branch shows that the curve is traced from left to right as
-            t increases.
-          </p>
-        </description>
-        <prefigure xmlns="https://prefigure.org" label="parabola-parametric">
-          <diagram dimensions="(400,380)" margins="5">
-            <definition>f(t) = (t, t^2)</definition>
-            <coordinates bbox="(-4.2,-1.4,4.2,10.4)">
-              <grid-axes xlabel="x" ylabel="y"/>
-
-              <group at="curve">
-                <parametric-curve function="f" domain="(-3,3)" stroke="blue"
-                                  thickness="3" arrows="1"
-                                  arrow-location="2"/>
-                <label anchor="f(2.6)" alignment="e" offset="(8,0)"
-                       clear-background="yes">
-                  <m>y=x^2</m>
-                </label>
-              </group>
-
-              <group at="samples">
-                <repeat parameter="k=0..6">
-                  <point p="f(k-3)" size="4" stroke="red" fill="red"/>
-                </repeat>
-                <label anchor="f(-3)" alignment="nw" offset="(-4,4)"
-                       clear-background="yes">
-                  <m>t=-3</m>
-                </label>
-                <label anchor="f(0)" alignment="s" offset="(0,-8)"
-                       clear-background="yes">
-                  <m>t=0</m>
-                </label>
-                <label anchor="f(3)" alignment="ne" offset="(4,4)"
-                       clear-background="yes">
-                  <m>t=3</m>
-                </label>
-              </group>
-            </coordinates>
-
-            <annotations>
-              <annotation ref="figure"
-                          text="The parametric curve x equals t, y equals t
-                                squared, which is the parabola y equals x
-                                squared traced from left to right">
-                <annotation ref="grid" text="The coordinate grid"/>
-                <annotation ref="axes" text="The coordinate axes"/>
-                <annotation ref="curve"
-                            text="The parabola y equals x squared, traced in
-                                  the direction of increasing t"
-                            sonify="yes"/>
-                <annotation ref="samples"
-                            text="The seven points coming from the integer
-                                  parameter values t equals minus three
-                                  through three"/>
-              </annotation>
-            </annotations>
-          </diagram>
-        </prefigure>
+    <sidebyside widths="46% 46%">
+      <image>
+        <latex-image><![CDATA[
+\begin{tikzpicture}[scale=0.52, >=stealth]
+\draw[gray!30, very thin] (-4,-1) grid (4,10);
+\draw[->, thick] (-4,0) -- (4.4,0) node[right] {$x$};
+\draw[->, thick] (0,-1) -- (0,10.4) node[above] {$y$};
+\foreach \x in {-3,-2,-1,1,2,3} \draw (\x,-0.12) -- (\x,0.12) node[below=4pt, font=\scriptsize] {$\x$};
+\foreach \y in {1,2,3,4,5,6,7,8,9} \draw (-0.12,\y) -- (0.12,\y) node[left=4pt, font=\scriptsize] {$\y$};
+\end{tikzpicture}
+]]></latex-image>
+        <shortdescription>Empty coordinate grid running from negative four to four horizontally and negative one to ten vertically, for plotting the seven points from the table and joining them.</shortdescription>
       </image>
-    </figure>
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (7,7);
+\draw[gray!35] (0,3.5) -- (7,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.3,6.7) {Eliminating $t$:};
+\node[anchor=north west, font=\small\itshape] at (0.3,3.2) {Name of the curve, and its direction:};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in two rows, one for eliminating the parameter and one for naming the curve and the direction in which it is traced.</shortdescription>
+      </image>
+    </sidebyside>
 
     <p>
       As our second example, consider the equation of the circle centered at
@@ -346,20 +284,42 @@
 
     <p>
       Here, we would like to parametrize <m>x</m> and <m>y</m> in terms of a
-      single parameter <m>t</m> in such a way that by varying the value of
-      <m>t</m>, we can reconstruct the circle <xref ref="eq-unit-circle"/>.
-      Remember that <m>\cos^2(t) + \sin^2(t) = 1</m>, so one way to achieve
-      our goal is to write
-
-    <md>
-      <mrow xml:id="eq-unit-circle-param" number="yes">
-        x = \cos(t), \qquad y = \sin(t),
-      </mrow>
-    </md>
+      single parameter <m>t</m>, as in <xref ref="eq-parametric-equations"/>,
+      in such a way that by varying the value of <m>t</m> we can reconstruct
+      the circle <xref ref="eq-unit-circle"/>. Find such a pair. (One
+      trigonometric identity does the whole job; match it against
+      <xref ref="eq-unit-circle"/> term by term. State the interval of
+      <m>t</m> that traces the circle exactly once, and check your answer by
+      substituting it back in.)
     </p>
 
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {the identity, and the parametrization:};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {interval of $t$, and the check:};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in two rows, one for the trigonometric identity and the resulting parametrization and one for the interval of the parameter and the verification.</shortdescription>
+      </image>
+    </sidebyside>
+
+    <assemblage xml:id="summary-unit-circle-param">
+      <title>The Unit Circle</title>
+      <p>
+        <md>
+          <mrow xml:id="eq-unit-circle-param" number="yes">
+            x = \cos(t), \qquad y = \sin(t), \qquad t \in [0, 2\pi).
+          </mrow>
+        </md>
+      </p>
+    </assemblage>
+
     <p>
-      where <m>t \in [0, 2\pi)</m>. The parametrization is illustrated in
+      The parametrization is illustrated in
       <xref ref="fig-unit-circle-param"/>.
     </p>
 
@@ -467,6 +427,18 @@
           Can you think of another way to write a parametric form of the
           circle <m>x^2 + y^2 = 1</m>?
         </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,5);
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape] at (0.25,4.75) {workspace};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank workspace for a second parametrization of the unit circle.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
       <hint>
         <p>
@@ -474,23 +446,6 @@
           counterclockwise, or to go around exactly once.
         </p>
       </hint>
-      <answer>
-        <p>
-          For instance <m>x = \sin(t)</m>, <m>y = \cos(t)</m>, or
-          <m>x = \cos(2t)</m>, <m>y = \sin(2t)</m>.
-        </p>
-      </answer>
-      <solution>
-        <p>
-          Taking <m>x = \sin(t)</m> and <m>y = \cos(t)</m> with
-          <m>t \in [0,2\pi)</m> gives the same circle, but starting at
-          <m>(0,1)</m> and traced <em>clockwise</em>. Taking
-          <m>x = \cos(2t)</m> and <m>y = \sin(2t)</m> with
-          <m>t \in [0,2\pi)</m> also gives the same circle, traced
-          counterclockwise but <em>twice</em>. A curve has many
-          parametrizations: the picture does not determine the schedule.
-        </p>
-      </solution>
     </exercise>
   </subsection>
 
@@ -523,293 +478,82 @@
             </p>
           </li>
         </ol>
+        <p>
+          <em>Solution.</em>
+          (In <alert>A</alert>, find the Cartesian equation of the line first
+          and then take <m>x = t</m>; state the interval of <m>t</m> that
+          gives the segment and no more of the line, and say where the point
+          is at each end of the interval. Parts <alert>B</alert> and
+          <alert>C</alert> are both adjustments of
+          <xref ref="eq-unit-circle-param"/>: one rescales the two
+          coordinates, the other shifts them. Verify each answer by
+          substituting it into the Cartesian equation.)
+        </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,10) -- (15,10);
+\draw[gray!35] (0,5) -- (15,5);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {A.};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {B.};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {C.};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in three labelled rows, one for each of the three parametrizations together with its verification.</shortdescription>
+          </image>
+        </sidebyside>
+
+        <p>
+          Now sketch the three curves on the grids below, marking the point
+          reached at <m>t = 0</m> and the direction of increasing <m>t</m>
+          on each.
+        </p>
+
+        <sidebyside widths="31% 31% 31%">
+          <image>
+            <latex-image><![CDATA[
+\begin{tikzpicture}[scale=0.75, >=stealth]
+\draw[gray!30, very thin] (-0.5,-0.5) grid (1.5,1.5);
+\draw[->, thick] (-0.5,0) -- (1.8,0) node[right] {$x$};
+\draw[->, thick] (0,-0.5) -- (0,1.8) node[above] {$y$};
+\draw (1,-0.08) -- (1,0.08) node[below=4pt, font=\scriptsize] {$1$};
+\draw (-0.08,1) -- (0.08,1) node[left=4pt, font=\scriptsize] {$1$};
+\node[anchor=north, font=\small\itshape] at (0.5,-0.75) {A.};
+\end{tikzpicture}
+]]></latex-image>
+            <shortdescription>Empty coordinate grid for part A, for sketching the segment from zero comma one to one comma zero.</shortdescription>
+          </image>
+          <image>
+            <latex-image><![CDATA[
+\begin{tikzpicture}[scale=0.4, >=stealth]
+\draw[gray!30, very thin] (-3.5,-4) grid (3.5,4);
+\draw[->, thick] (-3.5,0) -- (3.9,0) node[right] {$x$};
+\draw[->, thick] (0,-4) -- (0,4.4) node[above] {$y$};
+\foreach \x in {-3,-2,-1,1,2,3} \draw (\x,-0.12) -- (\x,0.12) node[below=3pt, font=\scriptsize] {$\x$};
+\foreach \y in {-3,-2,-1,1,2,3} \draw (-0.12,\y) -- (0.12,\y) node[left=3pt, font=\scriptsize] {$\y$};
+\node[anchor=north, font=\small\itshape] at (0,-4.6) {B.};
+\end{tikzpicture}
+]]></latex-image>
+            <shortdescription>Empty coordinate grid for part B, running from negative three to three horizontally and negative four to four vertically, for sketching the ellipse.</shortdescription>
+          </image>
+          <image>
+            <latex-image><![CDATA[
+\begin{tikzpicture}[scale=0.45, >=stealth]
+\draw[gray!30, very thin] (-1,-2.5) grid (5,2.5);
+\draw[->, thick] (-1,0) -- (5.4,0) node[right] {$x$};
+\draw[->, thick] (0,-2.5) -- (0,2.9) node[above] {$y$};
+\foreach \x in {1,2,3,4} \draw (\x,-0.12) -- (\x,0.12) node[below=3pt, font=\scriptsize] {$\x$};
+\foreach \y in {-2,-1,1,2} \draw (-0.12,\y) -- (0.12,\y) node[left=3pt, font=\scriptsize] {$\y$};
+\node[anchor=north, font=\small\itshape] at (2,-3.1) {C.};
+\end{tikzpicture}
+]]></latex-image>
+            <shortdescription>Empty coordinate grid for part C, running from negative one to five horizontally and negative two and a half to two and a half vertically, for sketching the shifted circle.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-
-      <solution>
-        <p>
-          <term>Part A.</term> The segment lies on the line
-          <m>y = 1 - x</m>, so we may take
-
-        <md>
-          <mrow xml:id="eq-segment-param" number="yes">
-            x = t, \qquad y = 1 - t, \qquad 0 \le t \le 1.
-          </mrow>
-        </md>
-        </p>
-        <p>
-          At <m>t = 0</m> we are at the point <m>(0,1)</m>, and at
-          <m>t = 1</m> we arrive at the point <m>(1,0)</m>. See
-          <xref ref="fig-segment-param"/>.
-        </p>
-
-        <figure xml:id="fig-segment-param">
-          <caption>
-            Part A: the segment <m>x = t</m>, <m>y = 1-t</m>,
-            <m>0 \le t \le 1</m>, which starts at <m>(0,1)</m> when
-            <m>t=0</m> and ends at <m>(1,0)</m> when <m>t=1</m>.
-          </caption>
-          <image xml:id="image-segment-param" width="55%">
-            <shortdescription>
-              The straight segment from the point (0,1) down to the point
-              (1,0), with an arrow pointing from the first to the second.
-            </shortdescription>
-            <description>
-              <p>
-                A straight segment on a coordinate grid joining the point
-                zero comma one on the y axis to the point one comma zero on
-                the x axis. Both endpoints are marked with dots and labeled
-                with the parameter values t equals zero and t equals one, and
-                an arrowhead on the segment points from the first toward the
-                second.
-              </p>
-            </description>
-            <prefigure xmlns="https://prefigure.org" label="segment-param">
-              <diagram dimensions="(340,340)" margins="5">
-                <definition>s(t) = (t, 1-t)</definition>
-                <coordinates bbox="(-0.45,-0.45,1.45,1.45)" aspect-ratio="1">
-                  <grid-axes xlabel="x" ylabel="y"/>
-
-                  <group at="curve">
-                    <parametric-curve function="s" domain="(0,1)"
-                                      stroke="blue" thickness="3"
-                                      arrows="1" arrow-location="0.55"/>
-                  </group>
-
-                  <group at="ends">
-                    <point p="s(0)" size="4.5" stroke="red" fill="red"/>
-                    <label anchor="s(0)" alignment="ne" offset="(6,6)"
-                           clear-background="yes">
-                      <m>(0,1),\ t=0</m>
-                    </label>
-                    <point p="s(1)" size="4.5" stroke="red" fill="red"/>
-                    <label anchor="s(1)" alignment="ne" offset="(6,6)"
-                           clear-background="yes">
-                      <m>(1,0),\ t=1</m>
-                    </label>
-                  </group>
-                </coordinates>
-
-                <annotations>
-                  <annotation ref="figure"
-                              text="The line segment from the point zero comma
-                                    one to the point one comma zero, traced as
-                                    t runs from zero to one">
-                    <annotation ref="grid" text="The coordinate grid"/>
-                    <annotation ref="axes" text="The coordinate axes"/>
-                    <annotation ref="curve"
-                                text="The segment, traced from zero comma one
-                                      toward one comma zero"
-                                sonify="yes"/>
-                    <annotation ref="ends"
-                                text="The endpoints of the segment, reached at
-                                      t equals zero and t equals one"/>
-                  </annotation>
-                </annotations>
-              </diagram>
-            </prefigure>
-          </image>
-        </figure>
-
-        <p>
-          <term>Part B.</term> Guided by the unit circle
-          <xref ref="eq-unit-circle-param"/>, we take
-
-        <md>
-          <mrow xml:id="eq-ellipse-param" number="yes">
-            x = 2\cos(t), \qquad y = 3\sin(t), \qquad 0 \le t \lt 2\pi.
-          </mrow>
-        </md>
-        </p>
-        <p>
-          To verify, note that
-
-        <md>
-          \frac{\left(2\cos t\right)^2}{4}
-          + \frac{\left(3\sin t\right)^2}{9}
-          = \cos^2 t + \sin^2 t = 1 .
-        </md>
-        </p>
-        <p>
-          See <xref ref="fig-ellipse-param"/>.
-        </p>
-
-        <figure xml:id="fig-ellipse-param">
-          <caption>
-            Part B: the ellipse <m>x = 2\cos(t)</m>, <m>y = 3\sin(t)</m>,
-            <m>0 \le t \lt 2\pi</m>, traced counterclockwise.
-          </caption>
-          <image xml:id="image-ellipse-param" width="55%">
-            <shortdescription>
-              An ellipse taller than it is wide, traced counterclockwise, with
-              its four axis points marked.
-            </shortdescription>
-            <description>
-              <p>
-                An ellipse on a coordinate grid, two units wide in the x
-                direction and three units tall in the y direction, centered at
-                the origin. Four dots mark the points reached at t equals
-                zero, at two comma zero; t equals pi over two, at zero comma
-                three; t equals pi, at minus two comma zero; and t equals
-                three pi over two, at zero comma minus three. An arrowhead
-                shows that the ellipse is traced counterclockwise.
-              </p>
-            </description>
-            <prefigure xmlns="https://prefigure.org" label="ellipse-param">
-              <diagram dimensions="(340,420)" margins="5">
-                <definition>e(t) = (2*cos(t), 3*sin(t))</definition>
-                <coordinates bbox="(-3.2,-4.2,3.2,4.2)" aspect-ratio="1">
-                  <grid-axes xlabel="x" ylabel="y"/>
-
-                  <group at="curve">
-                    <parametric-curve function="e" domain="(0,2*pi)"
-                                      stroke="blue" thickness="3"
-                                      arrows="1" arrow-location="0.35"/>
-                  </group>
-
-                  <group at="quarters">
-                    <point p="e(0)" size="4" stroke="red" fill="red"/>
-                    <label anchor="e(0)" alignment="ne" offset="(6,4)"
-                           clear-background="yes">
-                      <m>t=0</m>
-                    </label>
-                    <point p="e(pi/2)" size="4" stroke="red" fill="red"/>
-                    <label anchor="e(pi/2)" alignment="n" offset="(0,8)"
-                           clear-background="yes">
-                      <m>t=\pi/2</m>
-                    </label>
-                    <point p="e(pi)" size="4" stroke="red" fill="red"/>
-                    <label anchor="e(pi)" alignment="w" offset="(-8,0)"
-                           clear-background="yes">
-                      <m>t=\pi</m>
-                    </label>
-                    <point p="e(3*pi/2)" size="4" stroke="red" fill="red"/>
-                    <label anchor="e(3*pi/2)" alignment="s" offset="(0,-8)"
-                           clear-background="yes">
-                      <m>t=3\pi/2</m>
-                    </label>
-                  </group>
-                </coordinates>
-
-                <annotations>
-                  <annotation ref="figure"
-                              text="The ellipse x squared over four plus y
-                                    squared over nine equals one, parametrized
-                                    by two cosine t and three sine t">
-                    <annotation ref="grid" text="The coordinate grid"/>
-                    <annotation ref="axes" text="The coordinate axes"/>
-                    <annotation ref="curve"
-                                text="The ellipse, traced counterclockwise"
-                                sonify="yes"/>
-                    <annotation ref="quarters"
-                                text="The four points reached at t equals
-                                      zero, pi over two, pi, and three pi over
-                                      two"/>
-                  </annotation>
-                </annotations>
-              </diagram>
-            </prefigure>
-          </image>
-        </figure>
-
-        <p>
-          <term>Part C.</term> The equation of such a circle in Cartesian
-          coordinates is <m>(x-2)^2 + y^2 = 4</m>, so we shift the standard
-          parametrization of a circle of radius <m>2</m> by <m>2</m> units in
-          the <m>x</m>-direction:
-
-        <md>
-          <mrow xml:id="eq-shifted-circle-param" number="yes">
-            x = 2\cos(t) + 2, \qquad y = 2\sin(t), \qquad
-            0 \le t \lt 2\pi.
-          </mrow>
-        </md>
-        </p>
-        <p>
-          To verify, note that
-
-        <md>
-          <mrow>
-            \bigl(\left(2\cos t + 2\right) - 2\bigr)^2
-            + \left(2\sin t\right)^2 \amp = 4\cos^2 t + 4\sin^2 t
-          </mrow>
-          <mrow>
-            \amp = 4 .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          See <xref ref="fig-shifted-circle-param"/>.
-        </p>
-
-        <figure xml:id="fig-shifted-circle-param">
-          <caption>
-            Part C: the circle <m>x = 2\cos(t)+2</m>, <m>y = 2\sin(t)</m>,
-            <m>0 \le t \lt 2\pi</m>, of radius <m>2</m> centered at
-            <m>(2,0)</m>.
-          </caption>
-          <image xml:id="image-shifted-circle-param" width="55%">
-            <shortdescription>
-              A circle of radius two centered at the point (2,0), passing
-              through the origin, traced counterclockwise.
-            </shortdescription>
-            <description>
-              <p>
-                A circle of radius two on a coordinate grid, centered at the
-                point two comma zero, which is marked with a cross. The circle
-                passes through the origin on the left and through the point
-                four comma zero on the right. A dot marks the starting point
-                four comma zero, reached at t equals zero, and an arrowhead
-                shows that the circle is traced counterclockwise.
-              </p>
-            </description>
-            <prefigure xmlns="https://prefigure.org"
-                       label="shifted-circle-param">
-              <diagram dimensions="(400,320)" margins="5">
-                <definition>k(t) = (2*cos(t)+2, 2*sin(t))</definition>
-                <coordinates bbox="(-1.2,-2.8,5.2,2.8)" aspect-ratio="1">
-                  <grid-axes xlabel="x" ylabel="y"/>
-
-                  <group at="curve">
-                    <parametric-curve function="k" domain="(0,2*pi)"
-                                      stroke="blue" thickness="3"
-                                      arrows="1" arrow-location="0.35"/>
-                  </group>
-
-                  <group at="marks">
-                    <point p="(2,0)" size="4" stroke="black" fill="black"/>
-                    <label anchor="(2,0)" alignment="sw" offset="(-6,-6)"
-                           clear-background="yes">
-                      <m>(2,0)</m>
-                    </label>
-                    <point p="k(0)" size="4.5" stroke="red" fill="red"/>
-                    <label anchor="k(0)" alignment="ne" offset="(6,4)"
-                           clear-background="yes">
-                      <m>t=0</m>
-                    </label>
-                  </group>
-                </coordinates>
-
-                <annotations>
-                  <annotation ref="figure"
-                              text="The circle of radius two centered at the
-                                    point two comma zero, parametrized by two
-                                    cosine t plus two and two sine t">
-                    <annotation ref="grid" text="The coordinate grid"/>
-                    <annotation ref="axes" text="The coordinate axes"/>
-                    <annotation ref="curve"
-                                text="The circle, traced counterclockwise"
-                                sonify="yes"/>
-                    <annotation ref="marks"
-                                text="The center of the circle and its
-                                      starting point, reached at t equals
-                                      zero"/>
-                  </annotation>
-                </annotations>
-              </diagram>
-            </prefigure>
-          </image>
-        </figure>
-      </solution>
     </example>
   </subsection>
 
@@ -871,32 +615,34 @@
     </p>
 
     <p>
-      In practice this dictates how we set up the equations.
+      Say how the two definitions differ when you set up the equations, and
+      how they are related. (One of the two searches for a <em>pair</em> of
+      parameter values and the other for a <em>single</em> one; say which,
+      and what that means for the names you give the parameters. Then decide
+      whether every collision point is an intersection point, and whether
+      the converse holds.)
     </p>
 
-    <ul>
-      <li>
-        <p>
-          To find <term>intersection points</term>, give the two curves
-          different parameter names and solve <m>f_1(t) = f_2(s)</m>,
-          <m>g_1(t) = g_2(s)</m> for the pair <m>(t,s)</m>. Equivalently,
-          eliminate the parameters and intersect the two Cartesian curves.
-        </p>
-      </li>
-      <li>
-        <p>
-          To find <term>collision points</term>, use the same parameter
-          <m>t</m> in both curves and solve <m>f_1(t) = f_2(t)</m>,
-          <m>g_1(t) = g_2(t)</m> for <m>t</m>.
-        </p>
-      </li>
-    </ul>
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,9);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {to find intersection points, solve:};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {to find collision points, solve:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {which implies which:};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank box in three rows, for the equations that give intersection points, for the equations that give collision points, and for the implication between the two.</shortdescription>
+      </image>
+    </sidebyside>
 
     <p>
       In the next two examples the two paths are always the same: the
-      parabola <m>y = x^2</m> and the line <m>y = x+2</m>. Setting
-      <m>x^2 = x+2</m> gives <m>x^2 - x - 2 = (x-2)(x+1) = 0</m>, so the
-      paths meet at the two points
+      parabola <m>y = x^2</m> and the line <m>y = x+2</m>, which meet at the
+      two points
 
     <men xml:id="eq-parabola-line-intersections">
       (-1,1) \qquad \text{and} \qquad (2,4).
@@ -927,40 +673,36 @@
           Find all intersection points of their paths, and all collision
           points of the particles.
         </p>
+        <p>
+          <em>Solution.</em>
+          (Eliminate the parameter from each to confirm that the paths really
+          are the parabola and the line named in
+          <xref ref="eq-parabola-line-intersections"/>. Then set up the
+          collision equations: both coordinates must agree for the
+          <em>same</em> <m>t</m>, and here one of them pins <m>t</m> down
+          immediately. Finish by finding, for each of the two crossings, the
+          time at which each particle passes through it <mdash/> that is
+          what shows how they miss. Then compare with
+          <xref ref="fig-intersection-no-collision"/>.)
+        </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {the two paths:};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {collision equations:};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {when each particle reaches each crossing:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in three rows, for the two paths after eliminating the parameter, for the collision equations, and for the times at which each particle reaches each crossing.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
-
-      <solution>
-        <p>
-          <term>Paths.</term> Eliminating the parameter, the first particle
-          traces the parabola <m>y = x^2</m>. For the second, <m>x = -t</m>
-          and <m>y = 2-t = 2+x</m>, so it traces the line <m>y = x+2</m>. As
-          computed in <xref ref="eq-parabola-line-intersections"/>, the
-          two paths intersect at <m>(-1,1)</m> and
-          <m>(2,4)</m>.
-        </p>
-        <p>
-          <term>Collisions.</term> A collision requires a single <m>t</m>
-          with
-
-        <md>
-          t = -t \qquad \text{and} \qquad t^2 = 2 - t .
-        </md>
-        </p>
-        <p>
-          The first equation forces <m>t = 0</m>, but then <m>t^2 = 0</m>
-          while <m>2 - t = 2</m>. There is no solution, so the particles
-          never collide.
-        </p>
-        <p>
-          We can see exactly how they miss each other. The first particle is
-          at <m>(-1,1)</m> when <m>t=-1</m>, while the second particle
-          arrives there only at <m>t=1</m>. Similarly, the first particle
-          reaches <m>(2,4)</m> at <m>t=2</m>, long after the second particle
-          passed through it at <m>t=-2</m>. Each intersection point is
-          visited twice, but never simultaneously. See
-          <xref ref="fig-intersection-no-collision"/>.
-        </p>
-
+    </example>
         <figure xml:id="fig-intersection-no-collision">
           <caption>
             The parabola <m>C_1</m> and the line <m>C_2</m> intersect at
@@ -1072,8 +814,6 @@
             </prefigure>
           </image>
         </figure>
-      </solution>
-    </example>
 
     <example xml:id="ex-same-paths-collision">
       <title>The same paths, a different schedule<mdash/>now they collide</title>
@@ -1095,164 +835,44 @@
           Find the intersection points of the paths and the collision points
           of the particles.
         </p>
-      </statement>
-
-      <solution>
         <p>
-          <term>Paths.</term> For the second particle, <m>x = 2t-2</m> and
-          <m>y = 2t = x+2</m>, so it travels along the very same line
-          <m>y = x+2</m> as before, only faster and in the opposite
-          direction. The paths are therefore unchanged, and they still
-          intersect at the points <xref ref="eq-parabola-line-intersections"/>,
-          <m>(-1,1)</m> and <m>(2,4)</m>.
-        </p>
-        <p>
-          <term>Collisions.</term> Now a collision requires a single <m>t</m>
-          with
-
-        <md>
-          t = 2t - 2 \qquad \text{and} \qquad t^2 = 2t .
-        </md>
-        </p>
-        <p>
-          The first equation gives <m>t = 2</m>, and this value does satisfy
-          the second equation, since <m>2^2 = 4 = 2\cdot 2</m>. Hence the
-          particles do collide, at
-
-        <md>
-          \mathbf{r}_1(2) = \mathbf{r}_2(2) = \left\langle 2,4\right\rangle, \qquad
-          \text{at time } t = 2 .
-        </md>
-        </p>
-        <p>
-          The other intersection point is not a collision point: the first
-          particle passes through <m>(-1,1)</m> at <m>t=-1</m>, while the
-          second particle passes through it at <m>t = \tfrac12</m>. Two
-          intersection points, but only one collision. See
-          <xref ref="fig-collision"/>.
+          <em>Solution.</em>
+          (Eliminate the parameter again and compare with the previous
+          example: the paths should be unchanged, so the intersection points
+          are too. The collision equations, however, now have a solution;
+          find it, and remember to check that the value of <m>t</m> from the
+          first equation also satisfies the second. Then say what happens at
+          the <em>other</em> crossing, and mark the collision on the grid.)
         </p>
 
-        <figure xml:id="fig-collision">
-          <caption>
-            The same two paths as in
-            <xref ref="fig-intersection-no-collision"/>. The point
-            <m>(2,4)</m> is now a collision point, reached by both particles
-            at <m>t=2</m>, while <m>(-1,1)</m> remains an intersection point
-            that is not a collision point.
-          </caption>
-          <image xml:id="image-collision" width="75%">
-            <shortdescription>
-              The same parabola and line, with the crossing at (2,4)
-              highlighted as a collision point reached by both particles at
-              time t equals two.
-            </shortdescription>
-            <description>
-              <p>
-                The parabola y equals x squared and the line y equals x plus
-                two crossing at minus one comma one and at two comma four. The
-                point two comma four is drawn as a large highlighted dot and
-                labeled as a collision point, reached by both particles at
-                time t equals two, while the particles pass through minus one
-                comma one at the different times t equals minus one and t
-                equals one half.
-              </p>
-            </description>
-            <prefigure xmlns="https://prefigure.org" label="collision">
-              <diagram dimensions="(400,400)" margins="5">
-                <definition>p(t) = (t, t^2)</definition>
-                <definition>l(t) = (t, t+2)</definition>
-                <coordinates bbox="(-4.6,-1.8,5.6,7.2)">
-                  <grid-axes xlabel="x" ylabel="y"/>
-
-                  <group at="parabola">
-                    <!-- both arrows are placed before t=2, so they show
-                         the two particles running up to the collision -->
-                    <parametric-curve function="p" domain="(-2.4,2.6)"
-                                      stroke="blue" thickness="3"
-                                      arrows="1" arrow-location="1.5"/>
-                    <label anchor="p(-2.3)" alignment="nw" offset="(-6,4)"
-                           color="blue">
-                      <m>C_1</m>
-                    </label>
-                  </group>
-
-                  <group at="line">
-                    <parametric-curve function="l" domain="(-3.1,3.4)"
-                                      stroke="#009E73" thickness="3"
-                                      arrows="1" arrow-location="1.15"/>
-                    <label anchor="l(3.0)" alignment="se" offset="(8,-2)"
-                           color="#009E73">
-                      <m>C_2</m>
-                    </label>
-                  </group>
-
-                  <!-- as in the previous figure, the annotations sit in the
-                       empty wedges with a leader back to the crossing -->
-                  <group at="near-miss">
-                    <point p="(-1,1)" size="4.5" stroke="red" fill="red"/>
-                    <line endpoints="((-1.15,1.05), (-2.2,1.5))"
-                          stroke="gray" thickness="1"/>
-                    <label anchor="(-3.1,3.1)" alignment="c">
-                      <m>(-1,1)</m>
-                    </label>
-                    <label anchor="(-3.1,2.3)" alignment="c">
-                      <m>C_1: t=-1</m>
-                    </label>
-                    <label anchor="(-3.1,1.5)" alignment="c">
-                      <m>C_2: t=\tfrac12</m>
-                    </label>
-                  </group>
-
-                  <group at="collision">
-                    <circle center="(2,4)" radius="0.32" stroke="#D55E00"
-                            thickness="3"/>
-                    <point p="(2,4)" size="5.5" stroke="#D55E00"
-                           fill="#D55E00"/>
-                    <line endpoints="((2.35,3.9), (3.05,3.7))"
-                          stroke="gray" thickness="1"/>
-                    <label anchor="(3.9,3.7)" alignment="c" color="#D55E00">
-                      <m>(2,4)</m>
-                    </label>
-                    <label anchor="(3.9,2.9)" alignment="c" color="#D55E00">
-                      <m>\text{collision}</m>
-                    </label>
-                    <label anchor="(3.9,2.1)" alignment="c" color="#D55E00">
-                      <m>\text{at } t=2</m>
-                    </label>
-                  </group>
-                </coordinates>
-
-                <annotations>
-                  <annotation ref="figure"
-                              text="The same parabola and line, with the
-                                    crossing at two comma four highlighted as
-                                    a collision point">
-                    <annotation ref="grid" text="The coordinate grid"/>
-                    <annotation ref="axes" text="The coordinate axes"/>
-                    <annotation ref="parabola"
-                                text="The path of the first particle, the
-                                      parabola y equals x squared"
-                                sonify="yes"/>
-                    <annotation ref="line"
-                                text="The path of the second particle, the
-                                      line y equals x plus two"
-                                sonify="yes"/>
-                    <annotation ref="near-miss"
-                                text="The intersection point minus one comma
-                                      one, which the particles reach at the
-                                      different times t equals minus one and t
-                                      equals one half"/>
-                    <annotation ref="collision"
-                                text="The collision point two comma four,
-                                      which both particles reach at time t
-                                      equals two"/>
-                  </annotation>
-                </annotations>
-              </diagram>
-            </prefigure>
+        <sidebyside widths="46% 46%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (7,10);
+\draw[gray!35] (0,6.7) -- (7,6.7);
+\draw[gray!35] (0,3.4) -- (7,3.4);
+\node[anchor=north west, font=\small\itshape] at (0.3,9.7) {the paths:};
+\node[anchor=north west, font=\small\itshape] at (0.3,6.4) {collision equations:};
+\node[anchor=north west, font=\small\itshape] at (0.3,3.1) {the other crossing:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in three rows, for the paths, for the collision computation, and for what happens at the other crossing.</shortdescription>
           </image>
-        </figure>
-      </solution>
+          <image>
+            <latex-image><![CDATA[
+\begin{tikzpicture}[scale=0.55, >=stealth]
+\draw[gray!30, very thin] (-4,-2) grid (4,6);
+\draw[->, thick] (-4,0) -- (4.4,0) node[right] {$x$};
+\draw[->, thick] (0,-2) -- (0,6.4) node[above] {$y$};
+\foreach \x in {-3,-2,-1,1,2,3} \draw (\x,-0.12) -- (\x,0.12) node[below=4pt, font=\scriptsize] {$\x$};
+\foreach \y in {-1,1,2,3,4,5} \draw (-0.12,\y) -- (0.12,\y) node[left=4pt, font=\scriptsize] {$\y$};
+\end{tikzpicture}
+]]></latex-image>
+            <shortdescription>Empty coordinate grid running from negative four to four horizontally and negative two to six vertically, for drawing the parabola and the line and marking the collision point.</shortdescription>
+          </image>
+        </sidebyside>
+      </statement>
     </example>
 
     <remark xml:id="remark-collision-vs-intersection">
@@ -1273,6 +893,20 @@
           <m>\mathbf{r}_2</m> of the line <m>y = x+2</m> for which the two
           particles collide at <em>both</em> intersection points.
         </p>
+
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$\mathbf{r}_2(t) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {the collision equations it produces:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in two rows, one for the new parametrization of the line and one for the collision equations it produces.</shortdescription>
+          </image>
+        </sidebyside>
       </statement>
       <hint>
         <p>
@@ -1280,20 +914,6 @@
           <m>x</m>-coordinate as the first one at every time <m>t</m>.
         </p>
       </hint>
-      <answer>
-        <p>
-          <m>\mathbf{r}_2(t) = \left\langle t,\; t+2\right\rangle</m>.
-        </p>
-      </answer>
-      <solution>
-        <p>
-          With <m>\mathbf{r}_2(t) = \left\langle t, t+2\right\rangle</m> the collision equations
-          become <m>t = t</m> and <m>t^2 = t+2</m>, that is,
-          <m>(t-2)(t+1) = 0</m>. Thus <m>t = -1</m> gives the collision at
-          <m>(-1,1)</m> and <m>t = 2</m> gives the collision at
-          <m>(2,4)</m>: both intersection points are now collision points.
-        </p>
-      </solution>
     </exercise>
   </subsection>
 
@@ -1396,32 +1016,35 @@
         <p>
           Write the motion as a vector function and describe the path.
         </p>
-      </statement>
-
-      <solution>
         <p>
-          Collecting <xref ref="eq-helix-param-space"/> into a single vector
-          function,
-
-        <md>
-          \mathbf{r}(t) = \left\langle \cos(2t),\ \sin(2t),\ t
-          \right\rangle , \qquad 0 \le t \le \pi .
-        </md>
-        </p>
-        <p>
-          The first two coordinates satisfy <m>x^2 + y^2 = 1</m>, so the
-          shadow of the path on the <m>xy</m>-plane is the unit circle, and
-          as <m>t</m> runs from <m>0</m> to <m>\pi</m> the angle <m>2t</m>
-          runs from <m>0</m> to <m>2\pi</m>: the shadow goes around exactly
-          once. Meanwhile <m>z = t</m> increases steadily, so the object
-          climbs at a constant rate while circling. The path is therefore one
-          full turn of a <term>helix</term>, shown in
-          <xref ref="fig-helix-space-curve"/>. The motion begins at
-          <m>\mathbf{r}(0) = \left\langle 1,0,0\right\rangle</m> at time <m>t=0</m> and ends at
-          <m>\mathbf{r}(\pi) = \left\langle 1,0,\pi\right\rangle</m> at time <m>t=\pi</m>, directly
-          above the starting point.
+          <em>Solution.</em>
+          (Collect the three coordinates of
+          <xref ref="eq-helix-param-space"/> into one vector function. Then
+          describe the path: what equation do the first two coordinates
+          satisfy, how many times does the shadow of the path on the
+          <m>xy</m>-plane go around as <m>t</m> runs over <m>[0,\pi]</m>,
+          and what does <m>z</m> do meanwhile? Name the curve, and give the
+          points where the motion starts and ends. Then compare with
+          <xref ref="fig-helix-space-curve"/>.)
         </p>
 
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$\mathbf{r}(t) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {the shadow on the $xy$-plane, and how often it goes around:};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {what $z$ does:};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {the path, its start, and its end:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in four rows, for the vector function, for the shadow of the path on the x y plane, for the behaviour of the height, and for the name of the curve with its starting and ending points.</shortdescription>
+          </image>
+        </sidebyside>
         <figure xml:id="fig-helix-space-curve">
           <caption>
             One turn of the helix
@@ -1488,7 +1111,7 @@
             </latex-image>
           </image>
         </figure>
-      </solution>
+      </statement>
     </example>
 
     <p>
@@ -1505,54 +1128,41 @@
           the cylinder <m>x^2 + y^2 = 1</m> and the plane
           <m>y + z = 2</m>.
         </p>
-      </statement>
-
-      <solution>
         <p>
-          As shown in <xref ref="fig-cylinder-plane"/>, the intersection of
-          the two surfaces is an ellipse. Furthermore, its projection onto
-          the <m>xy</m>-plane is the circle <m>x^2 + y^2 = 1</m>, and we
-          already know its parametrization from
-          <xref ref="eq-unit-circle-param"/>:
-
-        <md>
-          x(t) = \cos(t), \qquad y(t) = \sin(t).
-        </md>
-        </p>
-        <p>
-          Then we use the fact that <m>y + z = 2</m> and write <m>z</m> in
-          terms of <m>t</m>:
-
-        <md>
-          z(t) = 2 - y(t) = 2 - \sin(t).
-        </md>
-        </p>
-        <p>
-          Hence the vector function representing the intersection of
-          <m>x^2+y^2=1</m> and <m>y+z=2</m> is
-
-        <md>
-          <mrow xml:id="eq-cylinder-plane-param" number="yes">
-            \mathbf{r}(t) = \cos(t)\,\mathbf{i} + \sin(t)\,\mathbf{j}
-                            + \bigl(2 - \sin(t)\bigr)\,\mathbf{k},
-          </mrow>
-        </md>
-        </p>
-        <p>
-          where <m>0 \le t \le 2\pi</m>. As a check, the four points
-          <m>\mathbf{r}(0) = \left\langle 1,0,2\right\rangle</m>,
-          <m>\mathbf{r}(\pi/2) = \left\langle 0,1,1\right\rangle</m>,
-          <m>\mathbf{r}(\pi) = \left\langle -1,0,2\right\rangle</m> and
-          <m>\mathbf{r}(3\pi/2) = \left\langle 0,-1,3\right\rangle</m> all
-          satisfy both equations.
+          <em>Solution.</em>
+          (The shadow of the curve on the <m>xy</m>-plane is the circle
+          <m>x^2+y^2=1</m>, whose parametrization you already know from
+          <xref ref="eq-unit-circle-param"/>. Use the equation of the plane
+          to write <m>z</m> in terms of <m>t</m>, assemble
+          <m>\mathbf{r}(t)</m>, and state the range of <m>t</m>. As a check,
+          confirm that <m>\mathbf{r}(0)</m>, <m>\mathbf{r}(\pi/2)</m>,
+          <m>\mathbf{r}(\pi)</m>, and <m>\mathbf{r}(3\pi/2)</m> satisfy both
+          equations, and compare with <xref ref="fig-cylinder-plane"/>.)
         </p>
 
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$x(t)$ and $y(t)$, from the cylinder:};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {$z(t)$, from the plane:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$\mathbf{r}(t) =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {check at $t = 0,\ \pi/2,\ \pi,\ 3\pi/2$:};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in four rows, for the x and y coordinates from the cylinder, for z from the plane, for the assembled vector function with the range of t, and for the check at four parameter values.</shortdescription>
+          </image>
+        </sidebyside>
         <figure xml:id="fig-cylinder-plane">
           <caption>
             The cylinder <m>x^2+y^2=1</m>, the plane <m>y+z=2</m>, and the
             ellipse <m>C</m> in which they meet. The violet arrow is the
-            position vector <m>\mathbf{r}(t)</m> of
-            <xref ref="eq-cylinder-plane-param"/> at <m>t=\pi/4</m>.
+            position vector <m>\mathbf{r}(t)</m> of your parametrization at
+            <m>t=\pi/4</m>.
           </caption>
           <image xml:id="image-cylinder-plane" width="70%">
             <shortdescription>
@@ -1614,7 +1224,7 @@
             </latex-image>
           </image>
         </figure>
-      </solution>
+      </statement>
     </example>
 
     <example xml:id="ex-two-surfaces">
@@ -1629,85 +1239,41 @@
           z = \sqrt{4 - 4x^2 - y^2} .
         </md>
         </p>
-      </statement>
-
-      <solution>
         <p>
-          On the intersection the two expressions for <m>z</m> agree.
-          Squaring both sides of
-
-        <md>
-          \sqrt{1 + x^2 + y^2} = \sqrt{4 - 4x^2 - y^2}
-        </md>
-        </p>
-        <p>
-          gives <m>1 + x^2 + y^2 = 4 - 4x^2 - y^2</m>, that is,
-
-        <md>
-          <mrow>
-            5x^2 + 2y^2 \amp = 3,
-          </mrow>
-          <mrow xml:id="eq-two-surfaces-shadow" number="yes">
-            \text{or} \quad
-            \left(\frac{x}{\sqrt{3/5}}\right)^{2}
-            + \left(\frac{y}{\sqrt{3/2}}\right)^{2} \amp = 1 .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          Notice that <m>z</m> has disappeared: equation
-          <xref ref="eq-two-surfaces-shadow"/> describes the shadow of the
-          intersection curve in the <m>xy</m>-plane, and it is an ellipse.
-          Parametrizing it exactly as in
-          <xref ref="eq-ellipse-param"/>,
-
-        <md>
-          <mrow>
-            x(t) \amp = \sqrt{\tfrac{3}{5}}\,\cos(t),
-          </mrow>
-          <mrow>
-            y(t) \amp = \sqrt{\tfrac{3}{2}}\,\sin(t), \qquad
-                        0 \le t \le 2\pi .
-          </mrow>
-        </md>
-        </p>
-        <p>
-          Plugging these into either of the two original equations, say
-          <m>z = \sqrt{1+x^2+y^2}</m>, recovers the missing coordinate:
-
-        <md>
-          z(t) = \sqrt{1 + \tfrac{3}{5}\cos^2(t)
-                         + \tfrac{3}{2}\sin^2(t)} .
-        </md>
-        </p>
-        <p>
-          Hence the curve of intersection, shown in
-          <xref ref="fig-two-surfaces"/>, is
-
-        <md>
-          <mrow>
-            \mathbf{r}(t) \amp = \Bigl\langle
-              \sqrt{\tfrac{3}{5}}\,\cos(t),\ \
-              \sqrt{\tfrac{3}{2}}\,\sin(t),
-          </mrow>
-          <mrow xml:id="eq-two-surfaces-param" number="yes">
-            \amp \qquad\quad
-              \sqrt{1 + \tfrac{3}{5}\cos^2(t) + \tfrac{3}{2}\sin^2(t)}
-              \Bigr\rangle ,
-          </mrow>
-        </md>
-        </p>
-        <p>
-          for <m>0 \le t \le 2\pi</m>.
+          <em>Solution.</em>
+          (On the intersection the two expressions for <m>z</m> agree.
+          Square both sides and simplify: <m>z</m> drops out, and what is
+          left is the equation of the shadow of the curve in the
+          <m>xy</m>-plane. Put it in the standard form of an ellipse and
+          parametrize it as you did in
+          <xref ref="ex-parametrizing-curves"/>; then recover <m>z(t)</m>
+          from either surface and assemble <m>\mathbf{r}(t)</m>, with its
+          range of <m>t</m>. Compare with <xref ref="fig-two-surfaces"/>.)
         </p>
 
+        <sidebyside width="97%">
+          <image>
+            <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,14);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {equate the two expressions for $z$ and square:};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {the shadow, in standard form:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$x(t)$ and $y(t)$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$z(t)$, and $\mathbf{r}(t) =$};
+\end{tikzpicture}
+            </latex-image>
+            <shortdescription>Blank box in four rows, for equating and squaring the two expressions for z, for the equation of the shadow in standard form, for the parametrization of the shadow, and for z of t with the assembled vector function.</shortdescription>
+          </image>
+        </sidebyside>
         <figure xml:id="fig-two-surfaces">
           <caption>
             The upper sheet of <m>z = \sqrt{1+x^2+y^2}</m> (blue) and the
             dome <m>z = \sqrt{4-4x^2-y^2}</m> (red) meet along the closed
-            curve <xref ref="eq-two-surfaces-param"/>, drawn in black. Its
-            shadow in the plane <m>z=0</m> is the dashed ellipse
-            <xref ref="eq-two-surfaces-shadow"/>.
+            curve drawn in black. Its shadow in the plane <m>z=0</m> is the
+            dashed ellipse; compare it with the equation you found.
           </caption>
           <image xml:id="image-two-surfaces" width="100%">
             <shortdescription>
@@ -1773,7 +1339,7 @@
             </latex-image>
           </image>
         </figure>
-      </solution>
+      </statement>
     </example>
   </subsection>
 

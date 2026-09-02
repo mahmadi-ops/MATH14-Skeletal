@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Applications: Mass and Center of Mass                        -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The definitions of the moments, the center  -->
+<!-- of mass and the centroid, and the boxed mass formula are kept; the    -->
+<!-- construction of the mass integral and the three worked examples are   -->
+<!-- replaced by blank workspace boxes, each preceded by a one-line        -->
+<!-- instruction.  File name and xml:ids are unchanged.                    -->
+<!--                                                                       -->
+<!-- Figures: all kept (the mass-element diagram and video, the paraboloid -->
+<!-- solid and its video, the region between the curves and its video, and -->
+<!-- the cardioid and its video); each is the check on the box above it.   -->
+<!-- Captions that stated the centroid have been trimmed.                  -->
 <section xml:id="section-mass-center-of-mass" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Applications: Mass and Center of Mass</title>
 
@@ -20,25 +34,35 @@ point at which the object would balance perfectly.
 Suppose a solid object occupies a region <m>D</m> in space and its
 density (mass per unit volume) at each point is given by a continuous
 function <m>\delta(x,y,z)</m>. To measure the total mass, we partition
-<m>D</m> into small boxes. If the <m>k</m>-th box contains the point
-<m>(x_k, y_k, z_k)</m> and has volume <m>\Delta V_k</m>, then the density
-is nearly constant on this small box, so its mass is approximately
+<m>D</m> into small boxes, as in <xref ref="fig-mass-element-tikz"/>.
+If the <m>k</m>-th box contains the point <m>(x_k, y_k, z_k)</m> and has
+volume <m>\Delta V_k</m>, write down its approximate mass, sum over the
+boxes, and let the size of the boxes shrink to zero.
 </p>
 
-<me>
-\Delta m_k = \delta(x_k, y_k, z_k)\, \Delta V_k,
-</me>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$\Delta m_k \approx$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$M = \displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the mass of a small box and one for the total mass as a limit of Riemann sums and as a triple integral.</shortdescription>
+</image>
+</sidebyside>
 
+<assemblage xml:id="assemblage-mass-3d">
+<title>Mass of a Solid</title>
 <p>
-as illustrated in <xref ref="fig-mass-element-tikz"/>. Summing over all
-the boxes gives a Riemann sum for the total mass, and letting the size
-of the boxes shrink to zero turns the sum into a triple integral:
-</p>
-
 <men xml:id="eq-mass-3d">
 M = \lim_{n \to \infty} \sum_{k=1}^{n} \delta(x_k, y_k, z_k)\, \Delta V_k
   = \iiint_D \delta(x,y,z)\, dV.
 </men>
+</p>
+</assemblage>
 
 <p>
 Watch the construction unfold in <xref ref="fig-mass-element-video"/>.
@@ -51,7 +75,7 @@ mass <m>\Delta m_k = \delta(x_k,y_k,z_k)\,\Delta V_k</m>, and the
 Riemann sum of these masses converges to the triple integral of the
 density.
 </caption>
-<video xml:id="video-mass-element"
+<video preview="play-button.png" xml:id="video-mass-element"
        source="videos/mass_element_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -174,71 +198,47 @@ Find the center of mass of a solid of constant density <m>\delta</m>,
 which is bounded by the disk <m>x^2 + y^2 \le 4</m> (in the plane
 <m>z = 0</m>) and the paraboloid <m>z = 4 - x^2 - y^2</m>.
 </p>
+<p>
+<em>Solution.</em>
+(The solid is shown in <xref ref="fig-paraboloid-com-tikz"/>. Use its
+symmetry to dispose of two of the three coordinates at once. For the
+third, work in cylindrical coordinates with
+<xref ref="eq-dv-cylindrical"/>: describe the region, compute <m>M</m>
+by <xref ref="eq-mass-3d"/> and the needed moment by
+<xref ref="eq-first-moments-3d"/>, and divide as in
+<xref ref="eq-com-3d"/>. What happens to <m>\delta</m>? Compare with
+<xref ref="fig-paraboloid-com-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,16);
+\draw[gray!35] (0,13.5) -- (15,13.5);
+\draw[gray!35] (0,11) -- (15,11);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,15.7) {by symmetry:};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.2) {the region in cylindrical coordinates:};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {$M = \displaystyle\iiint_D \delta\,dV =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$M_{xy} = \displaystyle\iiint_D z\,\delta\,dV =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$\bar z = \dfrac{M_{xy}}{M} =$ \qquad center of mass:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in five rows, for the symmetry argument, for the cylindrical description of the region, for the mass, for the first moment about the x y plane, and for the center of mass.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-paraboloid-com">
-<p>
-The solid is shown in <xref ref="fig-paraboloid-com-tikz"/>. Both the
-region and the density are symmetric about the <m>z</m>-axis, so the
-center of mass lies on that axis: <m>\bar{x} = \bar{y} = 0</m>. It
-remains to find <m>\bar{z} = M_{xy}/M</m> from
-<xref ref="eq-com-3d"/>.
-</p>
-
-<p>
-Because of the circular symmetry, we work in cylindrical coordinates,
-where <xref ref="eq-dv-cylindrical"/> applies and the region is
-described by
-<m>0 \le z \le 4 - r^2</m>, <m>0 \le r \le 2</m>, and
-<m>0 \le \theta \le 2\pi</m>. By <xref ref="eq-mass-3d"/>, the mass is
-</p>
-
-<md>
-<mrow>M \amp= \iiint_D \delta\, dV
-= \delta \int_0^{2\pi} \int_0^2 \int_0^{4-r^2} dz\, r\, dr\, d\theta</mrow>
-<mrow>\amp= \delta \int_0^{2\pi} \int_0^2 (4 - r^2)\, r\, dr\, d\theta
-= \delta \int_0^{2\pi} \left[ 2r^2 - \frac{r^4}{4} \right]_0^2 d\theta</mrow>
-<mrow>\amp= \delta \int_0^{2\pi} 4\, d\theta = 8\pi\delta.</mrow>
-</md>
-
-<p>
-Using <xref ref="eq-first-moments-3d"/>, the first moment about the
-<m>xy</m>-plane is
-</p>
-
-<md>
-<mrow>M_{xy} \amp= \iiint_D z\, \delta\, dV
-= \delta \int_0^{2\pi} \int_0^2 \int_0^{4-r^2} z\, dz\, r\, dr\, d\theta</mrow>
-<mrow>\amp= \delta \int_0^{2\pi} \int_0^2 \frac{(4 - r^2)^2}{2}\, r\, dr\, d\theta
-= \delta \int_0^{2\pi} \left[ -\frac{(4-r^2)^3}{12} \right]_0^2 d\theta</mrow>
-<mrow>\amp= \delta \int_0^{2\pi} \frac{16}{3}\, d\theta = \frac{32\pi\delta}{3}.</mrow>
-</md>
-
-<p>
-Therefore
-</p>
-
-<me>
-\bar{z} = \frac{M_{xy}}{M} = \frac{32\pi\delta/3}{8\pi\delta} = \frac{4}{3},
-</me>
-
-<p>
-and the center of mass is <m>\left(0, 0, \tfrac{4}{3}\right)</m>. Notice
-that the answer does not depend on <m>\delta</m>: for an object of
-constant density, the location of the balance point is determined by the
-shape alone. Watch the computation come together in
-<xref ref="fig-paraboloid-com-video"/>.
-</p>
-</solution>
 
 <figure xml:id="fig-paraboloid-com-video">
 <caption>
 The solid bounded above by <m>z = 4 - x^2 - y^2</m> and below by the
 disk <m>x^2 + y^2 \le 4</m>. By symmetry the center of mass lies on the
-<m>z</m>-axis, at height <m>\bar{z} = 4/3</m>.
+<m>z</m>-axis; use the animation to check its height.
 </caption>
-<video xml:id="video-paraboloid-com"
+<video preview="play-button.png" xml:id="video-paraboloid-com"
        source="videos/paraboloid_com_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -248,7 +248,7 @@ disk <m>x^2 + y^2 \le 4</m>. By symmetry the center of mass lies on the
 The solid of constant density bounded by the paraboloid
 <m>z = 4 - x^2 - y^2</m> and the disk <m>R</m>: <m>x^2 + y^2 \le 4</m>
 in the plane <m>z = 0</m>. The center of mass sits on the axis of
-symmetry at <m>(0, 0, 4/3)</m>.
+symmetry.
 </caption>
 <image xml:id="image-paraboloid-com-tikz" width="80%">
 <shortdescription>
@@ -387,78 +387,47 @@ the moment about the <m>x</m>-axis, and the center of mass is
 Find the centroid of the region between <m>y = \sqrt{x}</m> and
 <m>y = x^2</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Find where the curves meet, and describe the region, shown in
+<xref ref="fig-centroid-between-curves"/>. Since only the centroid is
+wanted, what may you take <m>\delta</m> to be, and what does <m>M</m>
+then measure? Compute <m>M</m>, <m>M_y</m> and <m>M_x</m> from
+<xref ref="eq-first-moments-2d"/>, divide as in
+<xref ref="eq-com-2d"/>, and explain from the picture why
+<m>\bar x = \bar y</m> had to happen. Compare with
+<xref ref="fig-centroid-between-curves-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,16);
+\draw[gray!35] (0,13.5) -- (15,13.5);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,15.7) {the region: \qquad take $\delta =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,13.2) {$M =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {$M_y = \displaystyle\iint_R x\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$M_x = \displaystyle\iint_R y\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$(\bar x, \bar y) =$ \qquad why $\bar x = \bar y$:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in five rows, for the description of the region, for the mass, for the two first moments, and for the centroid with the symmetry explanation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-centroid-between-curves">
-<p>
-The two curves intersect where <m>\sqrt{x} = x^2</m>, that is, at
-<m>x = 0</m> and <m>x = 1</m>, so the region lies over the interval
-<m>0 \le x \le 1</m> with <m>x^2 \le y \le \sqrt{x}</m>, as shown in
-<xref ref="fig-centroid-between-curves"/>. Since we are finding the
-centroid, we may take the constant density to be <m>\delta = 1</m>,
-in which case, by <xref ref="eq-first-moments-2d"/>, the mass is simply
-the area:
-</p>
-
-<me>
-M = \int_0^1 \int_{x^2}^{\sqrt{x}} dy\, dx
-  = \int_0^1 \left( \sqrt{x} - x^2 \right) dx
-  = \left[ \frac{2}{3}x^{3/2} - \frac{x^3}{3} \right]_0^1
-  = \frac{1}{3}.
-</me>
-
-<p>
-By <xref ref="eq-first-moments-2d"/>, the moment about the
-<m>y</m>-axis is
-</p>
-
-<me>
-M_y = \int_0^1 \int_{x^2}^{\sqrt{x}} x\, dy\, dx
-    = \int_0^1 x \left( \sqrt{x} - x^2 \right) dx
-    = \int_0^1 \left( x^{3/2} - x^3 \right) dx
-    = \frac{2}{5} - \frac{1}{4}
-    = \frac{3}{20},
-</me>
-
-<p>
-and the moment about the <m>x</m>-axis is
-</p>
-
-<me>
-M_x = \int_0^1 \int_{x^2}^{\sqrt{x}} y\, dy\, dx
-    = \int_0^1 \frac{(\sqrt{x})^2 - (x^2)^2}{2}\, dx
-    = \frac{1}{2} \int_0^1 \left( x - x^4 \right) dx
-    = \frac{1}{2}\left( \frac{1}{2} - \frac{1}{5} \right)
-    = \frac{3}{20}.
-</me>
-
-<p>
-By <xref ref="eq-com-2d"/>,
-</p>
-
-<me>
-\bar{x} = \frac{M_y}{M} = \frac{3/20}{1/3} = \frac{9}{20},
-\qquad
-\bar{y} = \frac{M_x}{M} = \frac{3/20}{1/3} = \frac{9}{20},
-</me>
-
-<p>
-so the centroid is <m>\left( \tfrac{9}{20}, \tfrac{9}{20} \right)</m>.
-It is no accident that <m>\bar{x} = \bar{y}</m>: the region is symmetric
-about the line <m>y = x</m>, so its centroid must lie on that line. See
-<xref ref="fig-centroid-between-curves-video"/> for an animated
-walkthrough.
-</p>
-</solution>
 
 <figure xml:id="fig-centroid-between-curves-video">
 <caption>
 The region between <m>y = \sqrt{x}</m> and <m>y = x^2</m> is symmetric
-about the line <m>y = x</m>, and its centroid
-<m>\left( \tfrac{9}{20}, \tfrac{9}{20} \right)</m> lies on that line.
+about the line <m>y = x</m>, and its centroid lies on that line. Use the
+animation to check its coordinates.
 </caption>
-<video xml:id="video-centroid-between-curves"
+<video preview="play-button.png" xml:id="video-centroid-between-curves"
        source="videos/centroid_between_curves_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -466,8 +435,7 @@ about the line <m>y = x</m>, and its centroid
 <figure xml:id="fig-centroid-between-curves">
 <caption>
 The region between <m>y = \sqrt{x}</m> (blue) and <m>y = x^2</m> (red)
-over <m>0 \le x \le 1</m>, with its centroid at
-<m>\left( \tfrac{9}{20}, \tfrac{9}{20} \right)</m>.
+over <m>0 \le x \le 1</m>, with its centroid marked.
 </caption>
 <image width="55%">
 <shortdescription>
@@ -525,74 +493,47 @@ The region between the square-root curve and the parabola, from 0 to 1.
 Find the centroid of the object that has the shape
 <m>r = 1 + \cos(\theta)</m> and density <m>\delta = 2</m>.
 </p>
+<p>
+<em>Solution.</em>
+(The cardioid is shown in <xref ref="fig-cardioid-centroid"/>. Use its
+symmetry to dispose of one coordinate. Work in polar coordinates with
+<m>dA = r\,dr\,d\theta</m> from <xref ref="eq-polar-area-element"/> and
+<m>x = r\cos\theta</m>: compute <m>M</m> and <m>M_y</m> from
+<xref ref="eq-first-moments-2d"/>. In the <m>\theta</m>-integrals, the
+odd powers of cosine integrate to zero over a full period,
+<m>\int_0^{2\pi}\cos^2\theta\,d\theta = \pi</m>, and
+<m>\int_0^{2\pi}\cos^4\theta\,d\theta = \tfrac{3\pi}{4}</m>. Then divide
+as in <xref ref="eq-com-2d"/>; what happens to <m>\delta = 2</m>?
+Compare with <xref ref="fig-cardioid-centroid-video"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,12.5) -- (15,12.5);
+\draw[gray!35] (0,8.5) -- (15,8.5);
+\draw[gray!35] (0,3.5) -- (15,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {by symmetry:};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.2) {$M = \displaystyle\iint_R \delta\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.2) {$M_y = \displaystyle\iint_R x\,\delta\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\bar x = \dfrac{M_y}{M} =$ \qquad centroid:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the symmetry argument, for the mass in polar coordinates, for the moment about the y axis, and for the centroid.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution xml:id="solution-cardioid-centroid">
-<p>
-The cardioid <m>r = 1 + \cos(\theta)</m> is shown in
-<xref ref="fig-cardioid-centroid"/>. The density is constant, so we are
-indeed finding a centroid, and the answer will not depend on the value
-<m>\delta = 2</m>. The region is symmetric about the <m>x</m>-axis
-(replacing <m>\theta</m> by <m>-\theta</m> does not change <m>r</m>),
-so <m>\bar{y} = 0</m> and we only need <m>\bar{x}</m>.
-</p>
-
-<p>
-Working in polar coordinates with <m>dA = r\, dr\, d\theta</m> from
-<xref ref="eq-polar-area-element"/>, the mass
-<xref ref="eq-first-moments-2d"/> is
-</p>
-
-<md>
-<mrow>M \amp= \iint_R \delta\, dA
-= 2 \int_0^{2\pi} \int_0^{1+\cos\theta} r\, dr\, d\theta
-= \int_0^{2\pi} (1 + \cos\theta)^2\, d\theta</mrow>
-<mrow>\amp= \int_0^{2\pi} \left( 1 + 2\cos\theta + \cos^2\theta \right) d\theta
-= 2\pi + 0 + \pi = 3\pi.</mrow>
-</md>
-
-<p>
-Since <m>x = r\cos\theta</m> by <xref ref="eq-polar-cartesian"/>, the
-moment about the <m>y</m>-axis is
-</p>
-
-<md>
-<mrow>M_y \amp= \iint_R x\, \delta\, dA
-= 2 \int_0^{2\pi} \int_0^{1+\cos\theta} (r\cos\theta)\, r\, dr\, d\theta
-= \frac{2}{3} \int_0^{2\pi} \cos\theta\, (1 + \cos\theta)^3\, d\theta</mrow>
-<mrow>\amp= \frac{2}{3} \int_0^{2\pi} \left( \cos\theta + 3\cos^2\theta
-+ 3\cos^3\theta + \cos^4\theta \right) d\theta
-= \frac{2}{3} \left( 0 + 3\pi + 0 + \frac{3\pi}{4} \right)
-= \frac{5\pi}{2},</mrow>
-</md>
-
-<p>
-where the odd powers of cosine integrate to zero over a full period,
-<m>\int_0^{2\pi} \cos^2\theta\, d\theta = \pi</m>, and
-<m>\int_0^{2\pi} \cos^4\theta\, d\theta = \tfrac{3\pi}{4}</m>. By
-<xref ref="eq-com-2d"/>,
-</p>
-
-<me>
-\bar{x} = \frac{M_y}{M} = \frac{5\pi/2}{3\pi} = \frac{5}{6},
-</me>
-
-<p>
-so the centroid is <m>\left( \tfrac{5}{6}, 0 \right)</m>. As promised,
-the constant density <m>\delta = 2</m> canceled out. The animation in
-<xref ref="fig-cardioid-centroid-video"/> shows how symmetry and the
-polar integrals combine to locate this point.
-</p>
-</solution>
 
 <figure xml:id="fig-cardioid-centroid-video">
 <caption>
 The cardioid <m>r = 1 + \cos(\theta)</m> with constant density: symmetry
 places the centroid on the <m>x</m>-axis, and the polar moment integrals
-put it at <m>\left( \tfrac{5}{6}, 0 \right)</m>.
+locate it. Use the animation to check your value.
 </caption>
-<video xml:id="video-cardioid-centroid"
+<video preview="play-button.png" xml:id="video-cardioid-centroid"
        source="videos/cardioid_centroid_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -600,8 +541,7 @@ put it at <m>\left( \tfrac{5}{6}, 0 \right)</m>.
 <figure xml:id="fig-cardioid-centroid">
 <caption>
 The cardioid <m>r = 1 + \cos(\theta)</m>. The region is symmetric about
-the <m>x</m>-axis and its centroid <m>\left( \tfrac{5}{6}, 0 \right)</m>
-is marked in maroon.
+the <m>x</m>-axis and its centroid is marked in maroon.
 </caption>
 <image width="55%">
 <shortdescription>

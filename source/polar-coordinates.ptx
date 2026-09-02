@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Polar Coordinates and Graphing Polar Equations              -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The definitions, the non-uniqueness         -->
+<!-- discussion and the symmetry rules are kept; the derivation of the     -->
+<!-- polar/Cartesian relations, the worked example, and the table and      -->
+<!-- sketch of the cardioid are replaced by blank workspace boxes and an   -->
+<!-- empty polar grid, each preceded by a one-line instruction.  The       -->
+<!-- relations themselves stay in their assemblage, so later sections can  -->
+<!-- still cite eq-polar-cartesian.  File name and xml:ids are unchanged.  -->
+<!--                                                                       -->
+<!-- Figures: the diagrams that define the coordinates, the negative-r     -->
+<!-- picture, the two representations, the four curves of Example I, the  -->
+<!-- y-axis and origin symmetry graphs, and every video are kept.  The     -->
+<!-- cardioid r = 1 + cos(theta), which the student plots from the table,  -->
+<!-- becomes an empty polar grid, with the video as the check.  Captions   -->
+<!-- that stated an answer have been trimmed.                              -->
 <section xml:id="section-polar-coordinates" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Polar Coordinates and Graphing Polar Equations</title>
 
@@ -199,15 +217,27 @@ A point P on a circle labeled in both coordinate systems, with the right triangl
 </figure>
 
 <p>
-From <xref ref="fig-polar-cartesian-prefigure"/>, you can see that for
-a given <m>(r,\theta)</m>, we uniquely have
-<m>(x,y) = (r\cos(\theta),\ r\sin(\theta))</m>. If we are given a pair
-<m>(x,y)</m>, there are two options for the directed distance
-<m>r</m>: a positive and a negative value. However, for a given
-<m>(x,y) \ne (0,0)</m>, there is a unique <m>\theta \in [0,2\pi)</m>
-that satisfies the first two equations of
-<xref ref="eq-polar-cartesian"/>.
+From the right triangle in <xref ref="fig-polar-cartesian-prefigure"/>,
+write <m>x</m> and <m>y</m> in terms of <m>(r,\theta)</m>, and then
+<m>r</m> and <m>\theta</m> in terms of <m>(x,y)</m>. (Given
+<m>(r,\theta)</m> the point <m>(x,y)</m> is unique; given
+<m>(x,y) \ne (0,0)</m>, how many choices are there for <m>r</m>, and
+how many for <m>\theta \in [0,2\pi)</m> once <m>r</m> is chosen?)
 </p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,7);
+\draw[gray!35] (0,4.5) -- (15,4.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$x =$ \qquad $y =$ \qquad $r^2 =$ \qquad $\tan\theta =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.2) {given $(x,y)$: choices for $r$, and for $\theta$:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the four relations between polar and Cartesian coordinates and one for the discussion of how many polar pairs a given Cartesian point has.</shortdescription>
+</image>
+</sidebyside>
 
 <assemblage xml:id="assemblage-polar-cartesian-equations">
 <title>Equations Relating Polar and Cartesian Coordinates</title>
@@ -348,61 +378,41 @@ equations.
 <li><p><m>r = 1 + 2r\cos\theta</m></p></li>
 </ol>
 </p>
+<p>
+<em>Solution.</em>
+(Use <xref ref="eq-polar-cartesian"/>. Parts <alert>A</alert> and
+<alert>B</alert> are one line each; name the curves. In
+<alert>C</alert>, regroup the left side as a product of two familiar
+quantities. In <alert>D</alert>, replace <m>r</m> and
+<m>r\cos\theta</m>, then square to remove the root. Compare with
+<xref ref="fig-polar-to-cartesian-prefigure"/>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,11);
+\draw[gray!35] (0,8.75) -- (15,8.75);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,4) -- (15,4);
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {A. $r = 1$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.45) {B. $\theta = \pi/4$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {C. $r^2\cos\theta\sin\theta = 4$:};
+\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {D. $r = 1 + 2r\cos\theta$:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four labelled rows, one for the Cartesian form of each of the four polar equations.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
 
-<solution>
-<p>
-The four curves are shown in
-<xref ref="fig-polar-to-cartesian-prefigure"/>.
-</p>
-
-<p>
-<ol marker="A.">
-<li>
-<p>
-This is the circle <m>x^2 + y^2 = 1</m>.
-</p>
-</li>
-<li>
-<p>
-This is the line <m>y = x</m>.
-</p>
-</li>
-<li>
-<p>
-We re-write <m>r^2\cos\theta\sin\theta = 4</m> as
-<m>(r\cos\theta)(r\sin\theta) = 4</m>, which then gives us
-<m>xy = 4</m>.
-</p>
-</li>
-<li>
-<p>
-Using <m>r = \sqrt{x^2+y^2}</m> and <m>r\cos\theta = x</m> from
-<xref ref="eq-polar-cartesian"/>:
-<md>
-<mrow>
-r = 1 + 2r\cos\theta
-\amp\Rightarrow \sqrt{x^2+y^2} = 1 + 2x
-\Rightarrow x^2 + y^2 = 1 + 4x + 4x^2
-</mrow>
-<mrow>
-\amp\Rightarrow y^2 - 3x^2 - 4x - 1 = 0.
-</mrow>
-</md>
-</p>
-</li>
-</ol>
-</p>
-</solution>
-
 <figure xml:id="fig-polar-to-cartesian-prefigure">
 <caption>
-The four curves of <xref ref="example-polar-to-cartesian"/>. From left
-to right: the circle <m>r = 1</m>, i.e., <m>x^2+y^2=1</m>; the line
-<m>\theta = \pi/4</m>, i.e., <m>y = x</m>; the hyperbola
-<m>r^2\cos\theta\sin\theta = 4</m>, i.e., <m>xy = 4</m>; and the conic
-<m>r = 1+2r\cos\theta</m>, i.e., <m>y^2 - 3x^2 - 4x - 1 = 0</m>.
+The four curves of <xref ref="example-polar-to-cartesian"/>, from left
+to right: parts A, B, C and D. Match each with the Cartesian equation
+you found.
 </caption>
 <sidebyside widths="23% 23% 23% 23%">
 <image>
@@ -524,19 +534,18 @@ begin by analyzing symmetries of polar equations.
 Note that a graph is symmetric about the <m>x</m>-axis if for every
 point <m>(r,\theta)</m> on the graph, there exists a point with the
 coordinates <m>(r,-\theta)</m> on the graph as well. As an example,
-consider the equation <m>r = 1 + \cos\theta</m>. Assuming that
+consider the equation <m>r = 1 + \cos\theta</m>. Explain why, if
 <m>(r,\theta)</m> is a point on the graph of this equation, so is
-<m>(r,-\theta)</m>, simply because <m>\cos(-\theta) = \cos\theta</m>.
-Let us plot its graph by computing some of the points as shown in
-<xref ref="table-cardioid-points"/>; the graph, with these points
-marked, is shown in <xref ref="fig-cardioid-prefigure"/>, and the
-process of sweeping <m>\theta</m> to trace the graph is animated in
-<xref ref="fig-cardioid-video"/>.
+<m>(r,-\theta)</m>. Then plot its graph: fill in
+<xref ref="table-cardioid-points"/>, mark the points on the polar grid
+below, use the symmetry to complete the curve, and name it. The process
+of sweeping <m>\theta</m> to trace the graph is animated in
+<xref ref="fig-cardioid-video"/>; use it to check your sketch.
 </p>
 
 <table xml:id="table-cardioid-points">
 <title>Some points on the graph of <m>r = 1 + \cos\theta</m></title>
-<tabular halign="center">
+<tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
 <row header="yes" bottom="minor">
 <cell><m>\theta</m></cell>
 <cell><m>0</m></cell>
@@ -547,78 +556,41 @@ process of sweeping <m>\theta</m> to trace the graph is animated in
 </row>
 <row>
 <cell><m>r = 1+\cos\theta</m></cell>
-<cell><m>2</m></cell>
-<cell><m>3/2</m></cell>
-<cell><m>1</m></cell>
-<cell><m>1/2</m></cell>
-<cell><m>0</m></cell>
+<cell></cell>
+<cell></cell>
+<cell></cell>
+<cell></cell>
+<cell></cell>
 </row>
 </tabular>
 </table>
 
-<figure xml:id="fig-cardioid-prefigure">
-<caption>
-The cardioid <m>r = 1 + \cos\theta</m>. The marked points correspond
-to the values in <xref ref="table-cardioid-points"/>. Since
-<m>\cos(-\theta) = \cos\theta</m>, the graph is symmetric about the
-<m>x</m>-axis.
-</caption>
-<image width="65%">
-<shortdescription>
-The cardioid r equals one plus cosine theta on a polar grid.
-</shortdescription>
-<prefigure xmlns="https://prefigure.org" label="prefigure-cardioid">
-<diagram dimensions="(360,321)" margins="10">
-<definition>card(t) = ((1+cos(t))*cos(t), (1+cos(t))*sin(t))</definition>
-<definition>ring1(t) = (0.5*cos(t), 0.5*sin(t))</definition>
-<definition>ring2(t) = (cos(t), sin(t))</definition>
-<definition>ring3(t) = (1.5*cos(t), 1.5*sin(t))</definition>
-<definition>ring4(t) = (2*cos(t), 2*sin(t))</definition>
-<coordinates bbox="(-2.5,-2.3,2.7,2.3)">
-<parametric-curve at="cd-ring1" function="ring1" domain="(0,2*pi)"
-    stroke="#dddddd" thickness="1"/>
-<parametric-curve at="cd-ring2" function="ring2" domain="(0,2*pi)"
-    stroke="#dddddd" thickness="1"/>
-<parametric-curve at="cd-ring3" function="ring3" domain="(0,2*pi)"
-    stroke="#dddddd" thickness="1"/>
-<parametric-curve at="cd-ring4" function="ring4" domain="(0,2*pi)"
-    stroke="#dddddd" thickness="1"/>
-<line at="cd-diag1" endpoints="((-1.55,-1.55),(1.55,1.55))"
-    stroke="#dddddd" thickness="1"/>
-<line at="cd-diag2" endpoints="((-1.55,1.55),(1.55,-1.55))"
-    stroke="#dddddd" thickness="1"/>
-<axes at="cd-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-<parametric-curve at="cd-curve" function="card" domain="(0,2*pi)"
-    stroke="#0072B2" thickness="3"/>
-<point at="cd-p0" p="(2,0)" fill="#D55E00" alignment="ne"/>
-<point at="cd-p60" p="(0.75,1.299)" fill="#D55E00" alignment="ne"/>
-<point at="cd-p90" p="(0,1)" fill="#D55E00" alignment="ne"/>
-<point at="cd-p120" p="(-0.25,0.433)" fill="#D55E00" alignment="nw"/>
-<point at="cd-p180" p="(0,0)" fill="#D55E00" alignment="sw"/>
-<label at="cd-eq" anchor="(-2.4,1.6)" alignment="e"
-    color="#0072B2"><m>r = 1+\cos(\theta)</m></label>
-<label at="cd-r1" anchor="(0.5,0.06)" alignment="n">
-<m>\tfrac12</m>
-</label>
-<label at="cd-r2" anchor="(1.02,0.06)" alignment="n">
-<m>1</m>
-</label>
-<label at="cd-r4" anchor="(2.02,0.06)" alignment="n">
-<m>2</m>
-</label>
-</coordinates>
-<annotations>
-<annotation ref="figure" text="A polar grid with concentric gray circles of radii one half, one, three halves and two. The cardioid r equals one plus cosine theta is drawn in blue: a heart shaped curve, widest at the point two comma zero on the positive x axis, closing to a cusp at the origin on the negative x axis side. Five vermillion points mark the table values at theta equal to zero, pi over three, pi over two, two pi over three, and pi.">
-  <annotation ref="cd-curve" text="The cardioid r equals one plus cosine theta, symmetric about the x axis."/>
-  <annotation ref="cd-p0" text="The point at theta equals zero, where r equals two."/>
-  <annotation ref="cd-p90" text="The point at theta equals pi over two, where r equals one."/>
-  <annotation ref="cd-p180" text="The point at theta equals pi, where r equals zero: the cusp at the origin."/>
-</annotation>
-</annotations>
-</diagram>
-</prefigure>
+<sidebyside widths="46% 46%">
+<image>
+<latex-image><![CDATA[
+\begin{tikzpicture}[scale=1.5, >=stealth]
+\foreach \r in {0.5,1,1.5,2} \draw[gray!35, very thin] (0,0) circle (\r);
+\foreach \a in {0,30,...,330} \draw[gray!35, very thin] (0,0) -- (\a:2);
+\draw[->, thick] (-2.2,0) -- (2.4,0) node[right] {$x$};
+\draw[->, thick] (0,-2.2) -- (0,2.4) node[above] {$y$};
+\foreach \x in {1,2} \draw (\x,-0.05) -- (\x,0.05) node[below=3pt, font=\scriptsize] {$\x$};
+\foreach \y in {1,2} \draw (-0.05,\y) -- (0.05,\y) node[left=3pt, font=\scriptsize] {$\y$};
+\end{tikzpicture}
+]]></latex-image>
+<shortdescription>Empty polar grid with circles of radius one half to two and rays every thirty degrees, for plotting the points of the table and sketching the graph of r equals one plus cosine theta.</shortdescription>
 </image>
-</figure>
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (7,7);
+\draw[gray!35] (0,3.5) -- (7,3.5);
+\node[anchor=north west, font=\small\itshape] at (0.3,6.7) {why $(r,-\theta)$ is also on the graph:};
+\node[anchor=north west, font=\small\itshape] at (0.3,3.2) {name of the curve:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the symmetry argument and one for the name of the curve.</shortdescription>
+</image>
+</sidebyside>
 
 <figure xml:id="fig-cardioid-video">
 <caption>
@@ -628,7 +600,7 @@ ray at angle <m>\theta</m> rotates counterclockwise while the distance
 sweeps out the cardioid, hitting the values of
 <xref ref="table-cardioid-points"/> along the way.
 </caption>
-<video xml:id="video-cardioid-trace"
+<video preview="play-button.png" xml:id="video-cardioid-trace"
        source="videos/cardioid_trace_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -708,7 +680,7 @@ Animation of graphing <m>r = 1 - \sin\theta</m>. As the traced point
 <m>y</m>-axis (in green) lands on the same curve, showing the symmetry
 about the <m>y</m>-axis.
 </caption>
-<video xml:id="video-cardioid-y-trace"
+<video preview="play-button.png" xml:id="video-cardioid-y-trace"
        source="videos/cardioid_y_trace_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -785,7 +757,7 @@ Animation of graphing <m>r^2 = \sin\theta</m>. For each
 vermillion) satisfy the equation, so the two branches are traced
 simultaneously and the graph is symmetric about the origin.
 </caption>
-<video xml:id="video-origin-symmetry-trace"
+<video preview="play-button.png" xml:id="video-origin-symmetry-trace"
        source="videos/origin_symmetry_trace_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>

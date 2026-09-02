@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MATH 14 Skeletal Notes                                                -->
+<!-- Section: Double Integrals in Polar Form                               -->
+<!--                                                                       -->
+<!-- Skeletal (fill-in) version of the section of the same name in the     -->
+<!-- completed MATH 14 notes.  The setup of the polar rectangle is kept;   -->
+<!-- the derivation of the area element, the four worked examples and the  -->
+<!-- four Concept Check answers are replaced by blank workspace boxes,     -->
+<!-- each preceded by a one-line instruction.  The area element and the    -->
+<!-- polar form of the double integral are restated in an assemblage so    -->
+<!-- that later sections and the assignments can still cite                -->
+<!-- eq-polar-area-element and eq-polar-double-integral.  File name and    -->
+<!-- xml:ids are unchanged.                                                -->
+<!--                                                                       -->
+<!-- Figures: all kept (the polar rectangles and their video, the four     -->
+<!-- regions of the examples, the solid of Example III, and the three      -->
+<!-- Concept Check pictures with their sliders); each is either a          -->
+<!-- statement or the check on a box.  Captions that stated a polar        -->
+<!-- description or a numerical answer have been trimmed.                  -->
 <section xml:id="section-double-integrals-polar-form" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Double Integrals in Polar Form</title>
 
@@ -39,42 +57,48 @@ R_{ij} = \{(r,\theta) : r_{i-1} \le r \le r_i,\
 </me>
 
 <p>
-which, using the fact that the area of a sector of a circle with
-radius <m>r</m> and central angle <m>\theta</m> is
-<m>\tfrac12 r^2\theta</m>, gives us
+Compute this area. (The area of a sector of a circle with radius
+<m>r</m> and central angle <m>\theta</m> is <m>\tfrac12 r^2\theta</m>;
+the polar rectangle is the difference of two sectors. Factor the
+difference of squares and write the result in terms of
+<m>\Delta r = r_i - r_{i-1}</m>, <m>\Delta\theta</m>, and the average
+radius <m>r_i^* = \tfrac12(r_i + r_{i-1})</m>. Then write the Riemann
+sum for <m>\iint_R f\,dA</m> with these cells and pass to the limit.)
 </p>
 
-<md>
-<mrow>
-\Delta A_i \amp= \tfrac12 r_i^2\,\Delta\theta
-- \tfrac12 r_{i-1}^2\,\Delta\theta
-= \tfrac12\left(r_i^2 - r_{i-1}^2\right)\Delta\theta
-</mrow>
-<mrow xml:id="eq-polar-area-element" number="yes">
-\amp= \tfrac12\left(r_i + r_{i-1}\right)\left(r_i - r_{i-1}\right)
-\Delta\theta
-= r_i^*\,\Delta r\,\Delta\theta,
-</mrow>
-</md>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {$\Delta A_i =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$\displaystyle\iint_R f(x,y)\,dA = \lim_{n,m\to\infty} \sum\sum$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$=$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the area of a polar rectangle, for the Riemann sum over polar rectangles, and for the resulting polar form of the double integral.</shortdescription>
+</image>
+</sidebyside>
 
+<assemblage xml:id="assemblage-polar-double-integral">
+<title>Double Integrals in Polar Coordinates</title>
 <p>
-where <m>\Delta\theta = \theta_j - \theta_{j-1}</m>,
-<m>i = 1,2,\dots,n</m>, and <m>j = 1,2,\dots,m</m>. Here
-<m>r_i^* = \tfrac12(r_i + r_{i-1})</m> is the average radius of the
-polar rectangle. Therefore,
-</p>
-
+The area of a polar rectangle with average radius <m>r_i^*</m> is
 <md>
-<mrow>
-\iint_R f(x,y)\,dA
-\amp= \lim_{n,m\to\infty}\sum_{i=1}^{n}\sum_{j=1}^{m}
-f\!\left(r_i^*\cos\theta_j^*,\ r_i^*\sin\theta_j^*\right)
-r_i^*\,\Delta r\,\Delta\theta
-</mrow>
-<mrow xml:id="eq-polar-double-integral" number="yes">
-\amp= \iint_R f(r\cos\theta,\ r\sin\theta)\,r\,dr\,d\theta.
+<mrow xml:id="eq-polar-area-element" number="yes">
+\Delta A_i = r_i^*\,\Delta r\,\Delta\theta,
 </mrow>
 </md>
+so that <m>dA = r\,dr\,d\theta</m>, and
+<md>
+<mrow xml:id="eq-polar-double-integral" number="yes">
+\iint_R f(x,y)\,dA = \iint_R f(r\cos\theta,\ r\sin\theta)\,r\,dr\,d\theta.
+</mrow>
+</md>
+</p>
+</assemblage>
 
 <figure xml:id="fig-polar-rectangles-prefigure">
 <caption>
@@ -213,7 +237,7 @@ has area exactly <m>r^*\,\Delta r\,\Delta\theta</m>, and the sum
 <m>\sum r^*\,\Delta r\,\Delta\theta</m> equals the area
 <m>\tfrac{3\pi}{4}</m> of <m>R</m> at every stage.
 </caption>
-<video xml:id="video-polar-element"
+<video preview="play-button.png" xml:id="video-polar-element"
        source="videos/polar_area_element_1080p.mp4"
        width="70%" aspect="16:9"/>
 </figure>
@@ -232,68 +256,38 @@ Evaluate <m>\displaystyle\iint_R (3x + 4y^2)\,dA</m>, where <m>R</m>
 is the region in the upper half plane bounded by the circles
 <m>x^2 + y^2 = 1</m> and <m>x^2 + y^2 = 4</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Sketch the region, shown in <xref ref="fig-half-annulus-prefigure"/>,
+and describe it in polar coordinates. Convert the integrand with
+<xref ref="eq-polar-cartesian"/>, remember the factor <m>r</m> in
+<m>dA</m>, integrate in <m>r</m> first, and use the half-angle identity
+for <m>\sin^2\theta</m> in the outer integral.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
+\draw[gray!35] (0,10.5) -- (15,10.5);
+\draw[gray!35] (0,7.5) -- (15,7.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$R = \{(r,\theta) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {$\displaystyle\iint_R (3x+4y^2)\,dA = \int_{\quad}^{\quad}\!\!\int_{\quad}^{\quad}$};
+\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {evaluate:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the polar description of the region, for the polar iterated integral, and for its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-The region
-</p>
-
-<me>
-R = \{(x,y) \mid y \ge 0,\ 1 \le x^2 + y^2 \le 4\}
-</me>
-
-<p>
-is shown in <xref ref="fig-half-annulus-prefigure"/>, and in polar
-coordinates we have
-</p>
-
-<me>
-R = \{(r,\theta) : 1 \le r \le 2,\ 0 \le \theta \le \pi\}.
-</me>
-
-<p>
-Therefore, using <m>x = r\cos\theta</m> and <m>y = r\sin\theta</m> from
-<xref ref="eq-polar-cartesian"/>, we can write:
-</p>
-
-<md>
-<mrow>
-\iint_R (3x + 4y^2)\,dA
-\amp= \int_0^{\pi}\!\!\int_1^2
-\left(3r\cos\theta + 4r^2\sin^2\theta\right) r\,dr\,d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{\pi}\!\!\int_1^2
-\left(3r^2\cos\theta + 4r^3\sin^2\theta\right) dr\,d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{\pi}
-\Big[r^3\cos\theta + r^4\sin^2\theta\Big]_{r=1}^{r=2}\,d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{\pi}\left(7\cos\theta
-+ 15\sin^2\theta\right)d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{\pi}\left[7\cos\theta
-+ \tfrac{15}{2}\left(1 - \cos 2\theta\right)\right]d\theta
-</mrow>
-<mrow>
-\amp= \left.\left(7\sin\theta + \frac{15\theta}{2}
-- \frac{15}{4}\sin 2\theta\right)\right|_0^{\pi}
-= \frac{15\pi}{2}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-half-annulus-prefigure">
 <caption>
 The region of <xref ref="example-polar-annulus"/>: the upper half of
 the annulus between the circles <m>x^2+y^2 = 1</m> and
-<m>x^2+y^2 = 4</m>. In polar coordinates it is simply
-<m>1 \le r \le 2</m>, <m>0 \le \theta \le \pi</m>.
+<m>x^2+y^2 = 4</m>.
 </caption>
 <image width="60%">
 <shortdescription>
@@ -351,51 +345,35 @@ Use a double integral to find the area enclosed by one loop of the
 four-leaved rose <m>r = \cos(2\theta)</m>, graphed in
 <xref ref="fig-rose-prefigure"/>.
 </p>
+<p>
+<em>Solution.</em>
+(Describe the colored loop <m>D</m> of <xref ref="fig-rose-prefigure"/>
+in polar coordinates: which angles sweep it, and for each such angle,
+from where to where does <m>r</m> run? Then the area is
+<xref ref="eq-area-double-integral"/> in polar form; the half-angle
+identity handles <m>\cos^2 2\theta</m>.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,11);
+\draw[gray!35] (0,8.5) -- (15,8.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {$D = \{(r,\theta) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.2) {$A(D) = \displaystyle\iint_D dA =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in two rows, one for the polar description of the loop and one for the area integral and its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
 
-<solution>
-<p>
-We notice that the region <m>D</m> (the colored loop in
-<xref ref="fig-rose-prefigure"/>) can be described as
-</p>
-
-<me>
-D = \left\{(r,\theta)\ \middle|\
--\pi/4 \le \theta \le \pi/4,\ 0 \le r \le \cos 2\theta\right\},
-</me>
-
-<p>
-and hence, by <xref ref="eq-area-double-integral"/>, we can evaluate
-its area as follows:
-</p>
-
-<md>
-<mrow>
-A(D) = \iint_D dA
-\amp= \int_{-\pi/4}^{\pi/4}\!\!\int_0^{\cos 2\theta}
-r\,dr\,d\theta
-= \int_{-\pi/4}^{\pi/4}
-\left[\tfrac12 r^2\right]_0^{\cos 2\theta} d\theta
-</mrow>
-<mrow>
-\amp= \tfrac12\int_{-\pi/4}^{\pi/4}\cos^2 2\theta\,d\theta
-= \tfrac14\int_{-\pi/4}^{\pi/4}\left(1 + \cos 4\theta\right)d\theta
-</mrow>
-<mrow>
-\amp= \tfrac14\left[\theta
-+ \tfrac14\sin 4\theta\right]_{-\pi/4}^{\pi/4}
-= \frac{\pi}{8}.
-</mrow>
-</md>
-</solution>
-
 <figure xml:id="fig-rose-prefigure">
 <caption>
-The four-leaved rose <m>r = \cos(2\theta)</m>. The shaded loop
-<m>D</m> is swept out as <m>\theta</m> runs from <m>-\pi/4</m> to
-<m>\pi/4</m>; the dashed rays are <m>\theta = \pm\pi/4</m>, where
-<m>r = 0</m>.
+The four-leaved rose <m>r = \cos(2\theta)</m>, with one loop <m>D</m>
+shaded. Which angles sweep it out?
 </caption>
 <image width="55%">
 <shortdescription>
@@ -454,65 +432,41 @@ Find the volume of the solid that lies under the paraboloid
 <m>z = x^2 + y^2</m>, above the <m>xy</m>-plane, and inside the
 cylinder <m>x^2 + y^2 = 2x</m>.
 </p>
+<p>
+<em>Solution.</em>
+(Complete the square to see what the cylinder's cross-section is; the
+base disk is shown in <xref ref="fig-shifted-disk-prefigure"/> and the
+solid in <xref ref="fig-polar-volume-tikz"/>. Convert
+<m>x^2+y^2 = 2x</m> to polar form and solve for <m>r</m>; that gives the
+upper limit of <m>r</m>, and the disk is swept by
+<m>-\pi/2 \le \theta \le \pi/2</m>. Integrate the height of the
+paraboloid over the disk. The outer integral involves
+<m>\cos^4\theta</m>: use the half-angle identity twice, and use
+symmetry to halve the interval.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
+\draw[gray!35] (0,12.5) -- (15,12.5);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {the cylinder in polar form: \qquad so $D = \{(r,\theta) :$};
+\node[anchor=north west, font=\small\itshape] at (0.35,12.2) {$V = \displaystyle\iint_D (x^2+y^2)\,dA = \int_{\quad}^{\quad}\!\!\int_{\quad}^{\quad}$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {evaluate:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the polar form of the cylinder and the description of the base disk, for the polar volume integral, and for its evaluation.</shortdescription>
+</image>
+</sidebyside>
 </statement>
 </example>
-
-<solution>
-<p>
-We notice that the cylinder can be re-written as
-<m>(x-1)^2 + y^2 = 1</m>, which is shown in
-<xref ref="fig-shifted-disk-prefigure"/>; the solid itself is shown in
-<xref ref="fig-polar-volume-tikz"/>. In polar coordinates,
-<m>x^2 + y^2 = 2x</m> becomes <m>r^2 = 2r\cos\theta</m>, that is,
-<m>r = 2\cos\theta</m>, so the base disk is
-</p>
-
-<me>
-D = \left\{(r,\theta)\ \middle|\
--\pi/2 \le \theta \le \pi/2,\ 0 \le r \le 2\cos\theta\right\}.
-</me>
-
-<p>
-Therefore,
-</p>
-
-<md>
-<mrow>
-V = \iint_D \left(x^2 + y^2\right)dA
-\amp= \int_{-\pi/2}^{\pi/2}\!\!\int_0^{2\cos\theta}
-r^2\, r\,dr\,d\theta
-</mrow>
-<mrow>
-\amp= \int_{-\pi/2}^{\pi/2}
-\left[\frac{r^4}{4}\right]_0^{2\cos\theta} d\theta
-</mrow>
-<mrow>
-\amp= 4\int_{-\pi/2}^{\pi/2}\cos^4\theta\,d\theta
-= 8\int_0^{\pi/2}\cos^4\theta\,d\theta
-</mrow>
-<mrow>
-\amp= 8\int_0^{\pi/2}\left(\frac{1+\cos 2\theta}{2}\right)^{2} d\theta
-</mrow>
-<mrow>
-\amp= 2\int_0^{\pi/2}\left[1 + 2\cos 2\theta
-+ \tfrac12\left(1 + \cos 4\theta\right)\right]d\theta
-</mrow>
-<mrow>
-\amp= 2\left[\tfrac32\theta + \sin 2\theta
-+ \tfrac18\sin 4\theta\right]_0^{\pi/2}
-</mrow>
-<mrow>
-\amp= 2\left(\frac{3}{2}\right)\left(\frac{\pi}{2}\right)
-= \frac{3\pi}{2}.
-</mrow>
-</md>
-</solution>
 
 <figure xml:id="fig-shifted-disk-prefigure">
 <caption>
 The base of the solid in <xref ref="example-polar-volume"/>: the disk
-<m>(x-1)^2 + y^2 \le 1</m>, whose boundary is the polar curve
-<m>r = 2\cos\theta</m>.
+inside the cylinder <m>x^2 + y^2 = 2x</m>.
 </caption>
 <image width="55%">
 <shortdescription>
@@ -559,8 +513,7 @@ A disk of radius one centered at (1,0), passing through the origin.
 <caption>
 The solid of <xref ref="example-polar-volume"/>: the region under the
 paraboloid <m>z = x^2 + y^2</m>, above the <m>xy</m>-plane, and inside
-the cylinder <m>x^2 + y^2 = 2x</m>. Its volume is
-<m>\frac{3\pi}{2}</m>.
+the cylinder <m>x^2 + y^2 = 2x</m>.
 </caption>
 <image width="70%">
 <shortdescription>
@@ -647,30 +600,26 @@ unit disk centered at the origin.
 <em>Hint:</em> Notice that you cannot solve this integral using
 Cartesian coordinates.
 </p>
-</statement>
-</example>
-
-<solution>
 <p>
-In polar coordinates the unit disk is
-<m>0 \le r \le 1</m>, <m>0 \le \theta \le 2\pi</m>, and
-<m>e^{x^2+y^2} = e^{r^2}</m>. The extra factor of <m>r</m> in
-<m>dA = r\,dr\,d\theta</m> is exactly what makes the integral
-computable, via the substitution <m>u = r^2</m>:
+<em>Solution.</em>
+(Describe the unit disk in polar coordinates and convert the integrand.
+The extra factor of <m>r</m> in <m>dA</m> is exactly what makes the
+inner integral computable: which substitution?)
 </p>
 
-<md>
-<mrow>
-\iint_R e^{x^2+y^2}\,dx\,dy
-\amp= \int_0^{2\pi}\!\!\int_0^1 e^{r^2}\,r\,dr\,d\theta
-= \int_0^{2\pi}\left[\tfrac12 e^{r^2}\right]_0^1 d\theta
-</mrow>
-<mrow>
-\amp= \int_0^{2\pi}\tfrac12(e - 1)\,d\theta
-= \pi(e-1).
-</mrow>
-</md>
-</solution>
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\displaystyle\iint_R e^{x^2+y^2}\,dx\,dy = \int_{\quad}^{\quad}\!\!\int_{\quad}^{\quad}$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box for converting the integral to polar form and evaluating it.</shortdescription>
+</image>
+</sidebyside>
+</statement>
+</example>
 
 </subsection>
 
@@ -705,40 +654,32 @@ to the following areas graphed in <xref ref="fig-polar-two-areas"/>:
 <li><p>the blue-colored area,</p></li>
 <li><p>the sum of the areas in (1) and (2).</p></li>
 </ol>
+<p>
+(Which angles sweep both regions? Write the vertical line <m>x = 1</m>
+and the two arcs in polar form; along a ray, where does each region
+begin and end? The third integral should need no line at all: what
+region is the union, and what does that give you to check the first two
+against?)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9) -- (15,9);
+\draw[gray!35] (0,6) -- (15,6);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$x = 1$ in polar form: \qquad the arcs:};
+\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {1. $A_{\text{red}} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {2. $A_{\text{blue}} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {3. $A_{\text{red}} + A_{\text{blue}} =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the polar forms of the boundary curves and for the three area integrals.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-Both regions are swept by the rays with <m>0 \le \theta \le \pi/3</m>: the
-lower limit is the positive <m>x</m>-axis and the upper limit is the line
-<m>y = \sqrt3\,x</m>. The vertical line <m>x = 1</m> is
-<m>r\cos\theta = 1</m>, that is <m>r = \sec\theta</m>, and the two arcs
-are <m>r = 1</m> and <m>r = 2</m>. Along a ray, the red region runs from
-the unit circle out to the line <m>x = 1</m>, and the blue region takes
-over from there out to the circle of radius <m>2</m>:
-</p>
-<md>
-<mrow>
-A_{\text{red}} \amp = \int_0^{\pi/3}\!\!\int_1^{\sec\theta} r\,dr\,d\theta
-  = \frac{\sqrt3}{2} - \frac{\pi}{6} \approx 0.342 ,
-</mrow>
-<mrow>
-A_{\text{blue}} \amp = \int_0^{\pi/3}\!\!\int_{\sec\theta}^{2}
-  r\,dr\,d\theta = \frac{2\pi}{3} - \frac{\sqrt3}{2} \approx 1.228 ,
-</mrow>
-<mrow>
-A_{\text{red}} + A_{\text{blue}} \amp
-  = \int_0^{\pi/3}\!\!\int_1^{2} r\,dr\,d\theta = \frac{\pi}{2} .
-</mrow>
-</md>
-<p>
-The third integral is the point of the question: adding the two regions
-removes the line <m>x = 1</m> from the picture, and what is left is the
-annular sector between <m>r=1</m> and <m>r=2</m> over
-<m>0 \le \theta \le \pi/3</m>, whose area is
-<m>\frac12\left(2^2-1^2\right)\cdot\frac{\pi}{3} = \frac{\pi}{2}</m>. It
-is a good check on the first two: <m>0.342 + 1.228 = 1.571 = \pi/2</m>.
-</p>
-</answer>
 </exercise>
 
 <figure xml:id="fig-polar-two-areas">
@@ -824,43 +765,34 @@ whose density is given by
 <em>Hint</em>: note that as <m>\theta</m> varies, you may need to modify
 the limits of <m>r</m> accordingly.
 </p>
+<p>
+(Write the density and <m>dA</m> in polar form first; something
+cancels. Then the limits: take the petal around <m>\theta = 0</m>,
+which is traced for <m>-\pi/6 \le \theta \le \pi/6</m>, and slide the
+ray in <xref ref="fig-polar-rose-circle"/>. Near <m>\theta = 0</m>
+which curve does the ray leave <m>R</m> at, and near the edges of the
+petal which one? Find the changeover angle, write the integral for one
+petal, and use the congruence of the three petals.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\draw[gray!35] (0,2.5) -- (15,2.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$\rho\,dA =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {the ray leaves $R$ at $r = \tfrac12$ when \qquad and at $r = \cos 3\theta$ when};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$M_{\text{petal}} =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.2) {$M =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in four rows, for the density times the area element in polar form, for the two ranges of theta with their upper limits of r, for the mass of one petal, and for the total mass.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-In polar coordinates the density is <m>\rho = 1/r</m>, and
-<m>dA = r\,dr\,d\theta</m>, so the two factors of <m>r</m> cancel and the
-integrand is <m>1</m>:
-</p>
-<me>
-M = \iint_R \frac{1}{\sqrt{x^2+y^2}}\,dA
-  = \iint_R \frac{1}{r}\; r\,dr\,d\theta
-  = \iint_R dr\,d\theta .
-</me>
-<p>
-Now the limits, which is where the hint bites. Take the petal around
-<m>\theta = 0</m>, which is traced for
-<m>-\frac{\pi}{6} \le \theta \le \frac{\pi}{6}</m>. Sliding the ray in
-<xref ref="fig-polar-rose-circle"/> shows what happens: near
-<m>\theta = 0</m> the petal is fatter than the circle, so the ray leaves
-<m>R</m> at <m>r=\frac12</m>, while near the edges of the petal it is
-thinner and the ray leaves at <m>r=\cos(3\theta)</m>. The changeover is
-where <m>\cos(3\theta) = \frac12</m>, that is
-<m>\theta = \pm\frac{\pi}{9}</m>. So for that petal
-</p>
-<me>
-M_{\text{petal}}
- = \int_{-\pi/9}^{\pi/9}\!\!\int_0^{1/2} dr\,d\theta
- + 2\int_{\pi/9}^{\pi/6}\!\!\int_0^{\cos(3\theta)} dr\,d\theta ,
-</me>
-<p>
-the factor <m>2</m> coming from the two symmetric ends of the petal. The
-three petals are congruent, so
-</p>
-<me>
-M = 3\,M_{\text{petal}}
-  = \frac{\pi}{3} + 2 - \sqrt3 \approx 1.315 .
-</me>
-</answer>
 </exercise>
 
 <figure xml:id="fig-polar-rose-circle">
@@ -908,41 +840,32 @@ Set up a double integral (in polar coordinates) for computing the volume
 of the region bounded by the cylinder <m>x^2+(y-1)^2=1</m> and the sphere
 <m>x^2+y^2+z^2=1</m>. See <xref ref="fig-ws-cylinder-sphere"/>.
 </p>
+<p>
+(This is <xref ref="q-di-cylinder-sphere"/> again. The height over a
+point of the region is unchanged; write it in terms of <m>r</m>. Put
+both boundary circles in polar form and find the angles where they
+cross. For which <m>\theta</m> is the sphere the binding constraint,
+and for which the cylinder? Use the symmetry about the <m>y</m>-axis,
+and compare the region of integration with the one you described in
+Cartesian coordinates.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
+\draw[gray!35] (0,9.5) -- (15,9.5);
+\draw[gray!35] (0,6.5) -- (15,6.5);
+\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {height: \qquad sphere: $r =$ \qquad cylinder: $r =$ \qquad they cross at $\theta =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,9.2) {the ray leaves at $r = 1$ when \qquad and at $r = 2\sin\theta$ when};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$V =$};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the height and the polar forms of the two circles with their crossing angles, for the two ranges of theta with their upper limits, and for the volume as polar integrals.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-This is <xref ref="q-di-cylinder-sphere"/> again, and it is the reason
-polar coordinates were worth developing. The height over a point of the
-region of integration is still <m>2\sqrt{1-x^2-y^2} = 2\sqrt{1-r^2}</m>.
-The two boundary circles are as friendly as they could be in polar form:
-the sphere gives <m>r=1</m>, and the cylinder <m>x^2+(y-1)^2=1</m>
-expands to <m>x^2+y^2 = 2y</m>, that is <m>r = 2\sin\theta</m>. They
-cross where <m>2\sin\theta = 1</m>, at <m>\theta = \frac{\pi}{6}</m> and
-<m>\theta = \frac{5\pi}{6}</m>.
-</p>
-<p>
-For <m>\frac{\pi}{6} \le \theta \le \frac{5\pi}{6}</m> the sphere is the
-binding constraint and the ray leaves at <m>r=1</m>; outside that range
-the cylinder is, and the ray leaves at <m>r = 2\sin\theta</m>. Using the
-symmetry about the <m>y</m>-axis,
-</p>
-<md>
-<mrow>
-V \amp= 2\int_0^{\pi/6}\!\!\int_0^{2\sin\theta}
-2\sqrt{1-r^2}\;r\,dr\,d\theta
-</mrow>
-<mrow>
-\amp\quad + \int_{\pi/6}^{5\pi/6}\!\!\int_0^{1}
-2\sqrt{1-r^2}\;r\,dr\,d\theta
-\ \approx\ 1.693 .
-</mrow>
-</md>
-<p>
-Compare the region of integration here with the one in
-<xref ref="q-di-cylinder-sphere"/>: the same set, described by two
-circles instead of by a square root.
-</p>
-</answer>
 </exercise>
 
 <exercise xml:id="q-polar-cardioid-overlap">
@@ -954,30 +877,31 @@ the two curves <m>r(\theta)=1+\cos\theta</m> and
 <m>r(\theta)=1+\sin\theta</m>. See
 <xref ref="fig-polar-cardioids"/>.
 </p>
+<p>
+(A point lies in the overlap when its <m>r</m> is at most <em>both</em>
+radii, so along each ray the region runs from <m>r = 0</m> out to the
+smaller of the two. Where do the cardioids cross, and which radius is
+the smaller one on each side of the crossing? Slide the ray in
+<xref ref="fig-polar-cardioids"/> to see. Set up one integral for each
+range of <m>\theta</m>, and say what symmetry relates the two.)
+</p>
+
+<sidebyside width="97%">
+<image>
+<latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
+\draw[gray!35] (0,7) -- (15,7);
+\draw[gray!35] (0,3) -- (15,3);
+\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {the cardioids cross at $\theta =$ \qquad the smaller radius is};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {$A =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {symmetry:};
+\end{tikzpicture}
+</latex-image>
+<shortdescription>Blank box in three rows, for the crossing angles and which radius is smaller where, for the area as a sum of polar integrals, and for the symmetry between the two pieces.</shortdescription>
+</image>
+</sidebyside>
 </statement>
-<answer>
-<p>
-A point lies in the overlap when its <m>r</m> is at most <em>both</em>
-<m>1+\cos\theta</m> and <m>1+\sin\theta</m>, so along each ray the region
-runs from <m>r=0</m> out to the smaller of the two. The two cardioids
-cross where <m>1+\cos\theta = 1+\sin\theta</m>, that is
-<m>\theta = \frac{\pi}{4}</m> and <m>\theta = \frac{5\pi}{4}</m>, and
-these are exactly the angles where the smaller of the two changes
-identity. Sliding the ray in <xref ref="fig-polar-cardioids"/> makes this
-visible: the readout shows which of the two radii is smaller.
-</p>
-<me>
-A = \int_{-3\pi/4}^{\pi/4}\!\!\int_0^{\,1+\sin\theta} r\,dr\,d\theta
-  + \int_{\pi/4}^{5\pi/4}\!\!\int_0^{\,1+\cos\theta} r\,dr\,d\theta .
-</me>
-<p>
-Each piece contributes the same amount, by the symmetry of the picture
-about the line <m>\theta = \frac{\pi}{4}</m>, and
-</p>
-<me>
-A = \frac{3\pi}{2} - 2\sqrt2 \approx 1.884 .
-</me>
-</answer>
 </exercise>
 
 <figure xml:id="fig-polar-cardioids">
