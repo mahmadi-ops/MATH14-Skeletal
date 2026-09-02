@@ -97,6 +97,19 @@ Do **not** give the print target a `deploy-dir`: that makes it a deploy
 target, which switches `pretext deploy` to Pelican and would publish all of
 `output/print` rather than the one PDF.
 
+### Two root files
+
+`source/main.ptx` is the web book; `source/main-print.ptx` is the root of
+the print and latex targets and differs only in leaving out the
+"Assignments and Review Problems" chapter and using
+`frontmatter-print.ptx` (no `introduction.ptx`, which is about the web
+features). The Runestone fill-in problems print as their regex answer
+patterns plus "Correct." feedback lines, so that chapter is web-only. The
+shared `<docinfo>` lives in `source/docinfo.ptx`. A structural change to
+`main.ptx` (a new chapter or section) must be mirrored in
+`main-print.ptx`; nothing in the print tree may `<xref>` into the problems
+chapter.
+
 ### Two publication files
 
 `publication/publication.ptx` (web) and `publication/publication-print.ptx`

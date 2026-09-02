@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared by main.ptx (web) and main-print.ptx (PDF): keep the macros and -->
+<!-- the latex-image preamble in one place so the two builds cannot drift. -->
+<docinfo>
+    
+    <html>
+        <placeholder>
+            <style>
+                .pretext-container {
+                    width: 100% !important;
+                }
+            </style>
+        </placeholder>
+    </html>
+  <macros>
+    \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+    \newcommand{\real}{\Bbb R}
+    \newcommand{\R}{\mathbb{R}}
+  </macros>
+  <latex-image-preamble>
+   \usepackage{tikz}
+   \usetikzlibrary{arrows.meta}
+   \usepackage{pgfplots}
+   \pgfplotsset{compat=1.18}
+</latex-image-preamble>
+</docinfo>

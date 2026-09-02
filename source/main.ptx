@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-<docinfo>
-    
-    <html>
-        <placeholder>
-            <style>
-                .pretext-container {
-                    width: 100% !important;
-                }
-            </style>
-        </placeholder>
-    </html>
-  <macros>
-    \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
-    \newcommand{\real}{\Bbb R}
-    \newcommand{\R}{\mathbb{R}}
-  </macros>
-  <latex-image-preamble>
-   \usepackage{tikz}
-   \usetikzlibrary{arrows.meta}
-   \usepackage{pgfplots}
-   \pgfplotsset{compat=1.18}
-</latex-image-preamble>
-</docinfo>
+<xi:include href="docinfo.ptx" />
 
   <book xml:id="math14">
     <title>MATH 14<ndash/>Skeletal Notes</title>

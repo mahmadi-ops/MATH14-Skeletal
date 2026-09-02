@@ -34,10 +34,12 @@
   </p>
 
   <p>
-    Everything else in this book is unchanged from the completed notes: the
-    assignments, with their answer boxes and the AI tutor, and the review
-    problem sets are all in
-    <xref ref="ch-problems" text="title"/>, exactly as described in the
-    preface that follows.
+    The assignments, with their answer boxes and the AI tutor, and the
+    review problem sets are unchanged from the completed notes. They live
+    online only, in the chapter <em>Assignments and Review Problems</em> of
+    the web version of this book at
+    <url href="https://mahmadi-ops.github.io/MATH14-Skeletal/">mahmadi-ops.github.io/MATH14-Skeletal</url>;
+    they are meant to be worked there, not on paper, so they are not in
+    the PDF.
   </p>
 </preface>

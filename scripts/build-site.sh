@@ -31,7 +31,7 @@ cp "output/print/$PDF" "output/web/$PDF"
 # enough that a build which died partway trips it.  Raise it when the book has
 # grown enough that the current value stops being a meaningful guard.  Override
 # for a one-off build with `MIN_PAGES=... scripts/build-site.sh`.
-MIN_PAGES="${MIN_PAGES:-200}"
+MIN_PAGES="${MIN_PAGES:-150}"
 
 # pretext depends on pyMuPDF, so it is present wherever this script can run.
 # The module was renamed from `fitz` to `pymupdf` in 1.24.3; accept either.

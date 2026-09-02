@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root file of the PRINT (PDF) and latex targets: identical to main.ptx  -->
+<!-- except that the problems chapter is left out and the frontmatter is    -->
+<!-- the print one.  Structural changes to main.ptx must be mirrored here.   -->
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<xi:include href="docinfo.ptx" />
+
+  <book xml:id="math14">
+    <title>MATH 14<ndash/>Skeletal Notes</title>
+    <xi:include href="frontmatter-print.ptx" />
+
+    <chapter xml:id="ch-curves-and-fields">
+      <title>Line Integrals</title>
+      <xi:include href="section-parametrization.ptx" />
+      <xi:include href="section-arc-length.ptx" />
+      <xi:include href="section-line-integrals.ptx" />
+      <xi:include href="section-vector-fields.ptx" />
+      <xi:include href="conservative-fields.ptx" />
+    </chapter>
+
+    <chapter xml:id="ch-multiple-integrals">
+      <title>Multiple Integrals</title>
+      <xi:include href="double-integrals-rectangles.ptx" />
+      <xi:include href="double-integrals-general-regions.ptx" />
+      <xi:include href="polar-coordinates.ptx" />
+      <xi:include href="double-integrals-polar-form.ptx" />
+      <xi:include href="triple-integrals-rectangular.ptx" />
+      <xi:include href="triple-integrals-cylindrical.ptx" />
+      <xi:include href="triple-integrals-spherical.ptx" />
+      <xi:include href="mass-center-of-mass.ptx" />
+      <xi:include href="jacobian-substitution.ptx" />
+      <xi:include href="surface-integrals.ptx" />
+    </chapter>
+
+    <chapter xml:id="ch-integral-theorems">
+      <title>The Big Theorems</title>
+      <xi:include href="greens-theorem.ptx" />
+      <xi:include href="stokes-theorem.ptx" />
+      <xi:include href="divergence-theorem.ptx" />
+    </chapter>
+
+    <!-- The fourth chapter, "Assignments and Review Problems", is web-only:
+         its problems are Runestone fill-in exercises whose print form shows
+         the answer-matching patterns and the "Correct." feedback literally,
+         and they are meant to be worked online (answer boxes, randomized
+         numbers, the AI tutor).  See main.ptx for it. -->
+
+  </book>
+
+</pretext>

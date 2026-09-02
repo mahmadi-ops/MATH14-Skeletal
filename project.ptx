@@ -11,9 +11,11 @@
          this target a deploy-dir: that would turn `pretext deploy` into a
          Pelican site and publish all of output/print instead of one PDF. -->
     <target name="print" format="pdf" xsl="custom-latex.xsl"
+            source="main-print.ptx"
             publication="publication-print.ptx"
             output-filename="math14-skeletal-notes.pdf" />
     <target name="latex" format="latex" xsl="custom-latex.xsl"
+            source="main-print.ptx"
             publication="publication-print.ptx" />
   </targets>
 </project>
