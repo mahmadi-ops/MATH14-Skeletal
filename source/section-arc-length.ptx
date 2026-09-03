@@ -4,10 +4,11 @@
 <!--                                                                       -->
 <!-- Skeletal (fill-in) version of the section of the same name in the     -->
 <!-- completed MATH 14 notes.  The setup of the arc-length construction    -->
-<!-- (the curve, the chords, the Pythagorean relation) and the boxed       -->
-<!-- results are kept; the passage from the chord sum to the integral, and -->
-<!-- every example and activity solution, is replaced by a blank workspace -->
-<!-- box preceded by a one-line instruction.  File name and xml:ids are    -->
+<!-- (the curve and the chords) and the boxed results are kept; the        -->
+<!-- Pythagorean relation for a chord, the passage from the chord sum to   -->
+<!-- the integral, and every example and activity solution, is replaced by -->
+<!-- a blank workspace box, most preceded by a one-line instruction.  The  -->
+<!-- instructor-notes remark is dropped.  File name and xml:ids are        -->
 <!-- unchanged, so the assignments and the next section cross-reference    -->
 <!-- this one exactly as before.                                           -->
 <!--                                                                       -->
@@ -36,7 +37,8 @@
       first in the plane and then in space, and we apply it to two motions:
       a point sweeping out a quarter circle and a paraglider spiralling to
       the ground. The key idea throughout is simple:
-      <em>distance travelled is speed accumulated over time</em>.
+      <em>the total arc length of a curved path can be approximated as the
+      sum of the arc lengths of <m>n</m> small pieces</em>.
     </p>
   </introduction>
 
@@ -133,20 +135,21 @@
 
     <p>
       The strategy is to replace the curve by a chain of straight segments
-      whose lengths we already know how to compute. Partition the time
-      interval into <m>n</m> pieces,
-      <m>a=t_0\lt t_1\lt\cdots\lt t_n=b</m>, mark the corresponding points
-      on the curve, and join consecutive ones by chords, as in
-      <xref ref="fig-arc-length-chords"/>. Over the <m>k</m>-th step the
-      object is displaced <m>\Delta x_k</m> horizontally and
-      <m>\Delta y_k</m> vertically, so by the Pythagorean theorem the
-      <m>k</m>-th chord length <m>\Delta s_k</m> satisfies
-
-    <men xml:id="eq-chord-pythagoras">
-      \left(\Delta s_k\right)^{2}
-        = \left(\Delta x_k\right)^{2} + \left(\Delta y_k\right)^{2}.
-    </men>
+      whose lengths we already know how to compute, as in
+      <xref ref="fig-arc-length-chords"/>.
     </p>
+
+    <sidebyside width="97%">
+      <image>
+        <latex-image>
+\begin{tikzpicture}
+\draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,8);
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape] at (0.25,7.75) {workspace};
+\end{tikzpicture}
+        </latex-image>
+        <shortdescription>Blank workspace for setting up the chords and the length of one of them.</shortdescription>
+      </image>
+    </sidebyside>
 
     <figure xml:id="fig-arc-length-chords">
       <caption>
@@ -285,13 +288,7 @@
 
     <p>
       Now build the arc length from the chords. (Approximate <m>S</m> by
-      the sum of the chord lengths <xref ref="eq-chord-pythagoras"/> and
-      let <m>n \to \infty</m>. The result has no variable of integration
-      yet: divide and multiply each term by
-      <m>\Delta t_k = t_k - t_{k-1}</m>, so that in the limit the
-      difference quotients become derivatives and the sum becomes an
-      integral over time. Finally, recognize the square root that appears
-      as the length of a vector you already know.)
+      the sum of the chord lengths and let <m>n \to \infty</m>.)
     </p>
 
     <sidebyside width="97%">
@@ -360,14 +357,6 @@
       </p>
     <p>
       <em>Solution.</em>
-      (Parametrize the quarter circle as in
-      <xref ref="eq-unit-circle-param"/>, restricting <m>t</m> to the first
-      quadrant. Differentiate to get <m>\mathbf{v}(t)</m> and its length;
-      something pleasant happens to the speed. Then apply
-      <xref ref="eq-arc-length-2d"/>. Say what the arc length swept out up
-      to time <m>t</m> is, and compare with
-      <xref ref="fig-quarter-circle-video"/> and
-      <xref ref="fig-quarter-circle-tikz"/>.)
     </p>
 
     <sidebyside width="97%">
@@ -375,16 +364,11 @@
         <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,12);
-\draw[gray!35] (0,9) -- (15,9);
-\draw[gray!35] (0,5.5) -- (15,5.5);
 \draw[gray!35] (0,2.5) -- (15,2.5);
-\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$\mathbf{r}(t) =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$\mathbf{v}(t) =$ \quad and \quad $\lVert\mathbf{v}(t)\rVert =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,5.2) {$S =$};
 \node[anchor=north west, font=\small\itshape] at (0.35,2.2) {arc length swept out up to time $t$:};
 \end{tikzpicture}
         </latex-image>
-        <shortdescription>Blank box in four rows, for the parametrization of the quarter circle, for the velocity vector and the speed, for the arc-length integral, and for the arc length swept out up to time t.</shortdescription>
+        <shortdescription>Blank box in two rows: an unlabelled one for the computation of the arc length, and one for the arc length swept out up to time t.</shortdescription>
       </image>
     </sidebyside>
       <figure xml:id="fig-quarter-circle-video">
@@ -481,8 +465,8 @@
 
       <figure xml:id="fig-quarter-circle-tikz">
         <caption>
-          Snapshot at <m>t=0.9</m>: the arc already swept out (blue) has
-          length <m>s(t)=t=0.9</m>, the part not yet traced is gray, and the
+          Snapshot at <m>t=\pi/4</m>: the arc already swept out (blue) has
+          length <m>s(t)=t=\pi/4</m>, the part not yet traced is gray, and the
           unit velocity vector <m>\mathbf{v}(t)</m> is tangent to the circle
           at the moving point.
         </caption>
@@ -496,7 +480,7 @@
               The first quadrant with a light coordinate grid. A quarter
               circle of radius one runs from the point (1,0) up to the point
               (0,1). The portion already travelled, from (1,0)
-              counterclockwise to the moving point at t equals 0.9, is a
+              counterclockwise to the moving point at t equals pi over four, is a
               thick blue arc ending in an arrowhead; the portion not yet
               travelled is gray. An orange position vector labelled r of t
               reaches from the origin to the moving point, drawn in red. A
@@ -514,20 +498,20 @@
               \draw[-&gt;] (-0.35,0) -- (1.55,0) node[right] {\(x\)};
               \draw[-&gt;] (0,-0.35) -- (0,1.55) node[above] {\(y\)};
               % remaining part of the quarter circle (still to be traced)
-              % (0.9 rad = 51.566 degrees)
-              \draw[gray!60, thick] (51.566:1) arc[start angle=51.566, end angle=90, radius=1];
-              % arc already swept out, from t=0 to t=0.9
-              \draw[blue, very thick, -&gt;] (1,0) arc[start angle=0, end angle=51.566, radius=1];
+              % (pi/4 rad = 45 degrees)
+              \draw[gray!60, thick] (45:1) arc[start angle=45, end angle=90, radius=1];
+              % arc already swept out, from t=0 to t=pi/4
+              \draw[blue, very thick, -&gt;] (1,0) arc[start angle=0, end angle=45, radius=1];
               % endpoints
               \fill (1,0) circle (0.55pt) node[below right=-1pt] {\((1,0)\)};
               \fill (0,1) circle (0.55pt) node[above right=-1pt] {\((0,1)\)};
               % position vector r(t)
-              \draw[-&gt;, orange, thick] (0,0) -- (0.6216,0.7833)
+              \draw[-&gt;, orange, thick] (0,0) -- (0.7071,0.7071)
                   node[pos=0.55, above left=-2pt] {\(\mathbf r(t)\)};
               % moving point
-              \fill[red] (0.6216,0.7833) circle (0.9pt);
+              \fill[red] (0.7071,0.7071) circle (0.9pt);
               % unit velocity vector v(t), components -sin t and cos t
-              \draw[-&gt;, green!55!black, thick] (0.6216,0.7833) -- ++(-0.7833,0.6216)
+              \draw[-&gt;, green!55!black, thick] (0.7071,0.7071) -- ++(-0.7071,0.7071)
                   node[pos=0.6, above right=-2pt] {\(\mathbf v(t)\)};
               % arc-length readout
               \node[blue] at (1.05,1.25) {\(s(t)=t\)};
@@ -546,8 +530,7 @@
       The formulas <xref ref="eq-arc-length-2d"/> and
       <xref ref="eq-line-element-2d"/> generalize to motion in space with
       no new ideas:
-      the <m>k</m>-th chord of <xref ref="eq-chord-pythagoras"/> simply
-      picks up a third leg, so
+      the <m>k</m>-th chord simply picks up a third leg, so
       <m>\left(\Delta s_k\right)^{2}
          = \left(\Delta x_k\right)^{2}+\left(\Delta y_k\right)^{2}
           +\left(\Delta z_k\right)^{2}</m>
@@ -599,36 +582,12 @@
           \mathbf{r}(t)=\left\langle t\cos t,\ t\sin t,\
             9\sqrt{8}-\frac{\sqrt{8}}{3}\,t^{3/2}\right\rangle.
         </me>
-        Assuming that the paraglider begins at time <m>t=0</m>:
+        Assuming that the paraglider begins at time <m>t=0</m>, calculate
+        the distance travelled by the paraglider until it reaches the
+        ground, that is, <m>z=0</m>.
       </p>
-      <ol>
-        <li>
-          <p>
-            How long does it take to reach the ground, that is,
-            <m>z=0</m>?
-          </p>
-        </li>
-        <li>
-          <p>
-            Calculate the velocity vector at time <m>t</m>, and also
-            calculate its length.
-          </p>
-        </li>
-        <li>
-          <p>Calculate the distance travelled by the paraglider.</p>
-        </li>
-      </ol>
     <p>
       <em>Solution.</em>
-      (In <alert>A</alert>, set the <m>z</m>-coordinate to zero and solve
-      for <m>t</m>. In <alert>B</alert>, differentiate each component
-      <mdash/> the first two need the product rule <mdash/> and then
-      simplify <m>\left\lVert\mathbf{v}(t)\right\rVert</m> all the way: the
-      cross terms cancel, the sines and cosines combine, and what is under
-      the root is a perfect square. In <alert>C</alert>, apply
-      <xref ref="eq-arc-length-3d"/> over the flight time you found in
-      <alert>A</alert>. Then compare with <xref ref="fig-paraglider-video"/>
-      and <xref ref="fig-paraglider-tikz"/>.)
     </p>
 
     <sidebyside width="97%">
@@ -636,14 +595,11 @@
         <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,18);
-\draw[gray!35] (0,14.5) -- (15,14.5);
 \draw[gray!35] (0,5) -- (15,5);
-\node[anchor=north west, font=\small\itshape] at (0.35,17.7) {A. time to reach the ground:};
-\node[anchor=north west, font=\small\itshape] at (0.35,14.2) {B. $\mathbf{v}(t) =$ \quad and \quad $\lVert\mathbf{v}(t)\rVert =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {C. $S =$};
+\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$S =$};
 \end{tikzpicture}
         </latex-image>
-        <shortdescription>Blank box in three labelled rows, for the landing time, for the velocity vector and the simplified speed, and for the arc-length integral giving the distance travelled.</shortdescription>
+        <shortdescription>Blank box in two rows: an unlabelled one for the landing time, the velocity vector and the speed, and one for the arc-length integral giving the distance travelled.</shortdescription>
       </image>
     </sidebyside>
 
@@ -660,10 +616,7 @@
 
       <figure xml:id="fig-paraglider-tikz">
         <caption>
-          The paraglider's path from
-          <m>\left\langle 0,0,9\sqrt{8}\right\rangle</m> down to
-          <m>\left\langle 9\cos 9,\,9\sin 9,\,0\right\rangle</m>. The dashed
-          gray curve is the path's shadow on the ground <m>z=0</m>.
+          The paraglider's path; compare with what you found.
         </caption>
         <image xml:id="image-paraglider-tikz" width="75%">
           <shortdescription>
@@ -674,12 +627,10 @@
             <p>
               A three-dimensional coordinate box with x and y running from
               minus 10 to 10 and z from 0 to 27. A thick blue spiral starts
-              at a red point labelled start, at the position vector with
-              components 0, 0, and 9 root 8, about 25.5 units above the
+              at a red point labelled start, about 25.5 units above the
               origin. The spiral winds outward and downward, its radius
               growing as it descends, making roughly one and a half turns
-              before landing at a red point labelled ground, at the position
-              vector with components 9 cosine 9, 9 sine 9, and 0. A dashed
+              before landing at a red point labelled ground. A dashed
               gray spiral on the floor of the box shows the path's shadow on
               the ground.
             </p>
@@ -701,10 +652,8 @@
               % start and end points
               \addplot3[only marks, mark=*, red, mark size=1.6pt] coordinates
                   {(0,0,25.4558) (-8.2003,3.7091,0)};
-              \node[above right] at (axis cs:0,0,25.4558)
-                  {start \(\left\langle 0,0,9\sqrt{8}\right\rangle\)};
-              \node[below] at (axis cs:-8.2003,3.7091,0)
-                  {ground \(\left\langle 9\cos 9,\ 9\sin 9,\ 0\right\rangle\)};
+              \node[above right] at (axis cs:0,0,25.4558) {start};
+              \node[below] at (axis cs:-8.2003,3.7091,0) {ground};
             \end{axis}
             \end{tikzpicture}
           </latex-image>
@@ -809,19 +758,7 @@
           lies on <em>both</em> surfaces for every <m>t</m>.
         </p>
         <p>
-          <em>Suggestion.</em> Use <m>y</m> itself as the parameter, and say
-          why that is smarter than using <m>x</m>.
-        </p>
-        <p>
           <em>Solution.</em>
-          (A point lies on <m>C</m> exactly when it satisfies both equations
-          at once: substitute the plane into the cone to eliminate <m>z</m>.
-          What is left is the shadow of <m>C</m> in the <m>xy</m>-plane,
-          shown in <xref ref="fig-cone-plane-shadow"/>; solve it for
-          <m>x</m>, take <m>y = t</m>, and say why parametrizing by <m>x</m>
-          instead would split the curve in two. Recover <m>z</m> from the
-          plane. Then check <m>\mathbf{r}(t)</m> on <m>S_1</m> and on
-          <m>S_2</m> separately, including the sign of <m>z</m>.)
         </p>
 
         <sidebyside width="97%">
@@ -829,16 +766,10 @@
             <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
-\draw[gray!35] (0,11) -- (15,11);
-\draw[gray!35] (0,7.5) -- (15,7.5);
-\draw[gray!35] (0,4) -- (15,4);
-\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {eliminate $z$:};
-\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {why $y = t$ rather than $x = t$:};
-\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$\mathbf{r}(t) =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {check on $S_1$ (with the sign of $z$), and on $S_2$:};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape] at (0.25,14.75) {workspace};
 \end{tikzpicture}
             </latex-image>
-            <shortdescription>Blank box in four rows, for eliminating z between the two surfaces, for the reason to use y as the parameter, for the vector parametrization, and for the checks on the cone and on the plane.</shortdescription>
+            <shortdescription>Blank workspace for the parametrization of the curve and its verification.</shortdescription>
           </image>
         </sidebyside>
         <figure xml:id="fig-cone-plane-shadow">
@@ -916,23 +847,12 @@
           <m>P(0,-1,1)</m> and <m>Q(0,1,1)</m>. Set up the arc-length integral
           <xref ref="eq-arc-length-3d"/>
           for the piece of <m>C</m> joining <m>P</m> to <m>Q</m> and evaluate
-          it <em>exactly</em>. Then give a decimal approximation to four
-          places.
+          it <em>exactly</em>.
         </p>
         <p>
           <em>Solution.</em>
-          (Find the parameter values of <m>P</m> and <m>Q</m> from your
-          parametrization in <xref ref="task-cone-plane-parametrize"/>, then
-          differentiate it to get <m>\mathbf{v}(t)</m> and the speed. The
-          integrand is even, so integrate over half the interval and double.
-          Substitute <m>u = \sqrt{2}\,t</m> to bring the integrand to the
-          form <m>\sqrt{1+u^2}</m>; evaluate <m>\int\sqrt{1+u^2}\,du</m> by
-          parts against <m>1</m> <mdash/> the integral reproduces itself, so
-          solve for it, and use <m>\int \frac{du}{\sqrt{1+u^2}} = \sinh^{-1}u
-          = \ln\!\left(u + \sqrt{1+u^2}\right)</m>. Record the antiderivative:
-          you will need it again in the next task. Finish with a sanity
-          check against the straight-line distance from <m>P</m> to
-          <m>Q</m>.)
+          (Substitute <m>u = \sqrt{2}\,t</m> to bring the integrand to the
+          form <m>\sqrt{1+u^2}</m>.)
         </p>
 
         <sidebyside width="97%">
@@ -947,11 +867,11 @@
 \node[anchor=north west, font=\small\itshape] at (0.35,19.7) {$t$ at $P$ and at $Q$; \quad $\mathbf{v}(t) =$ \quad $\lVert\mathbf{v}(t)\rVert =$};
 \node[anchor=north west, font=\small\itshape] at (0.35,16.7) {$S = \displaystyle\int \cdots$, after the substitution $u = \sqrt{2}\,t$:};
 \node[anchor=north west, font=\small\itshape] at (0.35,13.2) {$\displaystyle\int \sqrt{1+u^2}\,du =$ \quad (by parts; solve for the integral)};
-\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {apply the limits: $S =$ \quad exactly, and to four decimal places};
+\node[anchor=north west, font=\small\itshape] at (0.35,6.7) {apply the limits: $S =$};
 \node[anchor=north west, font=\small\itshape] at (0.35,2.2) {sanity check:};
 \end{tikzpicture}
             </latex-image>
-            <shortdescription>Blank box in five rows, for the parameter values of the endpoints with the velocity and speed, for the arc-length integral after the substitution, for the antiderivative of the square root of one plus u squared found by parts, for the exact and decimal values of the length, and for the sanity check.</shortdescription>
+            <shortdescription>Blank box in five rows, for the parameter values of the endpoints with the velocity and speed, for the arc-length integral after the substitution, for the antiderivative of the square root of one plus u squared found by parts, for the exact value of the length, and for the sanity check.</shortdescription>
           </image>
         </sidebyside>
       </statement>
@@ -970,14 +890,8 @@
         <p>
           <em>Solution.</em>
           (Which value of <m>t</m> gives <m>V</m>? Start the integral
-          there: <m>s(t) = \int_{\,\cdot}^{\,t}
-          \left\lVert\mathbf{v}(\tau)\right\rVert\,d\tau</m>, evaluated
-          with the antiderivative from
-          <xref ref="task-cone-plane-arc-length"/>. Check that
-          <m>s'(t) = \left\lVert\mathbf{v}(t)\right\rVert</m>. Then find the
-          <m>t</m> of the given point and evaluate <m>s</m> there; the
-          logarithm simplifies, because <m>3 + 2\sqrt{2}</m> is a perfect
-          square.)
+          there; the logarithm simplifies, because <m>3 + 2\sqrt{2}</m> is a
+          perfect square.)
         </p>
 
         <sidebyside width="97%">
@@ -985,54 +899,16 @@
             <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
-\draw[gray!35] (0,12) -- (15,12);
-\draw[gray!35] (0,6) -- (15,6);
-\draw[gray!35] (0,3) -- (15,3);
-\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {$V = \mathbf{r}(\;\;)$, so $s(t) = $};
-\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$s(t)$ evaluated:};
-\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {check $s'(t)$:};
-\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {$t$ at the given point, and $s$ there:};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape] at (0.25,14.75) {workspace};
 \end{tikzpicture}
             </latex-image>
-            <shortdescription>Blank box in four rows, for the parameter value of the vertex and the arc-length integral from it, for the evaluated arc-length function, for the derivative check, and for the parameter value of the given point with the length up to it.</shortdescription>
+            <shortdescription>Blank workspace for the arc-length function from the vertex and the length up to the given point.</shortdescription>
           </image>
         </sidebyside>
       </statement>
     </task>
   </activity>
 
-  <!-- ================================================================= -->
-  <remark xml:id="remark-cone-plane-instructor-notes">
-    <title>Instructor notes<mdash/>what to watch for</title>
-    <p>
-    <ul>
-      <li>
-        <p>
-          <term>Losing half the curve.</term> Students who write
-          <m>z = \sqrt{x^2+y^2}</m> and then square are fine, but those who
-          parametrize by <m>x</m> get <m>y = \pm\sqrt{2x+1}</m> and often keep
-          only the <m>+</m> branch<mdash/>losing the arc from <m>P</m> to
-          <m>V</m>. The check <m>z = \frac{t^2+1}{2} \gt 0</m> in the first
-          task is worth insisting on.
-        </p>
-      </li>
-      <li>
-        <p>
-          <term>Forgetting to verify.</term> The first task asks for a
-          substitution <em>and</em> a check; a parametrization that satisfies
-          only one of the two equations is a common error.
-        </p>
-      </li>
-      <li>
-        <p>
-          <term>Wrong endpoints.</term> In the arc-length task some students
-          integrate over <m>0 \le t \le 1</m> and forget the symmetric half,
-          getting exactly half the correct length.
-        </p>
-      </li>
-    </ul>
-    </p>
-  </remark>
   </subsection>
 
 </section>

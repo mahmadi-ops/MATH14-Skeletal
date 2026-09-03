@@ -4,8 +4,9 @@
 <!--                                                                       -->
 <!-- Skeletal (fill-in) version of the section of the same name in the     -->
 <!-- completed MATH 14 notes.  The construction of the mass integral (the  -->
-<!-- portions, the sum, the limit) is kept up to the point where ds has to -->
-<!-- be traded for dt; that step, both worked examples, and every Concept  -->
+<!-- portions, the sum, the limit) is kept as prose, with the right-hand   -->
+<!-- side of each of its four displayed equations left blank to fill in;   -->
+<!-- the step that trades ds for dt, both worked examples, and every Concept -->
 <!-- Check answer are replaced by blank workspace boxes, each preceded by  -->
 <!-- a one-line instruction.  The results are restated in an assemblage so -->
 <!-- that later sections can still cite eq-mass-speed and                  -->
@@ -66,7 +67,7 @@
     <md>
       <mrow xml:id="eq-mass-portion" number="yes">
         \text{mass of the } k\text{th portion}
-          \approx \rho\left(x_k,y_k,z_k\right)\,\Delta s_k,
+          \approx \rule{6cm}{0.4pt}
       </mrow>
     </md>
     </p>
@@ -77,7 +78,7 @@
     <md>
       <mrow xml:id="eq-mass-sum" number="yes">
         \text{mass of the wire}
-          \approx \sum_{k=1}^{n} \rho\left(x_k,y_k,z_k\right)\,\Delta s_k.
+          \approx \rule{6cm}{0.4pt}
       </mrow>
     </md>
     </p>
@@ -183,8 +184,7 @@
     <md>
       <mrow xml:id="eq-mass-limit" number="yes">
         \text{mass of the wire}
-          = \lim_{n\to\infty}\sum_{k=1}^{n}
-            \rho\left(x_k,y_k,z_k\right)\,\Delta s_k.
+          = \rule{6cm}{0.4pt}
       </mrow>
     </md>
     </p>
@@ -194,7 +194,7 @@
 
     <md>
       <mrow xml:id="eq-mass-line-integral" number="yes">
-        \text{mass of the wire} = \int_C \rho\left(x,y,z\right)\,ds,
+        \text{mass of the wire} = \rule{6cm}{0.4pt}
       </mrow>
     </md>
     </p>
@@ -224,12 +224,7 @@
     <p>
       Our final task is to write the line element <m>ds</m> in terms of
       <m>dt</m>, so the integral becomes an ordinary integral we can
-      evaluate. (Exactly as in <xref ref="eq-line-element-2d"/> of
-      <xref ref="sec-arc-length"/>, write <m>ds</m> as the length of an
-      infinitesimal displacement in <m>\R^3</m>. Substitute it into
-      <xref ref="eq-mass-line-integral"/>, factor <m>dt</m> out of the
-      square root, and recognize what is left under the root as the length
-      of the velocity vector <m>\mathbf{v}(t) = d\mathbf{r}/dt</m>.)
+      evaluate.
     </p>
 
     <sidebyside width="97%">
@@ -242,11 +237,10 @@
 \draw[gray!35] (0,3) -- (15,3);
 \node[anchor=north west, font=\small\itshape] at (0.35,12.7) {$ds =$};
 \node[anchor=north west, font=\small\itshape] at (0.35,10.2) {substitute into the mass integral and factor out $dt$:};
-\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {$\mathbf{v}(t) =$ \quad so \quad $\lVert\mathbf{v}(t)\rVert =$};
 \node[anchor=north west, font=\small\itshape] at (0.35,2.7) {mass of the wire $=$};
 \end{tikzpicture}
         </latex-image>
-        <shortdescription>Blank box in four rows, for the line element in terms of dx, dy and dz, for the substitution into the mass integral with dt factored out, for the velocity vector and its length, and for the resulting formula for the mass.</shortdescription>
+        <shortdescription>Blank box in four rows, for the line element in terms of dx, dy and dz, for the substitution into the mass integral with dt factored out, an unlabelled one, and for the resulting formula for the mass.</shortdescription>
       </image>
     </sidebyside>
 
