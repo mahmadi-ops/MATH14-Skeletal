@@ -7,6 +7,50 @@ iPad over the PDF — while the derivation is done in class.
 
 Deployed to GitHub Pages by `.github/workflows/pretext-deploy.yml`.
 
+## The Posting Desk
+
+This book is driven by the instructor's MATH 14 Posting Desk:
+https://claude.ai/code/artifact/a3e93642-a2cb-47f4-9654-f5eb959ea9cb
+
+**Skeletal sections, the ten assignments, the four review sets, and
+solution release are all posted from here**; the completed notes are
+posted from `mahmadi-ops/MATH-14`. The desk works like the MATH 13 one,
+whose rulebook is `mahmadi-ops/M13-Mehdi/CLAUDE.md`: the request kinds,
+the instructor saying "check the MATH 14 posting desk" in chat, the
+standing authorization to commit panel-initiated changes straight to
+`main` (validated first), never inventing content, and updating the panel
+on top of its current version afterwards. Repo-specific facts:
+
+- `scripts/desk_action.py post-notes|unpost-notes <xml:id> [<xml:id> ...]`
+  toggles includes in **both** roots (`main.ptx` and `main-print.ptx`) with
+  the UNPOSTED wrapper. An emptied inline chapter is wrapped whole in
+  `<!-- HIDDEN-CHAPTER-BEGIN ... HIDDEN-CHAPTER-END -->` with its includes
+  bare inside (a comment cannot nest one), and `ch-coming-soon.ptx` stands
+  in while no real chapter is visible. Never hand-edit those wrappers; run
+  the script. Several ids in one call are one change checked as a whole.
+- The script bails, restoring every file, when a change would leave a
+  dangling `<xref>` and the only mechanical fix would be taking another
+  topic down: that is an editorial call. Post the cited section together
+  with the citing one (same call), or decide what comes down.
+- Assignment 1's introduction names section 1.2 in plain text rather than
+  an `<xref>`, so it can be posted before 1.2; `introduction.ptx` likewise
+  names the AI-tutor guide in plain text. Always-live files must never
+  `<xref>` toggleable content.
+- **Solutions** are hidden by default and released per set through
+  `<version include="..."/>` in **both** `publication/publication.ptx` and
+  `publication/publication-print.ptx` (components `hwN-solutions` and
+  `reviewN-solutions`). A `release` request adds the component to the
+  list, `relock` removes it; nothing in the problem files changes.
+  `include="none"` means all hidden. Never delete the line.
+- `scripts/build-site.sh`'s PDF page floor scales with the content files
+  reachable from `main-print.ptx`; do not put a fixed floor back, since
+  an almost-empty PDF is a legitimate state.
+- `.github/workflows/desk-requests.yml` applies `desk-requests/*.json`
+  committed by the panel's instant path and redeploys.
+- Postings are tracked only on the desk; the syllabus repo is never
+  touched. Never mark anything posted on the desk before the push to
+  `main` has been made.
+
 ## Where the content comes from
 
 This repository started as a copy of the **completed** MATH 14 notes, and
