@@ -1,0 +1,61 @@
+name: Posting Desk requests
+# The Posting Desk panel commits small JSON request files into
+# desk-requests/ (via the instructor's GitHub connector). This workflow
+# reacts to that push, applies each request with scripts/desk_action.py,
+# removes the request files, and kicks the site build when the source
+# actually changed.
+on:
+  push:
+    branches: [main]
+    paths: ["desk-requests/**"]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: posting-desk
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply queued requests
+        run: |
+          python3 - <<'EOF'
+          import glob, json, os, subprocess, sys
+          for f in sorted(glob.glob("desk-requests/*.json")):
+              try:
+                  d = json.load(open(f))
+                  action, key = d["action"], d["key"]
+                  if action not in ("post-notes", "unpost-notes"):
+                      raise ValueError("unknown action %r" % action)
+                  r = subprocess.run([sys.executable, "scripts/desk_action.py", action, key])
+                  if r.returncode != 0:
+                      print("request %s could not be applied (exit %d)" % (f, r.returncode))
+              except Exception as e:
+                  print("request %s invalid: %s" % (f, e))
+              os.remove(f)
+          EOF
+
+      - name: Commit and rebuild the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SRC_CHANGED=0
+          [ -n "$(git status --porcelain source)" ] && SRC_CHANGED=1
+          git config user.name "posting-desk"
+          git config user.email "posting-desk@users.noreply.github.com"
+          git add -A source desk-requests
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Desk: apply panel requests"
+            git push
+          fi
+          if [ "$SRC_CHANGED" = "1" ]; then
+            gh workflow run pretext-deploy.yml --ref main
+          fi

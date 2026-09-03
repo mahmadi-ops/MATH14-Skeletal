@@ -10,12 +10,13 @@
     <chapter xml:id="ch-curves-and-fields">
       <title>Line Integrals</title>
       <xi:include href="section-parametrization.ptx" />
-      <xi:include href="section-arc-length.ptx" />
-      <xi:include href="section-line-integrals.ptx" />
-      <xi:include href="section-vector-fields.ptx" />
-      <xi:include href="conservative-fields.ptx" />
+      <!-- UNPOSTED <xi:include href="section-arc-length.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="section-line-integrals.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="section-vector-fields.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="conservative-fields.ptx" /> UNPOSTED -->
     </chapter>
 
+    <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-multiple-integrals">
       <title>Multiple Integrals</title>
       <xi:include href="double-integrals-rectangles.ptx" />
@@ -29,13 +30,16 @@
       <xi:include href="jacobian-substitution.ptx" />
       <xi:include href="surface-integrals.ptx" />
     </chapter>
+    HIDDEN-CHAPTER-END -->
 
+    <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-integral-theorems">
       <title>The Big Theorems</title>
       <xi:include href="greens-theorem.ptx" />
       <xi:include href="stokes-theorem.ptx" />
       <xi:include href="divergence-theorem.ptx" />
     </chapter>
+    HIDDEN-CHAPTER-END -->
 
     <!-- The written assignments are hidden from the build.  The same       -->
     <!-- problems are auto-graded in "Assignments and Review Problems",     -->
@@ -274,20 +278,25 @@
         </assemblage>
       </introduction>
       <xi:include href="hw1-online.ptx" />
-      <xi:include href="hw2-online.ptx" />
-      <xi:include href="hw3-online.ptx" />
-      <xi:include href="review1-practice.ptx" />
-      <xi:include href="hw4-online.ptx" />
-      <xi:include href="hw5-online.ptx" />
-      <xi:include href="hw6-online.ptx" />
-      <xi:include href="review2-practice.ptx" />
-      <xi:include href="hw7-online.ptx" />
-      <xi:include href="hw8-online.ptx" />
-      <xi:include href="hw9-online.ptx" />
-      <xi:include href="review3-practice.ptx" />
-      <xi:include href="hw10-online.ptx" />
-      <xi:include href="review4-practice.ptx" />
+      <!-- UNPOSTED <xi:include href="hw2-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw3-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="review1-practice.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw4-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw5-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw6-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="review2-practice.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw7-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw8-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw9-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="review3-practice.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="hw10-online.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="review4-practice.ptx" /> UNPOSTED -->
     </chapter>
+
+
+    <!-- Placeholder, in the book only while every real chapter is hidden;
+         scripts/desk_action.py toggles it automatically. -->
+    <!-- UNPOSTED <xi:include href="ch-coming-soon.ptx" /> UNPOSTED -->
 
   </book>
 

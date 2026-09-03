@@ -27,11 +27,46 @@ cp "output/print/$PDF" "output/web/$PDF"
 # exits 0 and prints "Success!  Built requested target(s) without errors."
 # So check the page count ourselves.
 #
-# MIN_PAGES is a floor, not the book's true length: it only has to be high
-# enough that a build which died partway trips it.  Raise it when the book has
-# grown enough that the current value stops being a meaningful guard.  Override
-# for a one-off build with `MIN_PAGES=... scripts/build-site.sh`.
-MIN_PAGES="${MIN_PAGES:-150}"
+# A fixed floor cannot work any more: the Posting Desk toggles sections in
+# and out of the book, so an almost-empty PDF is a legitimate state.  The
+# floor is therefore scaled to what is posted: every <xi:include> reachable
+# from main-print.ptx (the print root) is one source file in the PDF, and
+# the fixtures that are always present and carry no course content do not
+# count.  PAGES_PER_FILE sits well below the true average so an uneven
+# section does not trip the guard, and still catches a build that died
+# partway through a full book.  Override for a one-off build with
+# `PAGES_PER_FILE=... scripts/build-site.sh`, or set MIN_PAGES outright.
+PAGES_PER_FILE="${PAGES_PER_FILE:-6}"
+
+CONTENT_FILES="$(python3 - <<'PY'
+import os, re
+
+SRC = "source"
+ROOT = "main-print.ptx" if os.path.exists("source/main-print.ptx") else "main.ptx"
+FIXTURES = {ROOT, "docinfo.ptx", "frontmatter.ptx", "frontmatter-print.ptx",
+            "preface-skeletal.ptx", "introduction.ptx", "subsec-brain-map.ptx",
+            "ch-coming-soon.ptx"}
+
+def includes(path):
+    text = re.sub(r"<!--.*?-->", "", open(path, encoding="utf8").read(), flags=re.S)
+    return re.findall(r'<xi:include\s+href="\.?/?([^"]+)"\s*/>', text)
+
+seen = set()
+
+def walk(name):
+    path = os.path.join(SRC, name)
+    if name in seen or not os.path.exists(path):
+        return
+    seen.add(name)
+    for href in includes(path):
+        walk(href)
+
+walk(ROOT)
+print(len(seen - FIXTURES))
+PY
+)"
+
+MIN_PAGES="${MIN_PAGES:-$(( CONTENT_FILES * PAGES_PER_FILE ))}"
 
 # pretext depends on pyMuPDF, so it is present wherever this script can run.
 # The module was renamed from `fitz` to `pymupdf` in 1.24.3; accept either.
@@ -46,7 +81,8 @@ PY
 )"
 
 if [ "$PAGES" -lt "$MIN_PAGES" ]; then
-    echo "ERROR: $PDF has $PAGES pages, expected at least $MIN_PAGES." >&2
+    echo "ERROR: $PDF has $PAGES pages, expected at least $MIN_PAGES" >&2
+    echo "       ($CONTENT_FILES content files posted, $PAGES_PER_FILE pages each)." >&2
     echo "       LaTeX almost certainly aborted partway and the PDF is truncated," >&2
     echo "       even though pretext reported success.  To see the error it" >&2
     echo "       swallowed, build the latex target and compile it by hand:" >&2
@@ -56,4 +92,4 @@ if [ "$PAGES" -lt "$MIN_PAGES" ]; then
     exit 1
 fi
 
-echo "Site ready in output/web (PDF: $PAGES pages, $(du -h "output/web/$PDF" | cut -f1))"
+echo "Site ready in output/web (PDF: $PAGES pages, floor $MIN_PAGES, $(du -h "output/web/$PDF" | cut -f1))"

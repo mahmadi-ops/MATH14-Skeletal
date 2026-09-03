@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Placeholder chapter.  PreTeXt requires a book to hold at least one chapter,
+  so this stands in whenever every real chapter is hidden.  It carries no
+  course content; scripts/desk_action.py includes it and drops it again
+  automatically (see sync_roots), so it is visible only while the book would
+  otherwise be empty.
+-->
+<chapter xml:id="chapter-coming-soon">
+<title>Course Materials</title>
+<p>
+  The sections, the assignments, and the review problem sets appear here as
+  we reach them during the quarter.  Nothing has been posted yet <mdash />
+  please check back after our first class meeting.
+</p>
+</chapter>
