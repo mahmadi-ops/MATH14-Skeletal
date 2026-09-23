@@ -13,7 +13,7 @@
     <chapter xml:id="ch-curves-and-fields">
       <title>Line Integrals</title>
       <xi:include href="section-parametrization.ptx" />
-      <!-- UNPOSTED <xi:include href="section-arc-length.ptx" /> UNPOSTED -->
+      <xi:include href="section-arc-length.ptx" />
       <!-- UNPOSTED <xi:include href="section-line-integrals.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="section-vector-fields.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="conservative-fields.ptx" /> UNPOSTED -->
