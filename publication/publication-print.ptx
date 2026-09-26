@@ -52,7 +52,7 @@
                       hw10-solutions review1-solutions review2-solutions
                       review3-solutions review4-solutions"/> -->
     <!-- <version include="hw1-solutions review1-solutions"/> -->
-    <version include="none"/>
+    <version include="hw1-solutions"/>
   </source>
 
   <!-- Table of contents down to subsections, so the sidebar lists every
