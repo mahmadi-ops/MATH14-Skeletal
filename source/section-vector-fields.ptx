@@ -1142,7 +1142,9 @@ x y z u v w\\
         integrate. Compare <m>W_1</m> and <m>W_2</m>, and say what the
         comparison tells you about whether the endpoints alone determine
         the work. Which fields are the exception is the question taken up
-        in <xref ref="section-conservative-fields"/>.)
+        in the next section, Path Independence, Conservative Fields, and
+        Potential Functions.)
+        <!-- plain text until that section is posted: <xref ref="section-conservative-fields"/> -->
       </p>
 
       <sidebyside width="97%">
