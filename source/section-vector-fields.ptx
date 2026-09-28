@@ -7,8 +7,10 @@
 <!-- boxed results are kept; the normalization of the radial field, the   -->
 <!-- inverse-square magnitude, the passage from the subarc sum to the      -->
 <!-- work integral, the three worked examples, and the Concept Check       -->
-<!-- answer are replaced by blank workspace boxes, each preceded by a      -->
-<!-- one-line instruction.  The results of the derivation are restated in  -->
+<!-- answer are replaced by blank workspace boxes.  Each box carried a     -->
+<!-- one-line instruction and row labels naming the steps until the        -->
+<!-- instructor had those hints removed (Sep 2026); only the task          -->
+<!-- statement remains.  The results of the derivation are restated in     -->
 <!-- an assemblage so that the ids eq-work-sum, eq-work-Tds, eq-work-dr    -->
 <!-- and eq-work-parametrized survive.  File name and xml:ids are          -->
 <!-- unchanged.                                                            -->
@@ -132,8 +134,7 @@
       Compute it, and use it to explain why the blue arrows in
       <xref ref="fig-radial-field"/> grow in length as we move away from
       the origin along a straight line. Then modify the vector field so
-      that the length of the vectors is one at every point. (Dividing a
-      vector by its own length produces a unit vector.)
+      that the length of the vectors is one at every point.
     </p>
 
     <sidebyside width="97%">
@@ -141,12 +142,11 @@
         <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,6);
-\draw[gray!35] (0,3) -- (15,3);
-\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$\lVert\mathbf{F}(x,y)\rVert =$ \qquad so the arrows grow because};
-\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {the field with unit-length vectors: $\mathbf{F}(x,y) =$};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,5.75) {workspace};
 \end{tikzpicture}
         </latex-image>
-        <shortdescription>Blank box in two rows, one for the length of the radial field's vectors and the reason the arrows grow, and one for the normalized field.</shortdescription>
+        <shortdescription>Blank workspace for the length of the radial field's vectors and for the normalized field.</shortdescription>
       </image>
     </sidebyside>
 
@@ -263,10 +263,11 @@
         <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,3.5);
-\node[anchor=north west, font=\small\itshape] at (0.35,3.2) {$\lVert\mathbf{F}\rVert =$ \qquad\qquad so the pull weakens with};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,3.25) {workspace};
 \end{tikzpicture}
         </latex-image>
-        <shortdescription>Blank box with one row, for the magnitude of the inverse-square field in terms of the distance from the origin and the law it obeys.</shortdescription>
+        <shortdescription>Blank workspace for the magnitude of the inverse-square field in terms of the distance from the origin.</shortdescription>
       </image>
     </sidebyside>
 
@@ -593,16 +594,8 @@ x y z u v w\\
     </figure>
 
     <p>
-      Build the work integral from the subarcs. (On the <m>k</m>th subarc
-      the displacement has length <m>\Delta s_k</m> and direction
-      <m>\mathbf{T}_k</m>, so the dot-product form of
-      <xref ref="eq-work-constant"/> gives the work done along it. Sum
-      over the subarcs and let <m>n \to \infty</m>. Then use
-      <m>\mathbf{T} = \mathbf{v}/\lVert\mathbf{v}\rVert
-      = \frac{d\mathbf{r}/dt}{ds/dt}</m> to rewrite <m>\mathbf{T}\,ds</m>,
-      which gives the compact form of the integral, and finally write
-      everything in terms of a parametrization <m>\mathbf{r}(t)</m>,
-      <m>a \le t \le b</m>.)
+      Build the work integral from the subarcs, down to its form in terms
+      of a parametrization <m>\mathbf{r}(t)</m>, <m>a \le t \le b</m>.
     </p>
 
     <sidebyside width="97%">
@@ -610,18 +603,11 @@ x y z u v w\\
         <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,15);
-\draw[gray!35] (0,12) -- (15,12);
-\draw[gray!35] (0,9) -- (15,9);
-\draw[gray!35] (0,6) -- (15,6);
-\draw[gray!35] (0,3) -- (15,3);
-\node[anchor=north west, font=\small\itshape] at (0.35,14.7) {work along the $k$th subarc $\approx$};
-\node[anchor=north west, font=\small\itshape] at (0.35,11.7) {$W \approx \displaystyle\sum_{k=1}^{n}$};
-\node[anchor=north west, font=\small\itshape] at (0.35,8.7) {$W = \displaystyle\lim_{n\to\infty} \cdots = \int_C$};
-\node[anchor=north west, font=\small\itshape] at (0.35,5.7) {$\mathbf{T}\,ds =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {with $\mathbf{r}(t)$, $a \le t \le b$: \quad $\displaystyle\int_C \mathbf{F}\cdot d\mathbf{r} = \int_a^b$};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,14.75) {workspace};
 \end{tikzpicture}
         </latex-image>
-        <shortdescription>Blank box in five rows, for the work along one subarc, for the sum over subarcs, for the limit as a line integral, for rewriting T ds, and for the parametrized form of the integral.</shortdescription>
+        <shortdescription>Blank workspace for building the work integral from the subarcs, down to its parametrized form.</shortdescription>
       </image>
     </sidebyside>
 
@@ -783,13 +769,6 @@ x y z u v w\\
       </p>
       <p>
         <em>Solution.</em>
-        (Use <xref ref="eq-work-parametrized"/>. Read the parameter interval
-        off the two endpoints, write the force along the curve by
-        substituting <m>x = t</m>, <m>y = t^2</m>, <m>z = t^3</m>
-        <mdash/> one component vanishes identically <mdash/> and
-        differentiate for <m>\mathbf{v}(t)</m>. Dot, expand, and integrate
-        term by term. The curve is shown in
-        <xref ref="fig-twisted-cubic"/>.)
       </p>
 
       <sidebyside width="97%">
@@ -797,16 +776,11 @@ x y z u v w\\
           <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
-\draw[gray!35] (0,10.5) -- (15,10.5);
-\draw[gray!35] (0,7.5) -- (15,7.5);
-\draw[gray!35] (0,5) -- (15,5);
-\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {parameter interval:};
-\node[anchor=north west, font=\small\itshape] at (0.35,10.2) {$\mathbf{F}(\mathbf{r}(t)) =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,7.2) {$\mathbf{v}(t) =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,4.7) {$W = \displaystyle\int_C \mathbf{F}\cdot d\mathbf{r} =$};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,12.75) {workspace};
 \end{tikzpicture}
           </latex-image>
-          <shortdescription>Blank box in four rows, for the parameter interval, for the force along the curve, for the velocity vector, and for the work integral.</shortdescription>
+          <shortdescription>Blank workspace for computing the work along the twisted cubic.</shortdescription>
         </image>
       </sidebyside>
       <figure xml:id="fig-twisted-cubic">
@@ -879,18 +853,6 @@ x y z u v w\\
       </p>
       <p>
         <em>Solution.</em>
-        (This integral is in the differential form
-        <xref ref="eq-work-differential"/>: identify
-        <m>\mathbf{F} = \langle M, N, P\rangle</m> and recognize it as the
-        inverse-square field <xref ref="eq-gravity-field"/> of
-        <xref ref="fig-gravity-field"/>. Read off the parameter interval
-        from the endpoints. Along the helix, simplify <m>x^2+y^2+z^2</m>
-        first, then write <m>\mathbf{F}(\mathbf{r}(t))</m> and
-        <m>\mathbf{v}(t)</m>; the dot product collapses. Integrate with the
-        substitution <m>u = 1 + t^2</m>. Say what the sign of the answer
-        means physically, and check it against
-        <xref ref="fig-helix-gravity"/> and
-        <xref ref="fig-helix-gravity-video"/>.)
       </p>
 
       <sidebyside width="97%">
@@ -898,18 +860,11 @@ x y z u v w\\
           <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,17);
-\draw[gray!35] (0,14) -- (15,14);
-\draw[gray!35] (0,11) -- (15,11);
-\draw[gray!35] (0,8) -- (15,8);
-\draw[gray!35] (0,3) -- (15,3);
-\node[anchor=north west, font=\small\itshape] at (0.35,16.7) {$\mathbf{F} =$ \qquad parameter interval:};
-\node[anchor=north west, font=\small\itshape] at (0.35,13.7) {on the helix, $x^2+y^2+z^2 =$ \qquad so $\mathbf{F}(\mathbf{r}(t)) =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,10.7) {$\mathbf{v}(t) =$ \qquad and \qquad $\mathbf{F}\cdot\mathbf{v} =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,7.7) {$\displaystyle\int_C M\,dx+N\,dy+P\,dz = \int_0^{2\pi} \cdots$ \quad ($u = 1+t^2$)};
-\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {the sign, and why:};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,16.75) {workspace};
 \end{tikzpicture}
           </latex-image>
-          <shortdescription>Blank box in five rows, for identifying the field and the parameter interval, for the field along the helix, for the velocity and the dot product, for the integral evaluated by substitution, and for the physical meaning of the sign.</shortdescription>
+          <shortdescription>Blank workspace for computing the work done by the inverse-square field along the helix.</shortdescription>
         </image>
       </sidebyside>
       <figure xml:id="fig-helix-gravity">
@@ -918,9 +873,8 @@ x y z u v w\\
           <m>0\le t\le 2\pi</m>, climbing through the field
           <m>\mathbf{F}=-\mathbf{r}/\left\lVert\mathbf{r}\right\rVert^3</m>
           (orange arrows, direction only). At the same three points the
-          velocity <m>\mathbf{v}</m> is drawn in green: at every one of
-          them the field leans away from the direction of travel, which is
-          why the work comes out negative.
+          velocity <m>\mathbf{v}</m> is drawn in green; compare the angle
+          between the two arrows with the sign of your answer.
         </caption>
         <image xml:id="image-helix-gravity" width="70%">
           <shortdescription>
@@ -1134,17 +1088,6 @@ x y z u v w\\
 
       <p>
         <em>Solution.</em>
-        (Both curves start at <m>O</m> and end at <m>P</m>, as in
-        <xref ref="fig-path-dependence-paths"/>, so any difference between
-        the two answers can come only from the paths themselves. Apply
-        <xref ref="eq-work-parametrized"/> to each: write
-        <m>\mathbf{F}</m> along the path and the velocity, dot, and
-        integrate. Compare <m>W_1</m> and <m>W_2</m>, and say what the
-        comparison tells you about whether the endpoints alone determine
-        the work. Which fields are the exception is the question taken up
-        in the next section, Path Independence, Conservative Fields, and
-        Potential Functions.)
-        <!-- plain text until that section is posted: <xref ref="section-conservative-fields"/> -->
       </p>
 
       <sidebyside width="97%">
@@ -1152,14 +1095,11 @@ x y z u v w\\
           <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,13);
-\draw[gray!35] (0,8.5) -- (15,8.5);
-\draw[gray!35] (0,4) -- (15,4);
-\node[anchor=north west, font=\small\itshape] at (0.35,12.7) {along $C_1$: $\mathbf{F}(\mathbf{r}_1(t)) =$ \quad $\mathbf{r}_1'(t) =$ \quad $W_1 =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,8.2) {along $C_2$: $\mathbf{F}(\mathbf{r}_2(t)) =$ \quad $\mathbf{r}_2'(t) =$ \quad $W_2 =$};
-\node[anchor=north west, font=\small\itshape] at (0.35,3.7) {conclusion:};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,12.75) {workspace};
 \end{tikzpicture}
           </latex-image>
-          <shortdescription>Blank box in three rows, for the work along the segment, for the work along the parabola, and for the conclusion about path dependence.</shortdescription>
+          <shortdescription>Blank workspace for the work along the two paths and the comparison.</shortdescription>
         </image>
       </sidebyside>
     </statement>
@@ -1289,32 +1229,16 @@ x y z u v w\\
             </prefigure>
           </image>
         </figure>
-        <p>
-          (The field is the radial field <xref ref="eq-radial-field"/>,
-          which aims straight away from the origin at every point. For the
-          circle, ask what angle <m>\mathbf{F}</m> makes with the direction
-          of travel <m>\mathbf{T}</m> at every point, and what that does to
-          the integrand of <xref ref="eq-work-Tds"/>. For the ellipse the
-          integrand does not vanish: mark the stretches where the curve
-          moves away from the origin and those where it moves back, decide
-          the sign of <m>\mathbf{F}\cdot\mathbf{T}</m> on each, and think
-          about what a full circuit adds up to. Does reversing the
-          orientation change either answer?)
-        </p>
-
         <sidebyside width="97%">
           <image>
             <latex-image>
 \begin{tikzpicture}
 \draw[rounded corners=8pt, draw=gray!55, thick] (0,0) rectangle (15,10);
-\draw[gray!35] (0,6.5) -- (15,6.5);
-\draw[gray!35] (0,3) -- (15,3);
-\node[anchor=north west, font=\small\itshape] at (0.35,9.7) {the circle $C_2$: $\mathbf{F}\cdot\mathbf{T}$ is \qquad so the work is};
-\node[anchor=north west, font=\small\itshape] at (0.35,6.2) {the ellipse $C_1$: outward stretches \quad / \quad inward stretches \quad / \quad full circuit};
-\node[anchor=north west, font=\small\itshape] at (0.35,2.7) {reversing the orientation:};
+\node[anchor=north west, text=gray!60, font=\footnotesize\itshape]
+  at (0.25,9.75) {workspace};
 \end{tikzpicture}
             </latex-image>
-            <shortdescription>Blank box in three rows, for the sign of the work around the circle, for the sign on the outward and inward stretches of the ellipse and over a full circuit, and for the effect of reversing the orientation.</shortdescription>
+            <shortdescription>Blank workspace for deciding the sign of the work around each of the two closed paths.</shortdescription>
           </image>
         </sidebyside>
       </statement>
