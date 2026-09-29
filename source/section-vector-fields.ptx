@@ -464,23 +464,15 @@ x y z u v w\\
     </figure>
 
     <p>
-      The amount of work done by the force is equal to the magnitude of the
-      force in the direction of motion,
-      <m>\left\lVert\mathbf{F}\right\rVert\cos(\alpha)</m>, multiplied by the amount
-      of displacement <m>\delta x</m>:
+      The amount of work done by the force is
       <md>
         <mrow xml:id="eq-work-constant" number="yes">
-          \text{Work}
-            =\left\lVert\mathbf{F}\right\rVert\cos(\alpha)\times\delta x
-            =\mathbf{F}\cdot\left(\delta x\,\mathbf{i}\right).
+          \text{Work} = \underline{\hspace{9cm}}
         </mrow>
       </md>
-      The last equality holds because the motion is in the
-      <m>+x</m>-direction, which lets us rewrite
-      <m>\left\lVert\mathbf{F}\right\rVert\cos(\alpha)\times\delta x</m> as the dot
-      product <m>\mathbf{F}\cdot(\delta x\,\mathbf{i})</m>. This dot-product
-      form is the one that generalizes: <em>work is the dot product of the
-      force with the displacement</em>.
+      Write it first in terms of <m>\left\lVert\mathbf{F}\right\rVert</m>,
+      <m>\alpha</m> and <m>\delta x</m>, then as a dot product; the
+      dot-product form is the one that generalizes.
     </p>
   </subsection>
 
