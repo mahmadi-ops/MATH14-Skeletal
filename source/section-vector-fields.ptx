@@ -735,18 +735,21 @@ x y z u v w\\
       Assume the vector field has components
       <m>\mathbf{F}(x,y,z)=\left\langle M(x,y,z),\ N(x,y,z),\
          P(x,y,z)\right\rangle</m>. Since
-      <m>d\mathbf{r}=\left\langle dx,\ dy,\ dz\right\rangle</m>,
+      <md>
+        <mrow>
+          d\mathbf{r} = \underline{\hspace{5cm}},
+        </mrow>
+      </md>
       expanding the dot product gives the <term>differential form</term> of
       the line integral:
       <md>
         <mrow xml:id="eq-work-differential" number="yes">
-          \int_C \mathbf{F}\cdot d\mathbf{r}
-            =\int_C M\,dx+N\,dy+P\,dz.
+          \int_C \mathbf{F}\cdot d\mathbf{r} = \underline{\hspace{9cm}}
         </mrow>
       </md>
       All three notations<mdash/><xref ref="eq-work-Tds"/>,
-      <m>\int_C\mathbf{F}\cdot d\mathbf{r}</m>, and
-      <m>\int_C M\,dx+N\,dy+P\,dz</m><mdash/>mean exactly the same thing.
+      <m>\int_C\mathbf{F}\cdot d\mathbf{r}</m>, and the differential
+      form<mdash/>mean exactly the same thing.
     </p>
   </subsection>
 
@@ -785,8 +788,8 @@ x y z u v w\\
       <figure xml:id="fig-twisted-cubic">
         <caption>
           The twisted cubic
-          <m>\mathbf{r}(t)=\left\langle t,\ t^2,\ t^3\right\rangle</m>,
-          <m>0\le t\le 1</m>, from the origin to <m>(1,1,1)</m>. The dashed
+          <m>\mathbf{r}(t)=\left\langle t,\ t^2,\ t^3\right\rangle</m>
+          from the origin to <m>(1,1,1)</m>. The dashed
           gray curve is its shadow on the plane <m>z=0</m>.
         </caption>
         <image xml:id="image-twisted-cubic" width="70%">
@@ -868,8 +871,8 @@ x y z u v w\\
       </sidebyside>
       <figure xml:id="fig-helix-gravity">
         <caption>
-          The helix <m>\mathbf{r}(t)=\langle\cos t,\sin t,t\rangle</m>,
-          <m>0\le t\le 2\pi</m>, climbing through the field
+          The helix <m>\mathbf{r}(t)=\langle\cos t,\sin t,t\rangle</m>
+          from <m>(1,0,0)</m> to <m>(1,0,2\pi)</m>, climbing through the field
           <m>\mathbf{F}=-\mathbf{r}/\left\lVert\mathbf{r}\right\rVert^3</m>
           (orange arrows, direction only). At the same three points the
           velocity <m>\mathbf{v}</m> is drawn in green; compare the angle
@@ -885,8 +888,8 @@ x y z u v w\\
               A three-dimensional box with x and y from minus 1.4 to 1.4 and
               z from 0 to 7. A thick blue helix makes one full
               counterclockwise turn of radius one, starting at a red point
-              labelled (1,0,0), t equals 0, on the floor and ending at a red
-              point labelled (1,0,2 pi), t equals 2 pi, directly above it. A
+              labelled (1,0,0) on the floor and ending at a red point
+              labelled (1,0,2 pi) directly above it. A
               dashed gray unit circle on the floor is the helix's shadow.
               Three orange arrows attached to points of the helix, labelled
               F, point inward and downward, toward the origin. At the same
@@ -929,8 +932,8 @@ x y z u v w\\
 };
               \addplot3[only marks, mark=*, red, mark size=1.6pt] coordinates
                   {(1,0,0) (1,0,6.2832)};
-              \node[anchor=west, xshift=10pt, yshift=4pt] at (axis cs:1,0,0) {\((1,0,0),\ t=0\)};
-              \node[anchor=south west, xshift=4pt] at (axis cs:1,0,6.2832) {\((1,0,2\pi),\ t=2\pi\)};
+              \node[anchor=west, xshift=10pt, yshift=4pt] at (axis cs:1,0,0) {\((1,0,0)\)};
+              \node[anchor=south west, xshift=4pt] at (axis cs:1,0,6.2832) {\((1,0,2\pi)\)};
               \node[orange, anchor=east] at (axis cs:-1.4,-0.3,2.55)
                   {\(\mathbf F\)};
               \node[green!55!black, anchor=west]
