@@ -1,0 +1,7 @@
+<xml>
+  <dynamic-substitution id="ex-hw2o-quarter-circle">
+    <eval-subst obj="R">2</eval-subst>
+    <eval-subst obj="k">18</eval-subst>
+    <eval-subst obj="M">18</eval-subst>
+  </dynamic-substitution>
+</xml>
