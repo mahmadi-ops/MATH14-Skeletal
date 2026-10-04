@@ -280,7 +280,7 @@
       <xi:include href="hw1-online.ptx" />
       <xi:include href="hw2-online.ptx" />
       <xi:include href="hw3-online.ptx" />
-      <!-- UNPOSTED <xi:include href="review1-practice.ptx" /> UNPOSTED -->
+      <xi:include href="review1-practice.ptx" />
       <!-- UNPOSTED <xi:include href="hw4-online.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="hw5-online.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="hw6-online.ptx" /> UNPOSTED -->

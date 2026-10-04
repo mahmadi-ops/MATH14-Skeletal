@@ -43,13 +43,17 @@
   <!-- worked example in the text.  These templates are the core's own       -->
   <!-- "born visible" branch, restricted to that one chapter.  Which         -->
   <!-- solutions exist at all is decided by <version include="..."/> in      -->
-  <!-- publication/publication.ptx.                                          -->
-  <xsl:template match="exercise[ancestor::chapter[@xml:id = 'ch-problems']]/solution"
+  <!-- publication/publication.ptx.  The review sets are left out: like the  -->
+  <!-- MATH 13 review pages, their solutions stay behind the default knowls, -->
+  <!-- one click under each problem, once released.                          -->
+  <xsl:template match="exercise[ancestor::chapter[@xml:id = 'ch-problems']]
+                                [not(ancestor::section[starts-with(@xml:id, 'sec-exercises-review')])]/solution"
                 mode="is-hidden">
     <xsl:text>false</xsl:text>
   </xsl:template>
 
-  <xsl:template match="exercise[ancestor::chapter[@xml:id = 'ch-problems']]/solution"
+  <xsl:template match="exercise[ancestor::chapter[@xml:id = 'ch-problems']]
+                                [not(ancestor::section[starts-with(@xml:id, 'sec-exercises-review')])]/solution"
                 mode="heading-birth">
     <xsl:apply-templates select="." mode="heading-non-singleton-number"/>
   </xsl:template>
