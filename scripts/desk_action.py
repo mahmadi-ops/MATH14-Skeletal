@@ -79,6 +79,7 @@ TOPICS = {
     "sec-exercises-hw9-online": "hw9-online.ptx",
     "sec-exercises-hw10-online": "hw10-online.ptx",
     "sec-exercises-review1-practice": "review1-practice.ptx",
+    "sec-exercises-sample-past-exam-1": "sample-past-exam-1.ptx",
     "sec-exercises-review2-practice": "review2-practice.ptx",
     "sec-exercises-review3-practice": "review3-practice.ptx",
     "sec-exercises-review4-practice": "review4-practice.ptx",

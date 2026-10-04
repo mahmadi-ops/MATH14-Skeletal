@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sample Past Exam 1, with solutions.
+
+  Transcribed from the instructor's annotated solutions PDF of the Fall
+  2025 first exam (Exam_1-MATH14-Fall2025-Solutions.pdf): the five exam
+  questions and the handwritten solutions, followed by question 3 of the
+  Spring 2025 second exam (MATH_14_Exam__2_F2025-Solutions.pdf) as a sixth
+  question.  Point values are deliberately left out.  Modeled on the MATH 13
+  instructor book's sample-past-exam-1.ptx: one exercise per question, with
+  a task per part and a solution under each.  Included from main.ptx right after Review Problems #1, in
+  this book and in the completed instructor book.  The xml:id keeps the
+  "sec-exercises-" prefix so assets/unnumbered-chapter.css hides its number
+  like the rest of the chapter, and xsl/custom-html.xsl leaves the
+  worksheet out of its born-visible rule, so the solutions sit behind
+  knowls as on the MATH 13 sample exam page.
+
+  Two notes from typesetting:
+  - Question 3: the handwritten antiderivative had the factor (minus 5/2)
+    distributed over cos(sin t) as well; it belongs only to t minus
+    (1/2) sin 2t.  The cos(sin t) term vanishes over a full period either
+    way, so the answer, minus 5 pi, is unchanged.  Set correctly here.
+  - Question 1 calls the curve a helix, as the exam did.  Its points all
+    lie at distance 2 sqrt 2 from the origin in the plane y = minus x, so it
+    is in fact a circle; the statement is left as it was given.
+-->
+<worksheet xml:id="sec-exercises-sample-past-exam-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sample Past Exam 1</title>
+
+  <introduction>
+    <p>
+      A sample past exam, with worked solutions. It was a closed-book
+      exam: no aids of one's own (formula sheets, notes, phones,
+      tablets, smart watches or similar) were permitted, and students were
+      asked to write their work in a neat and organized format and to fully
+      justify every step. Try the exam under the same conditions before you
+      look at the solutions. The topics it covers, with links to the notes:
+    </p>
+    <p>
+      <ul>
+        <li><p><xref ref="sec-parametrization" text="title"/></p></li>
+        <li><p><xref ref="sec-arc-length" text="title"/></p></li>
+        <li><p><xref ref="sec-line-integrals" text="title"/></p></li>
+        <li><p><xref ref="sec-vector-fields" text="title"/></p></li>
+        <li><p>Path Independence, Conservative Fields, and Potential Functions
+          <!-- plain text until that section is posted: <xref ref="section-conservative-fields"/> --></p></li>
+      </ul>
+    </p>
+  </introduction>
+
+  <!-- ===================== Question 1 ===================== -->
+  <exercise xml:id="spe1-q1">
+    <introduction>
+      <p>
+        The helix starting from <m>(2, -2, 0)</m> is parametrized as
+        <me>
+          \mathbf{r}(t) = \left\langle 2\cos(t),\, -2\cos(t),\, 2\sqrt{2}\sin(t) \right\rangle .
+        </me>
+      </p>
+    </introduction>
+
+    <task xml:id="spe1-q1-a">
+      <statement>
+        <p>
+          Find the arc length <m>s(t)</m> of the helix, measured from
+          <m>(2, -2, 0)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The velocity is
+          <me>
+            \mathbf{v}(t) = \left\langle -2\sin t,\, 2\sin t,\, 2\sqrt{2}\cos t \right\rangle,
+          </me>
+          so the speed is
+          <me>
+            \lVert \mathbf{v}(t) \rVert
+            = \sqrt{4\sin^2 t + 4\sin^2 t + 8\cos^2 t}
+            = \sqrt{8} = 2\sqrt{2}.
+          </me>
+          The starting point <m>(2,-2,0)</m> is <m>\mathbf{r}(0)</m>, so
+          <me>
+            s(t) = \int_0^t \lVert \mathbf{v}(\tau) \rVert \, d\tau
+            = \int_0^t 2\sqrt{2}\, d\tau = 2\sqrt{2}\, t .
+          </me>
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="spe1-q1-b">
+      <statement>
+        <p>
+          Reparametrize the helix with respect to arc length.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Solving <m>s = 2\sqrt{2}\, t</m> for <m>t</m> gives
+          <m>t = \dfrac{s}{2\sqrt{2}}</m>, hence
+          <md>
+            <mrow>\mathbf{r}(t(s)) = \Bigl\langle\,
+              2\cos\!\Bigl(\tfrac{s}{2\sqrt{2}}\Bigr),\;
+              -2\cos\!\Bigl(\tfrac{s}{2\sqrt{2}}\Bigr),</mrow>
+            <mrow>\qquad\qquad
+              2\sqrt{2}\,\sin\!\Bigl(\tfrac{s}{2\sqrt{2}}\Bigr)
+              \Bigr\rangle .</mrow>
+          </md>
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Question 2 ===================== -->
+  <exercise xml:id="spe1-q2">
+    <statement>
+      <p>
+        Find the total mass of a wire in the shape of the parabola
+        <m>y = x^2</m> for <m>\sqrt{2} \le x \le \sqrt{6}</m>, where
+        <m>x</m> and <m>y</m> are measured in centimeters. Assume that the
+        mass density of the wire is given by <m>\rho(x,y) = y/x</m> in
+        grams per centimeter.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Parametrize the wire by <m>\mathbf{r}(t) = \langle t, t^2 \rangle</m>,
+        <m>\sqrt{2} \le t \le \sqrt{6}</m>. Along it the density is
+        <me>
+          \rho\bigl(x(t), y(t)\bigr) = \frac{t^2}{t} = t,
+        </me>
+        and <m>\mathbf{v}(t) = \langle 1, 2t \rangle</m>, so
+        <m>\lVert \mathbf{v}(t) \rVert = \sqrt{1 + 4t^2}</m>. Therefore
+        <md>
+          <mrow>M \amp = \int_C \rho(x,y)\, ds
+            = \int_{\sqrt{2}}^{\sqrt{6}} t\sqrt{1 + 4t^2}\, dt</mrow>
+          <mrow>\amp = \frac{1}{8} \int_{\sqrt{2}}^{\sqrt{6}} 8t\sqrt{1 + 4t^2}\, dt</mrow>
+          <mrow>\amp = \frac{1}{8}\cdot\frac{2}{3}
+            \left(1 + 4t^2\right)^{3/2} \Bigg|_{\sqrt{2}}^{\sqrt{6}}</mrow>
+          <mrow>\amp = \frac{1}{12}\left(5^3 - 3^3\right)
+            = \frac{98}{12},</mrow>
+        </md>
+        so the mass is <m>M = \dfrac{98}{12} = \dfrac{49}{6}</m> grams.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ===================== Question 3 ===================== -->
+  <exercise xml:id="spe1-q3">
+    <statement>
+      <p>
+        Evaluate the line integral
+        <m>\displaystyle\int_C 5y\, dx - \sin(y)\, dy</m>, where <m>C</m>
+        is the counter-clockwise oriented unit circle.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Take <m>\mathbf{r}(t) = \langle \cos t, \sin t \rangle</m>,
+        <m>0 \le t \le 2\pi</m>, so that
+        <m>\mathbf{v}(t) = \langle -\sin t, \cos t \rangle</m>. The field is
+        <m>\mathbf{F} = \langle 5y, -\sin(y) \rangle</m>, which along
+        <m>C</m> is
+        <m>\mathbf{F} = \langle 5\sin t, -\sin(\sin t) \rangle</m>, and
+        <md>
+          <mrow>\mathbf{F} \cdot \mathbf{v}
+            \amp = -5\sin^2 t - \cos t \, \sin(\sin t)</mrow>
+          <mrow>\amp = -\frac{5}{2}\bigl(1 - \cos(2t)\bigr) - \cos t \, \sin(\sin t).</mrow>
+        </md>
+        Hence
+        <md>
+          <mrow>\int_C 5y\, dx \amp - \sin(y)\, dy</mrow>
+          <mrow>\amp = \int_{0}^{2\pi} \Bigl[ -\tfrac{5}{2}\bigl(1 - \cos(2t)\bigr)
+              - \cos t \, \sin(\sin t) \Bigr] dt</mrow>
+          <mrow>\amp = \Bigl[ -\tfrac{5}{2}\bigl(t - \tfrac{1}{2}\sin(2t)\bigr)
+              + \cos(\sin t) \Bigr]_0^{2\pi}</mrow>
+          <mrow>\amp = -\frac{5}{2}\,(2\pi) = -5\pi .</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ===================== Question 4 ===================== -->
+  <exercise xml:id="spe1-q4">
+    <introduction>
+      <p>
+        Find a parametrization of the curve of intersection of the
+        following surfaces.
+      </p>
+    </introduction>
+
+    <task xml:id="spe1-q4-a">
+      <statement>
+        <p>
+          <m>z = 3x + y</m> and <m>y = 5x^2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>x = t</m>. Then <m>y = 5t^2</m> and
+          <m>z = 3t + 5t^2</m>:
+          <md>
+            <mrow>x(t) \amp = t,</mrow>
+            <mrow>y(t) \amp = 5t^2,</mrow>
+            <mrow>z(t) \amp = 3t + 5t^2, \qquad t \in \mathbb{R}.</mrow>
+          </md>
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="spe1-q4-b">
+      <statement>
+        <p>
+          <m>x^2 + y^2 = 9</m> and <m>z = 2x + y</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The cylinder gives <m>x = 3\cos t</m>, <m>y = 3\sin t</m>, and
+          then <m>z = 2x + y = 6\cos t + 3\sin t</m>:
+          <md>
+            <mrow>x(t) \amp = 3\cos t,</mrow>
+            <mrow>y(t) \amp = 3\sin t,</mrow>
+            <mrow>z(t) \amp = 6\cos t + 3\sin t, \qquad 0 \le t \le 2\pi.</mrow>
+          </md>
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Question 5 ===================== -->
+  <exercise xml:id="spe1-q5">
+    <introduction>
+      <p>
+        <alert>True or False? Clearly justify your answer.</alert> Note
+        that correct answers with incorrect or unclear justifications will
+        not earn credit.
+      </p>
+    </introduction>
+
+    <task xml:id="spe1-q5-a">
+      <statement>
+        <p>
+          Consider the line integral <m>\displaystyle\int_C f\, ds</m>,
+          where <m>f</m> is a scalar function. Reversing the direction in
+          which the integral is taken along a curve changes the sign of
+          the line integral,
+          <m>\displaystyle\int_{-C} f\, ds = -\int_C f\, ds</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>False.</alert> Let <m>C</m> be
+          <m>\mathbf{r}(t) = \langle x(t), y(t) \rangle</m>,
+          <m>a \le t \le b</m>. Then <m>-C</m> is traced by
+          <m>\mathbf{r}(a+b-t) = \langle x(a+b-t), y(a+b-t) \rangle</m>,
+          <m>a \le t \le b</m>, and with the substitution
+          <m>u = a+b-t</m>, <m>du = -dt</m>,
+          <md>
+            <mrow>\int_{-C} f\, ds
+              \amp = \int_{a}^{b} f\bigl(\mathbf{r}(a+b-t)\bigr)\,
+                \lVert \mathbf{v}(a+b-t) \rVert\, dt</mrow>
+            <mrow>\amp = \int_{u=b}^{u=a} f\bigl(\mathbf{r}(u)\bigr)\,
+                \lVert \mathbf{v}(u) \rVert\, (-du)</mrow>
+            <mrow>\amp = -\int_{u=b}^{u=a} f\bigl(\mathbf{r}(u)\bigr)\,
+                \lVert \mathbf{v}(u) \rVert\, du</mrow>
+            <mrow>\amp = \int_{u=a}^{u=b} f\bigl(\mathbf{r}(u)\bigr)\,
+                \lVert \mathbf{v}(u) \rVert\, du
+              = \int_C f\, ds .</mrow>
+          </md>
+          The line integral of a scalar function does not change sign when
+          the direction is reversed.
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="spe1-q5-b">
+      <statement>
+        <p>
+          If <m>f(x,y,z) = \cos\left(x^2 + y^2 + z^2\right) - 2</m> and
+          <m>C</m> is a smooth curve from point <m>A</m> to point <m>B</m>,
+          then <m>\displaystyle\int_C f(x,y,z)\, ds \gt 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>False.</alert> Since the cosine is at most <m>1</m>,
+          <m>f(x,y,z) \le -1</m> everywhere, and therefore
+          <me>
+            \int_C f(x,y,z)\, ds \lt 0 .
+          </me>
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Question 6 ===================== -->
+  <!-- Question 3 of the Spring 2025 Exam 2. -->
+  <figure xml:id="fig-spe1-field">
+    <caption>
+      The vector field <m>\mathbf{F}</m> and the circle <m>C</m> of
+      <xref ref="spe1-q6"/>. Every field vector is horizontal and has the
+      same length: they point right above the <m>x</m>-axis and left
+      below it.
+    </caption>
+    <image width="60%">
+      <shortdescription>
+      A horizontal field, rightward above the x-axis and leftward below it, with a circle centered at the origin.
+      </shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-spe1-field">
+        <diagram dimensions="(360,360)" margins="10">
+          <coordinates bbox="(-4.2,-4.2,4.2,4.2)">
+            <axes at="sf-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
+            <repeat at="sf-upper" parameter="i=-3..3">
+              <repeat parameter="j=0..3">
+                <vector at="sf-u-((i))-((j))" v="(0.55,0)"
+                    tail="(i-0.275, 0.5+j)" stroke="#56B4E9" thickness="2"/>
+              </repeat>
+            </repeat>
+            <repeat at="sf-lower" parameter="i=-3..3">
+              <repeat parameter="j=0..3">
+                <vector at="sf-l-((i))-((j))" v="(-0.55,0)"
+                    tail="(i+0.275, -0.5-j)" stroke="#56B4E9" thickness="2"/>
+              </repeat>
+            </repeat>
+            <circle at="sf-C" center="(0,0)" radius="2.5" fill="none"
+                stroke="black" thickness="2"/>
+            <label at="sf-Clabel" anchor="(1.95,1.95)" alignment="ne"><m>C</m></label>
+            <label at="sf-Olabel" anchor="(-0.15,-0.15)" alignment="sw"><m>O</m></label>
+          </coordinates>
+          <annotations>
+            <annotation ref="figure" text="A grid of light blue horizontal field vectors of equal length. Above the x axis they all point to the right; below it they all point to the left. A black circle C is centered at the origin O and cuts through the grid, so that along its upper half the field points right and along its lower half the field points left.">
+              <annotation ref="sf-upper" text="The field vectors above the x axis, all pointing to the right."/>
+              <annotation ref="sf-lower" text="The field vectors below the x axis, all pointing to the left."/>
+              <annotation ref="sf-C" text="The circle C, centered at the origin."/>
+            </annotation>
+          </annotations>
+        </diagram>
+      </prefigure>
+    </image>
+  </figure>
+
+  <exercise xml:id="spe1-q6">
+    <introduction>
+      <p>
+        Let <m>C</m> be a circle centered at the origin. Also, assume that
+        the vector field <m>\mathbf{F}</m> is the vector field which is
+        graphed in <xref ref="fig-spe1-field"/>.
+      </p>
+    </introduction>
+
+    <task xml:id="spe1-q6-a">
+      <statement>
+        <p>
+          If <m>C</m> is traced counterclockwise, is
+          <m>\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r}</m> positive,
+          negative, or zero? Explain.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>Negative.</alert> Along the upper half of <m>C</m> the
+          counterclockwise unit tangent <m>\hat{\mathbf{T}}</m> points
+          leftward while <m>\mathbf{F}</m> points right; along the lower
+          half <m>\hat{\mathbf{T}}</m> points rightward while
+          <m>\mathbf{F}</m> points left. So the angle <m>\theta</m> between
+          <m>\hat{\mathbf{T}}</m> and <m>\mathbf{F}</m> is obtuse everywhere
+          along <m>C</m>, which means
+          <m>\mathbf{F} \cdot \hat{\mathbf{T}} \lt 0</m>, and hence
+          <me>
+            \oint_C \mathbf{F} \cdot d\mathbf{r}
+            = \oint_C \mathbf{F} \cdot \hat{\mathbf{T}}\, ds \lt 0 .
+          </me>
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="spe1-q6-b">
+      <statement>
+        <p>
+          Is <m>\mathbf{F}</m> conservative? Explain.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>No.</alert> If <m>\mathbf{F}</m> were conservative, we
+          would have <m>\displaystyle\oint_C \mathbf{F} \cdot d\mathbf{r} = 0</m>
+          for any loop <m>C</m>, and part (a) found a loop around which the
+          circulation is not zero.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+</worksheet>
