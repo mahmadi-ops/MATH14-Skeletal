@@ -1,0 +1,39 @@
+name: Build PDF only
+# One-off: builds the print target on this branch and pushes the PDF to the
+# branch pdf-hw3-out.  Never touches gh-pages.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    container: pretextbook/pretext-full:1.9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: setup git config
+        run: |
+          git config --global --add safe.directory $(pwd)
+          git config user.name "${{ github.actor }} via GitHub Actions"
+          git config user.email "${{ github.actor }}@github_actions.no_reply"
+      - name: install deps
+        run: pip install -r requirements.txt --break-system-packages
+      - name: initialize prefigure
+        run: prefig init
+      - name: build print
+        run: pretext build print
+        env:
+          extra_mem_top: "50000000"
+          extra_mem_bot: "20000000"
+      - name: publish the PDF to a branch
+        run: |
+          ls -la output/print/*.pdf
+          mkdir -p /tmp/out && cp output/print/*.pdf /tmp/out/
+          git checkout --orphan pdf-hw3-out
+          git rm -rfq --cached . && git clean -fdxq -e /tmp
+          cp /tmp/out/*.pdf .
+          git add *.pdf && git commit -qm "One-off PDF: Assignment 3 with solutions"
+          git push -f origin HEAD:pdf-hw3-out

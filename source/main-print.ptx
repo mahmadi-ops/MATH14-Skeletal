@@ -18,6 +18,12 @@
       <xi:include href="section-vector-fields.ptx" />
       <xi:include href="conservative-fields.ptx" />
     </chapter>
+    <!-- one-off instructor PDF: Assignment 3 with its solutions -->
+    <chapter xml:id="ch-assignment-3-solutions">
+      <title>Assignment 3</title>
+      <xi:include href="hw3-online.ptx" />
+      <xi:include href="hw3-solutions.ptx" />
+    </chapter>
 
     <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-multiple-integrals">
