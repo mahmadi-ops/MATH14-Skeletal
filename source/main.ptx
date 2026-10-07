@@ -16,21 +16,19 @@
       <xi:include href="conservative-fields.ptx" />
     </chapter>
 
-    <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-multiple-integrals">
       <title>Multiple Integrals</title>
       <xi:include href="double-integrals-rectangles.ptx" />
-      <xi:include href="double-integrals-general-regions.ptx" />
-      <xi:include href="polar-coordinates.ptx" />
-      <xi:include href="double-integrals-polar-form.ptx" />
-      <xi:include href="triple-integrals-rectangular.ptx" />
-      <xi:include href="triple-integrals-cylindrical.ptx" />
-      <xi:include href="triple-integrals-spherical.ptx" />
-      <xi:include href="mass-center-of-mass.ptx" />
-      <xi:include href="jacobian-substitution.ptx" />
-      <xi:include href="surface-integrals.ptx" />
+      <!-- UNPOSTED <xi:include href="double-integrals-general-regions.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="polar-coordinates.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="double-integrals-polar-form.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="triple-integrals-rectangular.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="triple-integrals-cylindrical.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="triple-integrals-spherical.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="mass-center-of-mass.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="jacobian-substitution.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="surface-integrals.ptx" /> UNPOSTED -->
     </chapter>
-    HIDDEN-CHAPTER-END -->
 
     <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-integral-theorems">
