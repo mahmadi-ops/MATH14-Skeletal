@@ -19,9 +19,9 @@
     <chapter xml:id="ch-multiple-integrals">
       <title>Multiple Integrals</title>
       <xi:include href="double-integrals-rectangles.ptx" />
-      <!-- UNPOSTED <xi:include href="double-integrals-general-regions.ptx" /> UNPOSTED -->
-      <!-- UNPOSTED <xi:include href="polar-coordinates.ptx" /> UNPOSTED -->
-      <!-- UNPOSTED <xi:include href="double-integrals-polar-form.ptx" /> UNPOSTED -->
+      <xi:include href="double-integrals-general-regions.ptx" />
+      <xi:include href="polar-coordinates.ptx" />
+      <xi:include href="double-integrals-polar-form.ptx" />
       <!-- UNPOSTED <xi:include href="triple-integrals-rectangular.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="triple-integrals-cylindrical.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="triple-integrals-spherical.ptx" /> UNPOSTED -->
