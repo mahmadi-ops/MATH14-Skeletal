@@ -15,7 +15,7 @@
 <!-- are unchanged.                                                        -->
 <!--                                                                       -->
 <!-- Figures: the figures of Examples I and II show only the graphs of the -->
-<!-- boundary curves (no shading, strips or end lines): the student shades -->
+<!-- boundary curves with the region shaded and a typical strip; the examples state R by the figure -->
 <!-- the region R and draws a strip.  The strip video, the tetrahedron,    -->
 <!-- the reverse-order picture, the area region, and the two GeoGebra/     -->
 <!-- PreFigure statements of the Concept Check are kept; the symmetry      -->
@@ -51,8 +51,7 @@ Calculate the following double integral,
 </me>
 
 <p>
-where
-<m>R = \{(x,y) : 0 \le x \le 1,\ (-2x^2+2x) \le y \le (x^3+1)\}</m>.
+where <m>R</m> is the shaded region in <xref ref="fig-case1-region-prefigure"/>.
 </p>
 <p>
 <em>Solution.</em>
@@ -75,27 +74,39 @@ where
 
 <figure xml:id="fig-case1-region-prefigure">
 <caption>
-The graphs of <m>f_1(x) = x^3 + 1</m> and <m>f_2(x) = -2x^2 + 2x</m>.
-Shade the region <m>R</m> of <xref ref="example-case1-vertical"/> on
-them, and draw a typical strip.
+The region <m>R</m> of <xref ref="example-case1-vertical"/>, shaded, with typical vertical strips.
 </caption>
 <image width="70%">
 <shortdescription>
-The graphs of an upper and a lower curve, with the region between them left to shade.
+A region between an upper and a lower curve, with vertical strips.
 </shortdescription>
 <prefigure xmlns="https://prefigure.org" label="prefigure-case1-region">
 <diagram dimensions="(380,300)" margins="10">
 <definition>f1(t) = (t, t^3 + 1)</definition>
 <definition>f2(t) = (t, -2*t^2 + 2*t)</definition>
+<definition>f1sc(t) = t^3 + 1</definition>
+<definition>f2sc(t) = -2*t^2 + 2*t</definition>
 <coordinates bbox="(-0.35,-0.4,1.45,2.45)">
 <axes at="c1-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-<parametric-curve at="c1-f1" function="f1" domain="(-0.15,1.1)"
+<area-between-curves at="c1-region" function1="f2sc" function2="f1sc"
+    domain="(0,1)" fill="#d3e8d3" stroke="none"/>
+<line at="c1-strip1" endpoints="((0.25,0.375),(0.25,1.0156))"
+    stroke="#009E73" thickness="3"/>
+<line at="c1-strip2" endpoints="((0.5,0.5),(0.5,1.125))"
+    stroke="#009E73" thickness="3"/>
+<line at="c1-strip3" endpoints="((0.75,0.375),(0.75,1.4219))"
+    stroke="#009E73" thickness="3"/>
+<line at="c1-left" endpoints="((0,0),(0,1))" stroke="black"
+    thickness="2" dash="6 4"/>
+<line at="c1-right" endpoints="((1,0),(1,2))" stroke="black"
+    thickness="2" dash="6 4"/>
+<parametric-curve at="c1-f1" function="f1" domain="(0,1)"
     stroke="#0072B2" thickness="3"/>
-<parametric-curve at="c1-f2" function="f2" domain="(-0.15,1.1)"
+<parametric-curve at="c1-f2" function="f2" domain="(0,1)"
     stroke="#D55E00" thickness="3"/>
 <label at="c1-f1-label" anchor="(0.42,1.35)" alignment="nw"
     color="#0072B2"><m>f_1(x) = x^3 + 1</m></label>
-<label at="c1-f2-label" anchor="(0.52,0.17)" alignment="s"
+<label at="c1-f2-label" anchor="(0.52,0.28)" alignment="s"
     color="#D55E00"><m>f_2(x) = -2x^2 + 2x</m></label>
 <point at="c1-x0" p="(0,0)" fill="black" alignment="sw">
 <m>0</m>
@@ -105,9 +116,11 @@ The graphs of an upper and a lower curve, with the region between them left to s
 </point>
 </coordinates>
 <annotations>
-<annotation ref="figure" text="Two curves above the x axis, with the points zero and one marked on the axis. The curve f 1 of x equals x cubed plus one, drawn in blue, rises from one to two across the interval from zero to one. The curve f 2 of x equals negative two x squared plus two x, drawn in vermillion, is an arch from zero up to one half and back to zero. Nothing between them is shaded: the region is left for the reader to draw.">
-  <annotation ref="c1-f1" text="The curve f 1 of x equals x cubed plus 1, drawn in blue."/>
-  <annotation ref="c1-f2" text="The curve f 2 of x equals negative 2 x squared plus 2 x, drawn in vermillion."/>
+<annotation ref="figure" text="The region between two curves above the interval from zero to one on the x axis. The upper boundary, drawn in blue, is f 1 of x equals x cubed plus one, rising from one to two. The lower boundary, drawn in vermillion, is f 2 of x equals negative two x squared plus two x, an arch from zero up to one half and back to zero. The region between them is shaded light green with three vertical green strips.">
+  <annotation ref="c1-f1" text="The upper boundary f 1 of x equals x cubed plus 1, drawn in blue."/>
+  <annotation ref="c1-f2" text="The lower boundary f 2 of x equals negative 2 x squared plus 2 x, drawn in vermillion."/>
+  <annotation ref="c1-region" text="The region R, shaded in light green."/>
+  <annotation ref="c1-strip2" text="A typical vertical strip at a fixed x. The inner integral in y runs along this strip from the lower curve to the upper curve."/>
 </annotation>
 </annotations>
 </diagram>
@@ -133,8 +146,7 @@ Calculate the following double integral,
 </me>
 
 <p>
-where
-<m>R = \{(x,y) : 0.1 \le y \le 0.5,\ y^2 \le x \le y^{1/3}\}</m>.
+where <m>R</m> is the shaded region in <xref ref="fig-case2-region-prefigure"/>.
 </p>
 <p>
 <em>Solution.</em>
@@ -157,13 +169,11 @@ where
 
 <figure xml:id="fig-case2-region-prefigure">
 <caption>
-The graphs of <m>x = g_1(y) = y^2</m> and <m>x = g_2(y) = y^{1/3}</m>.
-Shade the region <m>R</m> of <xref ref="example-case2-horizontal"/> on
-them, and draw a typical strip.
+The region <m>R</m> of <xref ref="example-case2-horizontal"/>, shaded, with typical horizontal strips.
 </caption>
 <image width="70%">
 <shortdescription>
-The graphs of a left and a right curve, with the region between them left to shade.
+A region between a left and a right curve, with horizontal strips.
 </shortdescription>
 <prefigure xmlns="https://prefigure.org" label="prefigure-case2-region">
 <diagram dimensions="(380,300)" margins="10">
@@ -171,25 +181,39 @@ The graphs of a left and a right curve, with the region between them left to sha
 <definition>g2(t) = (t^(1/3), t)</definition>
 <coordinates bbox="(-0.12,-0.09,1.22,0.68)">
 <axes at="c2-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-<parametric-curve at="c2-g1" function="g1" domain="(0,0.62)"
+<polygon at="c2-region" fill="#d3e8d3" stroke="none" closed="yes"
+    points="((0.01,0.1),(0.01361,0.1167),(0.01778,0.1333),(0.0225,0.15),(0.02778,0.1667),(0.03361,0.1833),(0.04,0.2),(0.04694,0.2167),(0.05444,0.2333),(0.0625,0.25),(0.07111,0.2667),(0.08028,0.2833),(0.09,0.3),(0.1003,0.3167),(0.1111,0.3333),(0.1225,0.35),(0.1344,0.3667),(0.1469,0.3833),(0.16,0.4),(0.1736,0.4167),(0.1878,0.4333),(0.2025,0.45),(0.2178,0.4667),(0.2336,0.4833),(0.25,0.5),(0.7937,0.5),(0.7848,0.4833),(0.7757,0.4667),(0.7663,0.45),(0.7567,0.4333),(0.7469,0.4167),(0.7368,0.4),(0.7264,0.3833),(0.7157,0.3667),(0.7047,0.35),(0.6934,0.3333),(0.6816,0.3167),(0.6694,0.3),(0.6568,0.2833),(0.6437,0.2667),(0.63,0.25),(0.6156,0.2333),(0.6006,0.2167),(0.5848,0.2),(0.5681,0.1833),(0.5503,0.1667),(0.5313,0.15),(0.5109,0.1333),(0.4886,0.1167),(0.4642,0.1))"/>
+<line at="c2-strip1" endpoints="((0.04,0.2),(0.585,0.2))"
+    stroke="#009E73" thickness="3"/>
+<line at="c2-strip2" endpoints="((0.09,0.3),(0.669,0.3))"
+    stroke="#009E73" thickness="3"/>
+<line at="c2-strip3" endpoints="((0.16,0.4),(0.737,0.4))"
+    stroke="#009E73" thickness="3"/>
+<line at="c2-bottom" endpoints="((0.01,0.1),(0.464,0.1))"
+    stroke="black" thickness="2" dash="6 4"/>
+<line at="c2-top" endpoints="((0.25,0.5),(0.794,0.5))"
+    stroke="black" thickness="2" dash="6 4"/>
+<parametric-curve at="c2-g1" function="g1" domain="(0.1,0.5)"
     stroke="#D55E00" thickness="3"/>
-<parametric-curve at="c2-g2" function="g2" domain="(0,0.62)"
+<parametric-curve at="c2-g2" function="g2" domain="(0.1,0.5)"
     stroke="#0072B2" thickness="3"/>
 <label at="c2-g1-label" anchor="(0.02,0.56)" alignment="ne"
     color="#D55E00"><m>g_1(y) = y^2</m></label>
 <label at="c2-g2-label" anchor="(0.72,0.22)" alignment="se"
     color="#0072B2"><m>g_2(y) = y^{1/3}</m></label>
-<point at="c2-y1" p="(0,0.1)" fill="black" alignment="w">
-<m>0.1</m>
-</point>
-<point at="c2-y5" p="(0,0.5)" fill="black" alignment="w">
-<m>0.5</m>
-</point>
+<label at="c2-top-label" anchor="(0.52,0.54)" alignment="n">
+<m>y = 0.5</m>
+</label>
+<label at="c2-bottom-label" anchor="(0.24,0.06)" alignment="s">
+<m>y = 0.1</m>
+</label>
 </coordinates>
 <annotations>
-<annotation ref="figure" text="Two curves leaving the origin, with the points zero point one and zero point five marked on the y axis. The curve x equals g 1 of y equals y squared, drawn in vermillion, hugs the y axis. The curve x equals g 2 of y equals the cube root of y, drawn in blue, sweeps out to the right. Nothing between them is shaded: the region is left for the reader to draw.">
-  <annotation ref="c2-g1" text="The curve x equals g 1 of y equals y squared, drawn in vermillion."/>
-  <annotation ref="c2-g2" text="The curve x equals g 2 of y equals y to the one third, drawn in blue."/>
+<annotation ref="figure" text="A region between two curves for y between zero point one and zero point five. The left boundary, drawn in vermillion, is g 1 of y equals y squared. The right boundary, drawn in blue, is g 2 of y equals the cube root of y. The region between them is shaded light green with three horizontal green strips, and dashed lines mark y equals zero point one and y equals zero point five.">
+  <annotation ref="c2-g1" text="The left boundary g 1 of y equals y squared, drawn in vermillion."/>
+  <annotation ref="c2-g2" text="The right boundary g 2 of y equals y to the one third, drawn in blue."/>
+  <annotation ref="c2-region" text="The region R, shaded in light green."/>
+  <annotation ref="c2-strip2" text="A typical horizontal strip at a fixed y. The inner integral in x runs along this strip from the left curve to the right curve."/>
 </annotation>
 </annotations>
 </diagram>
