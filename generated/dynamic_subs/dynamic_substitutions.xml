@@ -1,0 +1,46 @@
+<xml>
+  <dynamic-substitution id="ex-hw2o-quarter-circle">
+    <eval-subst obj="R">2</eval-subst>
+    <eval-subst obj="k">18</eval-subst>
+    <eval-subst obj="M">18</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-cycloid-speed">
+    <eval-subst obj="a">5</eval-subst>
+    <eval-subst obj="speed">10</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-cartesian-from-parametric">
+    <eval-subst obj="a">4</eval-subst>
+    <eval-subst obj="b">8</eval-subst>
+    <eval-subst obj="poly">8^{3} x^{3}+4^{3} y^{3}-4^{2}\cdot 8^{2} x y</eval-subst>
+    <eval-subst obj="tangent">\frac{-8}{4} \left(x-2\right)+4</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-helix-scalar">
+    <eval-subst obj="a">5</eval-subst>
+    <eval-subst obj="n">3</eval-subst>
+    <eval-subst obj="value">\sqrt{2} \left(5 \pi+\frac{\pi^{4}}{4}\right)</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-exponential-path">
+    <eval-subst obj="T">2</eval-subst>
+    <eval-subst obj="value">2 \left(e^{4}-e^{-4}\right)-\left(e^{2}-e^{-2}\right)</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-circle-in-plane">
+    <eval-subst obj="c">5</eval-subst>
+    <eval-subst obj="R">6</eval-subst>
+    <eval-subst obj="zero">0</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-speed-distance">
+    <eval-subst obj="c">24</eval-subst>
+    <eval-subst obj="a">5</eval-subst>
+    <eval-subst obj="b">12</eval-subst>
+    <eval-subst obj="L">\frac{12^{3}}{3}+12-\frac{5^{3}}{3}-5</eval-subst>
+    <eval-subst obj="sp">5^{2}+1</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-work-parabola">
+    <eval-subst obj="a">3</eval-subst>
+    <eval-subst obj="work">7+\frac{e^{2}-e^{1}}{2}</eval-subst>
+  </dynamic-substitution>
+  <dynamic-substitution id="ex-r1p-spiral-length">
+    <eval-subst obj="a">5</eval-subst>
+    <eval-subst obj="len">\frac{5^{2}}{2}</eval-subst>
+  </dynamic-substitution>
+</xml>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Assignment 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/unnumbered-chapter.css">
+<link rel="stylesheet" type="text/css" href="external/custom.css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH 14–Skeletal Notes">
+<meta property="book:author" content="Mehdi Ahmadi">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="math14.html"><span class="title">MATH 14–Skeletal Notes</span></a></h1>
+<p class="byline">Mehdi Ahmadi</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-exercises-hw2-online.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-problems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercises-review1-practice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+\newcommand{\real}{\Bbb R}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-skeletal.html" class="internal"><span class="title">How to Use These Notes</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="intro.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="subsec-brain-map.html" class="internal"><span class="title">The big picture</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-curves-and-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Line Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-parametrization.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Parametrization of Curves</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-parametric-equations" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Parametric Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-parametrizing-examples" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Some Examples of Parametrizing Curves</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-intersection-collision" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Intersection Points versus Collision Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-curves-in-space" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Curves in Space and Vector Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-tangent-line-space-curve" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Tangent Lines to Curves in Space</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-arc-length.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Arc Length of a Curve</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arc-length.html#subsec-arc-length-2d" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Arc Length in 2D</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arc-length.html#subsec-arc-length-3d" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Arc Length in 3D</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arc-length.html#subsec-cone-plane-activity" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Activity: Where a Plane Slices a Cone</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-line-integrals.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Line Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-line-integrals.html#subsec-scalar-line-integrals" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Line Integrals of Scalar Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-line-integrals.html#subsec-line-integral-walls" class="internal"><span class="codenumber">1.3.2</span> <span class="title">A Geometric Interpretation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-line-integrals.html#subsec-line-integral-questions" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-vector-fields.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Vector Fields and Line Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-vector-fields" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Vector Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-work-reminder" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Work (Reminder)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-work-force-field" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Work of a Force Field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-work-exploration" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-conservative-fields.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Path Independence, Conservative Fields, and Potential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-gradient-fields" class="internal"><span class="codenumber">1.5.1</span> <span class="title">A Brief Reminder (Gradient Fields)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-conservative-definitions" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Path Independence and Some Basic Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-ftli" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Line Integrals in Conservative Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-potential-function" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Finding a Potential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-conservative-gradient" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Conservative Fields are Gradient Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-loop-property" class="internal"><span class="codenumber">1.5.6</span> <span class="title">The Loop Property of Conservative Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-conservative-concept-check" class="internal"><span class="codenumber">1.5.7</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-multiple-integrals.html" class="internal"><span class="codenumber">2</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-double-integrals-rectangles.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Double and Iterated Integrals Over Rectangles</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-area-under-curve-reminder" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Reminder: Area Under <span class="process-math">\(y = f(x)\)</span> from <span class="process-math">\(x = a\)</span> to <span class="process-math">\(x = b\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-double-integrals-rectangles" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Double Integrals Over Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-iterated-integrals" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Calculating Double Integrals as Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-iterated-integral-substitution" class="internal"><span class="codenumber">2.1.4</span> <span class="title">An Iterated Integral Requiring Substitution and Integration by Parts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#subsec-double-integral-questions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-double-integrals-general-regions.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Double Integrals Over General Regions and Area by Double Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-general-regions-case1" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Case I: Regions of the Form <span class="process-math">\(R = \{(x,y) : a \le x \le b,\ f_2(x) \le y \le f_1(x)\}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-general-regions-case2" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Case II: Regions of the Form <span class="process-math">\(R = \{(x,y) : c \le y \le d,\ g_1(y) \le x \le g_2(y)\}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-tetrahedron-volume" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Volume of a Tetrahedron</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-area-by-double-integration" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Area by Double Integration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#subsec-general-regions-questions" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-polar-coordinates.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Polar Coordinates and Graphing Polar Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-definition" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Polar Coordinate System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-cartesian-relation" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Relation Between Polar and Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-nonuniqueness" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Non-Uniqueness of Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-to-cartesian-example" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Replacing Polar Equations by Cartesian Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-symmetries" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-double-integrals-polar-form.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Double Integrals in Polar Form</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-double-integral" class="internal"><span class="codenumber">2.4.1</span> <span class="title">How Does a Double Integral Look in Polar Coordinates?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-annulus-example" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Integrating Over a Half Annulus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-rose-example" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Area Enclosed by One Loop of a Rose</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-volume-example" class="internal"><span class="codenumber">2.4.4</span> <span class="title">A Volume Computed in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-gaussian-example" class="internal"><span class="codenumber">2.4.5</span> <span class="title">An Integral That Needs Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#subsec-polar-questions" class="internal"><span class="codenumber">2.4.6</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-problems.html" class="internal"><span class="codenumber">3</span> <span class="title">Assignments and Review Problems</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw1-online.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Assignment 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw1-online.html#exercises-hw1-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw2-online.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Assignment 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw2-online.html#exercises-hw2-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-exercises-hw3-online.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Assignment 3</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw3-online.html#exercises-hw3-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-review1-practice.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Review Problems #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-review1-practice.html#exercises-review1-practice" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-exercises-sample-past-exam-1.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sample Past Exam 1</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw4-online.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Assignment 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw4-online.html#exercises-hw4-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercises-hw3-online"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Assignment 3</span>
+</h2>
+<section class="introduction" id="sec-exercises-hw3-online-2"><div class="para" id="sec-exercises-hw3-online-2-1">Sections: <a href="sec-vector-fields.html" class="internal" title="Section 1.4: Vector Fields and Line Integrals">Vector Fields and Line Integrals</a> and Path Independence, Conservative Fields, and Potential Functions.  Work each problem, then type your answers into the boxes and have them checked here.<div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-hw3-online-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-exercises-hw3-online-2-2">Press “Check Me” to submit; you may check as often as you like.<div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-hw3-online-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-exercises-hw3-online-2-3">
+<dfn class="terminology">How to type your answers.</dfn> Numbers: a decimal number and nothing else—no units, no <span class="process-math">\(=\)</span> sign, no <span class="process-math">\(\pi\text{;}\)</span> give at least three decimals (for instance <code class="code-inline tex2jax_ignore">18.850</code>, not <code class="code-inline tex2jax_ignore">6pi</code>). Answers are accepted within a small tolerance. Words: type just the word asked for, in lower case.<div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-hw3-online-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="exercises" id="exercises-hw3-online"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ex-hw3o-inverse-square"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Inverse-Square Field.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-hw3o-inverse-square-2-1">Sketch the vector field <span class="process-math">\(\displaystyle\mathbf{F}(x,y) = -\frac{\mathbf{r}}{\lVert \mathbf{r} \rVert^3}\)</span> in the plane, where <span class="process-math">\(\mathbf{r} = \left\langle x, y \right\rangle\text{.}\)</span> Select all that apply.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-inverse-square-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-hw3o-inverse-square" data-multipleanswers="true">
+<li data-component="answer" id="rs-ex-hw3o-inverse-square_opt_a" data-correct=""><div class="para" id="ex-hw3o-inverse-square-3-1-1-1">All the vectors point toward the origin.</div></li>
+<li data-component="feedback" id="rs-ex-hw3o-inverse-square_opt_a"><div class="para" id="ex-hw3o-inverse-square-3-1-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-ex-hw3o-inverse-square_opt_b" data-correct=""><div class="para" id="ex-hw3o-inverse-square-3-2-1-1">The vectors decrease in length as you move away from the origin.</div></li>
+<li data-component="feedback" id="rs-ex-hw3o-inverse-square_opt_b"><div class="para" id="ex-hw3o-inverse-square-3-2-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-ex-hw3o-inverse-square_opt_c"><div class="para" id="ex-hw3o-inverse-square-3-3-1-1">All the vectors point away from the origin.</div></li>
+<li data-component="feedback" id="rs-ex-hw3o-inverse-square_opt_c"><div class="para" id="ex-hw3o-inverse-square-3-3-2-1">Incorrect.</div></li>
+<li data-component="answer" id="rs-ex-hw3o-inverse-square_opt_d"><div class="para" id="ex-hw3o-inverse-square-3-4-1-1">The vectors increase in length as you move away from the origin.</div></li>
+<li data-component="feedback" id="rs-ex-hw3o-inverse-square_opt_d"><div class="para" id="ex-hw3o-inverse-square-3-4-2-1">Incorrect.</div></li>
+<li data-component="answer" id="rs-ex-hw3o-inverse-square_opt_e"><div class="para" id="ex-hw3o-inverse-square-3-5-1-1">The length of each vector is <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-hw3o-inverse-square_opt_e"><div class="para" id="ex-hw3o-inverse-square-3-5-2-1">Incorrect.</div></li>
+</ul>
+</div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-inverse-square-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-inverse-square-4-1">Since <span class="process-math">\(\mathbf{F} = -\frac{1}{\lVert \mathbf{r} \rVert^3}\,\mathbf{r}\)</span> is a negative multiple of the position vector <span class="process-math">\(\mathbf{r}\text{,}\)</span> the arrow at each point <span class="process-math">\((x,y) \ne (0,0)\)</span> points from that point toward the origin. Its length is<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-inverse-square-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-hw3o-inverse-square-4-2">
+\begin{equation*}
+\lVert \mathbf{F} \rVert
+= \frac{\lVert \mathbf{r} \rVert}{\lVert \mathbf{r} \rVert^3}
+= \frac{1}{\lVert \mathbf{r} \rVert^2} ,
+\end{equation*}
+</div>
+<div class="para" id="ex-hw3o-inverse-square-4-3">which decreases as you move away from the origin (and is not <span class="process-math">\(1\)</span>). So the true statements are: all the vectors point toward the origin, and they decrease in length as you move away from it. This is an inverse-square field, like gravity; it is not defined at the origin.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-inverse-square-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#ex-hw3o-inverse-square-4" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 1: An Inverse-Square Field"><a href="#ex-hw3o-inverse-square" title="Copy heading and permalink for Exercise 1: An Inverse-Square Field" aria-label="Copy heading and permalink for Exercise 1: An Inverse-Square Field">🔗</a></div></article><article class="exercise exercise-like" id="ex-hw3o-segment-arc"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Segment and a Half Circle.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-segment-arc">
+<div class="para" id="ex-hw3o-segment-arc-2-1">Curves <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\)</span> are parametrized as follows: <span class="process-math">\(C_1\)</span> is <span class="process-math">\((x(t),y(t)) = (t,0)\)</span> for <span class="process-math">\(-1 \le t \le 1\text{,}\)</span> and <span class="process-math">\(C_2\)</span> is <span class="process-math">\((x(t),y(t)) = (\cos t, \sin t)\)</span> for <span class="process-math">\(0 \le t \le \pi\text{.}\)</span> Sketch, on a separate sheet of paper, the curves <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\)</span> with arrows showing their orientation.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-segment-arc-2-2">Next, suppose that <span class="process-math">\(\mathbf{F} = 3x\,\mathbf{i} + (4x + 2y)\,\mathbf{j}\text{.}\)</span> Calculate <span class="process-math">\(\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r}\text{,}\)</span> where <span class="process-math">\(C\)</span> is the curve <span class="process-math">\(C = C_1 \cup C_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-segment-arc-2-3">
+<span class="process-math">\(\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r} =\)</span> <input type="text" placeholder="Number" size="10"><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"number": [6.273000000000001,6.293], "feedback": "<div class=\"para\" id=\"ex-hw3o-segment-arc-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-hw3o-segment-arc-3-1-2-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-segment-arc-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-segment-arc-4-1">The figure below shows the curves: <span class="process-math">\(C_1\)</span> runs along the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\((-1,0)\)</span> to <span class="process-math">\((1,0)\text{,}\)</span> and <span class="process-math">\(C_2\)</span> runs along the upper half of the unit circle from <span class="process-math">\((1,0)\)</span> back to <span class="process-math">\((-1,0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ex-hw3o-segment-arc-4-2"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;">
+<img src="generated/latex-image/image-hw3o-segment-arc.svg" role="img" class="contained" alt="A segment along the x axis from minus one to one, then the upper half of the unit circle back to minus one."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="image-hw3o-segment-arc-description"><div class="para" id="image-hw3o-segment-arc-2-1">The segment C one runs along the x axis from the point minus one comma zero to the point one comma zero, with an arrow pointing right. The curve C two is the upper half of the unit circle from one comma zero back to minus one comma zero, with an arrow at the top pointing left.<div class="autopermalink" data-description="Paragraph"><a href="#image-hw3o-segment-arc-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The curves <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\)</span> with their orientation.<div class="autopermalink" data-description="Figure 3.3.1"><a href="#ex-hw3o-segment-arc-4-2" title="Copy heading and permalink for Figure 3.3.1" aria-label="Copy heading and permalink for Figure 3.3.1">🔗</a></div></figcaption></figure><div class="para" id="ex-hw3o-segment-arc-4-3">On <span class="process-math">\(C_1\)</span> we have <span class="process-math">\(y = 0\)</span> and <span class="process-math">\(d\mathbf{r} = \mathbf{i}\,dx\text{,}\)</span> so only the <span class="process-math">\(\mathbf{i}\)</span>-component of <span class="process-math">\(\mathbf{F}\)</span> contributes:<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-hw3o-segment-arc-4-4">
+\begin{equation*}
+\int_{C_1} \mathbf{F} \cdot d\mathbf{r}
+= \int_{-1}^{1} 3x\,dx = \frac{3x^2}{2}\Big|_{-1}^{1} = 0 .
+\end{equation*}
+</div>
+<div class="para" id="ex-hw3o-segment-arc-4-5">On <span class="process-math">\(C_2\text{,}\)</span> <span class="process-math">\(\mathbf{r}'(t) = -\sin t\,\mathbf{i} + \cos t\,\mathbf{j}\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-hw3o-segment-arc-4-6">
+\begin{align*}
+\amp \int_{C_2} \mathbf{F} \cdot d\mathbf{r}\\
+\amp = \int_0^{\pi} \big(3\cos t\,\mathbf{i}
++ (4\cos t + 2\sin t)\,\mathbf{j}\big)\\
+\amp \quad \cdot \left(-\sin t\,\mathbf{i} + \cos t\,\mathbf{j}\right) dt\\
+\amp = \int_0^{\pi} \left(-\cos t\sin t + 4\cos^2 t\right) dt\\
+\amp = 2\pi .
+\end{align*}
+</div>
+<div class="para" id="ex-hw3o-segment-arc-4-7">Hence <span class="process-math">\(\int_C \mathbf{F} \cdot d\mathbf{r} = 0 + 2\pi = 2\pi \approx 6.283\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-segment-arc-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#ex-hw3o-segment-arc-4" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2: A Segment and a Half Circle"><a href="#ex-hw3o-segment-arc" title="Copy heading and permalink for Exercise 2: A Segment and a Half Circle" aria-label="Copy heading and permalink for Exercise 2: A Segment and a Half Circle">🔗</a></div></article><article class="exercise exercise-like" id="ex-hw3o-constant-field"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Constant Field Along a Segment.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-constant-field">
+<div class="para" id="ex-hw3o-constant-field-2-1">Sketch the vector field <span class="process-math">\(\mathbf{F}(x,y) = 3\,\mathbf{i} + 4\,\mathbf{j}\)</span> and calculate the line integral of <span class="process-math">\(\mathbf{F}\)</span> along the line segment from <span class="process-math">\((-1,3)\)</span> to <span class="process-math">\((4,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-constant-field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-constant-field-2-2">The line integral equals <input type="text" placeholder="Number" size="10">.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-constant-field-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"number": [6.99,7.01], "feedback": "<div class=\"para\" id=\"ex-hw3o-constant-field-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-hw3o-constant-field-3-1-2-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-constant-field-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-constant-field-4-1">The field is constant: every arrow is the same vector <span class="process-math">\(\left\langle 3, 4 \right\rangle\text{,}\)</span> of length <span class="process-math">\(5\text{,}\)</span> pointing up and to the right. Parametrize the segment by <span class="process-math">\(\mathbf{r}(t) = \left\langle -1 + 5t,\ 3 - 2t \right\rangle\text{,}\)</span> <span class="process-math">\(0 \le t \le 1\text{,}\)</span> so <span class="process-math">\(\mathbf{r}'(t) = \left\langle 5, -2 \right\rangle\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-constant-field-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-hw3o-constant-field-4-2">
+\begin{align*}
+\int_C \mathbf{F} \cdot d\mathbf{r}
+\amp = \int_0^1 (3 \cdot 5 + 4 \cdot (-2))\,dt\\
+\amp = 7 .
+\end{align*}
+</div>
+<div class="para" id="ex-hw3o-constant-field-4-3">For a constant field this is just <span class="process-math">\(\mathbf{F}\)</span> dotted with the displacement <span class="process-math">\(\left\langle 5, -2 \right\rangle\)</span> from the start of the segment to its end.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-constant-field-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#ex-hw3o-constant-field-4" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 3: A Constant Field Along a Segment"><a href="#ex-hw3o-constant-field" title="Copy heading and permalink for Exercise 3: A Constant Field Along a Segment" aria-label="Copy heading and permalink for Exercise 3: A Constant Field Along a Segment">🔗</a></div></article><article class="exercise exercise-like" id="ex-hw3o-helix-twice"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Twice Around a Helix.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-helix-twice">
+<div class="para" id="ex-hw3o-helix-twice-2-1">Find <span class="process-math">\(\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r}\)</span> for <span class="process-math">\(\mathbf{F} = 3y\,\mathbf{i} - 2x\,\mathbf{j} + z\,\mathbf{k}\)</span> if <span class="process-math">\(C\)</span> is the helix <span class="process-math">\(x = \cos t\text{,}\)</span> <span class="process-math">\(y = \sin t\text{,}\)</span> <span class="process-math">\(z = t\text{,}\)</span> for <span class="process-math">\(0 \le t \le 4\pi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-helix-twice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-helix-twice-2-2">
+<span class="process-math">\(\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r} =\)</span> <input type="text" placeholder="Number" size="10"><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-helix-twice-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"number": [47.521,47.561], "feedback": "<div class=\"para\" id=\"ex-hw3o-helix-twice-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-hw3o-helix-twice-3-1-2-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-helix-twice-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-helix-twice-4-1">Since <span class="process-math">\(C\)</span> is given by <span class="process-math">\(\mathbf{r} = \cos t\,\mathbf{i} + \sin t\,\mathbf{j} + t\,\mathbf{k}\text{,}\)</span> we have <span class="process-math">\(\mathbf{r}'(t) = -\sin t\,\mathbf{i} + \cos t\,\mathbf{j} + \mathbf{k}\text{.}\)</span> Thus<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-helix-twice-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-hw3o-helix-twice-4-2">
+\begin{align*}
+\amp \int_C \mathbf{F} \cdot d\mathbf{r}\\
+\amp \quad = \int_0^{4\pi} \left(3\sin t\,\mathbf{i}
+- 2\cos t\,\mathbf{j} + t\,\mathbf{k}\right)\\
+\amp \qquad\qquad \cdot \left(-\sin t\,\mathbf{i}
++ \cos t\,\mathbf{j} + \mathbf{k}\right) dt\\
+\amp \quad = \int_0^{4\pi} \left(-3\sin^2 t - 2\cos^2 t + t\right) dt\\
+\amp \quad = -6\pi - 4\pi + 8\pi^2 = 8\pi^2 - 10\pi\\
+\amp \quad \approx 47.541 .
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#ex-hw3o-helix-twice-4" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 4: Twice Around a Helix"><a href="#ex-hw3o-helix-twice" title="Copy heading and permalink for Exercise 4: Twice Around a Helix" aria-label="Copy heading and permalink for Exercise 4: Twice Around a Helix">🔗</a></div></article><figure class="figure figure-like" id="fig-hw3o-field"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-hw3o-field-diagcess.svg" data-cml="generated/prefigure/prefigure-hw3o-field-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The vector field <span class="process-math">\(\mathbf{F}\)</span> and the curve <span class="process-math">\(C\)</span> of <a href="sec-exercises-hw3-online.html#ex-hw3o-sign" class="xref" data-knowl="./knowl/xref/ex-hw3o-sign.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5: The Sign of a Line Integral">Exercise 5</a>. The curve is traversed in the direction of the arrowhead.<div class="autopermalink" data-description="Figure 3.3.2"><a href="#fig-hw3o-field" title="Copy heading and permalink for Figure 3.3.2" aria-label="Copy heading and permalink for Figure 3.3.2">🔗</a></div></figcaption></figure><article class="exercise exercise-like" id="ex-hw3o-sign"><h4 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Sign of a Line Integral.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-sign">
+<div class="para" id="ex-hw3o-sign-2-1">For the field and curve of <a href="sec-exercises-hw3-online.html#fig-hw3o-field" class="internal" title="Figure 3.3.2">Figure 3.3.2</a>, is <span class="process-math">\(\displaystyle\oint_C \mathbf{F} \cdot d\mathbf{r}\)</span> positive, negative, or zero? Type one word: <code class="code-inline tex2jax_ignore">positive</code>, <code class="code-inline tex2jax_ignore">negative</code>, or <code class="code-inline tex2jax_ignore">zero</code>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-sign-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-sign-2-2">Answer: <input type="text" placeholder="Text" size="12"><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-sign-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"regex": "^\\s*negative\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-sign-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*positive\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-sign-3-1-2-1-1\">Incorrect.<\/div>"}, {"regex": "^\\s*zero\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-sign-3-1-3-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-sign-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-sign-4-1">Along the bottom of <span class="process-math">\(C\)</span> the field and the unit tangent make acute angles, so <span class="process-math">\(\mathbf{F} \cdot \hat{\mathbf{T}} \gt 0\)</span> there; along the top they make obtuse angles, so <span class="process-math">\(\mathbf{F} \cdot \hat{\mathbf{T}} \lt 0\text{.}\)</span> The field is longer—stronger—over the top half, so the negative contribution wins and the integral is <dfn class="terminology">negative</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-sign-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#ex-hw3o-sign-4" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 5: The Sign of a Line Integral"><a href="#ex-hw3o-sign" title="Copy heading and permalink for Exercise 5: The Sign of a Line Integral" aria-label="Copy heading and permalink for Exercise 5: The Sign of a Line Integral">🔗</a></div></article><article class="exercise exercise-like" id="ex-hw3o-two-paths"><h4 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two Particles, Two Paths.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-two-paths">
+<div class="para" id="ex-hw3o-two-paths-2-1">With <span class="process-math">\(\mathbf{F} = \left\langle y, x \right\rangle\text{,}\)</span> find the work done from <span class="process-math">\((-1,1)\)</span> to <span class="process-math">\((1,1)\)</span> along the parabola <span class="process-math">\(C_1: y = 2x^2-1\)</span> and along <span class="process-math">\(C_2\text{,}\)</span> the bottom half of <span class="process-math">\(x^2 + (y-1)^2 = 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-two-paths-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-two-paths-2-2">Work along <span class="process-math">\(C_1\text{:}\)</span> <input type="text" placeholder="Number" size="10"> foot-pounds.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-two-paths-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-two-paths-2-3">Work along <span class="process-math">\(C_2\text{:}\)</span> <input type="text" placeholder="Number" size="10"> foot-pounds.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-two-paths-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"number": [1.99,2.01], "feedback": "<div class=\"para\" id=\"ex-hw3o-two-paths-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-hw3o-two-paths-3-1-2-1-1\">Incorrect.<\/div>"}], [{"number": [1.99,2.01], "feedback": "<div class=\"para\" id=\"ex-hw3o-two-paths-3-2-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-hw3o-two-paths-3-2-2-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-two-paths-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-two-paths-4-1">On <span class="process-math">\(C_1\text{,}\)</span> <span class="process-math">\(\mathbf{r}(t) = \left\langle t, 2t^2-1
+\right\rangle\)</span> with <span class="process-math">\(-1 \le t \le 1\text{,}\)</span> so <span class="process-math">\(\mathbf{F} \cdot \mathbf{v} = 6t^2 - 1\)</span> and <span class="process-math">\(W = \int_{-1}^{1}(6t^2-1)\,dt = 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-two-paths-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-hw3o-two-paths-4-2">On <span class="process-math">\(C_2\text{,}\)</span> <span class="process-math">\(\mathbf{r}(t) = \left\langle \cos t,
+1+\sin t \right\rangle\)</span> with <span class="process-math">\(\pi \le t \le 2\pi\text{,}\)</span> so <span class="process-math">\(\mathbf{F} \cdot \mathbf{v} = \cos(2t) - \sin t\)</span> and <span class="process-math">\(W = 2\)</span> again.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-two-paths-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-hw3o-two-paths-4-3">The two answers agree because <span class="process-math">\(\mathbf{F} = \nabla(xy)\)</span> is conservative—revisit this problem after <a href="section-conservative-fields.html" class="internal" title="Section 1.5: Path Independence, Conservative Fields, and Potential Functions">Path Independence, Conservative Fields, and Potential Functions</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-two-paths-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#ex-hw3o-two-paths-4" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 6: Two Particles, Two Paths"><a href="#ex-hw3o-two-paths" title="Copy heading and permalink for Exercise 6: Two Particles, Two Paths" aria-label="Copy heading and permalink for Exercise 6: Two Particles, Two Paths">🔗</a></div></article><article class="exercise exercise-like" id="ex-hw3o-helix"><h4 class="heading">
+<span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Line Integral Along a Helix.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-helix">
+<div class="para" id="ex-hw3o-helix-2-1">For the helix <span class="process-math">\(\mathbf{r}(t) = \left\langle \cos t, \sin t,
+t/2\pi \right\rangle\text{,}\)</span> <span class="process-math">\(0 \le t \le 2\pi\text{,}\)</span> compute <span class="process-math">\(\displaystyle\int_C x\,dy - y\,dx + dz\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-helix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-helix-2-2">The integrand <span class="process-math">\(\mathbf{F} \cdot \mathbf{v}\)</span> is the constant <input type="text" placeholder="Number" size="10">, and the integral equals <input type="text" placeholder="Number" size="10">.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-helix-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"number": [1.154,1.164], "feedback": "<div class=\"para\" id=\"ex-hw3o-helix-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"ex-hw3o-helix-3-1-2-1-1\">Incorrect.<\/div>"}], [{"number": [7.273000000000001,7.293], "feedback": "<div class=\"para\" id=\"ex-hw3o-helix-3-2-1-1-1\">Correct.<\/div>"}, {"number": [6.273000000000001,6.293], "feedback": "<div class=\"para\" id=\"ex-hw3o-helix-3-2-2-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-helix-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-helix-4-1">The integral is <span class="process-math">\(\int_C \mathbf{F} \cdot d\mathbf{r}\)</span> with <span class="process-math">\(\mathbf{F} = \left\langle -y, x, 1 \right\rangle\text{.}\)</span> Along the helix <span class="process-math">\(\mathbf{F} = \left\langle -\sin t, \cos t, 1
+\right\rangle\)</span> and <span class="process-math">\(\mathbf{v} = \left\langle -\sin t, \cos t, \frac{1}{2\pi}
+\right\rangle\text{,}\)</span> so <span class="process-math">\(\mathbf{F} \cdot \mathbf{v} = 1 + \frac{1}{2\pi}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-helix-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-hw3o-helix-4-2">
+\begin{align*}
+\amp \int_C x\,dy - y\,dx + dz\\
+\amp \quad = \int_0^{2\pi}\left(1 + \frac{1}{2\pi}\right) dt\\
+\amp \quad = 2\pi + 1 \approx 7.283 .
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#ex-hw3o-helix-4" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 7: A Line Integral Along a Helix"><a href="#ex-hw3o-helix" title="Copy heading and permalink for Exercise 7: A Line Integral Along a Helix" aria-label="Copy heading and permalink for Exercise 7: A Line Integral Along a Helix">🔗</a></div></article><figure class="figure figure-like" id="fig-hw3o-paths"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-hw3o-paths-diagcess.svg" data-cml="generated/prefigure/prefigure-hw3o-paths-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The vector field <span class="process-math">\(\mathbf{F}\)</span> and the two paths <span class="process-math">\(ADC\)</span> and <span class="process-math">\(ABC\)</span> of <a href="sec-exercises-hw3-online.html#ex-hw3o-less-work" class="xref" data-knowl="./knowl/xref/ex-hw3o-less-work.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 8: Which Path Takes Less Work?">Exercise 8</a>. Every field vector points in the same direction; only their lengths change.<div class="autopermalink" data-description="Figure 3.3.3"><a href="#fig-hw3o-paths" title="Copy heading and permalink for Figure 3.3.3" aria-label="Copy heading and permalink for Figure 3.3.3">🔗</a></div></figcaption></figure><article class="exercise exercise-like" id="ex-hw3o-less-work"><h4 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Which Path Takes Less Work?</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="" id="rs-ex-hw3o-less-work">
+<div class="para" id="ex-hw3o-less-work-2-1">For the field of <a href="sec-exercises-hw3-online.html#fig-hw3o-paths" class="internal" title="Figure 3.3.3">Figure 3.3.3</a>: over which path does <span class="process-math">\(\mathbf{F}\)</span> perform less work? Type <code class="code-inline tex2jax_ignore">ADC</code> or <code class="code-inline tex2jax_ignore">ABC</code>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-less-work-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-less-work-2-2">Answer: <input type="text" placeholder="Text" size="8"><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-less-work-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-less-work-2-3">Is <span class="process-math">\(\mathbf{F}\)</span> conservative? Type <code class="code-inline tex2jax_ignore">yes</code> or <code class="code-inline tex2jax_ignore">no</code>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-less-work-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-hw3o-less-work-2-4">Answer: <input type="text" placeholder="Text" size="8"><div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-less-work-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"regex": "^\\s*abc\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-less-work-3-1-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*adc\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-less-work-3-1-2-1-1\">Incorrect.<\/div>"}], [{"regex": "^\\s*no\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-less-work-3-2-1-1-1\">Correct.<\/div>"}, {"regex": "^\\s*yes\\s*$", "regexFlags": "i", "feedback": "<div class=\"para\" id=\"ex-hw3o-less-work-3-2-2-1-1\">Incorrect.<\/div>"}]]</script>
+</div></div></div>
+<div class="solutions"><div class="solution solution-like" id="ex-hw3o-less-work-4">
+<h4 class="heading">
+<span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-hw3o-less-work-4-1">Both paths run along two sides of the square. The horizontal sides <span class="process-math">\(AD\)</span> and <span class="process-math">\(BC\)</span> contribute the same, but the vertical side <span class="process-math">\(DC\)</span> sits where the field is longer than it is along <span class="process-math">\(AB\text{,}\)</span> and the angle between <span class="process-math">\(\mathbf{F}\)</span> and <span class="process-math">\(\hat{\mathbf{T}}\)</span> is the same on both. Hence <span class="process-math">\(\int_{ADC} \gt \int_{ABC}\text{,}\)</span> so <span class="process-math">\(ABC\)</span> is the path of less work.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-less-work-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-hw3o-less-work-4-2">Because the two paths share their endpoints and give different work, <span class="process-math">\(\mathbf{F}\)</span> is <dfn class="terminology">not</dfn> conservative: a conservative field is path-independent.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hw3o-less-work-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#ex-hw3o-less-work-4" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Exercise 8: Which Path Takes Less Work?"><a href="#ex-hw3o-less-work" title="Copy heading and permalink for Exercise 8: Which Path Takes Less Work?" aria-label="Copy heading and permalink for Exercise 8: Which Path Takes Less Work?">🔗</a></div></article><div class="autopermalink" data-description="Exercises"><a href="#exercises-hw3-online" title="Copy heading and permalink for Exercises" aria-label="Copy heading and permalink for Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Assignment 3"><a href="#sec-exercises-hw3-online" title="Copy heading and permalink for Section 3.3: Assignment 3" aria-label="Copy heading and permalink for Section 3.3: Assignment 3">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-exercises-hw2-online.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercises-review1-practice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<script>diagcess.Base.init()</script><script src="external/math-input-palette.js"></script><script src="external/custom.js"></script>
+</body>
+</html>
