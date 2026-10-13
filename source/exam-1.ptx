@@ -36,8 +36,7 @@
         <li><p><xref ref="sec-arc-length" text="title"/></p></li>
         <li><p><xref ref="sec-line-integrals" text="title"/></p></li>
         <li><p><xref ref="sec-vector-fields" text="title"/></p></li>
-        <li><p>Path Independence, Conservative Fields, and Potential Functions
-          <!-- plain text, as on the sample exam, so that this page never holds up the desk: <xref ref="section-conservative-fields"/> --></p></li>
+        <li><p><xref ref="section-conservative-fields" text="title"/></p></li>
       </ul>
     </p>
   </introduction>
@@ -49,12 +48,11 @@
       <p>
         Two particles move in the plane. At time <m>t</m> their position
         vectors are
-        <me>
-          \mathbf{r}_1(t) = \left\langle t,\ t^2 \right\rangle
-          \qquad\text{and}\qquad
-          \mathbf{r}_2(t) = \left\langle 2t - 3,\ 2t + 3 \right\rangle,
-          \qquad t \in \mathbb{R}.
-        </me>
+        <md>
+          <mrow>\mathbf{r}_1(t) \amp = \left\langle t,\ t^2 \right\rangle</mrow>
+          <mrow>\mathbf{r}_2(t) \amp = \left\langle 2t - 3,\ 2t + 3 \right\rangle,
+            \quad t \in \mathbb{R}.</mrow>
+        </md>
       </p>
     </introduction>
 
@@ -68,11 +66,11 @@
         <p>
           Solve <m>\mathbf{r}_1(t) = \mathbf{r}_2(s)</m> (different
           parameters): <m>t = 2s - 3</m> and <m>t^2 = 2s + 3</m>, so
-          <me>
-            (2s - 3)^2 = 2s + 3
-            \;\Rightarrow\; 4s^2 - 14s + 6 = 0
-            \;\Rightarrow\; (2s - 1)(s - 3) = 0 :
-          </me>
+          <md>
+            <mrow>(2s - 3)^2 \amp = 2s + 3</mrow>
+            <mrow>\Rightarrow\quad 4s^2 - 14s + 6 \amp = 0</mrow>
+            <mrow>\Rightarrow\quad (2s - 1)(s - 3) \amp = 0 :</mrow>
+          </md>
           <m>s = \frac12</m> (<m>t = -2</m>) or <m>s = 3</m> (<m>t = 3</m>).
           Intersection points: <m>(-2, 4)</m> and <m>(3, 9)</m>.
           (Equivalently: the parabola <m>y = x^2</m> meets the line
@@ -144,16 +142,18 @@
       </statement>
       <solution>
         <p>
-          Speed (with <m>\mathbf{v}</m> from (a)):
-          <m>\lVert \mathbf{v}(t) \rVert = \sqrt{4t^2 + 4 + \frac{1}{t^2}}
-          = \sqrt{\left(2t + \frac1t\right)^2} = 2t + \frac1t</m>
-          (<m>t \gt 0</m>). The points are <m>\mathbf{r}(1)</m> and
-          <m>\mathbf{r}(e)</m>, so
-          <me>
-            L = \int_1^e \left(2t + \frac1t\right) dt
-            = \Bigl[\, t^2 + \ln t \,\Bigr]_1^e
-            = \left(e^2 + 1\right) - (1 + 0) = e^2 .
-          </me>
+          Speed (with <m>\mathbf{v}</m> from (a)), for <m>t \gt 0</m>:
+          <md>
+            <mrow>\lVert \mathbf{v}(t) \rVert
+              \amp = \sqrt{4t^2 + 4 + \frac{1}{t^2}}</mrow>
+            <mrow>\amp = \sqrt{\left(2t + \frac1t\right)^2} = 2t + \frac1t .</mrow>
+          </md>
+          The points are <m>\mathbf{r}(1)</m> and <m>\mathbf{r}(e)</m>, so
+          <md>
+            <mrow>L \amp = \int_1^e \left(2t + \frac1t\right) dt
+              = \Bigl[\, t^2 + \ln t \,\Bigr]_1^e</mrow>
+            <mrow>\amp = \left(e^2 + 1\right) - (1 + 0) = e^2 .</mrow>
+          </md>
         </p>
       </solution>
     </task>
@@ -178,12 +178,12 @@
           With <m>\mathbf{r}(t) = \langle 2\cos t, 2\sin t \rangle</m>,
           <m>0 \le t \le \frac{\pi}{2}</m>, and
           <m>\lVert \mathbf{v}(t) \rVert = \lVert \langle -2\sin t, 2\cos t \rangle \rVert = 2</m>,
-          <me>
-            \text{Area} = \int_C (1 + xy)\, ds
-            = \int_0^{\pi/2} (1 + 4\cos t\sin t)\, 2\, dt
-            = \pi + 8\left[\frac{\sin^2 t}{2}\right]_0^{\pi/2}
-            = \pi + 4 \ \text{m}^2 .
-          </me>
+          <md>
+            <mrow>\text{Area} \amp = \int_C (1 + xy)\, ds</mrow>
+            <mrow>\amp = \int_0^{\pi/2} (1 + 4\cos t\sin t)\, 2\, dt</mrow>
+            <mrow>\amp = \pi + 8\left[\frac{\sin^2 t}{2}\right]_0^{\pi/2}
+              = \pi + 4 \ \text{m}^2 .</mrow>
+          </md>
         </p>
       </solution>
     </task>
@@ -201,12 +201,12 @@
         <p>
           With <m>\mathbf{r}(t) = \langle 2\cos t, 2\sin t \rangle</m>,
           <m>0 \le t \le 2\pi</m>, and <m>\lVert \mathbf{v} \rVert = 2</m>,
-          <me>
-            M = \int_C (3 + x)\, ds
-            = \int_0^{2\pi} (3 + 2\cos t)\, 2\, dt
-            = 12\pi + 4\Bigl[\, \sin t \,\Bigr]_0^{2\pi}
-            = 12\pi \ \text{g}.
-          </me>
+          <md>
+            <mrow>M \amp = \int_C (3 + x)\, ds</mrow>
+            <mrow>\amp = \int_0^{2\pi} (3 + 2\cos t)\, 2\, dt</mrow>
+            <mrow>\amp = 12\pi + 4\Bigl[\, \sin t \,\Bigr]_0^{2\pi}
+              = 12\pi \ \text{g}.</mrow>
+          </md>
           (Or: <m>\int_C 3\, ds = 3 \cdot (\text{length}) = 3 \cdot 4\pi</m>,
           and <m>\int_C x\, ds = 0</m> since the circle is symmetric about
           the <m>y</m>-axis and <m>x</m> changes sign under that
@@ -232,14 +232,19 @@
     </statement>
     <solution>
       <p>
-        <m>\mathbf{F} \cdot \mathbf{T}
-        = \lVert \mathbf{F} \rVert\, \lVert \mathbf{T} \rVert \cos 60^\circ
-        = 4 \cdot 1 \cdot \frac12 = 2</m> at every point, so
+        At every point
         <me>
-          W = \oint_C \mathbf{F} \cdot \mathbf{T}\, ds
-          = \oint_C 2\, ds = 2 \cdot (\text{length of } C)
-          = 2 \cdot 2\pi(3) = 12\pi \ \text{J}.
+          \mathbf{F} \cdot \mathbf{T}
+          = \lVert \mathbf{F} \rVert\, \lVert \mathbf{T} \rVert \cos 60^\circ
+          = 4 \cdot 1 \cdot \frac12 = 2,
         </me>
+        so
+        <md>
+          <mrow>W \amp = \oint_C \mathbf{F} \cdot \mathbf{T}\, ds
+            = \oint_C 2\, ds</mrow>
+          <mrow>\amp = 2 \cdot (\text{length of } C)
+            = 2 \cdot 2\pi(3) = 12\pi \ \text{J}.</mrow>
+        </md>
       </p>
     </solution>
   </exercise>
@@ -300,35 +305,44 @@
     <statement>
       <p>
         Consider the vector field
-        <me>
-          \mathbf{F}(x, y, z) = (2xy + z)\,\mathbf{i}
-          + \left(x^2 + 2y\right)\mathbf{j} + (x + 2z)\,\mathbf{k}.
-        </me>
+        <md>
+          <mrow>\mathbf{F}(x, y, z) \amp = (2xy + z)\,\mathbf{i}
+            + \left(x^2 + 2y\right)\mathbf{j}</mrow>
+          <mrow>\amp \qquad + (x + 2z)\,\mathbf{k}.</mrow>
+        </md>
         Evaluate <m>\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r}</m>,
         where <m>C</m> is the curve
-        <me>
-          \mathbf{r}(t) = \left\langle t^2,\ 1 + t^3,\ \sin\!\left(\frac{\pi t}{2}\right) \right\rangle,
-          \qquad 0 \le t \le 1 .
-        </me>
+        <md>
+          <mrow>\mathbf{r}(t) \amp = \left\langle t^2,\ 1 + t^3,\ \sin\!\left(\frac{\pi t}{2}\right) \right\rangle,</mrow>
+          <mrow>\amp \qquad 0 \le t \le 1 .</mrow>
+        </md>
         Remember to include <em>all the steps</em> of your work.
       </p>
     </statement>
     <solution>
       <p>
         Potential <m>f</m> (<m>\nabla f = \mathbf{F}</m>):
-        <m>f_x = 2xy + z \Rightarrow f = x^2 y + xz + g(y, z)</m>;
-        <m>f_y = x^2 + g_y = x^2 + 2y \Rightarrow g = y^2 + h(z)</m>;
-        <m>f_z = x + h'(z) = x + 2z \Rightarrow h = z^2 + K</m>. So
-        <m>f = x^2 y + xz + y^2 + z^2</m> (plus any constant); check:
-        <m>\nabla f = \left\langle 2xy + z,\ x^2 + 2y,\ x + 2z \right\rangle = \mathbf{F}</m>.
+        <md>
+          <mrow>\amp f_x = 2xy + z</mrow>
+          <mrow>\Rightarrow\quad \amp f = x^2 y + xz + g(y, z);</mrow>
+          <mrow>\amp f_y = x^2 + g_y = x^2 + 2y</mrow>
+          <mrow>\Rightarrow\quad \amp g = y^2 + h(z);</mrow>
+          <mrow>\amp f_z = x + h'(z) = x + 2z</mrow>
+          <mrow>\Rightarrow\quad \amp h = z^2 + K.</mrow>
+        </md>
+        So <m>f = x^2 y + xz + y^2 + z^2</m> (plus any constant); check:
+        <me>
+          \nabla f = \left\langle 2xy + z,\ x^2 + 2y,\ x + 2z \right\rangle = \mathbf{F}.
+        </me>
         Since <m>\nabla f</m> is continuous everywhere and <m>C</m> is
         smooth, the Fundamental Theorem of Line Integrals applies, with
         <m>A = \mathbf{r}(0) = (0, 1, 0)</m> and
         <m>B = \mathbf{r}(1) = (1, 2, 1)</m>:
-        <me>
-          \int_C \mathbf{F} \cdot d\mathbf{r} = f(B) - f(A)
-          = \bigl(1 \cdot 2 + 1 \cdot 1 + 4 + 1\bigr) - \bigl(0 + 0 + 1 + 0\bigr) = 7 .
-        </me>
+        <md>
+          <mrow>\int_C \mathbf{F} \cdot d\mathbf{r} \amp = f(B) - f(A)</mrow>
+          <mrow>\amp = \bigl(1 \cdot 2 + 1 \cdot 1 + 4 + 1\bigr)</mrow>
+          <mrow>\amp \qquad - \bigl(0 + 0 + 1 + 0\bigr) = 7 .</mrow>
+        </md>
         (A direct computation from the parametrization gives the same value
         but is much longer.)
       </p>
@@ -393,10 +407,10 @@
           <m>\mathbf{r}'(t) = \langle -\sin t, \cos t \rangle</m>, and,
           using <m>\sin^2 t = 1 - \cos^2 t</m> and <m>u = \cos t</m>,
           <md>
-            <mrow>\oint_C \mathbf{F} \cdot d\mathbf{r}
-              \amp = \int_0^{2\pi} \left(-\sin^3 t + \cos^2 t\sin t\right) dt
-              = \int_0^{2\pi} \left(2\cos^2 t - 1\right)\sin t\, dt</mrow>
-            <mrow>\amp = \Bigl[\, -\tfrac23\cos^3 t + \cos t \,\Bigr]_0^{2\pi} = 0,</mrow>
+            <mrow>\amp \oint_C \mathbf{F} \cdot d\mathbf{r}</mrow>
+            <mrow>\amp \quad = \int_0^{2\pi} \left(-\sin^3 t + \cos^2 t\sin t\right) dt</mrow>
+            <mrow>\amp \quad = \int_0^{2\pi} \left(2\cos^2 t - 1\right)\sin t\, dt</mrow>
+            <mrow>\amp \quad = \Bigl[\, -\tfrac23\cos^3 t + \cos t \,\Bigr]_0^{2\pi} = 0,</mrow>
           </md>
           yet <m>\mathbf{F}</m> is not conservative by (a). The loop property
           requires <m>\oint_C \mathbf{G} \cdot d\mathbf{r} = 0</m> around

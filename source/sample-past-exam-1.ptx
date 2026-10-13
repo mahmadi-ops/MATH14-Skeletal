@@ -42,8 +42,7 @@
         <li><p><xref ref="sec-arc-length" text="title"/></p></li>
         <li><p><xref ref="sec-line-integrals" text="title"/></p></li>
         <li><p><xref ref="sec-vector-fields" text="title"/></p></li>
-        <li><p>Path Independence, Conservative Fields, and Potential Functions
-          <!-- plain text until that section is posted: <xref ref="section-conservative-fields"/> --></p></li>
+        <li><p><xref ref="section-conservative-fields" text="title"/></p></li>
       </ul>
     </p>
   </introduction>
