@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Exam 1, with brief solutions.
+
+  Transcribed from the instructor's answer key of the Fall 2026 first exam
+  (MATH14-Exam1-Brief-Solutions.pdf): the six problems with their point
+  values, and the short solutions of the key, kept as short as they are
+  there.  The cover page's instructions are the introduction; its score
+  table and "Answers at a glance" are left out, since every answer sits
+  in the solution under its problem.  Built like sample-past-exam-1.ptx:
+  one exercise per problem, a task per part, a solution under each, and
+  the "sec-exercises-" id prefix, so assets/unnumbered-chapter.css hides
+  its number and xsl/custom-html.xsl keeps its solutions behind knowls
+  (it is a worksheet).  The solutions carry no component: like the sample
+  exam's, they are always available.  Included from main.ptx right after
+  Sample Past Exam 1, in the skeletal book and in the completed
+  instructor book; the two copies are identical.
+-->
+<worksheet xml:id="sec-exercises-exam-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Exam 1</title>
+
+  <introduction>
+    <p>
+      The first exam of Fall 2026, with brief solutions. It had six
+      problems worth 20 points in all, and 65 minutes to do them in. It
+      was a closed-book exam: no aids of one's own (formula sheets, notes,
+      phones, tablets, smart watches or similar) and no calculators of any
+      kind were permitted. Students were asked to write their work in a
+      neat and organized format, to fully justify every step, and to give
+      exact answers. Try the exam under the same conditions before you look
+      at the solutions. The topics it covers, with links to the notes:
+    </p>
+    <p>
+      <ul>
+        <li><p><xref ref="sec-parametrization" text="title"/></p></li>
+        <li><p><xref ref="sec-arc-length" text="title"/></p></li>
+        <li><p><xref ref="sec-line-integrals" text="title"/></p></li>
+        <li><p><xref ref="sec-vector-fields" text="title"/></p></li>
+        <li><p>Path Independence, Conservative Fields, and Potential Functions
+          <!-- plain text, as on the sample exam, so that this page never holds up the desk: <xref ref="section-conservative-fields"/> --></p></li>
+      </ul>
+    </p>
+  </introduction>
+
+  <!-- ===================== Problem 1 ===================== -->
+  <exercise xml:id="exam1-q1">
+    <title>(3 points)</title>
+    <introduction>
+      <p>
+        Two particles move in the plane. At time <m>t</m> their position
+        vectors are
+        <me>
+          \mathbf{r}_1(t) = \left\langle t,\ t^2 \right\rangle
+          \qquad\text{and}\qquad
+          \mathbf{r}_2(t) = \left\langle 2t - 3,\ 2t + 3 \right\rangle,
+          \qquad t \in \mathbb{R}.
+        </me>
+      </p>
+    </introduction>
+
+    <task xml:id="exam1-q1-a">
+      <statement>
+        <p>
+          Find all intersection points of the two paths. (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Solve <m>\mathbf{r}_1(t) = \mathbf{r}_2(s)</m> (different
+          parameters): <m>t = 2s - 3</m> and <m>t^2 = 2s + 3</m>, so
+          <me>
+            (2s - 3)^2 = 2s + 3
+            \;\Rightarrow\; 4s^2 - 14s + 6 = 0
+            \;\Rightarrow\; (2s - 1)(s - 3) = 0 :
+          </me>
+          <m>s = \frac12</m> (<m>t = -2</m>) or <m>s = 3</m> (<m>t = 3</m>).
+          Intersection points: <m>(-2, 4)</m> and <m>(3, 9)</m>.
+          (Equivalently: the parabola <m>y = x^2</m> meets the line
+          <m>y = x + 6</m> where <m>x^2 = x + 6</m>, i.e.
+          <m>x = -2</m> or <m>3</m>.)
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="exam1-q1-b">
+      <statement>
+        <p>
+          Find all collision points of the two particles. (1 point)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Same place at the same time: <m>\mathbf{r}_1(t) = \mathbf{r}_2(t)</m>
+          gives <m>t = 2t - 3</m>, so <m>t = 3</m>, and
+          <m>t^2 = 9 = 2(3) + 3</m> checks. Only collision point:
+          <m>(3, 9)</m>, at <m>t = 3</m>. (<m>(-2, 4)</m> is not one:
+          particle 1 is there at <m>t = -2</m>, particle 2 at
+          <m>t = \frac12</m>.)
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Problem 2 ===================== -->
+  <exercise xml:id="exam1-q2">
+    <title>(4 points)</title>
+    <introduction>
+      <p>
+        An object moves along the curve
+        <me>
+          \mathbf{r}(t) = \left\langle t^2,\ 2t,\ \ln t \right\rangle,
+          \qquad t \gt 0.
+        </me>
+      </p>
+    </introduction>
+
+    <task xml:id="exam1-q2-a">
+      <statement>
+        <p>
+          Find the velocity <m>\mathbf{v}(t)</m> and parametric equations
+          of the tangent line to the curve at the point <m>(1, 2, 0)</m>.
+          (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>\mathbf{v}(t) = \mathbf{r}'(t) = \left\langle 2t,\ 2,\ \frac1t \right\rangle</m>;
+          <m>(1, 2, 0) = \mathbf{r}(1)</m> and
+          <m>\mathbf{v}(1) = \langle 2, 2, 1 \rangle</m>, so the tangent
+          line is <m>\langle 1, 2, 0 \rangle + s\,\langle 2, 2, 1 \rangle</m>,
+          i.e. <m>x = 1 + 2s</m>, <m>y = 2 + 2s</m>, <m>z = s</m>
+          (<m>s \in \mathbb{R}</m>).
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="exam1-q2-b">
+      <statement>
+        <p>
+          Find the distance traveled by the object from the point
+          <m>(1, 2, 0)</m> to the point <m>\left(e^2, 2e, 1\right)</m>.
+          (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Speed (with <m>\mathbf{v}</m> from (a)):
+          <m>\lVert \mathbf{v}(t) \rVert = \sqrt{4t^2 + 4 + \frac{1}{t^2}}
+          = \sqrt{\left(2t + \frac1t\right)^2} = 2t + \frac1t</m>
+          (<m>t \gt 0</m>). The points are <m>\mathbf{r}(1)</m> and
+          <m>\mathbf{r}(e)</m>, so
+          <me>
+            L = \int_1^e \left(2t + \frac1t\right) dt
+            = \Bigl[\, t^2 + \ln t \,\Bigr]_1^e
+            = \left(e^2 + 1\right) - (1 + 0) = e^2 .
+          </me>
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Problem 3 ===================== -->
+  <exercise xml:id="exam1-q3">
+    <title>(3 points)</title>
+
+    <task xml:id="exam1-q3-a">
+      <statement>
+        <p>
+          A wall stands on the quarter of the circle <m>x^2 + y^2 = 4</m>
+          that runs from <m>(2, 0)</m> to <m>(0, 2)</m> in the first
+          quadrant. Its height above the point <m>(x, y)</m> is
+          <m>h(x, y) = 1 + xy</m>, where all lengths are in meters. Find the
+          area of one side of the wall. (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          With <m>\mathbf{r}(t) = \langle 2\cos t, 2\sin t \rangle</m>,
+          <m>0 \le t \le \frac{\pi}{2}</m>, and
+          <m>\lVert \mathbf{v}(t) \rVert = \lVert \langle -2\sin t, 2\cos t \rangle \rVert = 2</m>,
+          <me>
+            \text{Area} = \int_C (1 + xy)\, ds
+            = \int_0^{\pi/2} (1 + 4\cos t\sin t)\, 2\, dt
+            = \pi + 8\left[\frac{\sin^2 t}{2}\right]_0^{\pi/2}
+            = \pi + 4 \ \text{m}^2 .
+          </me>
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="exam1-q3-b">
+      <statement>
+        <p>
+          A thin wire has the shape of the whole circle
+          <m>x^2 + y^2 = 4</m>, and its density at the point
+          <m>(x, y)</m> is <m>\rho(x, y) = 3 + x</m> grams per meter. Find
+          the mass of the wire. (1 point)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          With <m>\mathbf{r}(t) = \langle 2\cos t, 2\sin t \rangle</m>,
+          <m>0 \le t \le 2\pi</m>, and <m>\lVert \mathbf{v} \rVert = 2</m>,
+          <me>
+            M = \int_C (3 + x)\, ds
+            = \int_0^{2\pi} (3 + 2\cos t)\, 2\, dt
+            = 12\pi + 4\Bigl[\, \sin t \,\Bigr]_0^{2\pi}
+            = 12\pi \ \text{g}.
+          </me>
+          (Or: <m>\int_C 3\, ds = 3 \cdot (\text{length}) = 3 \cdot 4\pi</m>,
+          and <m>\int_C x\, ds = 0</m> since the circle is symmetric about
+          the <m>y</m>-axis and <m>x</m> changes sign under that
+          reflection.)
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Problem 4 ===================== -->
+  <exercise xml:id="exam1-q4">
+    <title>(2 points)</title>
+    <statement>
+      <p>
+        An object moves once counterclockwise around the circle
+        <m>x^2 + y^2 = 9</m> (in meters). Throughout the motion it is acted
+        on by a force <m>\mathbf{F}</m> of constant magnitude
+        <m>\lVert \mathbf{F} \rVert = 4</m> newtons that always makes an
+        angle of <m>60^\circ</m> with the unit tangent vector
+        <m>\mathbf{T}</m> of the path (<xref ref="fig-exam1-force"/>). Find
+        the work done by <m>\mathbf{F}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>\mathbf{F} \cdot \mathbf{T}
+        = \lVert \mathbf{F} \rVert\, \lVert \mathbf{T} \rVert \cos 60^\circ
+        = 4 \cdot 1 \cdot \frac12 = 2</m> at every point, so
+        <me>
+          W = \oint_C \mathbf{F} \cdot \mathbf{T}\, ds
+          = \oint_C 2\, ds = 2 \cdot (\text{length of } C)
+          = 2 \cdot 2\pi(3) = 12\pi \ \text{J}.
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- The point of the circle where the vectors are drawn sits at 35 degrees:
+       T, the counterclockwise unit tangent, points at 125 degrees, and F,
+       60 degrees further on, at 185 degrees, into the circle, as on the
+       exam's own picture. -->
+  <figure xml:id="fig-exam1-force">
+    <caption>
+      The path <m>C</m> of <xref ref="exam1-q4"/>, traversed
+      counterclockwise, with the unit tangent <m>\mathbf{T}</m> and the
+      force <m>\mathbf{F}</m> at one of its points: the angle between them
+      is <m>60^\circ</m> at every point of <m>C</m>.
+    </caption>
+    <image width="50%">
+      <shortdescription>
+      A circle about the origin, traversed counterclockwise, with a tangent vector T and a force F at sixty degrees to it at one point.
+      </shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-exam1-force">
+        <diagram dimensions="(320,320)" margins="10">
+          <definition>P = 3*(cos(35*pi/180), sin(35*pi/180))</definition>
+          <definition>T = 1.45*(-sin(35*pi/180), cos(35*pi/180))</definition>
+          <definition>F = 1.6*(cos(185*pi/180), sin(185*pi/180))</definition>
+          <coordinates bbox="(-3.7,-3.7,3.7,3.7)">
+            <circle at="ef-C" center="(0,0)" radius="3" fill="none"
+                stroke="black" thickness="2"/>
+            <arc at="ef-dir" center="(0,0)" radius="3" range="(-62,-40)"
+                stroke="black" thickness="2" arrows="1"/>
+            <point at="ef-O" p="(0,0)" size="2.5" fill="black"/>
+            <label at="ef-Olabel" anchor="(-0.12,-0.12)" alignment="sw"><m>O</m></label>
+            <label at="ef-Clabel" anchor="(1.45,-2.75)" alignment="se"><m>C</m></label>
+            <vector at="ef-T" v="T" tail="P" stroke="#0072B2" thickness="3"/>
+            <label at="ef-Tlabel" anchor="P+T" alignment="n"><m>\mathbf{T}</m></label>
+            <vector at="ef-F" v="F" tail="P" stroke="#D55E00" thickness="3"/>
+            <label at="ef-Flabel" anchor="P+F" alignment="s"><m>\mathbf{F}</m></label>
+            <angle-marker at="ef-angle" points="(P+T, P, P+F)" radius="26"
+                thickness="1.5"><m>60^\circ</m></angle-marker>
+            <point at="ef-P" p="P" size="2.5" fill="black"/>
+          </coordinates>
+          <annotations>
+            <annotation ref="figure" text="A circle C centered at the origin O, with a small arrow on its lower right showing that it is traversed counterclockwise. At a point on its upper right, two vectors start: the unit tangent T, in blue, pointing up and to the left along the direction of motion, and the force F, in vermillion, pointing left into the circle. The angle between them is marked sixty degrees.">
+              <annotation ref="ef-C" text="The circle C, x squared plus y squared equals 9, centered at the origin."/>
+              <annotation ref="ef-dir" text="An arrow on the circle: the motion is counterclockwise."/>
+              <annotation ref="ef-T" text="The unit tangent vector T, in blue, in the direction of motion."/>
+              <annotation ref="ef-F" text="The force F, in vermillion, of magnitude 4 newtons."/>
+              <annotation ref="ef-angle" text="The angle between T and F, sixty degrees."/>
+            </annotation>
+          </annotations>
+        </diagram>
+      </prefigure>
+    </image>
+  </figure>
+
+  <!-- ===================== Problem 5 ===================== -->
+  <exercise xml:id="exam1-q5">
+    <title>(4 points)</title>
+    <statement>
+      <p>
+        Consider the vector field
+        <me>
+          \mathbf{F}(x, y, z) = (2xy + z)\,\mathbf{i}
+          + \left(x^2 + 2y\right)\mathbf{j} + (x + 2z)\,\mathbf{k}.
+        </me>
+        Evaluate <m>\displaystyle\int_C \mathbf{F} \cdot d\mathbf{r}</m>,
+        where <m>C</m> is the curve
+        <me>
+          \mathbf{r}(t) = \left\langle t^2,\ 1 + t^3,\ \sin\!\left(\frac{\pi t}{2}\right) \right\rangle,
+          \qquad 0 \le t \le 1 .
+        </me>
+        Remember to include <em>all the steps</em> of your work.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Potential <m>f</m> (<m>\nabla f = \mathbf{F}</m>):
+        <m>f_x = 2xy + z \Rightarrow f = x^2 y + xz + g(y, z)</m>;
+        <m>f_y = x^2 + g_y = x^2 + 2y \Rightarrow g = y^2 + h(z)</m>;
+        <m>f_z = x + h'(z) = x + 2z \Rightarrow h = z^2 + K</m>. So
+        <m>f = x^2 y + xz + y^2 + z^2</m> (plus any constant); check:
+        <m>\nabla f = \left\langle 2xy + z,\ x^2 + 2y,\ x + 2z \right\rangle = \mathbf{F}</m>.
+        Since <m>\nabla f</m> is continuous everywhere and <m>C</m> is
+        smooth, the Fundamental Theorem of Line Integrals applies, with
+        <m>A = \mathbf{r}(0) = (0, 1, 0)</m> and
+        <m>B = \mathbf{r}(1) = (1, 2, 1)</m>:
+        <me>
+          \int_C \mathbf{F} \cdot d\mathbf{r} = f(B) - f(A)
+          = \bigl(1 \cdot 2 + 1 \cdot 1 + 4 + 1\bigr) - \bigl(0 + 0 + 1 + 0\bigr) = 7 .
+        </me>
+        (A direct computation from the parametrization gives the same value
+        but is much longer.)
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ===================== Problem 6 ===================== -->
+  <exercise xml:id="exam1-q6">
+    <title>(4 points)</title>
+    <introduction>
+      <p>
+        Decide whether each statement below is true or false. Clearly
+        justify your answer: a correct answer with an incorrect or unclear
+        justification will not earn credit.
+      </p>
+    </introduction>
+
+    <task xml:id="exam1-q6-a">
+      <statement>
+        <p>
+          <alert>True or False?</alert> The vector field
+          <m>\mathbf{F}(x, y) = y^2\,\mathbf{i} + xy\,\mathbf{j}</m> is
+          conservative. (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>False.</alert> <m>\mathbf{F}</m> is continuous on the open
+          connected region <m>\mathbb{R}^2</m>, so it is conservative iff it
+          is a gradient field. If <m>\mathbf{F} = \nabla f</m>:
+          <m>f_x = y^2 \Rightarrow f = xy^2 + g(y)</m>, and
+          <m>f_y = 2xy + g'(y) = xy</m> forces <m>g'(y) = -xy</m>,
+          impossible since <m>g'(y)</m> depends on <m>y</m> only. No
+          potential exists: not conservative. (Other valid arguments:
+          <m>\mathbf{F} = \nabla f</m> would give
+          <m>\frac{\partial}{\partial y}\left(y^2\right) = f_{xy} = f_{yx}
+          = \frac{\partial}{\partial x}(xy)</m> by the Mixed Derivative
+          Theorem, but <m>2y \ne y</m>; or two paths with the same
+          endpoints and different line integrals, e.g. <m>\frac23</m> along
+          the segment from <m>(0, 0)</m> to <m>(1, 1)</m> and
+          <m>\frac35</m> along <m>y = x^2</m>.)
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="exam1-q6-b">
+      <statement>
+        <p>
+          <alert>True or False?</alert> If a vector field <m>\mathbf{G}</m>
+          satisfies <m>\oint_C \mathbf{G} \cdot d\mathbf{r} = 0</m> for some
+          closed curve <m>C</m>, then <m>\mathbf{G}</m> is conservative.
+          (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>False.</alert> Counterexample: <m>\mathbf{F}</m> of part (a)
+          and the unit circle <m>C</m> given by
+          <m>\mathbf{r}(t) = \langle \cos t, \sin t \rangle</m>,
+          <m>0 \le t \le 2\pi</m>. Then
+          <m>\mathbf{F}(\mathbf{r}(t)) = \left\langle \sin^2 t,\ \cos t\sin t \right\rangle</m>,
+          <m>\mathbf{r}'(t) = \langle -\sin t, \cos t \rangle</m>, and,
+          using <m>\sin^2 t = 1 - \cos^2 t</m> and <m>u = \cos t</m>,
+          <md>
+            <mrow>\oint_C \mathbf{F} \cdot d\mathbf{r}
+              \amp = \int_0^{2\pi} \left(-\sin^3 t + \cos^2 t\sin t\right) dt
+              = \int_0^{2\pi} \left(2\cos^2 t - 1\right)\sin t\, dt</mrow>
+            <mrow>\amp = \Bigl[\, -\tfrac23\cos^3 t + \cos t \,\Bigr]_0^{2\pi} = 0,</mrow>
+          </md>
+          yet <m>\mathbf{F}</m> is not conservative by (a). The loop property
+          requires <m>\oint_C \mathbf{G} \cdot d\mathbf{r} = 0</m> around
+          <em>every</em> closed curve, not just one.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+</worksheet>
