@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefigure-exam1-force-figure" viewBox="0 0 340 340">
+  <defs>
+    <clipPath id="prefigure-exam1-force-clipPath-0">
+      <rect x="10.0" y="10.0" width="320.0" height="320.0"/>
+    </clipPath>
+    <clipPath id="prefigure-exam1-force-clipPath-1">
+      <rect x="10.0" y="10.0" width="320.0" height="320.0"/>
+    </clipPath>
+    <marker id="prefigure-exam1-force-arrow-head-end-2_None_24_60-black" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="6.5" refY="4.0">
+      <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="black" stroke="none"/>
+    </marker>
+    <marker id="prefigure-exam1-force-arrow-head-end-2_None_24_60-black-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="8.5" refY="6.0">
+      <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
+    </marker>
+    <marker id="prefigure-exam1-force-arrow-head-end-3_None_24_60-h0072B2" markerWidth="13.5" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="9.8" refY="6.0">
+      <path d="M 13.5 6.0L 0.0 12.0L 2.6 7.5L 2.6 4.5L 0.0 0.0Z" fill="#0072B2" stroke="none"/>
+    </marker>
+    <marker id="prefigure-exam1-force-arrow-head-end-3_None_24_60-h0072B2-outline" markerWidth="17.5" markerHeight="16.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="11.8" refY="8.0">
+      <path d="M 16.3 9.8 L 2.8 15.8 A 2 2 0 0 1 0.0 14.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 16.3 6.2 A 2 2 0 0 1 16.3 9.8 Z" fill="white" stroke="none"/>
+    </marker>
+    <marker id="prefigure-exam1-force-arrow-head-end-3_None_24_60-hD55E00" markerWidth="13.5" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="9.8" refY="6.0">
+      <path d="M 13.5 6.0L 0.0 12.0L 2.6 7.5L 2.6 4.5L 0.0 0.0Z" fill="#D55E00" stroke="none"/>
+    </marker>
+    <marker id="prefigure-exam1-force-arrow-head-end-3_None_24_60-hD55E00-outline" markerWidth="17.5" markerHeight="16.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="11.8" refY="8.0">
+      <path d="M 16.3 9.8 L 2.8 15.8 A 2 2 0 0 1 0.0 14.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 16.3 6.2 A 2 2 0 0 1 16.3 9.8 Z" fill="white" stroke="none"/>
+    </marker>
+  </defs>
+  <path id="prefigure-exam1-force-ef-C" d="M 299.7 170.0 L 299.5 161.9 L 298.7 153.7 L 297.4 145.7 L 295.7 137.7 L 293.4 129.9 L 290.6 122.2 L 287.4 114.8 L 283.7 107.5 L 279.5 100.5 L 275.0 93.7 L 270.0 87.3 L 264.6 81.2 L 258.8 75.4 L 252.7 70.0 L 246.3 65.0 L 239.5 60.5 L 232.5 56.3 L 225.2 52.6 L 217.8 49.4 L 210.1 46.6 L 202.3 44.3 L 194.3 42.6 L 186.3 41.3 L 178.1 40.5 L 170.0 40.3 L 161.9 40.5 L 153.7 41.3 L 145.7 42.6 L 137.7 44.3 L 129.9 46.6 L 122.2 49.4 L 114.8 52.6 L 107.5 56.3 L 100.5 60.5 L 93.7 65.0 L 87.3 70.0 L 81.2 75.4 L 75.4 81.2 L 70.0 87.3 L 65.0 93.7 L 60.5 100.5 L 56.3 107.5 L 52.6 114.8 L 49.4 122.2 L 46.6 129.9 L 44.3 137.7 L 42.6 145.7 L 41.3 153.7 L 40.5 161.9 L 40.3 170.0 L 40.5 178.1 L 41.3 186.3 L 42.6 194.3 L 44.3 202.3 L 46.6 210.1 L 49.4 217.8 L 52.6 225.2 L 56.3 232.5 L 60.5 239.5 L 65.0 246.3 L 70.0 252.7 L 75.4 258.8 L 81.2 264.6 L 87.3 270.0 L 93.7 275.0 L 100.5 279.5 L 107.5 283.7 L 114.8 287.4 L 122.2 290.6 L 129.9 293.4 L 137.7 295.7 L 145.7 297.4 L 153.7 298.7 L 161.9 299.5 L 170.0 299.7 L 178.1 299.5 L 186.3 298.7 L 194.3 297.4 L 202.3 295.7 L 210.1 293.4 L 217.8 290.6 L 225.2 287.4 L 232.5 283.7 L 239.5 279.5 L 246.3 275.0 L 252.7 270.0 L 258.8 264.6 L 264.6 258.8 L 270.0 252.7 L 275.0 246.3 L 279.5 239.5 L 283.7 232.5 L 287.4 225.2 L 290.6 217.8 L 293.4 210.1 L 295.7 202.3 L 297.4 194.3 L 298.7 186.3 L 299.5 178.1 Z" stroke="black" stroke-width="2" fill="none"/>
+  <path id="prefigure-exam1-force-ef-dir" d="M 230.9 284.5 L 231.3 284.3 L 231.8 284.1 L 232.2 283.8 L 232.7 283.6 L 233.1 283.4 L 233.5 283.1 L 234.0 282.9 L 234.4 282.6 L 234.8 282.4 L 235.3 282.1 L 235.7 281.9 L 236.1 281.6 L 236.5 281.4 L 237.0 281.1 L 237.4 280.8 L 237.8 280.6 L 238.2 280.3 L 238.7 280.1 L 239.1 279.8 L 239.5 279.5 L 239.9 279.3 L 240.4 279.0 L 240.8 278.7 L 241.2 278.5 L 241.6 278.2 L 242.0 277.9 L 242.4 277.6 L 242.8 277.3 L 243.3 277.1 L 243.7 276.8 L 244.1 276.5 L 244.5 276.2 L 244.9 275.9 L 245.3 275.6 L 245.7 275.4 L 246.1 275.1 L 246.5 274.8 L 246.9 274.5 L 247.3 274.2 L 247.7 273.9 L 248.1 273.6 L 248.5 273.3 L 248.9 273.0 L 249.3 272.7 L 249.7 272.4 L 250.1 272.1 L 250.5 271.8 L 250.9 271.4 L 251.3 271.1 L 251.6 270.8 L 252.0 270.5 L 252.4 270.2 L 252.8 269.9 L 253.2 269.6 L 253.6 269.2 L 253.9 268.9 L 254.3 268.6 L 254.7 268.3 L 255.1 267.9 L 255.5 267.6 L 255.8 267.3 L 256.2 267.0 L 256.6 266.6 L 256.9 266.3 L 257.3 266.0 L 257.7 265.6 L 258.0 265.3 L 258.4 264.9 L 258.8 264.6 L 259.1 264.3 L 259.5 263.9 L 259.9 263.6 L 260.2 263.2 L 260.6 262.9 L 260.9 262.5 L 261.3 262.2 L 261.6 261.8 L 262.0 261.5 L 262.3 261.1 L 262.7 260.8 L 263.0 260.4 L 263.4 260.1 L 263.7 259.7 L 264.1 259.3 L 264.4 259.0 L 264.8 258.6 L 265.1 258.2 L 265.4 257.9 L 265.8 257.5 L 266.1 257.1 L 266.4 256.8 L 266.8 256.4 L 267.1 256.0 L 267.4 255.7 L 267.8 255.3 L 268.1 254.9 L 268.4 254.5 L 268.7 254.1 L 269.1 253.8" stroke="black" stroke-width="2" fill="none" marker-end="url(#prefigure-exam1-force-arrow-head-end-2_None_24_60-black)"/>
+  <circle id="prefigure-exam1-force-ef-O" cx="170.0" cy="170.0" r="2.5" stroke="black" stroke-width="2" fill="black"/>
+  <g id="prefigure-exam1-force-ef-Olabel" transform="translate(160.8,179.2) translate(-13.8,-0.0)">
+    <g id="prefigure-exam1-force-g-0">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="13.808px" height="13.144px" role="img" focusable="false" viewBox="0 -704 763 726" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-exam1-force-MJX-2-TEX-I-1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="upper O">
+              <use data-c="1D442" xlink:href="#prefigure-exam1-force-MJX-2-TEX-I-1D442"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="prefigure-exam1-force-ef-Clabel" transform="translate(236.7,292.9) translate(0.0,-0.0)">
+    <g id="prefigure-exam1-force-g-1">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="13.752px" height="13.160px" role="img" focusable="false" viewBox="0 -705 760 727" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-exam1-force-MJX-3-TEX-I-1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="upper C">
+              <use data-c="1D436" xlink:href="#prefigure-exam1-force-MJX-3-TEX-I-1D436"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <path id="prefigure-exam1-force-ef-T" stroke="#0072B2" stroke-width="3" fill="none" d="M 276.3 95.6 L 240.3 44.2" marker-end="url(#prefigure-exam1-force-arrow-head-end-3_None_24_60-h0072B2)"/>
+  <g id="prefigure-exam1-force-ef-Tlabel" transform="translate(240.3,40.2) translate(-7.2,-12.2)">
+    <g id="prefigure-exam1-force-g-2">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="14.480px" height="12.216px" role="img" focusable="false" viewBox="0 -675 800 675" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-exam1-force-MJX-4-TEX-B-1D413" d="M41 425Q41 426 51 545T62 669V675H737V669Q738 665 748 546T758 425V419H696V425Q687 517 669 555T595 607Q578 612 522 613H478V62H631V0H615Q585 3 399 3Q214 3 184 0H168V62H321V613H277H263Q164 613 134 561Q113 527 103 425V419H41V425Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="TeXAtom" data-mjx-texclass="ORD">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="bold" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-attributes="texclass:ORD" data-semantic-speech="bold upper T">
+                <use data-c="1D413" xlink:href="#prefigure-exam1-force-MJX-4-TEX-B-1D413"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <path id="prefigure-exam1-force-ef-F" stroke="#D55E00" stroke-width="3" fill="none" d="M 276.3 95.6 L 207.3 101.6" marker-end="url(#prefigure-exam1-force-arrow-head-end-3_None_24_60-hD55E00)"/>
+  <g id="prefigure-exam1-force-ef-Flabel" transform="translate(207.3,105.6) translate(-6.6,-0.0)">
+    <g id="prefigure-exam1-force-g-3">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="13.104px" height="12.304px" role="img" focusable="false" viewBox="0 -680 724 680" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-exam1-force-MJX-5-TEX-B-1D405" d="M425 0L228 3Q63 3 51 0H39V62H147V618H39V680H644V676Q647 670 659 552T675 428V424H613Q613 433 605 477Q599 511 589 535T562 574T530 599T488 612T441 617T387 618H368H304V371H333Q389 373 411 390T437 468V488H499V192H437V212Q436 244 430 263T408 292T378 305T333 309H304V62H439V0H425Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="TeXAtom" data-mjx-texclass="ORD">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="bold" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-attributes="texclass:ORD" data-semantic-speech="bold upper F">
+                <use data-c="1D405" xlink:href="#prefigure-exam1-force-MJX-5-TEX-B-1D405"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="prefigure-exam1-force-ef-angle">
+    <g transform="translate(248.7,80.6) translate(-26.0,-13.2)">
+      <g id="prefigure-exam1-force-g-4">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="26.000px" height="13.192px" role="img" focusable="false" viewBox="0 -707 1436.6 729" x="0.0" y="0.0">
+          <defs>
+            <path id="prefigure-exam1-force-MJX-6-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
+            <path id="prefigure-exam1-force-MJX-6-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
+            <path id="prefigure-exam1-force-MJX-6-TEX-N-2218" d="M55 251Q55 328 112 386T249 444T386 388T444 249Q444 171 388 113T250 55Q170 55 113 112T55 251ZM245 403Q188 403 142 361T96 250Q96 183 141 140T250 96Q284 96 313 109T354 135T375 160Q403 197 403 250Q403 313 360 358T245 403Z"/>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="msup" data-semantic-type="superscript" data-semantic-role="integer" data-semantic-id="2" data-semantic-children="0,1" data-semantic-speech="60 Superscript ring">
+                <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="2" data-semantic-speech="60" data-semantic-prefix="Base">
+                  <use data-c="36" xlink:href="#prefigure-exam1-force-MJX-6-TEX-N-36"/>
+                  <use data-c="30" xlink:href="#prefigure-exam1-force-MJX-6-TEX-N-30" transform="translate(500,0)"/>
+                </g>
+                <g data-mml-node="mo" transform="translate(1033,393.1) scale(0.707)" data-semantic-type="operator" data-semantic-role="multiplication" data-semantic-id="1" data-semantic-parent="2" data-semantic-speech="ring" data-semantic-prefix="Exponent">
+                  <use data-c="2218" xlink:href="#prefigure-exam1-force-MJX-6-TEX-N-2218"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <path d="M 261.4 74.3 A 26.0 26.0 0 0 0 250.4 97.9" stroke="black" stroke-width="1.5" fill="none"/>
+  </g>
+  <circle id="prefigure-exam1-force-ef-P" cx="276.3" cy="95.6" r="2.5" stroke="black" stroke-width="2" fill="black"/>
+</svg>
