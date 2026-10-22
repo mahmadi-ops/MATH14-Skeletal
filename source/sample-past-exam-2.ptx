@@ -4,8 +4,10 @@
 
   Transcribed from the instructor's annotated solutions PDF of the Winter
   2025 second exam (MATH_14_Exam__2_W2025_-_solutions.pdf): questions 1, 2,
-  3, 5 and the bonus question 6 with the handwritten solutions worked out
-  in full.  Question 4 of that exam (the circle in a horizontal field) is
+  3 and 5 with the handwritten solutions worked out in full.  The exam's
+  optional sixth question, on a line integral, is left out at the
+  instructor's request; question 6 here is a true/false question on triple
+  integrals written for this page.  Question 4 of that exam (the circle in a horizontal field) is
   already question 6 of Sample Past Exam 1, so in its place stands question
   1 of the Winter 2025 third exam (MATH_14_Exam__3_W2025_solutions.pdf), a
   spherical-coordinates rewrite, at the instructor's request.  Point values
@@ -17,11 +19,11 @@
   skeletal book and in the completed instructor book; the two copies are
   identical.
 
-  Every solution carries a figure: the projection of the solid for the two
+  Every solution of questions 1 to 5 carries a figure: the projection of the solid for the two
   rewrites, the solid itself and its two projections for the change of
-  order, the two polar curves for the area, the cross-section of the solid
-  for the signs question, and the circle with its four quarter arcs for
-  the bonus question.
+  order, the two polar curves for the area, and the cross-section of the
+  solid for the signs question.  The true/false solutions argue in words
+  and a short computation.
 -->
 <worksheet xml:id="sec-exercises-sample-past-exam-2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Sample Past Exam 2</title>
@@ -47,7 +49,6 @@
         <li><p><xref ref="section-triple-integrals-rectangular" text="title"/></p></li>
         <li><p><xref ref="section-triple-integrals-cylindrical" text="title"/></p></li>
         <li><p><xref ref="section-triple-integrals-spherical" text="title"/></p></li>
-        <li><p><xref ref="sec-line-integrals" text="title"/> (the bonus question)</p></li>
       </ul>
     </p>
   </introduction>
@@ -708,88 +709,95 @@
   </exercise>
 
   <!-- ===================== Question 6 ===================== -->
+  <!-- Written for this page in place of the exam's optional sixth question. -->
   <exercise xml:id="spe2-q6">
     <introduction>
       <p>
-        This was the optional bonus question.
-        <alert>True or False? Justify your answer.</alert>
+        <alert>True or False? Clearly justify your answer.</alert> Note
+        that correct answers with incorrect or unclear justifications will
+        not earn credit.
       </p>
     </introduction>
 
     <task xml:id="spe2-q6-a">
       <statement>
         <p>
-          If <m>f(x,y) = \dfrac{x^3 y^3}{x^2 + y^2}</m> and the curve
-          <m>C</m> is a full circle of radius <m>R</m> centered at the
-          origin, then the result of the line integral
-          <m>\displaystyle\int_C f\,ds</m> does not depend on <m>R</m>.
+          If <m>E</m> is the solid cylinder <m>x^2 + y^2 \le 1</m>,
+          <m>0 \le z \le 1</m>, then
+          <me>
+            \iiint_E z\,dV = \int_0^{2\pi}\!\!\int_0^1\!\!\int_0^1 z\,dz\,dr\,d\theta .
+          </me>
         </p>
       </statement>
       <solution>
         <p>
-          <alert>True.</alert> Cut <m>C</m> into its four quarter arcs
-          <m>C_1</m>, <m>C_2</m>, <m>C_3</m>, <m>C_4</m>, one in each
-          quadrant (<xref ref="fig-spe2-q6-circle"/>). The denominator of
-          <m>f</m> is <m>R^2</m> on all of <m>C</m>, and the sign of
-          <m>f</m> is the sign of <m>x^3 y^3</m>, that is, of <m>xy</m>:
-          <m>f \gt 0</m> on <m>C_1</m> and <m>C_3</m>, and <m>f \lt 0</m>
-          on <m>C_2</m> and <m>C_4</m>. Moreover <m>f</m> takes exactly the
-          same values on <m>C_1</m> and on <m>C_3</m>, since
-          <m>f(-x,-y) = f(x,y)</m>, and the values on <m>C_2</m> are the
-          negatives of those on <m>C_1</m>, since <m>f(-x,y) = -f(x,y)</m>
-          (likewise for <m>C_4</m> and <m>C_3</m>). Both <m>f</m> and the
-          circle are symmetric in this way, and <m>ds</m> is unchanged by
-          reflections, so
+          <alert>False.</alert> The limits are right: <m>E</m> is
+          <m>0 \le \theta \le 2\pi</m>, <m>0 \le r \le 1</m>,
+          <m>0 \le z \le 1</m>. But in cylindrical coordinates the volume
+          element is <m>dV = r\,dz\,dr\,d\theta</m>
+          (<xref ref="eq-dv-cylindrical"/>), not <m>dz\,dr\,d\theta</m>: a
+          small cylindrical box has sides <m>\Delta r</m>,
+          <m>r\,\Delta\theta</m> (an arc of the circle of radius <m>r</m>)
+          and <m>\Delta z</m>. The factor <m>r</m> is missing, and the two
+          sides differ:
+          <md>
+            <mrow>
+              \iiint_E z\,dV \amp = \int_0^{2\pi}\!\!\int_0^1\!\!\int_0^1 z\,r\,dz\,dr\,d\theta
+            </mrow>
+            <mrow>
+              \amp = 2\pi\cdot\frac12\cdot\frac12 = \frac{\pi}{2},
+            </mrow>
+          </md>
+          whereas
           <me>
-            \int_C f\,ds = \int_{C_1} f\,ds + \int_{C_2} f\,ds + \int_{C_3} f\,ds + \int_{C_4} f\,ds = 0
+            \int_0^{2\pi}\!\!\int_0^1\!\!\int_0^1 z\,dz\,dr\,d\theta
+            = 2\pi\cdot 1\cdot\frac12 = \pi .
           </me>
-          for every radius <m>R</m>: the result, <m>0</m>, is independent of
-          <m>R</m>.
+          (As a check on the first value: <m>E</m> has volume <m>\pi</m>
+          and <m>z</m> averages <m>1/2</m> over it, so
+          <m>\iiint_E z\,dV = \pi/2</m>.)
         </p>
-        <figure xml:id="fig-spe2-q6-circle">
-          <caption>
-            The circle <m>C</m> of <xref ref="spe2-q6"/> and its four quarter arcs. On <m>C_1</m> and <m>C_3</m> the function <m>f = x^3y^3/(x^2+y^2)</m> is positive; on <m>C_2</m> and <m>C_4</m> it takes the opposite values. The four contributions to <m>\int_C f\,ds</m> cancel in pairs.
-          </caption>
-          <image width="40%">
-            <shortdescription>
-            A circle centered at the origin, drawn in blue in the first and third quadrants and in orange in the second and fourth, with the arcs labelled C one to C four and marked plus or minus.
-            </shortdescription>
-            <prefigure xmlns="https://prefigure.org" label="prefigure-spe2-q6-circle">
-              <diagram dimensions="(300,300)" margins="10">
-                <definition>circ(t) = (cos(t), sin(t))</definition>
-                <coordinates bbox="(-1.5,-1.5,1.5,1.5)">
-                <axes at="q6-axes" xlabel="x" ylabel="y" decorations="no" arrows="1"/>
-                <parametric-curve at="q6-c1" function="circ" domain="(0,pi/2)" stroke="#0072B2" thickness="3"/>
-                <parametric-curve at="q6-c2" function="circ" domain="(pi/2,pi)" stroke="#D55E00" thickness="3"/>
-                <parametric-curve at="q6-c3" function="circ" domain="(pi,3*pi/2)" stroke="#0072B2" thickness="3"/>
-                <parametric-curve at="q6-c4" function="circ" domain="(3*pi/2,2*pi)" stroke="#D55E00" thickness="3"/>
-                <label at="q6-l1" anchor="(0.78,0.78)" alignment="ne" color="#0072B2"><m>C_1,\ f \gt 0</m></label>
-                <label at="q6-l2" anchor="(-0.78,0.78)" alignment="nw" color="#D55E00"><m>C_2,\ f \lt 0</m></label>
-                <label at="q6-l3" anchor="(-0.78,-0.78)" alignment="sw" color="#0072B2"><m>C_3,\ f \gt 0</m></label>
-                <label at="q6-l4" anchor="(0.78,-0.78)" alignment="se" color="#D55E00"><m>C_4,\ f \lt 0</m></label>
-                <label at="q6-rlab" anchor="(0.5,0.08)" alignment="n"><m>R</m></label>
-                <line at="q6-radius" endpoints="((0,0),(1,0))" stroke="#555555" thickness="1.5"/>
-                </coordinates>
-                <annotations>
-                <annotation ref="figure" text="A circle of radius R centered at the origin, cut into four quarter arcs by the axes.">
-                  <annotation ref="q6-c1" text="C one, in the first quadrant, where f is positive." sonify="yes"/>
-                  <annotation ref="q6-c2" text="C two, in the second quadrant, where f is negative." sonify="yes"/>
-                  <annotation ref="q6-c3" text="C three, in the third quadrant, where f is positive." sonify="yes"/>
-                  <annotation ref="q6-c4" text="C four, in the fourth quadrant, where f is negative." sonify="yes"/>
-                </annotation>
-                </annotations>
-              </diagram>
-            </prefigure>
-          </image>
-        </figure>
+      </solution>
+    </task>
+
+    <task xml:id="spe2-q6-b">
+      <statement>
         <p>
-          (A direct computation confirms it: with
-          <m>\mathbf{r}(t) = \langle R\cos t, R\sin t\rangle</m>,
-          <m>0 \le t \le 2\pi</m>, we get
-          <m>f = R^4\cos^3 t\,\sin^3 t</m> and <m>ds = R\,dt</m>, so
-          <m>\int_C f\,ds = R^5\int_0^{2\pi}\cos^3 t\,\sin^3 t\,dt = 0</m>,
-          the integrand being <m>\tfrac18\sin^3(2t)</m>, which integrates
-          to <m>0</m> over a full period.)
+          The volume of the ball of radius <m>R</m> centered at the origin
+          is
+          <me>
+            \int_0^{2\pi}\!\!\int_0^{2\pi}\!\!\int_0^R \rho^2\sin\phi\,d\rho\,d\phi\,d\theta .
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>False.</alert> The integrand is the right one,
+          <m>dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta</m>
+          (<xref ref="eq-dv-spherical"/>), but the angle <m>\phi</m>,
+          measured down from the positive <m>z</m>-axis, runs only from
+          <m>0</m> (straight up) to <m>\pi</m> (straight down); together
+          with <m>0 \le \theta \le 2\pi</m> that already reaches every
+          direction once. Letting <m>\phi</m> run on to <m>2\pi</m> passes
+          over the ball a second time, and there <m>\sin\phi \lt 0</m>, so
+          the second pass cancels the first:
+          <md>
+            <mrow>
+              \int_0^{2\pi}\!\!\int_0^{2\pi}\!\!\int_0^R \rho^2\sin\phi\,d\rho\,d\phi\,d\theta
+            </mrow>
+            <mrow>
+              \quad = 2\pi\cdot\frac{R^3}{3}\int_0^{2\pi}\sin\phi\,d\phi = 0 .
+            </mrow>
+          </md>
+          With the correct range,
+          <md>
+            <mrow>
+              \int_0^{2\pi}\!\!\int_0^{\pi}\!\!\int_0^R \rho^2\sin\phi\,d\rho\,d\phi\,d\theta
+            </mrow>
+            <mrow>
+              \quad = 2\pi\cdot 2\cdot\frac{R^3}{3} = \frac{4}{3}\pi R^3 .
+            </mrow>
+          </md>
         </p>
       </solution>
     </task>
