@@ -721,11 +721,6 @@
       <me>
         \iiint_E \frac{x^2}{x^2 + y^2 + z^2}\,dV = \frac13\operatorname{Vol}(E) .
       </me>
-      <p>
-        The integrand is undefined at the origin. Decide whether that
-        affects the integral, and justify your answer without evaluating
-        the triple integral directly.
-      </p>
     </statement>
     <solution>
       <p>
@@ -768,13 +763,6 @@
           \quad\Longrightarrow\quad
           I_x = \frac13\operatorname{Vol}(E) .
         </me>
-      </p>
-      <p>
-        <em>Why the origin causes no problem.</em> Away from the origin
-        <m>0 \le \dfrac{x^2}{x^2+y^2+z^2} \le 1</m>, so the integrand is
-        bounded, and a single point has zero volume. Changing the value of
-        an integrand at one point, or assigning it any convenient value
-        there, does not change the triple integral.
       </p>
       <p>
         <em>Numerical value.</em> Since
