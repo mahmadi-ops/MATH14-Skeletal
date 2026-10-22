@@ -6,8 +6,8 @@
   2025 second exam (MATH_14_Exam__2_W2025_-_solutions.pdf): questions 1, 2,
   3 and 5 with the handwritten solutions worked out in full.  The exam's
   optional sixth question, on a line integral, is left out at the
-  instructor's request; question 6 here is a true/false question on triple
-  integrals written for this page.  Question 4 of that exam (the circle in a horizontal field) is
+  instructor's request, so the page has five questions.  Question 4 of
+  that exam (the circle in a horizontal field) is
   already question 6 of Sample Past Exam 1, so in its place stands question
   1 of the Winter 2025 third exam (MATH_14_Exam__3_W2025_solutions.pdf), a
   spherical-coordinates rewrite, at the instructor's request.  Point values
@@ -19,11 +19,10 @@
   skeletal book and in the completed instructor book; the two copies are
   identical.
 
-  Every solution of questions 1 to 5 carries a figure: the projection of the solid for the two
+  Every solution carries a figure: the projection of the solid for the two
   rewrites, the solid itself and its two projections for the change of
   order, the two polar curves for the area, and the cross-section of the
-  solid for the signs question.  The true/false solutions argue in words
-  and a short computation.
+  solid for the signs question.
 -->
 <worksheet xml:id="sec-exercises-sample-past-exam-2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Sample Past Exam 2</title>
@@ -703,101 +702,6 @@
           <m>x \le 2</m>, with the values on the two halves mirror images
           of each other. The two halves contribute opposite amounts and the
           integral is <m>0</m>.
-        </p>
-      </solution>
-    </task>
-  </exercise>
-
-  <!-- ===================== Question 6 ===================== -->
-  <!-- Written for this page in place of the exam's optional sixth question. -->
-  <exercise xml:id="spe2-q6">
-    <introduction>
-      <p>
-        <alert>True or False? Clearly justify your answer.</alert> Note
-        that correct answers with incorrect or unclear justifications will
-        not earn credit.
-      </p>
-    </introduction>
-
-    <task xml:id="spe2-q6-a">
-      <statement>
-        <p>
-          If <m>E</m> is the solid cylinder <m>x^2 + y^2 \le 1</m>,
-          <m>0 \le z \le 1</m>, then
-          <me>
-            \iiint_E z\,dV = \int_0^{2\pi}\!\!\int_0^1\!\!\int_0^1 z\,dz\,dr\,d\theta .
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <alert>False.</alert> The limits are right: <m>E</m> is
-          <m>0 \le \theta \le 2\pi</m>, <m>0 \le r \le 1</m>,
-          <m>0 \le z \le 1</m>. But in cylindrical coordinates the volume
-          element is <m>dV = r\,dz\,dr\,d\theta</m>
-          (<xref ref="eq-dv-cylindrical"/>), not <m>dz\,dr\,d\theta</m>: a
-          small cylindrical box has sides <m>\Delta r</m>,
-          <m>r\,\Delta\theta</m> (an arc of the circle of radius <m>r</m>)
-          and <m>\Delta z</m>. The factor <m>r</m> is missing, and the two
-          sides differ:
-          <md>
-            <mrow>
-              \iiint_E z\,dV \amp = \int_0^{2\pi}\!\!\int_0^1\!\!\int_0^1 z\,r\,dz\,dr\,d\theta
-            </mrow>
-            <mrow>
-              \amp = 2\pi\cdot\frac12\cdot\frac12 = \frac{\pi}{2},
-            </mrow>
-          </md>
-          whereas
-          <me>
-            \int_0^{2\pi}\!\!\int_0^1\!\!\int_0^1 z\,dz\,dr\,d\theta
-            = 2\pi\cdot 1\cdot\frac12 = \pi .
-          </me>
-          (As a check on the first value: <m>E</m> has volume <m>\pi</m>
-          and <m>z</m> averages <m>1/2</m> over it, so
-          <m>\iiint_E z\,dV = \pi/2</m>.)
-        </p>
-      </solution>
-    </task>
-
-    <task xml:id="spe2-q6-b">
-      <statement>
-        <p>
-          The volume of the ball of radius <m>R</m> centered at the origin
-          is
-          <me>
-            \int_0^{2\pi}\!\!\int_0^{2\pi}\!\!\int_0^R \rho^2\sin\phi\,d\rho\,d\phi\,d\theta .
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <alert>False.</alert> The integrand is the right one,
-          <m>dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta</m>
-          (<xref ref="eq-dv-spherical"/>), but the angle <m>\phi</m>,
-          measured down from the positive <m>z</m>-axis, runs only from
-          <m>0</m> (straight up) to <m>\pi</m> (straight down); together
-          with <m>0 \le \theta \le 2\pi</m> that already reaches every
-          direction once. Letting <m>\phi</m> run on to <m>2\pi</m> passes
-          over the ball a second time, and there <m>\sin\phi \lt 0</m>, so
-          the second pass cancels the first:
-          <md>
-            <mrow>
-              \int_0^{2\pi}\!\!\int_0^{2\pi}\!\!\int_0^R \rho^2\sin\phi\,d\rho\,d\phi\,d\theta
-            </mrow>
-            <mrow>
-              \quad = 2\pi\cdot\frac{R^3}{3}\int_0^{2\pi}\sin\phi\,d\phi = 0 .
-            </mrow>
-          </md>
-          With the correct range,
-          <md>
-            <mrow>
-              \int_0^{2\pi}\!\!\int_0^{\pi}\!\!\int_0^R \rho^2\sin\phi\,d\rho\,d\phi\,d\theta
-            </mrow>
-            <mrow>
-              \quad = 2\pi\cdot 2\cdot\frac{R^3}{3} = \frac{4}{3}\pi R^3 .
-            </mrow>
-          </md>
         </p>
       </solution>
     </task>
