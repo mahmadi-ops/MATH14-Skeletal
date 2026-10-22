@@ -609,55 +609,6 @@
         <m>z = 2 - (x-2)^2</m>, <m>y = -1</m>, and <m>y = 1</m>. Remember
         to justify your responses.
       </p>
-      <p>
-        The two parabolic cylinders meet where
-        <m>(x-2)^2 = 2 - (x-2)^2</m>, that is, <m>(x-2)^2 = 1</m>, so at
-        <m>x = 1</m> and <m>x = 3</m>. Between them the second lies above
-        the first, so
-        <me>
-          S:\quad 1 \le x \le 3,\qquad -1 \le y \le 1,\qquad (x-2)^2 \le z \le 2-(x-2)^2 ,
-        </me>
-        a solid with the cross-section of <xref ref="fig-spe2-q5-section"/>
-        in every plane <m>y = c</m>, <m>-1 \le c \le 1</m>.
-      </p>
-      <figure xml:id="fig-spe2-q5-section">
-        <caption>
-          The cross-section of the solid <m>S</m> of <xref ref="spe2-q5"/> by a plane <m>y = c</m>: the region between the parabolas <m>z = (x-2)^2</m> and <m>z = 2 - (x-2)^2</m>, which meet at <m>x = 1</m> and <m>x = 3</m>. It is symmetric about the dashed line <m>x = 2</m>.
-        </caption>
-        <image width="50%">
-          <shortdescription>
-          Two parabolas, one opening upward with vertex at two comma zero and one opening downward with vertex at two comma two, crossing at x equals one and x equals three; the lens between them is shaded and a dashed vertical line marks x equals two.
-          </shortdescription>
-          <prefigure xmlns="https://prefigure.org" label="prefigure-spe2-q5-section">
-            <diagram dimensions="(382,200)" margins="10">
-              <definition>lower(x) = (x-2)^2</definition>
-              <definition>upper(x) = 2 - (x-2)^2</definition>
-              <definition>lc(t) = (t, (t-2)^2)</definition>
-              <definition>uc(t) = (t, 2 - (t-2)^2)</definition>
-              <coordinates bbox="(-0.35,-0.4,5.0,2.4)">
-              <area-between-curves at="q5-region" function1="lower" function2="upper" domain="(1,3)" fill="#fbe3d0" stroke="none"/>
-              <axes at="q5-axes" xlabel="x" ylabel="z" hlabels="(1,1,3)" vlabels="(1,1,2)" arrows="1"/>
-              <parametric-curve at="q5-lower" function="lc" domain="(0.6,3.4)" stroke="#0072B2" thickness="3"/>
-              <parametric-curve at="q5-upper" function="uc" domain="(0.6,3.4)" stroke="#D55E00" thickness="3"/>
-              <line at="q5-axis" endpoints="((2,-0.3),(2,2.3))" stroke="#555555" thickness="1.5" dash="5 4"/>
-              <point at="q5-p1" p="(1,1)" fill="black" size="3.5"/>
-              <point at="q5-p3" p="(3,1)" fill="black" size="3.5"/>
-              <label at="q5-lowlab" anchor="(3.2,1.45)" alignment="e" offset="(3,0)" color="#0072B2"><m>z=(x-2)^2</m></label>
-              <label at="q5-uplab" anchor="(3.25,0.55)" alignment="e" offset="(3,0)" color="#D55E00"><m>z=2-(x-2)^2</m></label>
-              <label at="q5-symlab" anchor="(2,2.3)" alignment="n" offset="(0,3)" color="#555555"><m>x=2</m></label>
-              </coordinates>
-              <annotations>
-              <annotation ref="figure" text="The lens between an upward parabola with vertex at two comma zero and a downward parabola with vertex at two comma two, which cross at x equals one and x equals three.">
-                <annotation ref="q5-region" text="The shaded cross-section of the solid S."/>
-                <annotation ref="q5-lower" text="The parabola z equals x minus two squared, the floor of S." sonify="yes"/>
-                <annotation ref="q5-upper" text="The parabola z equals two minus x minus two squared, the roof of S." sonify="yes"/>
-                <annotation ref="q5-axis" text="The line x equals two, about which the cross-section is symmetric."/>
-              </annotation>
-              </annotations>
-            </diagram>
-          </prefigure>
-        </image>
-      </figure>
     </introduction>
 
     <task xml:id="spe2-q5-a">
@@ -668,8 +619,57 @@
       </statement>
       <solution>
         <p>
-          <alert>Negative.</alert> On <m>S</m> we have
-          <m>1 \le x \le 3</m>, so <m>-2 \le x - 3 \le 0</m>. On the
+          <alert>Negative.</alert> First locate <m>S</m>. The two
+          parabolic cylinders meet where
+          <m>(x-2)^2 = 2 - (x-2)^2</m>, that is, <m>(x-2)^2 = 1</m>, so at
+          <m>x = 1</m> and <m>x = 3</m>. Between them the second lies above
+          the first, so
+          <me>
+            S:\quad 1 \le x \le 3,\qquad -1 \le y \le 1,\qquad (x-2)^2 \le z \le 2-(x-2)^2 ,
+          </me>
+          a solid with the cross-section of <xref ref="fig-spe2-q5-section"/>
+          in every plane <m>y = c</m>, <m>-1 \le c \le 1</m>.
+        </p>
+        <figure xml:id="fig-spe2-q5-section">
+          <caption>
+            The cross-section of the solid <m>S</m> of <xref ref="spe2-q5"/> by a plane <m>y = c</m>: the region between the parabolas <m>z = (x-2)^2</m> and <m>z = 2 - (x-2)^2</m>, which meet at <m>x = 1</m> and <m>x = 3</m>. It is symmetric about the dashed line <m>x = 2</m>.
+          </caption>
+          <image width="50%">
+            <shortdescription>
+            Two parabolas, one opening upward with vertex at two comma zero and one opening downward with vertex at two comma two, crossing at x equals one and x equals three; the lens between them is shaded and a dashed vertical line marks x equals two.
+            </shortdescription>
+            <prefigure xmlns="https://prefigure.org" label="prefigure-spe2-q5-section">
+              <diagram dimensions="(382,200)" margins="10">
+                <definition>lower(x) = (x-2)^2</definition>
+                <definition>upper(x) = 2 - (x-2)^2</definition>
+                <definition>lc(t) = (t, (t-2)^2)</definition>
+                <definition>uc(t) = (t, 2 - (t-2)^2)</definition>
+                <coordinates bbox="(-0.35,-0.4,5.0,2.4)">
+                <area-between-curves at="q5-region" function1="lower" function2="upper" domain="(1,3)" fill="#fbe3d0" stroke="none"/>
+                <axes at="q5-axes" xlabel="x" ylabel="z" hlabels="(1,1,3)" vlabels="(1,1,2)" arrows="1"/>
+                <parametric-curve at="q5-lower" function="lc" domain="(0.6,3.4)" stroke="#0072B2" thickness="3"/>
+                <parametric-curve at="q5-upper" function="uc" domain="(0.6,3.4)" stroke="#D55E00" thickness="3"/>
+                <line at="q5-axis" endpoints="((2,-0.3),(2,2.3))" stroke="#555555" thickness="1.5" dash="5 4"/>
+                <point at="q5-p1" p="(1,1)" fill="black" size="3.5"/>
+                <point at="q5-p3" p="(3,1)" fill="black" size="3.5"/>
+                <label at="q5-lowlab" anchor="(3.2,1.45)" alignment="e" offset="(3,0)" color="#0072B2"><m>z=(x-2)^2</m></label>
+                <label at="q5-uplab" anchor="(3.25,0.55)" alignment="e" offset="(3,0)" color="#D55E00"><m>z=2-(x-2)^2</m></label>
+                <label at="q5-symlab" anchor="(2,2.3)" alignment="n" offset="(0,3)" color="#555555"><m>x=2</m></label>
+                </coordinates>
+                <annotations>
+                <annotation ref="figure" text="The lens between an upward parabola with vertex at two comma zero and a downward parabola with vertex at two comma two, which cross at x equals one and x equals three.">
+                  <annotation ref="q5-region" text="The shaded cross-section of the solid S."/>
+                  <annotation ref="q5-lower" text="The parabola z equals x minus two squared, the floor of S." sonify="yes"/>
+                  <annotation ref="q5-upper" text="The parabola z equals two minus x minus two squared, the roof of S." sonify="yes"/>
+                  <annotation ref="q5-axis" text="The line x equals two, about which the cross-section is symmetric."/>
+                </annotation>
+                </annotations>
+              </diagram>
+            </prefigure>
+          </image>
+        </figure>
+        <p>
+          On <m>S</m> we have <m>1 \le x \le 3</m>, so <m>-2 \le x - 3 \le 0</m>. On the
           interval <m>[-2, 0]</m>, which lies inside <m>[-\pi, 0]</m>, the
           sine is at most <m>0</m>, so <m>\sin(x-3) \le 0</m> and therefore
           <m>\sin^5(x-3) \le 0</m> throughout <m>S</m>, with equality only
@@ -687,8 +687,9 @@
       </statement>
       <solution>
         <p>
-          <alert>Zero.</alert> The solid is symmetric about the plane
-          <m>x = 2</m>: replacing <m>x - 2</m> by <m>-(x-2)</m> changes
+          <alert>Zero.</alert> The solid, described in the solution of
+          part (a), is symmetric about the plane <m>x = 2</m>
+          (<xref ref="fig-spe2-q5-section"/>): replacing <m>x - 2</m> by <m>-(x-2)</m> changes
           none of its bounding surfaces, so the reflection
           <m>x \mapsto 4 - x</m> maps <m>S</m> onto itself. The integrand
           is odd under the same reflection,
