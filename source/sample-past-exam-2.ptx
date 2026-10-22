@@ -6,8 +6,11 @@
   2025 second exam (MATH_14_Exam__2_W2025_-_solutions.pdf): questions 1, 2,
   3 and 5 with the handwritten solutions worked out in full.  The exam's
   optional sixth question, on a line integral, is left out at the
-  instructor's request, so the page has five questions.  Question 4 of
-  that exam (the circle in a horizontal field) is
+  instructor's request; question 6 here is the true/false problem of the
+  instructor's triple_integral_true_false_solution.pdf (the integral of
+  x^2/(x^2+y^2+z^2) over the unit ball), set in the exam's true/false
+  format with the rule "prove it if true, give a counterexample if
+  false", and its solution transcribed.  Question 4 of that exam (the circle in a horizontal field) is
   already question 6 of Sample Past Exam 1, so in its place stands question
   1 of the Winter 2025 third exam (MATH_14_Exam__3_W2025_solutions.pdf), a
   spherical-coordinates rewrite, at the instructor's request.  Point values
@@ -19,10 +22,11 @@
   skeletal book and in the completed instructor book; the two copies are
   identical.
 
-  Every solution carries a figure: the projection of the solid for the two
+  Every solution of questions 1 to 5 carries a figure: the projection of the solid for the two
   rewrites, the solid itself and its two projections for the change of
   order, the two polar curves for the area, and the cross-section of the
-  solid for the signs question.
+  solid for the signs question.  Question 6 is a symmetry argument and
+  needs none.
 -->
 <worksheet xml:id="sec-exercises-sample-past-exam-2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Sample Past Exam 2</title>
@@ -705,5 +709,83 @@
         </p>
       </solution>
     </task>
+  </exercise>
+
+  <!-- ===================== Question 6 ===================== -->
+  <!-- The instructor's true/false problem on triple integrals. -->
+  <exercise xml:id="spe2-q6">
+    <statement>
+      <p>
+        <alert>True or False?</alert> If the statement is true, prove it;
+        if it is false, give a counterexample.
+      </p>
+      <p>
+        Let <m>E</m> be the solid unit ball
+        <m>E = \{(x,y,z) : x^2 + y^2 + z^2 \le 1\}</m>. Then
+      </p>
+      <me>
+        \iiint_E \frac{x^2}{x^2 + y^2 + z^2}\,dV = \frac13\operatorname{Vol}(E) .
+      </me>
+      <p>
+        The integrand is undefined at the origin. Decide whether that
+        affects the integral, and justify your answer without evaluating
+        the triple integral directly.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>True.</alert> Write
+        <me>
+          I_x = \iiint_E \frac{x^2}{x^2 + y^2 + z^2}\,dV ,
+        </me>
+        and define <m>I_y</m> and <m>I_z</m> in the same way, with
+        <m>y^2</m> and <m>z^2</m> in the numerator.
+      </p>
+      <p>
+        <em>Use symmetry.</em> The unit ball is unchanged when the
+        coordinate axes are permuted. Swapping <m>x</m> and <m>y</m>, that
+        is, the change of variables <m>(x,y,z) \mapsto (y,x,z)</m>, maps
+        <m>E</m> onto itself, does not change volumes (its Jacobian
+        determinant is <m>-1</m>), and turns the integrand of <m>I_x</m>
+        into that of <m>I_y</m>, since the denominator
+        <m>x^2 + y^2 + z^2</m> is unchanged. So <m>I_x = I_y</m>, and
+        swapping <m>x</m> and <m>z</m> in the same way gives
+        <m>I_x = I_z</m>:
+        <me>
+          I_x = I_y = I_z .
+        </me>
+      </p>
+      <p>
+        <em>Add the three equal integrals.</em>
+        <md>
+          <mrow>
+            I_x + I_y + I_z \amp = \iiint_E \frac{x^2 + y^2 + z^2}{x^2 + y^2 + z^2}\,dV
+          </mrow>
+          <mrow>
+            \amp = \iiint_E 1\,dV = \operatorname{Vol}(E) .
+          </mrow>
+        </md>
+      </p>
+      <p>
+        <em>Conclude.</em> Since the three integrals are equal,
+        <me>
+          3I_x = \operatorname{Vol}(E)
+          \quad\Longrightarrow\quad
+          I_x = \frac13\operatorname{Vol}(E) .
+        </me>
+      </p>
+      <p>
+        <em>Why the origin causes no problem.</em> Away from the origin
+        <m>0 \le \dfrac{x^2}{x^2+y^2+z^2} \le 1</m>, so the integrand is
+        bounded, and a single point has zero volume. Changing the value of
+        an integrand at one point, or assigning it any convenient value
+        there, does not change the triple integral.
+      </p>
+      <p>
+        <em>Numerical value.</em> Since
+        <m>\operatorname{Vol}(E) = \tfrac43\pi</m>, the integral is
+        <m>\tfrac13\cdot\tfrac43\pi = \tfrac{4\pi}{9}</m>.
+      </p>
+    </solution>
   </exercise>
 </worksheet>
