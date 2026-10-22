@@ -13,8 +13,9 @@
   exercise per question, a task per part, a solution under each, and the
   "sec-exercises-" id prefix, so assets/unnumbered-chapter.css hides its
   number and xsl/custom-html.xsl keeps its solutions behind knowls (it is
-  a worksheet).  Included from main.ptx right after Exam 1, in the skeletal
-  book and in the completed instructor book; the two copies are identical.
+  a worksheet).  Included from main.ptx right after Review Problems #2, in the
+  skeletal book and in the completed instructor book; the two copies are
+  identical.
 
   Every solution carries a figure: the projection of the solid for the two
   rewrites, the solid itself and its two projections for the change of
