@@ -81,6 +81,7 @@ TOPICS = {
     "sec-exercises-review1-practice": "review1-practice.ptx",
     "sec-exercises-sample-past-exam-1": "sample-past-exam-1.ptx",
     "sec-exercises-exam-1": "exam-1.ptx",
+    "sec-exercises-sample-past-exam-2": "sample-past-exam-2.ptx",
     "sec-exercises-review2-practice": "review2-practice.ptx",
     "sec-exercises-review3-practice": "review3-practice.ptx",
     "sec-exercises-review4-practice": "review4-practice.ptx",
