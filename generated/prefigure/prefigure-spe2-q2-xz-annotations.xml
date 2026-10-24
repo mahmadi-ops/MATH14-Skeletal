@@ -1,0 +1,42 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-spe2-q2-xz-figure" speech2="The projection of the solid onto the xz-plane: the region under the parabola z equals x squared from x equals zero to one.">
+      <grouped>prefigure-spe2-q2-xz-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-spe2-q2-xz-q2xz-region</active>
+        <active>prefigure-spe2-q2-xz-q2xz-par</active>
+        <active>prefigure-spe2-q2-xz-q2xz-strip</active>
+      </children>
+      <components>
+        <active>prefigure-spe2-q2-xz-q2xz-region</active>
+        <active>prefigure-spe2-q2-xz-q2xz-par</active>
+        <active>prefigure-spe2-q2-xz-q2xz-strip</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-spe2-q2-xz-q2xz-region" speech2="The shaded region.">
+      <active>prefigure-spe2-q2-xz-q2xz-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-spe2-q2-xz-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-spe2-q2-xz-q2xz-par" speech2="The parabola z equals x squared." sonify="yes">
+      <active>prefigure-spe2-q2-xz-q2xz-par</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-spe2-q2-xz-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-spe2-q2-xz-q2xz-par</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-spe2-q2-xz-q2xz-strip" speech2="A horizontal strip at height z, from x equals root z to x equals one.">
+      <active>prefigure-spe2-q2-xz-q2xz-strip</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-spe2-q2-xz-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

@@ -1,0 +1,54 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-spe2-q3-region-figure" speech2="The circle r equals two cosine theta and the curve r equals two cosine squared theta, with the region between them shaded.">
+      <grouped>prefigure-spe2-q3-region-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-spe2-q3-region-q3-region</active>
+        <active>prefigure-spe2-q3-region-q3-circle</active>
+        <active>prefigure-spe2-q3-region-q3-curve</active>
+        <active>prefigure-spe2-q3-region-q3-ray</active>
+      </children>
+      <components>
+        <active>prefigure-spe2-q3-region-q3-region</active>
+        <active>prefigure-spe2-q3-region-q3-circle</active>
+        <active>prefigure-spe2-q3-region-q3-curve</active>
+        <active>prefigure-spe2-q3-region-q3-ray</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-spe2-q3-region-q3-region" speech2="The shaded region, outside the curve and inside the circle.">
+      <active>prefigure-spe2-q3-region-q3-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-spe2-q3-region-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-spe2-q3-region-q3-circle" speech2="The circle r equals two cosine theta, of radius one centered at one comma zero." sonify="yes">
+      <active>prefigure-spe2-q3-region-q3-circle</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-spe2-q3-region-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-spe2-q3-region-q3-circle</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-spe2-q3-region-q3-curve" speech2="The curve r equals two cosine squared theta, inside the circle." sonify="yes">
+      <active>prefigure-spe2-q3-region-q3-curve</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-spe2-q3-region-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-spe2-q3-region-q3-curve</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-spe2-q3-region-q3-ray" speech2="A ray at angle theta, which enters the region on the curve and leaves it on the circle.">
+      <active>prefigure-spe2-q3-region-q3-ray</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-spe2-q3-region-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>
