@@ -38,10 +38,13 @@
       tablets, smart watches or similar) were permitted, and students were
       asked to write their work in a neat and organized format and to fully
       justify every step. Try the exam under the same conditions before you
-      look at the solutions. The topics it covers, with links to the notes:
+      look at the solutions. Its topics are those of Exam #2, with links to
+      the notes:
     </p>
     <p>
       <ul>
+        <li><p><xref ref="section-double-integrals-rectangles" text="title"/></p></li>
+        <li><p><xref ref="section-double-integrals-general-regions" text="title"/></p></li>
         <li><p><xref ref="section-polar-coordinates" text="title"/></p></li>
         <li><p><xref ref="section-double-integrals-polar-form" text="title"/></p></li>
         <li><p><xref ref="section-triple-integrals-rectangular" text="title"/></p></li>
