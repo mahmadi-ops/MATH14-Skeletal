@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Exam 2, with solutions.
+
+  Transcribed from the instructor's solutions of the Fall 2026 second exam
+  (MATH14-Exam2-Fall2026-Solutions.pdf): the six problems with their point
+  values, the solutions of the key, and its grading notes, which close
+  each solution.  That PDF has no cover page, so the introduction says only
+  what the key does (six problems, 20 points) and lists the topics as
+  Sample Past Exam 2 does.  Built like exam-1.ptx: one exercise per
+  problem, a task per part, a solution under each, and the
+  "sec-exercises-" id prefix, so assets/unnumbered-chapter.css hides its
+  number and xsl/custom-html.xsl keeps its solutions behind knowls (it is a
+  worksheet).  The solutions carry no component: like Exam 1's, they are
+  always available.  The key's eight figures sit in the solutions, as in
+  Sample Past Exam 2: PreFigure for the plane pictures, pgfplots for the
+  two solids.  Included from main.ptx right after Sample Past Exam 2, in
+  the skeletal book and in the completed instructor book; the two copies
+  are identical.
+-->
+<worksheet xml:id="sec-exercises-exam-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Exam 2</title>
+
+  <introduction>
+    <p>
+      The second exam of Fall 2026, with solutions. It had six problems
+      worth 20 points in all. Each solution ends with the grading notes of
+      the key, which show how the points were given. Try the exam under
+      exam conditions before you look at the solutions. The topics it
+      covers, with links to the notes:
+    </p>
+    <p>
+      <ul>
+        <li><p><xref ref="section-double-integrals-rectangles" text="title"/></p></li>
+        <li><p><xref ref="section-double-integrals-general-regions" text="title"/></p></li>
+        <li><p><xref ref="section-polar-coordinates" text="title"/></p></li>
+        <li><p><xref ref="section-double-integrals-polar-form" text="title"/></p></li>
+        <li><p><xref ref="section-triple-integrals-rectangular" text="title"/></p></li>
+        <li><p><xref ref="section-triple-integrals-cylindrical" text="title"/></p></li>
+        <li><p><xref ref="section-triple-integrals-spherical" text="title"/></p></li>
+      </ul>
+    </p>
+  </introduction>
+
+  <!-- ===================== Problem 1 ===================== -->
+  <exercise xml:id="exam2-q1">
+    <title>(3 points)</title>
+    <statement>
+      <p>
+        Rewrite (<alert>do not evaluate</alert>) the following integral in
+        cylindrical coordinates:
+        <me>
+          \int_0^2\!\!\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\!\!
+          \int_0^{4-x^2-y^2} z\sqrt{x^2+y^2}\,dz\,dy\,dx .
+        </me>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The limits on <m>x</m> and <m>y</m> describe the projection of the
+        solid onto the <m>xy</m>-plane: <m>0 \le x \le 2</m> and
+        <m>y^2 \le 2x - x^2</m>, that is, <m>x^2 - 2x + y^2 \le 0</m>, the
+        disk <m>(x-1)^2 + y^2 \le 1</m> of radius <m>1</m> centered at
+        <m>(1,0)</m> (<xref ref="fig-exam2-q1-disk"/>). Its boundary circle
+        is <m>x^2 + y^2 = 2x</m>, in polar coordinates
+        <m>r^2 = 2r\cos\theta</m>, so <m>r = 2\cos\theta</m>; the disk is
+        swept out by <m>-\pi/2 \le \theta \le \pi/2</m>,
+        <m>0 \le r \le 2\cos\theta</m>.
+      </p>
+      <figure xml:id="fig-exam2-q1-disk">
+        <caption>
+          The projection of the solid of <xref ref="exam2-q1"/> onto the <m>xy</m>-plane: the disk <m>(x-1)^2 + y^2 \le 1</m>, whose boundary is <m>r = 2\cos\theta</m>. A ray at angle <m>\theta</m> leaves the disk at <m>r = 2\cos\theta</m>; the rays that meet it have <m>-\pi/2 \le \theta \le \pi/2</m>.
+        </caption>
+        <image width="45%">
+          <shortdescription>
+          A shaded disk of radius one centered at the point one comma zero, tangent to the y axis at the origin, with a ray from the origin at angle theta ending on its boundary.
+          </shortdescription>
+          <description>
+            <p>
+            Coordinate axes x and y. A disk of radius one, centered at the point one comma zero on the x axis, is shaded tan; its blue boundary circle passes through the origin and the point two comma zero. A green ray from the origin at an angle theta above the x axis ends on the circle, where r equals two cosine theta, and a small arc marks the angle.
+            </p>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="prefigure-exam2-q1-disk">
+            <diagram dimensions="(300,262)" margins="10">
+              <definition>circ(t) = (1 + cos(t), sin(t))</definition>
+              <coordinates bbox="(-0.6,-1.4,2.6,1.4)">
+              <circle at="q1-disk" center="(1,0)" radius="1" fill="#fbe3d0" stroke="none"/>
+              <axes at="q1-axes" xlabel="x" ylabel="y" hlabels="(2,1,2)" vlabels="(-1,1,1)" arrows="1"/>
+              <parametric-curve at="q1-circle" function="circ" domain="(0,2*pi)" stroke="#0072B2" thickness="3"/>
+              <line at="q1-ray" endpoints="((0,0),(1.5,0.866))" stroke="#009E73" thickness="2.5"/>
+              <arc at="q1-angle" center="(0,0)" radius="0.45" range="(0,30)" stroke="#009E73" thickness="2"/>
+              <point at="q1-center" p="(1,0)" fill="black" size="3.5"/>
+              <point at="q1-end" p="(1.5,0.866)" fill="#009E73" size="3.5"/>
+              <label at="q1-thetalab" anchor="(0.5,0.13)" alignment="e" color="#009E73"><m>\theta</m></label>
+              <label at="q1-rlab" anchor="(1.5,0.866)" alignment="ne" offset="(3,3)" color="#0072B2"><m>r = 2\cos\theta</m></label>
+              <label at="q1-clab" anchor="(1,0)" alignment="ne" offset="(2,3)"><m>(1,0)</m></label>
+              <label at="q1-eqlab" anchor="(1,-0.3)" alignment="s"><m>(x-1)^2+y^2\le 1</m></label>
+              </coordinates>
+              <annotations>
+              <annotation ref="figure" text="The disk of radius one centered at one comma zero, the shadow of the solid.">
+                <annotation ref="q1-disk" text="The shaded disk."/>
+                <annotation ref="q1-circle" text="Its boundary circle, r equals two cosine theta in polar coordinates." sonify="yes"/>
+                <annotation ref="q1-ray" text="A ray from the origin at angle theta, which leaves the disk at r equals two cosine theta."/>
+              </annotation>
+              </annotations>
+            </diagram>
+          </prefigure>
+        </image>
+      </figure>
+      <p>
+        The limits on <m>z</m> run from the plane <m>z = 0</m> up to the
+        paraboloid <m>z = 4 - x^2 - y^2 = 4 - r^2</m> (which is
+        <m>\ge 0</m> on the disk, since <m>r \le 2</m> there). The integrand
+        is <m>z\sqrt{x^2 + y^2} = zr</m>, and
+        <m>dV = r\,dz\,dr\,d\theta</m>. Hence
+        <md>
+          <mrow>
+            \int_0^2\!\!\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\!\!
+            \int_0^{4-x^2-y^2} z\sqrt{x^2+y^2}\,dz\,dy\,dx
+          </mrow>
+          <mrow>
+            \quad = \int_{-\pi/2}^{\pi/2}\!\!\int_0^{2\cos\theta}\!\!\int_0^{4-r^2}
+            z\,r^2\,dz\,dr\,d\theta .
+          </mrow>
+        </md>
+      </p>
+      <p>
+        <em>Grading.</em> 1 point for the projection <m>r = 2\cos\theta</m>
+        with <m>-\pi/2 \le \theta \le \pi/2</m>; 1 point for the
+        <m>z</m>-limits <m>0 \le z \le 4 - r^2</m>; 1 point for the
+        integrand with the factor <m>r</m> from <m>dV</m>
+        (<m>zr \cdot r = zr^2</m>).
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ===================== Problem 2 ===================== -->
+  <exercise xml:id="exam2-q2">
+    <title>(4 points)</title>
+    <introduction>
+      <p>
+        Consider the integral
+        <me>
+          \int_0^1\!\!\int_0^{y}\!\!\int_0^{1-y^2} f(x,y,z)\,dz\,dx\,dy .
+        </me>
+        Rewrite (<alert>do not evaluate</alert>) this integral in the
+        following forms.
+      </p>
+    </introduction>
+
+    <task xml:id="exam2-q2-a">
+      <statement>
+        <p>
+          <m>\displaystyle\iiint_R f(x,y,z)\,dy\,dz\,dx</m> (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The given limits describe the solid
+          <me>
+            R:\quad 0 \le y \le 1,\qquad 0 \le x \le y,\qquad 0 \le z \le 1 - y^2 ,
+          </me>
+          shown in <xref ref="fig-exam2-q2-solid"/>: it stands on the
+          triangle <m>0 \le x \le y \le 1</m> of the <m>xy</m>-plane, under
+          the parabolic cylinder <m>z = 1 - y^2</m> (which meets the plane
+          <m>z = 0</m> along the line <m>y = 1</m>); its other two faces lie
+          in the planes <m>x = 0</m> and <m>x = y</m>. Its projections onto
+          the <m>xz</m>- and <m>yz</m>-planes are shown in
+          <xref ref="fig-exam2-q2-xz"/> and <xref ref="fig-exam2-q2-yz"/>.
+        </p>
+        <figure xml:id="fig-exam2-q2-solid">
+          <caption>
+            The solid <m>R</m> of <xref ref="exam2-q2"/>: over the triangle <m>0 \le x \le y \le 1</m> of the <m>xy</m>-plane, between the floor <m>z = 0</m> and the parabolic cylinder <m>z = 1 - y^2</m>. Its other faces lie in the planes <m>x = 0</m> (grey, at the back) and <m>x = y</m> (orange).
+          </caption>
+          <image width="60%">
+            <shortdescription>
+            A solid standing on a triangle in the xy-plane, with a curved blue roof that rises to height one over the z axis and comes down to the floor along the line y equals one, a flat gray back face in the plane x equals zero, and a flat orange face in the plane x equals y.
+            </shortdescription>
+            <description>
+              <p>
+              Coordinate axes x, y and z. A translucent solid stands on the triangle of the xy-plane with vertices at the origin, zero comma one comma zero, and one comma one comma zero. Its roof is the parabolic cylinder z equals one minus y squared, at height one along the z axis and coming down to the floor along the line y equals one. Its gray back face lies in the plane x equals zero, and its orange front face lies in the vertical plane x equals y, whose edge on the floor runs from the origin to the point one comma one comma zero.
+              </p>
+            </description>
+            <latex-image>
+              <![CDATA[\begin{tikzpicture}[line join=round, line cap=round]
+                        \definecolor{oiblue}{RGB}{0,114,178}
+                        \definecolor{oiorange}{RGB}{213,94,0}
+                        \begin{axis}[
+                            view={60}{20},
+                            width=10cm,
+                            axis lines=center,
+                            axis line style={-latex, black!70, line width=0.7pt},
+                            xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+                            label style={font=\large},
+                            ticks=none,
+                            xmin=0, xmax=1.5, ymin=0, ymax=1.8, zmin=0, zmax=1.35,
+                            clip=false,
+                            unit vector ratio=1 1 1,
+                          ]
+                          % the face in the plane x = 0, at the back: 0 <= z <= 1 - y^2
+                          \addplot3[surf, shader=flat, color=black!12, opacity=0.5, fill opacity=0.5,
+                                    domain=0:1, samples=16, y domain=0:1, samples y=2,
+                                    z buffer=sort, forget plot]
+                            (0, {x}, {y*(1-x^2)});
+                          % the floor z = 0: 0 <= x <= y <= 1
+                          \addplot3[surf, shader=flat, color=oiorange!20, opacity=0.5, fill opacity=0.5,
+                                    domain=0:1, samples=12, y domain=0:1, samples y=2,
+                                    z buffer=sort, forget plot]
+                            ({y*x}, {x}, 0);
+                          % the face in the plane x = y: 0 <= z <= 1 - y^2
+                          \addplot3[surf, shader=flat, color=oiorange!35, opacity=0.6, fill opacity=0.6,
+                                    domain=0:1, samples=16, y domain=0:1, samples y=2,
+                                    z buffer=sort, forget plot]
+                            ({x}, {x}, {y*(1-x^2)});
+                          % the roof z = 1 - y^2
+                          \addplot3[surf, shader=faceted, faceted color=oiblue!25,
+                                    colormap={roofq2}{color=(oiblue!15!white) color=(oiblue!45!white)},
+                                    opacity=0.55, fill opacity=0.55,
+                                    domain=0:1, samples=16, y domain=0:1, samples y=6,
+                                    z buffer=sort, forget plot]
+                            ({y*x}, {x}, {1-x^2});
+                          % edges
+                          \addplot3[black!65, line width=1pt, samples=40, samples y=0, domain=0:1, forget plot]
+                            (0, {x}, {1-x^2});
+                          \addplot3[oiblue, line width=1.5pt, samples=40, samples y=0, domain=0:1, forget plot]
+                            ({x}, {x}, {1-x^2});
+                          \draw[black!65, dashed, line width=1pt] (axis cs:0,1,0) -- (axis cs:1,1,0);
+                          \draw[oiorange!85!black, line width=1.3pt] (axis cs:0,0,0) -- (axis cs:1,1,0);
+                          % labels
+                          \node[oiblue, font=\small, anchor=south west] at (axis cs:0.45,0.45,0.85) {$z = 1 - y^2$};
+                          \node[oiorange!85!black, font=\small, anchor=north] at (axis cs:0.6,0.6,0) {$x = y$};
+                          \node[font=\small, anchor=north west] at (axis cs:1,1,0) {$(1,1,0)$};
+                        \end{axis}
+                      \end{tikzpicture}]]>
+            </latex-image>
+          </image>
+        </figure>
+        <p>
+          For the order <m>dy\,dz\,dx</m> the outer variable is <m>x</m>,
+          which runs over <m>0 \le x \le 1</m> in all. For a fixed
+          <m>x</m>, the conditions <m>x \le y</m> and
+          <m>z \le 1 - y^2</m>, i.e. <m>y \le \sqrt{1-z}</m>, can both hold
+          only if <m>x \le \sqrt{1-z}</m>, that is, <m>z \le 1 - x^2</m>. So
+          the projection of <m>R</m> onto the <m>xz</m>-plane is the region
+          under the parabola <m>z = 1 - x^2</m>, <m>0 \le x \le 1</m>
+          (<xref ref="fig-exam2-q2-xz"/>), and for each <m>(x,z)</m> in it,
+          <m>y</m> runs from <m>x</m> up to <m>\sqrt{1-z}</m>:
+          <me>
+            \iiint_R f\,dy\,dz\,dx
+            = \int_0^1\!\!\int_0^{1-x^2}\!\!\int_x^{\sqrt{1-z}} f(x,y,z)\,dy\,dz\,dx .
+          </me>
+        </p>
+        <figure xml:id="fig-exam2-q2-xz">
+          <caption>
+            The projection of <m>R</m> onto the <m>xz</m>-plane: the region under <m>z = 1 - x^2</m>, <m>0 \le x \le 1</m>. For a fixed <m>x</m>, <m>z</m> runs from <m>0</m> to <m>1 - x^2</m>; above each of its points, <m>y</m> runs from <m>x</m> to <m>\sqrt{1-z}</m>.
+          </caption>
+          <image width="40%">
+            <shortdescription>
+            The region under the parabola z equals one minus x squared between x equals zero and x equals one, shaded, with a vertical strip at a fixed x from z equals zero up to the parabola.
+            </shortdescription>
+            <prefigure xmlns="https://prefigure.org" label="prefigure-exam2-q2-xz">
+              <diagram dimensions="(260,252)" margins="10">
+                <definition>zero(x) = 0</definition>
+                <definition>par(x) = 1 - x^2</definition>
+                <definition>pc(t) = (t, 1 - t^2)</definition>
+                <coordinates bbox="(-0.25,-0.4,1.45,1.3)">
+                <area-between-curves at="q2xz-region" function1="zero" function2="par" domain="(0,1)" fill="#fbe3d0" stroke="none"/>
+                <axes at="q2xz-axes" xlabel="x" ylabel="z" hlabels="(1,1,1)" vlabels="(1,1,1)" arrows="1"/>
+                <parametric-curve at="q2xz-par" function="pc" domain="(0,1.15)" stroke="#0072B2" thickness="3"/>
+                <line at="q2xz-strip" endpoints="((0.45,0),(0.45,0.7975))" stroke="#009E73" thickness="2.5"/>
+                <point at="q2xz-s1" p="(0.45,0)" fill="#009E73" size="3"/>
+                <point at="q2xz-s2" p="(0.45,0.7975)" fill="#009E73" size="3"/>
+                <label at="q2xz-parlab" anchor="(0.72,0.55)" alignment="ne" color="#0072B2"><m>z = 1 - x^2</m></label>
+                <label at="q2xz-xlab" anchor="(0.45,0)" alignment="s" offset="(0,-4)" color="#009E73"><m>x</m></label>
+                <label at="q2xz-toplab" anchor="(0.45,0.7975)" alignment="ne" offset="(3,3)" color="#009E73"><m>1 - x^2</m></label>
+                </coordinates>
+                <annotations>
+                <annotation ref="figure" text="The projection of the solid onto the xz-plane: the region under the parabola z equals one minus x squared from x equals zero to one.">
+                  <annotation ref="q2xz-region" text="The shaded region."/>
+                  <annotation ref="q2xz-par" text="The parabola z equals one minus x squared." sonify="yes"/>
+                  <annotation ref="q2xz-strip" text="A vertical strip at a fixed x, from z equals zero to z equals one minus x squared."/>
+                </annotation>
+                </annotations>
+              </diagram>
+            </prefigure>
+          </image>
+        </figure>
+        <p>
+          <em>Grading.</em> 1 point for the correct outer and middle limits
+          (the projection), 1 point for the inner limits.
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="exam2-q2-b">
+      <statement>
+        <p>
+          <m>\displaystyle\iiint_R f(x,y,z)\,dx\,dy\,dz</m> (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          With <m>R</m> as in the solution of part (a), the outer variable
+          is now <m>z</m>, with <m>0 \le z \le 1</m> in all; for a fixed
+          <m>z</m>, <m>y</m> runs from <m>0</m> to <m>\sqrt{1-z}</m> (the
+          projection of <m>R</m> onto the <m>yz</m>-plane is the region
+          under <m>z = 1 - y^2</m>, <m>0 \le y \le 1</m>,
+          <xref ref="fig-exam2-q2-yz"/>), and then the inner variable
+          <m>x</m> runs from <m>0</m> to <m>y</m>:
+          <me>
+            \iiint_R f\,dx\,dy\,dz
+            = \int_0^1\!\!\int_0^{\sqrt{1-z}}\!\!\int_0^{y} f(x,y,z)\,dx\,dy\,dz .
+          </me>
+        </p>
+        <figure xml:id="fig-exam2-q2-yz">
+          <caption>
+            The projection of <m>R</m> onto the <m>yz</m>-plane: the region under <m>z = 1 - y^2</m>, <m>0 \le y \le 1</m>. For a fixed <m>z</m>, <m>y</m> runs from <m>0</m> to <m>\sqrt{1-z}</m>; above each of its points, <m>x</m> runs from <m>0</m> to <m>y</m>.
+          </caption>
+          <image width="40%">
+            <shortdescription>
+            The region under the parabola z equals one minus y squared between y equals zero and y equals one, shaded, with a horizontal strip at height z from the z axis to the parabola.
+            </shortdescription>
+            <prefigure xmlns="https://prefigure.org" label="prefigure-exam2-q2-yz">
+              <diagram dimensions="(260,252)" margins="10">
+                <definition>zero(x) = 0</definition>
+                <definition>par(x) = 1 - x^2</definition>
+                <definition>pc(t) = (t, 1 - t^2)</definition>
+                <coordinates bbox="(-0.25,-0.4,1.45,1.3)">
+                <area-between-curves at="q2yz-region" function1="zero" function2="par" domain="(0,1)" fill="#fbe3d0" stroke="none"/>
+                <axes at="q2yz-axes" xlabel="y" ylabel="z" hlabels="(1,1,1)" vlabels="(1,1,1)" arrows="1"/>
+                <parametric-curve at="q2yz-par" function="pc" domain="(0,1.15)" stroke="#0072B2" thickness="3"/>
+                <line at="q2yz-strip" endpoints="((0,0.4),(0.7746,0.4))" stroke="#009E73" thickness="2.5"/>
+                <point at="q2yz-s1" p="(0,0.4)" fill="#009E73" size="3"/>
+                <point at="q2yz-s2" p="(0.7746,0.4)" fill="#009E73" size="3"/>
+                <label at="q2yz-parlab" anchor="(0.62,0.8)" alignment="ne" color="#0072B2"><m>z = 1 - y^2</m></label>
+                <label at="q2yz-zlab" anchor="(0,0.4)" alignment="w" offset="(-4,0)" color="#009E73"><m>z</m></label>
+                <label at="q2yz-rootlab" anchor="(0.7746,0.4)" alignment="ne" offset="(3,3)" color="#009E73"><m>\sqrt{1-z}</m></label>
+                </coordinates>
+                <annotations>
+                <annotation ref="figure" text="The projection of the solid onto the yz-plane: the region under the parabola z equals one minus y squared from y equals zero to one.">
+                  <annotation ref="q2yz-region" text="The shaded region."/>
+                  <annotation ref="q2yz-par" text="The parabola z equals one minus y squared." sonify="yes"/>
+                  <annotation ref="q2yz-strip" text="A horizontal strip at height z, from y equals zero to y equals the square root of one minus z."/>
+                </annotation>
+                </annotations>
+              </diagram>
+            </prefigure>
+          </image>
+        </figure>
+        <p>
+          <em>Check</em> (not required): with <m>f = 1</m> all three orders
+          give the volume <m>\int_0^1 y\left(1 - y^2\right) dy = \frac14</m>.
+        </p>
+        <p>
+          <em>Grading.</em> 1 point for the correct outer and middle limits
+          (the projection), 1 point for the inner limits.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Problem 3 ===================== -->
+  <exercise xml:id="exam2-q3">
+    <title>(3 points)</title>
+    <statement>
+      <p>
+        Set up (<alert>do not evaluate</alert>) a double integral for the
+        purpose of computing the area <em>inside</em> <m>x^2 + y^2 = 3y</m>
+        and <em>outside</em> <m>x^2 + y^2 = y + \sqrt{x^2 + y^2}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Both curves are simplest in polar coordinates. Since
+        <m>x^2 + y^2 = r^2</m> and <m>y = r\sin\theta</m>, the first is
+        <m>r^2 = 3r\sin\theta</m>, that is, <m>r = 3\sin\theta</m>: the
+        circle of radius <m>\frac32</m> centered at
+        <m>\left(0, \frac32\right)</m>, traced once as <m>\theta</m> runs
+        from <m>0</m> to <m>\pi</m>. The second is
+        <m>r^2 = r\sin\theta + r</m>, that is, <m>r = 1 + \sin\theta</m>, a
+        cardioid with its cusp at the origin, pointing down; its top point
+        is <m>r = 2</m> at <m>\theta = \pi/2</m>, and it passes through
+        <m>(\pm 1, 0)</m> at <m>\theta = 0, \pi</m>. Both curves are
+        symmetric about the <m>y</m>-axis (<xref ref="fig-exam2-q3-region"/>).
+      </p>
+      <figure xml:id="fig-exam2-q3-region">
+        <caption>
+          The circle <m>r = 3\sin\theta</m> and the cardioid <m>r = 1 + \sin\theta</m> of <xref ref="exam2-q3"/>. They cross at <m>\theta = \pi/6</m> and <m>\theta = 5\pi/6</m>, and in between the circle lies outside the cardioid. The shaded region, inside the circle and outside the cardioid, is swept by the rays <m>\pi/6 \le \theta \le 5\pi/6</m>; along each, <m>r</m> runs from <m>1 + \sin\theta</m> to <m>3\sin\theta</m>.
+        </caption>
+        <image width="55%">
+          <shortdescription>
+          A circle of radius three halves centered at zero comma three halves, and a cardioid with its cusp at the origin whose top is at zero comma two; the crescent inside the circle and outside the cardioid is shaded.
+          </shortdescription>
+          <description>
+            <p>
+            Coordinate axes x and y. A blue circle of radius three halves is centered at zero comma three halves, passing through the origin and the point zero comma three. An orange cardioid, r equals one plus sine theta, has its cusp at the origin, passes through minus one comma zero and one comma zero, dips slightly below the x axis between them, and reaches up to zero comma two. The two curves cross at two points marked in black, where dashed rays from the origin at angles pi over six and five pi over six meet them. The crescent between the cardioid and the circle, above those two points, is shaded tan. A green ray from the origin at an angle theta crosses the cardioid and then the circle, with the two crossing points marked.
+            </p>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="prefigure-exam2-q3-region">
+            <diagram dimensions="(380,256)" margins="10">
+              <definition>circ(t) = (3*sin(t)*cos(t), 3*sin(t)*sin(t))</definition>
+              <definition>card(t) = ((1 + sin(t))*cos(t), (1 + sin(t))*sin(t))</definition>
+              <coordinates bbox="(-2.9,-0.6,2.9,3.3)">
+              <polygon at="q3-region" points="((1.299,0.75),(1.37,0.8899),(1.427,1.036),(1.467,1.188),(1.492,1.343),(1.5,1.5),(1.492,1.657),(1.467,1.812),(1.427,1.964),(1.37,2.11),(1.299,2.25),(1.214,2.382),(1.115,2.504),(1.004,2.615),(0.8817,2.714),(0.75,2.799),(0.6101,2.87),(0.4635,2.927),(0.3119,2.967),(0.1568,2.992),(0,3),(-0.1568,2.992),(-0.3119,2.967),(-0.4635,2.927),(-0.6101,2.87),(-0.75,2.799),(-0.8817,2.714),(-1.004,2.615),(-1.115,2.504),(-1.214,2.382),(-1.299,2.25),(-1.37,2.11),(-1.427,1.964),(-1.467,1.812),(-1.492,1.657),(-1.5,1.5),(-1.492,1.343),(-1.467,1.188),(-1.427,1.036),(-1.37,0.8899),(-1.299,0.75),(-1.295,0.8413),(-1.285,0.9333),(-1.266,1.025),(-1.24,1.117),(-1.207,1.207),(-1.166,1.295),(-1.118,1.381),(-1.063,1.464),(-1.001,1.542),(-0.933,1.616),(-0.8585,1.685),(-0.7783,1.748),(-0.6929,1.805),(-0.6029,1.856),(-0.5088,1.899),(-0.4113,1.935),(-0.3109,1.963),(-0.2085,1.984),(-0.1046,1.996),(0,2),(0.1046,1.996),(0.2085,1.984),(0.3109,1.963),(0.4113,1.935),(0.5088,1.899),(0.6029,1.856),(0.6929,1.805),(0.7783,1.748),(0.8585,1.685),(0.933,1.616),(1.001,1.542),(1.063,1.464),(1.118,1.381),(1.166,1.295),(1.207,1.207),(1.24,1.117),(1.266,1.025),(1.285,0.9333),(1.295,0.8413))" fill="#fbe3d0" stroke="none" closed="yes"/>
+              <axes at="q3-axes" xlabel="x" ylabel="y" hlabels="(-1,1,1)" vlabels="(1,1,3)" arrows="1"/>
+              <line at="q3-ray1" endpoints="((0,0),(1.732,1))" stroke="#555555" thickness="1.5" dash="5 4"/>
+              <line at="q3-ray5" endpoints="((0,0),(-1.732,1))" stroke="#555555" thickness="1.5" dash="5 4"/>
+              <parametric-curve at="q3-circle" function="circ" domain="(0,pi)" stroke="#0072B2" thickness="3"/>
+              <parametric-curve at="q3-card" function="card" domain="(0,2*pi)" stroke="#D55E00" thickness="3"/>
+              <line at="q3-ray" endpoints="((0,0),(1.299,2.25))" stroke="#009E73" thickness="2.5"/>
+              <arc at="q3-angle" center="(0,0)" radius="0.35" range="(0,60)" stroke="#009E73" thickness="2"/>
+              <point at="q3-in" p="(0.933,1.616)" fill="#009E73" size="3.5"/>
+              <point at="q3-out" p="(1.299,2.25)" fill="#009E73" size="3.5"/>
+              <point at="q3-p1" p="(1.299,0.75)" fill="black" size="3.5"/>
+              <point at="q3-p5" p="(-1.299,0.75)" fill="black" size="3.5"/>
+              <label at="q3-thetalab" anchor="(0.3,0.2)" alignment="ne" color="#009E73"><m>\theta</m></label>
+              <label at="q3-circlab" anchor="(1.52,1.6)" alignment="e" offset="(3,0)" color="#0072B2"><m>r = 3\sin\theta</m></label>
+              <label at="q3-cardlab" anchor="(0.55,-0.25)" alignment="se" color="#D55E00"><m>r = 1 + \sin\theta</m></label>
+              <label at="q3-ray1lab" anchor="(1.732,1)" alignment="e" offset="(3,0)" color="#555555"><m>\theta = \pi/6</m></label>
+              <label at="q3-ray5lab" anchor="(-1.732,1)" alignment="w" offset="(-3,0)" color="#555555"><m>\theta = 5\pi/6</m></label>
+              </coordinates>
+              <annotations>
+              <annotation ref="figure" text="The circle r equals three sine theta and the cardioid r equals one plus sine theta, with the region inside the circle and outside the cardioid shaded.">
+                <annotation ref="q3-region" text="The shaded region, inside the circle and outside the cardioid."/>
+                <annotation ref="q3-circle" text="The circle r equals three sine theta, of radius three halves centered at zero comma three halves." sonify="yes"/>
+                <annotation ref="q3-card" text="The cardioid r equals one plus sine theta, with its cusp at the origin." sonify="yes"/>
+                <annotation ref="q3-ray1" text="The dashed ray theta equals pi over six, through the right crossing point."/>
+                <annotation ref="q3-ray5" text="The dashed ray theta equals five pi over six, through the left crossing point."/>
+                <annotation ref="q3-ray" text="A ray at angle theta, which enters the region on the cardioid and leaves it on the circle."/>
+              </annotation>
+              </annotations>
+            </diagram>
+          </prefigure>
+        </image>
+      </figure>
+      <p>
+        The curves meet where <m>3\sin\theta = 1 + \sin\theta</m>, i.e.
+        <m>\sin\theta = \frac12</m>, so at <m>\theta = \pi/6</m> and
+        <m>\theta = 5\pi/6</m> (both with <m>r = \frac32</m>: the points
+        <m>\left(\pm\frac{3\sqrt3}{4}, \frac34\right)</m>). For
+        <m>\pi/6 \le \theta \le 5\pi/6</m> we have
+        <m>\sin\theta \ge \frac12</m>, so
+        <m>3\sin\theta \ge 1 + \sin\theta</m>: along a ray at angle
+        <m>\theta</m> the region runs from the cardioid out to the circle.
+        With <m>dA = r\,dr\,d\theta</m>, and using the symmetry about the
+        <m>y</m>-axis,
+        <md>
+          <mrow>
+            A \amp = \int_{\pi/6}^{5\pi/6}\!\!\int_{1+\sin\theta}^{3\sin\theta} r\,dr\,d\theta
+          </mrow>
+          <mrow>
+            \amp = 2\int_{\pi/6}^{\pi/2}\!\!\int_{1+\sin\theta}^{3\sin\theta} r\,dr\,d\theta .
+          </mrow>
+        </md>
+      </p>
+      <p>
+        <em>Value</em> (not required): <m>A = \pi</m>.
+      </p>
+      <p>
+        <em>Grading.</em> 1 point for both polar equations; 1 point for the
+        intersection angles <m>\pi/6</m>, <m>5\pi/6</m> and the sketch; 1
+        point for the integral with <m>r\,dr\,d\theta</m> and the correct
+        inner order (cardioid to circle).
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ===================== Problem 4 ===================== -->
+  <exercise xml:id="exam2-q4">
+    <title>(3 points)</title>
+    <statement>
+      <p>
+        Rewrite (<alert>do not evaluate</alert>) the following integral in
+        spherical coordinates:
+        <me>
+          \int_{-3}^{0}\!\!\int_{-\sqrt{9-x^2}}^{0}\!\!
+          \int_{\sqrt{(x^2+y^2)/3}}^{\sqrt{12-x^2-y^2}} yz\,dz\,dy\,dx .
+        </me>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>The projection.</em> The limits <m>-3 \le x \le 0</m>,
+        <m>-\sqrt{9 - x^2} \le y \le 0</m> describe the quarter of the disk
+        <m>x^2 + y^2 \le 9</m> with <m>x \le 0</m> and <m>y \le 0</m>, the
+        third quadrant (<xref ref="fig-exam2-q4-proj"/>): the rays through
+        it have <m>\pi \le \theta \le 3\pi/2</m>.
+      </p>
+      <figure xml:id="fig-exam2-q4-proj">
+        <caption>
+          The projection of the solid of <xref ref="exam2-q4"/> onto the <m>xy</m>-plane: the quarter of the disk <m>x^2 + y^2 \le 9</m> in the third quadrant, swept by <m>\pi \le \theta \le 3\pi/2</m>.
+        </caption>
+        <image width="42%">
+          <shortdescription>
+          A shaded quarter disk of radius three in the third quadrant, bounded by the negative x axis, the negative y axis, and a quarter circle, with an arrow sweeping from the negative x axis to the negative y axis.
+          </shortdescription>
+          <prefigure xmlns="https://prefigure.org" label="prefigure-exam2-q4-proj">
+            <diagram dimensions="(300,300)" margins="10">
+              <definition>circ(t) = (3*cos(t), 3*sin(t))</definition>
+              <coordinates bbox="(-4.4,-3.9,0.9,1.4)">
+              <polygon at="q4p-region" points="((0,0),(-3,0),(-2.997,-0.1309),(-2.989,-0.2615),(-2.974,-0.3916),(-2.954,-0.5209),(-2.929,-0.6493),(-2.898,-0.7765),(-2.861,-0.9021),(-2.819,-1.026),(-2.772,-1.148),(-2.719,-1.268),(-2.661,-1.385),(-2.598,-1.5),(-2.53,-1.612),(-2.457,-1.721),(-2.38,-1.826),(-2.298,-1.928),(-2.212,-2.027),(-2.121,-2.121),(-2.027,-2.212),(-1.928,-2.298),(-1.826,-2.38),(-1.721,-2.457),(-1.612,-2.53),(-1.5,-2.598),(-1.385,-2.661),(-1.268,-2.719),(-1.148,-2.772),(-1.026,-2.819),(-0.9021,-2.861),(-0.7765,-2.898),(-0.6493,-2.929),(-0.5209,-2.954),(-0.3916,-2.974),(-0.2615,-2.989),(-0.1309,-2.997),(0,-3))" fill="#fbe3d0" stroke="none" closed="yes"/>
+              <axes at="q4p-axes" xlabel="x" ylabel="y" hlabels="(-3,1,-1)" vlabels="(-3,1,-1)" arrows="1"/>
+              <parametric-curve at="q4p-arc" function="circ" domain="(pi,3*pi/2)" stroke="#0072B2" thickness="3"/>
+              <arc at="q4p-sweep" center="(0,0)" radius="1.4" range="(180,270)" stroke="#009E73" thickness="2" arrows="1"/>
+              <label at="q4p-thetalab" anchor="(-1.15,-1.6)" alignment="sw" color="#009E73"><m>\pi \le \theta \le \tfrac{3\pi}{2}</m></label>
+              <label at="q4p-arclab" anchor="(-2.2,-2.2)" alignment="sw" offset="(-3,-3)" color="#0072B2"><m>x^2+y^2=9</m></label>
+              </coordinates>
+              <annotations>
+              <annotation ref="figure" text="The quarter disk of radius three in the third quadrant, the shadow of the solid.">
+                <annotation ref="q4p-region" text="The shaded quarter disk."/>
+                <annotation ref="q4p-arc" text="The quarter circle of radius three from the negative x axis down to the negative y axis." sonify="yes"/>
+                <annotation ref="q4p-sweep" text="An arrow sweeping from theta equals pi, the negative x axis, to theta equals three pi over two, the negative y axis."/>
+              </annotation>
+              </annotations>
+            </diagram>
+          </prefigure>
+        </image>
+      </figure>
+      <p>
+        <em>The solid.</em> The lower limit on <m>z</m>,
+        <m>z = \sqrt{(x^2 + y^2)/3}</m>, is the upper nappe of the cone
+        <m>3z^2 = x^2 + y^2</m>: in spherical coordinates
+        <m>\sqrt3\,\rho\cos\phi = \rho\sin\phi</m>, so
+        <m>\tan\phi = \sqrt3</m> and <m>\phi = \pi/3</m>. The upper limit,
+        <m>z = \sqrt{12 - x^2 - y^2}</m>, is the upper half of the sphere
+        <m>x^2 + y^2 + z^2 = 12</m>, which is <m>\rho = 2\sqrt3</m>. The
+        solid lies above the cone and below the sphere, so it is the part
+        of the ball <m>\rho \le 2\sqrt3</m> with <m>0 \le \phi \le \pi/3</m>,
+        an ice-cream cone, cut to the quarter
+        <m>\pi \le \theta \le 3\pi/2</m> (<xref ref="fig-exam2-q4-solid"/>).
+        As a check, the cone and the sphere meet where
+        <m>x^2 + y^2 + \frac13\left(x^2 + y^2\right) = 12</m>, that is, on
+        the circle <m>x^2 + y^2 = 9</m> (at height <m>z = \sqrt3</m>),
+        exactly the boundary of the projection.
+      </p>
+      <figure xml:id="fig-exam2-q4-solid">
+        <caption>
+          The solid of <xref ref="exam2-q4"/>: the quarter, over the third quadrant, of the region inside the sphere <m>\rho = 2\sqrt3</m> and above the cone <m>\phi = \pi/3</m>. The two surfaces meet along the circle <m>x^2 + y^2 = 9</m>, <m>z = \sqrt3</m>.
+        </caption>
+        <image width="55%">
+          <shortdescription>
+          A quarter of an ice-cream cone: an orange cone with its vertex at the origin opening upward, capped by a blue piece of a sphere, cut by the two vertical planes x equals zero and y equals zero so that only the part over the third quadrant remains.
+          </shortdescription>
+          <description>
+            <p>
+            Coordinate axes x, y and z, seen from the side of the third quadrant. Above the xy-plane, an orange conical surface rises from the origin at sixty degrees from the positive z axis, and a blue spherical cap of radius two root three closes it from above; the two meet along a black quarter circle of radius three at height root three. Two flat gray faces, in the planes x equals zero and y equals zero, cut the solid to the quarter over the third quadrant, where x and y are both negative.
+            </p>
+          </description>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}[line join=round, line cap=round]
+                      \definecolor{oiblue}{RGB}{0,114,178}
+                      \definecolor{oiorange}{RGB}{213,94,0}
+                      \begin{axis}[
+                          view={-40}{18},
+                          width=10cm,
+                          axis lines=center,
+                          axis line style={-latex, black!70, line width=0.7pt},
+                          xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+                          label style={font=\large},
+                          ticks=none,
+                          xmin=-3.6, xmax=1.6, ymin=-3.6, ymax=1.6, zmin=0, zmax=4.4,
+                          clip=false,
+                          unit vector ratio=1 1 1,
+                        ]
+                        % the flat faces in the planes x = 0 (theta = 3pi/2) and y = 0 (theta = pi)
+                        \addplot3[surf, shader=flat, color=black!12, opacity=0.5, fill opacity=0.5,
+                                  domain=0:3.4641, samples=8, y domain=0:60, samples y=12,
+                                  z buffer=sort, forget plot]
+                          (0, {-x*sin(y)}, {x*cos(y)});
+                        \addplot3[surf, shader=flat, color=black!12, opacity=0.5, fill opacity=0.5,
+                                  domain=0:3.4641, samples=8, y domain=0:60, samples y=12,
+                                  z buffer=sort, forget plot]
+                          ({-x*sin(y)}, 0, {x*cos(y)});
+                        % the cone phi = pi/3 over the third quadrant: z = r/sqrt(3), 0 <= r <= 3
+                        \addplot3[surf, shader=faceted, faceted color=oiorange!30,
+                                  colormap={coneexam2}{color=(oiorange!12!white) color=(oiorange!45!white)},
+                                  opacity=0.6, fill opacity=0.6,
+                                  domain=0:3, samples=10, y domain=180:270, samples y=16,
+                                  z buffer=sort, forget plot]
+                          ({x*cos(y)}, {x*sin(y)}, {x/sqrt(3)});
+                        % the sphere rho = 2 sqrt 3, phi from 0 to pi/3
+                        \addplot3[surf, shader=faceted, faceted color=oiblue!30,
+                                  colormap={sphexam2}{color=(oiblue!15!white) color=(oiblue!55!white)},
+                                  opacity=0.65, fill opacity=0.65,
+                                  domain=0:60, samples=12, y domain=180:270, samples y=16,
+                                  z buffer=sort, forget plot]
+                          ({3.4641*sin(x)*cos(y)}, {3.4641*sin(x)*sin(y)}, {3.4641*cos(x)});
+                        % the circle where they meet, and the edges in the two flat faces
+                        \addplot3[black, line width=1.4pt, samples=40, samples y=0, domain=180:270, forget plot]
+                          ({3*cos(x)}, {3*sin(x)}, {sqrt(3)});
+                        \draw[oiorange!85!black, line width=1.2pt] (axis cs:0,0,0) -- (axis cs:-3,0,1.7321);
+                        \draw[oiorange!85!black, line width=1.2pt] (axis cs:0,0,0) -- (axis cs:0,-3,1.7321);
+                        \addplot3[oiblue, line width=1.2pt, samples=30, samples y=0, domain=0:60, forget plot]
+                          ({-3.4641*sin(x)}, 0, {3.4641*cos(x)});
+                        \addplot3[oiblue, line width=1.2pt, samples=30, samples y=0, domain=0:60, forget plot]
+                          (0, {-3.4641*sin(x)}, {3.4641*cos(x)});
+                        % labels
+                        \node[oiblue, font=\small, anchor=west, xshift=4pt] at (axis cs:0,-2.227,2.654) {$\rho = 2\sqrt3$};
+                        \node[oiorange!85!black, font=\small, anchor=west] at (axis cs:-0.3,-2.6,1.0) {$\phi = \pi/3$};
+                        \node[font=\small, anchor=east, xshift=-4pt] at (axis cs:-3,0,1.7321) {$x^2+y^2=9,\ z=\sqrt3$};
+                      \end{axis}
+                    \end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
+      <p>
+        <em>The integral.</em> With <m>y = \rho\sin\phi\sin\theta</m> and
+        <m>z = \rho\cos\phi</m>, the integrand is
+        <m>yz = \rho^2\sin\phi\cos\phi\sin\theta</m>, and
+        <m>dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta</m>. Hence
+        <md>
+          <mrow>
+            \int_{-3}^{0}\!\!\int_{-\sqrt{9-x^2}}^{0}\!\!
+            \int_{\sqrt{(x^2+y^2)/3}}^{\sqrt{12-x^2-y^2}} yz\,dz\,dy\,dx
+          </mrow>
+          <mrow>
+            \quad = \int_{\pi}^{3\pi/2}\!\!\int_0^{\pi/3}\!\!\int_0^{2\sqrt3}
+            \rho^4\sin^2\phi\cos\phi\,\sin\theta\,d\rho\,d\phi\,d\theta .
+          </mrow>
+        </md>
+      </p>
+      <p>
+        <em>Grading.</em> 1 point for the <m>\theta</m>-limits; 1 point
+        for <m>\phi = \pi/3</m> and <m>\rho = 2\sqrt3</m> (with the solid
+        correctly identified as the part <em>above</em> the cone); 1 point
+        for the integrand including <m>\rho^2\sin\phi</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ===================== Problem 5 ===================== -->
+  <exercise xml:id="exam2-q5">
+    <title>(4 points)</title>
+    <introduction>
+      <p>
+        <alert>Without calculating the integrals</alert>, decide whether
+        each of the following integrals is positive, negative, or zero.
+        Let <m>S</m> be the solid bounded by <m>z = y^2 - 1</m>,
+        <m>z = 1 - y^2</m>, <m>x = 0</m>, and <m>x = 2</m>. Remember to
+        justify your responses.
+      </p>
+    </introduction>
+
+    <task xml:id="exam2-q5-a">
+      <statement>
+        <p>
+          <m>\displaystyle\iiint_S e^x\sin y\,dV</m> (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First locate <m>S</m>. The two parabolic cylinders meet where
+          <m>y^2 - 1 = 1 - y^2</m>, that is, <m>y^2 = 1</m>, so at
+          <m>y = \pm 1</m>; between them <m>1 - y^2</m> lies above
+          <m>y^2 - 1</m>. So
+          <me>
+            S:\quad 0 \le x \le 2,\qquad -1 \le y \le 1,\qquad y^2 - 1 \le z \le 1 - y^2 ,
+          </me>
+          a solid with the lens-shaped cross-section of
+          <xref ref="fig-exam2-q5-section"/> in every plane <m>x = c</m>,
+          <m>0 \le c \le 2</m>.
+        </p>
+        <figure xml:id="fig-exam2-q5-section">
+          <caption>
+            The cross-section of the solid <m>S</m> of <xref ref="exam2-q5"/> by a plane <m>x = c</m>: the region between the parabolas <m>z = y^2 - 1</m> and <m>z = 1 - y^2</m>, which meet at <m>y = \pm 1</m>. It is symmetric about the <m>z</m>-axis, that is, about the plane <m>y = 0</m>.
+          </caption>
+          <image width="50%">
+            <shortdescription>
+            Two parabolas in the yz-plane, one opening upward with vertex at zero comma minus one and one opening downward with vertex at zero comma one, crossing at y equals minus one and y equals one; the lens between them is shaded.
+            </shortdescription>
+            <prefigure xmlns="https://prefigure.org" label="prefigure-exam2-q5-section">
+              <diagram dimensions="(340,232)" margins="10">
+                <definition>lower(x) = x^2 - 1</definition>
+                <definition>upper(x) = 1 - x^2</definition>
+                <definition>lc(t) = (t, t^2 - 1)</definition>
+                <definition>uc(t) = (t, 1 - t^2)</definition>
+                <coordinates bbox="(-1.8,-1.4,2.4,1.45)">
+                <area-between-curves at="q5-region" function1="lower" function2="upper" domain="(-1,1)" fill="#fbe3d0" stroke="none"/>
+                <axes at="q5-axes" xlabel="y" ylabel="z" hlabels="(-1,1,1)" vlabels="(-1,1,1)" arrows="1"/>
+                <parametric-curve at="q5-lower" function="lc" domain="(-1.3,1.3)" stroke="#0072B2" thickness="3"/>
+                <parametric-curve at="q5-upper" function="uc" domain="(-1.3,1.3)" stroke="#D55E00" thickness="3"/>
+                <point at="q5-pm" p="(-1,0)" fill="black" size="3.5"/>
+                <point at="q5-pp" p="(1,0)" fill="black" size="3.5"/>
+                <label at="q5-uplab" anchor="(0.95,0.95)" alignment="e" offset="(3,0)" color="#D55E00"><m>z=1-y^2</m></label>
+                <label at="q5-lowlab" anchor="(0.95,-1.0)" alignment="e" offset="(3,0)" color="#0072B2"><m>z=y^2-1</m></label>
+                </coordinates>
+                <annotations>
+                <annotation ref="figure" text="The lens between an upward parabola with vertex at zero comma minus one and a downward parabola with vertex at zero comma one, which cross at y equals minus one and y equals one.">
+                  <annotation ref="q5-region" text="The shaded cross-section of the solid S."/>
+                  <annotation ref="q5-lower" text="The parabola z equals y squared minus one, the floor of S." sonify="yes"/>
+                  <annotation ref="q5-upper" text="The parabola z equals one minus y squared, the roof of S." sonify="yes"/>
+                </annotation>
+                </annotations>
+              </diagram>
+            </prefigure>
+          </image>
+        </figure>
+        <p>
+          <alert>Zero.</alert> <m>S</m> is symmetric about the plane
+          <m>y = 0</m>: replacing <m>y</m> by <m>-y</m> changes none of its
+          bounding surfaces, so the reflection <m>y \mapsto -y</m> maps
+          <m>S</m> onto itself. The integrand is odd under that reflection,
+          <m>e^x\sin(-y) = -e^x\sin y</m>: it is <m>\ge 0</m> on the half
+          <m>y \ge 0</m> of <m>S</m> and <m>\le 0</m> on the half
+          <m>y \le 0</m>, with the values on the two halves mirror images of
+          each other (the factor <m>e^x</m> is the same at mirror points).
+          The two halves contribute opposite amounts and the integral is
+          <m>0</m>.
+        </p>
+        <p>
+          <em>Grading.</em> 1 point for the correct sign, 1 point for the
+          justification; a correct sign with no or wrong reasoning earns at
+          most <m>\frac12</m> point. The description of <m>S</m> by
+          inequalities is part of the justification of both parts.
+        </p>
+      </solution>
+    </task>
+
+    <task xml:id="exam2-q5-b">
+      <statement>
+        <p>
+          <m>\displaystyle\iiint_S \left(z + y^2 - 1\right) dV</m> (2 points)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <alert>Negative.</alert> On <m>S</m>, described in the solution of
+          part (a), we have <m>z \le 1 - y^2</m>, that is,
+          <m>z + y^2 - 1 \le 0</m>, with equality only on the top surface
+          <m>z = 1 - y^2</m>, which has zero volume. An integrand that is
+          negative throughout the solid except on a surface of zero volume
+          has a negative integral. (Its value is <m>-\frac{64}{15}</m>, but
+          no calculation is expected.)
+        </p>
+        <p>
+          <em>Grading.</em> 1 point for the correct sign, 1 point for the
+          justification; a correct sign with no or wrong reasoning earns at
+          most <m>\frac12</m> point. The description of <m>S</m> by
+          inequalities is part of the justification of both parts.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- ===================== Problem 6 ===================== -->
+  <exercise xml:id="exam2-q6">
+    <title>(3 points)</title>
+    <statement>
+      <p>
+        <alert>True or False?</alert> If the statement is true, prove it;
+        if it is false, give a counterexample.
+      </p>
+      <p>
+        Let <m>E</m> be the solid unit ball
+        <m>E = \{(x,y,z) : x^2 + y^2 + z^2 \le 1\}</m>. Then
+        <me>
+          \iiint_E (x + y + z)^2\,dV = \iiint_E \left(x^2 + y^2 + z^2\right) dV .
+        </me>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>True.</alert> Expand the square:
+        <me>
+          (x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2xz .
+        </me>
+        So it suffices to show that
+        <me>
+          \iiint_E xy\,dV = \iiint_E yz\,dV = \iiint_E xz\,dV = 0 .
+        </me>
+      </p>
+      <p>
+        <em>Use symmetry.</em> The unit ball is symmetric about the plane
+        <m>x = 0</m>: the reflection <m>(x,y,z) \mapsto (-x,y,z)</m> maps
+        <m>E</m> onto itself and does not change volumes. The integrand
+        <m>xy</m> is odd under it, <m>(-x)y = -xy</m>: the half
+        <m>x \ge 0</m> of <m>E</m> and the half <m>x \le 0</m> contribute
+        opposite amounts, so <m>\iiint_E xy\,dV = 0</m>. The same
+        reflection kills <m>xz</m>, and the reflection <m>y \mapsto -y</m>
+        kills <m>yz</m>. (Equivalently, in spherical coordinates each cross
+        term carries a factor <m>\int_0^{2\pi}\sin\theta\cos\theta\,d\theta</m>,
+        <m>\int_0^{2\pi}\sin\theta\,d\theta</m> or
+        <m>\int_0^{2\pi}\cos\theta\,d\theta</m>, all equal to <m>0</m>.)
+      </p>
+      <p>
+        <em>Conclude.</em> Integrating the expansion over <m>E</m>,
+        <md>
+          <mrow>
+            \amp \iiint_E (x + y + z)^2\,dV
+          </mrow>
+          <mrow>
+            \amp \quad = \iiint_E \left(x^2 + y^2 + z^2\right) dV + 2 \cdot 0 + 2 \cdot 0 + 2 \cdot 0
+          </mrow>
+          <mrow>
+            \amp \quad = \iiint_E \left(x^2 + y^2 + z^2\right) dV .
+          </mrow>
+        </md>
+      </p>
+      <p>
+        <em>Numerical value</em> (not required). In spherical coordinates,
+        <me>
+          \iiint_E \rho^2 \cdot \rho^2\sin\phi\,d\rho\,d\phi\,d\theta
+          = \frac15 \cdot 2 \cdot 2\pi = \frac{4\pi}{5} .
+        </me>
+      </p>
+      <p>
+        <em>Grading.</em> 1 point for <q>True</q> with the expansion; 2
+        points for a correct symmetry (or direct spherical-coordinates)
+        argument that the three cross terms integrate to <m>0</m>.
+      </p>
+    </solution>
+  </exercise>
+</worksheet>
