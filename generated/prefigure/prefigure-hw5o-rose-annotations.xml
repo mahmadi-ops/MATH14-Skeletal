@@ -1,0 +1,82 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-rose-figure" speech2="The two lobes of r equals one plus sine three theta between theta equals pi over six and five pi over six, with the area they bound shaded.">
+      <grouped>prefigure-hw5o-rose-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-rose-grid-axes</active>
+        <active>prefigure-hw5o-rose-rs-region</active>
+        <active>prefigure-hw5o-rose-rs-curve</active>
+        <active>prefigure-hw5o-rose-rs-rest</active>
+        <active>prefigure-hw5o-rose-rs-sample</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-rose-grid-axes</active>
+        <active>prefigure-hw5o-rose-rs-region</active>
+        <active>prefigure-hw5o-rose-rs-curve</active>
+        <active>prefigure-hw5o-rose-rs-rest</active>
+        <active>prefigure-hw5o-rose-rs-sample</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw5o-rose-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-rose-grid</active>
+        <active>prefigure-hw5o-rose-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-rose-grid</active>
+        <active>prefigure-hw5o-rose-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw5o-rose-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-grid" speech2="The coordinate grid">
+      <active>prefigure-hw5o-rose-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-rose-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-axes" speech2="The coordinate axes">
+      <active>prefigure-hw5o-rose-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-rose-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-rs-region" speech2="The shaded area, bounded by the curve and the rays theta equals pi over six and five pi over six.">
+      <active>prefigure-hw5o-rose-rs-region</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-rose-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-rs-curve" speech2="The curve r equals one plus sine three theta for theta from pi over six to five pi over six, symmetric about the y axis." sonify="yes">
+      <active>prefigure-hw5o-rose-rs-curve</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-rose-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-rose-rs-curve</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-rs-rest" speech2="The rest of the rose, dotted, which is not part of the problem.">
+      <active>prefigure-hw5o-rose-rs-rest</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-rose-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-rose-rs-sample" speech2="A sample radius, from the origin out to the curve at r equals one plus sine three theta.">
+      <active>prefigure-hw5o-rose-rs-sample</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw5o-rose-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

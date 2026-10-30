@@ -1,0 +1,73 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-quartic-figure" speech2="The curve x squared times x squared plus y squared equals eight y squared, in polar form r equals two root two tangent theta.">
+      <grouped>prefigure-hw5o-quartic-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-quartic-grid-axes</active>
+        <active>prefigure-hw5o-quartic-qd-ne</active>
+        <active>prefigure-hw5o-quartic-qd-asym1</active>
+        <active>prefigure-hw5o-quartic-qd-asym2</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-quartic-grid-axes</active>
+        <active>prefigure-hw5o-quartic-qd-ne</active>
+        <active>prefigure-hw5o-quartic-qd-asym1</active>
+        <active>prefigure-hw5o-quartic-qd-asym2</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-quartic-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw5o-quartic-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-quartic-grid</active>
+        <active>prefigure-hw5o-quartic-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-quartic-grid</active>
+        <active>prefigure-hw5o-quartic-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw5o-quartic-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-quartic-grid" speech2="The coordinate grid">
+      <active>prefigure-hw5o-quartic-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-quartic-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-quartic-axes" speech2="The coordinate axes">
+      <active>prefigure-hw5o-quartic-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-quartic-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-quartic-qd-ne" speech2="The branch in the first quadrant, rising from the origin toward the asymptote x equals two root two." sonify="yes">
+      <active>prefigure-hw5o-quartic-qd-ne</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-quartic-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-quartic-qd-ne</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-quartic-qd-asym1" speech2="The vertical asymptote x equals two root two.">
+      <active>prefigure-hw5o-quartic-qd-asym1</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-quartic-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-quartic-qd-asym2" speech2="The vertical asymptote x equals negative two root two.">
+      <active>prefigure-hw5o-quartic-qd-asym2</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-quartic-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

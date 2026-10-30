@@ -1,0 +1,51 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-cardioid-figure" speech2="The crescent region inside the cardioid r equals five times one plus cosine theta and outside the circle r equals five.">
+      <grouped>prefigure-hw5o-cardioid-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-cardioid-cd-region</active>
+        <active>prefigure-hw5o-cardioid-cd-card</active>
+        <active>prefigure-hw5o-cardioid-cd-circle</active>
+        <active>prefigure-hw5o-cardioid-cd-ray</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-cardioid-cd-region</active>
+        <active>prefigure-hw5o-cardioid-cd-card</active>
+        <active>prefigure-hw5o-cardioid-cd-circle</active>
+        <active>prefigure-hw5o-cardioid-cd-ray</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-cardioid-cd-region" speech2="The shaded region R, inside the cardioid and outside the circle, for theta between minus pi over two and pi over two.">
+      <active>prefigure-hw5o-cardioid-cd-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-cardioid-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-cardioid-cd-card" speech2="The cardioid r equals five times one plus cosine theta, with its cusp at the origin." sonify="yes">
+      <active>prefigure-hw5o-cardioid-cd-card</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-cardioid-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-cardioid-cd-card</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-cardioid-cd-circle" speech2="The circle r equals five, centered at the origin.">
+      <active>prefigure-hw5o-cardioid-cd-circle</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-cardioid-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-cardioid-cd-ray" speech2="A ray at angle theta, crossing R from r equals five to r equals five times one plus cosine theta.">
+      <active>prefigure-hw5o-cardioid-cd-ray</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-cardioid-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

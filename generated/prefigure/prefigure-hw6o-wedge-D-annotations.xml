@@ -1,0 +1,51 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw6o-wedge-D-figure" speech2="The half disk D of radius R on the side x greater than or equal to zero, the shadow of the wedge.">
+      <grouped>prefigure-hw6o-wedge-D-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-region</active>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-arc</active>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-diam</active>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-ray</active>
+      </children>
+      <components>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-region</active>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-arc</active>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-diam</active>
+        <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-ray</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw6o-wedge-D-hw6o-wedge-D-region" speech2="The shaded half disk D.">
+      <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw6o-wedge-D-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-wedge-D-hw6o-wedge-D-arc" speech2="The semicircle r equals R, from theta equals minus pi over two to pi over two." sonify="yes">
+      <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-arc</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw6o-wedge-D-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw6o-wedge-D-hw6o-wedge-D-arc</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw6o-wedge-D-hw6o-wedge-D-diam" speech2="The straight edge of D along the y axis, where the top plane z equals x meets the base.">
+      <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-diam</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw6o-wedge-D-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-wedge-D-hw6o-wedge-D-ray" speech2="A sample ray at angle theta, with r running from zero to R.">
+      <active>prefigure-hw6o-wedge-D-hw6o-wedge-D-ray</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw6o-wedge-D-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

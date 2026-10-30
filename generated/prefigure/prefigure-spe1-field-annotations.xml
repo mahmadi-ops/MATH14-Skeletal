@@ -1,0 +1,39 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-spe1-field-figure" speech2="A grid of light blue horizontal field vectors of equal length. Above the x axis they all point to the right; below it they all point to the left. A black circle C is centered at the origin O and cuts through the grid, so that along its upper half the field points right and along its lower half the field points left.">
+      <grouped>prefigure-spe1-field-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-spe1-field-sf-upper</active>
+        <active>prefigure-spe1-field-sf-lower</active>
+        <active>prefigure-spe1-field-sf-C</active>
+      </children>
+      <components>
+        <active>prefigure-spe1-field-sf-upper</active>
+        <active>prefigure-spe1-field-sf-lower</active>
+        <active>prefigure-spe1-field-sf-C</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-spe1-field-sf-upper" speech2="The field vectors above the x axis, all pointing to the right.">
+      <active>prefigure-spe1-field-sf-upper</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-spe1-field-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-spe1-field-sf-lower" speech2="The field vectors below the x axis, all pointing to the left.">
+      <active>prefigure-spe1-field-sf-lower</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-spe1-field-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-spe1-field-sf-C" speech2="The circle C, centered at the origin.">
+      <active>prefigure-spe1-field-sf-C</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-spe1-field-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

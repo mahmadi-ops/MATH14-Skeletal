@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exam 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/unnumbered-chapter.css">
+<link rel="stylesheet" type="text/css" href="external/custom.css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH 14–Skeletal Notes">
+<meta property="book:author" content="Mehdi Ahmadi">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.6';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="math14.html"><span class="title">MATH 14–Skeletal Notes</span></a></h1>
+<p class="byline">Mehdi Ahmadi</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-exercises-sample-past-exam-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-problems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercises-hw7-online.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+\newcommand{\real}{\Bbb R}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-skeletal.html" class="internal"><span class="title">How to Use These Notes</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="intro.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="subsec-brain-map.html" class="internal"><span class="title">The big picture</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-curves-and-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Line Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-parametrization.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Parametrization of Curves</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-parametric-equations" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Parametric Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-parametrizing-examples" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Some Examples of Parametrizing Curves</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-intersection-collision" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Intersection Points versus Collision Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-curves-in-space" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Curves in Space and Vector Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-parametrization.html#subsec-tangent-line-space-curve" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Tangent Lines to Curves in Space</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-arc-length.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Arc Length of a Curve</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arc-length.html#subsec-arc-length-2d" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Arc Length in 2D</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arc-length.html#subsec-arc-length-3d" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Arc Length in 3D</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arc-length.html#subsec-cone-plane-activity" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Activity: Where a Plane Slices a Cone</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-line-integrals.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Line Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-line-integrals.html#subsec-scalar-line-integrals" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Line Integrals of Scalar Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-line-integrals.html#subsec-line-integral-walls" class="internal"><span class="codenumber">1.3.2</span> <span class="title">A Geometric Interpretation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-line-integrals.html#subsec-line-integral-questions" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-vector-fields.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Vector Fields and Line Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-vector-fields" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Vector Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-work-reminder" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Work (Reminder)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-work-force-field" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Work of a Force Field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vector-fields.html#subsec-work-exploration" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-conservative-fields.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Path Independence, Conservative Fields, and Potential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-gradient-fields" class="internal"><span class="codenumber">1.5.1</span> <span class="title">A Brief Reminder (Gradient Fields)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-conservative-definitions" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Path Independence and Some Basic Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-ftli" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Line Integrals in Conservative Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-potential-function" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Finding a Potential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-conservative-gradient" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Conservative Fields are Gradient Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-loop-property" class="internal"><span class="codenumber">1.5.6</span> <span class="title">The Loop Property of Conservative Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-conservative-fields.html#sec-conservative-concept-check" class="internal"><span class="codenumber">1.5.7</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-multiple-integrals.html" class="internal"><span class="codenumber">2</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-double-integrals-rectangles.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Double and Iterated Integrals Over Rectangles</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-area-under-curve-reminder" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Reminder: Area Under <span class="process-math">\(y = f(x)\)</span> from <span class="process-math">\(x = a\)</span> to <span class="process-math">\(x = b\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-double-integrals-rectangles" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Double Integrals Over Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-iterated-integrals" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Calculating Double Integrals as Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#sec-iterated-integral-substitution" class="internal"><span class="codenumber">2.1.4</span> <span class="title">An Iterated Integral Requiring Substitution and Integration by Parts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-rectangles.html#subsec-double-integral-questions" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-double-integrals-general-regions.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Double Integrals Over General Regions and Area by Double Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-general-regions-case1" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Case I: Regions of the Form <span class="process-math">\(R = \{(x,y) : a \le x \le b,\ f_2(x) \le y \le f_1(x)\}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-general-regions-case2" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Case II: Regions of the Form <span class="process-math">\(R = \{(x,y) : c \le y \le d,\ g_1(y) \le x \le g_2(y)\}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-tetrahedron-volume" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Volume of a Tetrahedron</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#sec-area-by-double-integration" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Area by Double Integration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-general-regions.html#subsec-general-regions-questions" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-polar-coordinates.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Polar Coordinates and Graphing Polar Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-definition" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Polar Coordinate System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-cartesian-relation" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Relation Between Polar and Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-nonuniqueness" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Non-Uniqueness of Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-to-cartesian-example" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Replacing Polar Equations by Cartesian Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-polar-coordinates.html#sec-polar-symmetries" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-double-integrals-polar-form.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Double Integrals in Polar Form</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-double-integral" class="internal"><span class="codenumber">2.4.1</span> <span class="title">How Does a Double Integral Look in Polar Coordinates?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-annulus-example" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Integrating Over a Half Annulus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-rose-example" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Area Enclosed by One Loop of a Rose</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-volume-example" class="internal"><span class="codenumber">2.4.4</span> <span class="title">A Volume Computed in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#sec-polar-gaussian-example" class="internal"><span class="codenumber">2.4.5</span> <span class="title">An Integral That Needs Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-double-integrals-polar-form.html#subsec-polar-questions" class="internal"><span class="codenumber">2.4.6</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-triple-integrals-rectangular.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Triple Integrals in Rectangular Coordinates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-rectangular.html#sec-triple-integral-meaning" class="internal"><span class="codenumber">2.5.1</span> <span class="title">What Does a Triple Integral Mean?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-rectangular.html#sec-triple-case1" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Case I: <span class="process-math">\(E = \{(x,y,z) : a \le x \le b,\)</span> <span class="process-math">\(g_1(x) \le y \le g_2(x),\)</span> <span class="process-math">\(u_1(x,y) \le z \le u_2(x,y)\}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-rectangular.html#sec-triple-case2" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Case II: <span class="process-math">\(E = \{(x,y,z) : h_1(y) \le x \le h_2(y),\)</span> <span class="process-math">\(c \le y \le d,\)</span> <span class="process-math">\(u_1(x,y) \le z \le u_2(x,y)\}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-rectangular.html#sec-triple-mass" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Mass With Variable Density</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-rectangular.html#subsec-triple-questions" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-triple-integrals-cylindrical.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Triple Integrals in Cylindrical Coordinates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-cylindrical.html#sec-cylindrical-coordinates" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Cylindrical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-cylindrical.html#sec-cylindrical-mass-example" class="internal"><span class="codenumber">2.6.2</span> <span class="title">The Mass of a Solid With Axial Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-cylindrical.html#subsec-cylindrical-questions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-triple-integrals-spherical.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Triple Integrals in Spherical Coordinates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-spherical.html#sec-spherical-coordinates" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-spherical.html#sec-spherical-integration" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Integration in Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-spherical.html#sec-spherical-icecream" class="internal"><span class="codenumber">2.7.3</span> <span class="title">The Ice Cream Cone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-spherical.html#sec-spherical-shifted-example" class="internal"><span class="codenumber">2.7.4</span> <span class="title">Converting a Triple Integral to Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-triple-integrals-spherical.html#sec-spherical-rewrite" class="internal"><span class="codenumber">2.7.5</span> <span class="title">Re-Writing an Integral in Spherical and Cylindrical Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-mass-center-of-mass.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Applications: Mass and Center of Mass</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mass-center-of-mass.html#sec-com-two-masses" class="internal"><span class="codenumber">2.8.1</span> <span class="title">The Center of Mass of Two Point Masses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mass-center-of-mass.html#sec-com-n-masses" class="internal"><span class="codenumber">2.8.2</span> <span class="title">The Center of Mass of <span class="process-math">\(n\)</span> Point Masses and the First Moments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mass-center-of-mass.html#sec-mass-2d-object" class="internal"><span class="codenumber">2.8.3</span> <span class="title">Finding the Center of Mass of a 2D Object</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mass-center-of-mass.html#sec-mass-3d-object" class="internal"><span class="codenumber">2.8.4</span> <span class="title">Finding the Center of Mass of a 3D Object*</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mass-center-of-mass.html#subsec-mass-questions" class="internal"><span class="codenumber">2.8.5</span> <span class="title">Concept Check</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-jacobian-substitution.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Substitution in Multiple Integrals and the Jacobian Determinant</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-jacobian-substitution.html#sec-jacobian-determinant" class="internal"><span class="codenumber">2.9.1</span> <span class="title">The Jacobian Determinant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-jacobian-substitution.html#sec-substitution-examples" class="internal"><span class="codenumber">2.9.2</span> <span class="title">Choosing a Transformation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-jacobian-substitution.html#sec-substitution-3d" class="internal"><span class="codenumber">2.9.3</span> <span class="title">Substitution in Triple Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-jacobian-substitution.html#sec-jacobian-activity" class="internal"><span class="codenumber">2.9.4</span> <span class="title">Activity: Watching a Substitution Transform a Region</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-surface-integrals.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Surface Integrals: Flux Through a Surface</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-surface-integrals.html#sec-flux-flat" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Flux Through a Flat Surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-surface-integrals.html#sec-parametric-surfaces" class="internal"><span class="codenumber">2.10.2</span> <span class="title">Parametric Surfaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-surface-integrals.html#sec-surface-normal" class="internal"><span class="codenumber">2.10.3</span> <span class="title">The Normal Vector to a Surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-surface-integrals.html#sec-oriented-surfaces" class="internal"><span class="codenumber">2.10.4</span> <span class="title">Oriented Surfaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-surface-integrals.html#sec-surface-integral-def" class="internal"><span class="codenumber">2.10.5</span> <span class="title">The Surface Integral of a Vector Field</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-problems.html" class="internal"><span class="codenumber">3</span> <span class="title">Assignments and Review Problems</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw1-online.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Assignment 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw1-online.html#exercises-hw1-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw2-online.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Assignment 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw2-online.html#exercises-hw2-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw3-online.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Assignment 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw3-online.html#exercises-hw3-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-review1-practice.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Review Problems #1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-review1-practice.html#exercises-review1-practice" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-exercises-sample-past-exam-1.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sample Past Exam 1</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-exercises-exam-1.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exam 1</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw4-online.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Assignment 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw4-online.html#exercises-hw4-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw5-online.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Assignment 5</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw5-online.html#exercises-hw5-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw6-online.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Assignment 6</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw6-online.html#exercises-hw6-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-review2-practice.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Review Problems #2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-review2-practice.html#exercises-review2-practice" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-exercises-sample-past-exam-2.html" class="internal"><span class="codenumber">3.11</span> <span class="title">Sample Past Exam 2</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="sec-exercises-exam-2.html" class="internal"><span class="codenumber">3.12</span> <span class="title">Exam 2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercises-hw7-online.html" class="internal"><span class="codenumber">3.13</span> <span class="title">Assignment 7</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercises-hw7-online.html#exercises-hw7-online" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="worksheet" id="sec-exercises-exam-2" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exam 2</span><div class="print-links"><a href="?printpreview=sec-exercises-exam-2" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h2>
+<section class="introduction" id="sec-exercises-exam-2-2"><div class="para" id="sec-exercises-exam-2-2-1">The second exam of Fall 2026, with solutions. It had six problems worth 20 points in all. Each solution ends with the grading notes of the key, which show how the points were given. Try the exam under exam conditions before you look at the solutions. The topics it covers, with links to the notes:<div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-exercises-exam-2-2-2">
+<ul class="disc" id="sec-exercises-exam-2-2-2-1">
+<li id="sec-exercises-exam-2-2-2-1-1">
+<div class="para" id="sec-exercises-exam-2-2-2-1-1-1">
+<a href="section-double-integrals-rectangles.html" class="internal" title="Section 2.1: Double and Iterated Integrals Over Rectangles">Double and Iterated Integrals Over Rectangles</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-exercises-exam-2-2-2-1-2">
+<div class="para" id="sec-exercises-exam-2-2-2-1-2-1">
+<a href="section-double-integrals-general-regions.html" class="internal" title="Section 2.2: Double Integrals Over General Regions and Area by Double Integration">Double Integrals Over General Regions and Area by Double Integration</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-exercises-exam-2-2-2-1-3">
+<div class="para" id="sec-exercises-exam-2-2-2-1-3-1">
+<a href="section-polar-coordinates.html" class="internal" title="Section 2.3: Polar Coordinates and Graphing Polar Equations">Polar Coordinates and Graphing Polar Equations</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-exercises-exam-2-2-2-1-4">
+<div class="para" id="sec-exercises-exam-2-2-2-1-4-1">
+<a href="section-double-integrals-polar-form.html" class="internal" title="Section 2.4: Double Integrals in Polar Form">Double Integrals in Polar Form</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-exercises-exam-2-2-2-1-5">
+<div class="para" id="sec-exercises-exam-2-2-2-1-5-1">
+<a href="section-triple-integrals-rectangular.html" class="internal" title="Section 2.5: Triple Integrals in Rectangular Coordinates">Triple Integrals in Rectangular Coordinates</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-exercises-exam-2-2-2-1-6">
+<div class="para" id="sec-exercises-exam-2-2-2-1-6-1">
+<a href="section-triple-integrals-cylindrical.html" class="internal" title="Section 2.6: Triple Integrals in Cylindrical Coordinates">Triple Integrals in Cylindrical Coordinates</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-exercises-exam-2-2-2-1-7">
+<div class="para" id="sec-exercises-exam-2-2-2-1-7-1">
+<a href="section-triple-integrals-spherical.html" class="internal" title="Section 2.7: Triple Integrals in Spherical Coordinates">Triple Integrals in Spherical Coordinates</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-exercises-exam-2-2-2-1-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-exercises-exam-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="exam2-q1"><h3 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(3 points).</span>
+</h3>
+<div class="para logical" id="exam2-q1-2-1">
+<div class="para">Rewrite (<em class="alert">do not evaluate</em>) the following integral in cylindrical coordinates:</div>
+<div class="displaymath process-math" id="exam2-q1-2-1-2">
+\begin{equation*}
+\int_0^2\!\!\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\!\!
+\int_0^{4-x^2-y^2} z\sqrt{x^2+y^2}\,dz\,dy\,dx .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exam2-q1-3-1">The limits on <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> describe the projection of the solid onto the <span class="process-math">\(xy\)</span>-plane: <span class="process-math">\(0 \le x \le 2\)</span> and <span class="process-math">\(y^2 \le 2x - x^2\text{,}\)</span> that is, <span class="process-math">\(x^2 - 2x + y^2 \le 0\text{,}\)</span> the disk <span class="process-math">\((x-1)^2 + y^2 \le 1\)</span> of radius <span class="process-math">\(1\)</span> centered at <span class="process-math">\((1,0)\)</span> (<a href="sec-exercises-exam-2.html#fig-exam2-q1-disk" class="internal" title="Figure 3.12.1">Figure 3.12.1</a>). Its boundary circle is <span class="process-math">\(x^2 + y^2 = 2x\text{,}\)</span> in polar coordinates <span class="process-math">\(r^2 = 2r\cos\theta\text{,}\)</span> so <span class="process-math">\(r = 2\cos\theta\text{;}\)</span> the disk is swept out by <span class="process-math">\(-\pi/2 \le \theta \le \pi/2\text{,}\)</span> <span class="process-math">\(0 \le r \le 2\cos\theta\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q1-disk"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-exam2-q1-disk-diagcess.svg" data-cml="generated/prefigure/prefigure-exam2-q1-disk-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-exam2-q1-disk-2-description"><div class="para" id="fig-exam2-q1-disk-2-2-1">Coordinate axes x and y. A disk of radius one, centered at the point one comma zero on the x axis, is shaded tan; its blue boundary circle passes through the origin and the point two comma zero. A green ray from the origin at an angle theta above the x axis ends on the circle, where r equals two cosine theta, and a small arc marks the angle.<div class="autopermalink" data-description="Paragraph"><a href="#fig-exam2-q1-disk-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The projection of the solid of <a href="sec-exercises-exam-2.html#exam2-q1" class="internal" title="Worksheet Exercise 3.12.1: (3 points)">Worksheet Exercise 3.12.1</a> onto the <span class="process-math">\(xy\)</span>-plane: the disk <span class="process-math">\((x-1)^2 + y^2 \le 1\text{,}\)</span> whose boundary is <span class="process-math">\(r = 2\cos\theta\text{.}\)</span> A ray at angle <span class="process-math">\(\theta\)</span> leaves the disk at <span class="process-math">\(r = 2\cos\theta\text{;}\)</span> the rays that meet it have <span class="process-math">\(-\pi/2 \le \theta \le \pi/2\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.1"><a href="#fig-exam2-q1-disk" title="Copy heading and permalink for Figure 3.12.1" aria-label="Copy heading and permalink for Figure 3.12.1">🔗</a></div></figcaption></figure><div class="para logical" id="exam2-q1-3-3">
+<div class="para">The limits on <span class="process-math">\(z\)</span> run from the plane <span class="process-math">\(z = 0\)</span> up to the paraboloid <span class="process-math">\(z = 4 - x^2 - y^2 = 4 - r^2\)</span> (which is <span class="process-math">\(\ge 0\)</span> on the disk, since <span class="process-math">\(r \le 2\)</span> there). The integrand is <span class="process-math">\(z\sqrt{x^2 + y^2} = zr\text{,}\)</span> and <span class="process-math">\(dV = r\,dz\,dr\,d\theta\text{.}\)</span> Hence</div>
+<div class="displaymath process-math" id="exam2-q1-3-3-8">
+\begin{gather*}
+\int_0^2\!\!\int_{-\sqrt{2x-x^2}}^{\sqrt{2x-x^2}}\!\!
+\int_0^{4-x^2-y^2} z\sqrt{x^2+y^2}\,dz\,dy\,dx\\
+\quad = \int_{-\pi/2}^{\pi/2}\!\!\int_0^{2\cos\theta}\!\!\int_0^{4-r^2}
+z\,r^2\,dz\,dr\,d\theta .
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q1-3-4">
+<em class="emphasis">Grading.</em> 1 point for the projection <span class="process-math">\(r = 2\cos\theta\)</span> with <span class="process-math">\(-\pi/2 \le \theta \le \pi/2\text{;}\)</span> 1 point for the <span class="process-math">\(z\)</span>-limits <span class="process-math">\(0 \le z \le 4 - r^2\text{;}\)</span> 1 point for the integrand with the factor <span class="process-math">\(r\)</span> from <span class="process-math">\(dV\)</span> (<span class="process-math">\(zr \cdot r = zr^2\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.1.1"><a href="#exam2-q1-3" title="Copy heading and permalink for Solution 3.12.1.1" aria-label="Copy heading and permalink for Solution 3.12.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3.12.1: (3 points)"><a href="#exam2-q1" title="Copy heading and permalink for Worksheet Exercise 3.12.1: (3 points)" aria-label="Copy heading and permalink for Worksheet Exercise 3.12.1: (3 points)">🔗</a></div></article><article class="exercise exercise-like" id="exam2-q2"><h3 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(4 points).</span>
+</h3>
+<div class="introduction" id="exam2-q2-2"><div class="para logical" id="exam2-q2-2-1">
+<div class="para">Consider the integral</div>
+<div class="displaymath process-math" id="exam2-q2-2-1-1">
+\begin{equation*}
+\int_0^1\!\!\int_0^{y}\!\!\int_0^{1-y^2} f(x,y,z)\,dz\,dx\,dy .
+\end{equation*}
+</div>
+<div class="para">Rewrite (<em class="alert">do not evaluate</em>) this integral in the following forms.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exam2-q2-a"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exam2-q2-a-1-1">
+<span class="process-math">\(\displaystyle\iiint_R f(x,y,z)\,dy\,dz\,dx\)</span> (2 points)<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q2-a-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exam2-q2-a-2-1">
+<div class="para">The given limits describe the solid</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-exam2-q2-solid.html ./knowl/xref/fig-exam2-q2-xz.html ./knowl/xref/fig-exam2-q2-yz.html" id="exam2-q2-a-2-1-1">
+\begin{equation*}
+R:\quad 0 \le y \le 1,\qquad 0 \le x \le y,\qquad 0 \le z \le 1 - y^2 ,
+\end{equation*}
+</div>
+<div class="para">shown in <a href="sec-exercises-exam-2.html#fig-exam2-q2-solid" class="xref" data-knowl="./knowl/xref/fig-exam2-q2-solid.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.2">Figure 3.12.2</a>: it stands on the triangle <span class="process-math">\(0 \le x \le y \le 1\)</span> of the <span class="process-math">\(xy\)</span>-plane, under the parabolic cylinder <span class="process-math">\(z = 1 - y^2\)</span> (which meets the plane <span class="process-math">\(z = 0\)</span> along the line <span class="process-math">\(y = 1\)</span>); its other two faces lie in the planes <span class="process-math">\(x = 0\)</span> and <span class="process-math">\(x = y\text{.}\)</span> Its projections onto the <span class="process-math">\(xz\)</span>- and <span class="process-math">\(yz\)</span>-planes are shown in <a href="sec-exercises-exam-2.html#fig-exam2-q2-xz" class="internal" title="Figure 3.12.3">Figure 3.12.3</a> and <a href="sec-exercises-exam-2.html#fig-exam2-q2-yz" class="internal" title="Figure 3.12.4">Figure 3.12.4</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-a-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q2-solid"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<img src="generated/latex-image/fig-exam2-q2-solid-2.svg" role="img" class="contained" alt="A solid standing on a triangle in the xy-plane, with a curved blue roof that rises to height one over the z axis and comes down to the floor along the line y equals one, a flat gray back face in the plane x equals zero, and a flat orange face in the plane x equals y."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-exam2-q2-solid-2-description"><div class="para" id="fig-exam2-q2-solid-2-2-1">Coordinate axes x, y and z. A translucent solid stands on the triangle of the xy-plane with vertices at the origin, zero comma one comma zero, and one comma one comma zero. Its roof is the parabolic cylinder z equals one minus y squared, at height one along the z axis and coming down to the floor along the line y equals one. Its gray back face lies in the plane x equals zero, and its orange front face lies in the vertical plane x equals y, whose edge on the floor runs from the origin to the point one comma one comma zero.<div class="autopermalink" data-description="Paragraph"><a href="#fig-exam2-q2-solid-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The solid <span class="process-math">\(R\)</span> of <a href="sec-exercises-exam-2.html#exam2-q2" class="internal" title="Worksheet Exercise 3.12.2: (4 points)">Worksheet Exercise 3.12.2</a>: over the triangle <span class="process-math">\(0 \le x \le y \le 1\)</span> of the <span class="process-math">\(xy\)</span>-plane, between the floor <span class="process-math">\(z = 0\)</span> and the parabolic cylinder <span class="process-math">\(z = 1 - y^2\text{.}\)</span> Its other faces lie in the planes <span class="process-math">\(x = 0\)</span> (grey, at the back) and <span class="process-math">\(x = y\)</span> (orange).<div class="autopermalink" data-description="Figure 3.12.2"><a href="#fig-exam2-q2-solid" title="Copy heading and permalink for Figure 3.12.2" aria-label="Copy heading and permalink for Figure 3.12.2">🔗</a></div></figcaption></figure><div class="para logical" id="exam2-q2-a-2-3">
+<div class="para">For the order <span class="process-math">\(dy\,dz\,dx\)</span> the outer variable is <span class="process-math">\(x\text{,}\)</span> which runs over <span class="process-math">\(0 \le x \le 1\)</span> in all. For a fixed <span class="process-math">\(x\text{,}\)</span> the conditions <span class="process-math">\(x \le y\)</span> and <span class="process-math">\(z \le 1 - y^2\text{,}\)</span> i.e. <span class="process-math">\(y \le \sqrt{1-z}\text{,}\)</span> can both hold only if <span class="process-math">\(x \le \sqrt{1-z}\text{,}\)</span> that is, <span class="process-math">\(z \le 1 - x^2\text{.}\)</span> So the projection of <span class="process-math">\(R\)</span> onto the <span class="process-math">\(xz\)</span>-plane is the region under the parabola <span class="process-math">\(z = 1 - x^2\text{,}\)</span> <span class="process-math">\(0 \le x \le 1\)</span> (<a href="sec-exercises-exam-2.html#fig-exam2-q2-xz" class="internal" title="Figure 3.12.3">Figure 3.12.3</a>), and for each <span class="process-math">\((x,z)\)</span> in it, <span class="process-math">\(y\)</span> runs from <span class="process-math">\(x\)</span> up to <span class="process-math">\(\sqrt{1-z}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-exam2-q2-xz.html" id="exam2-q2-a-2-3-19">
+\begin{equation*}
+\iiint_R f\,dy\,dz\,dx
+= \int_0^1\!\!\int_0^{1-x^2}\!\!\int_x^{\sqrt{1-z}} f(x,y,z)\,dy\,dz\,dx .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-a-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q2-xz"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-exam2-q2-xz-diagcess.svg" data-cml="generated/prefigure/prefigure-exam2-q2-xz-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The projection of <span class="process-math">\(R\)</span> onto the <span class="process-math">\(xz\)</span>-plane: the region under <span class="process-math">\(z = 1 - x^2\text{,}\)</span> <span class="process-math">\(0 \le x \le 1\text{.}\)</span> For a fixed <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(z\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(1 - x^2\text{;}\)</span> above each of its points, <span class="process-math">\(y\)</span> runs from <span class="process-math">\(x\)</span> to <span class="process-math">\(\sqrt{1-z}\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.3"><a href="#fig-exam2-q2-xz" title="Copy heading and permalink for Figure 3.12.3" aria-label="Copy heading and permalink for Figure 3.12.3">🔗</a></div></figcaption></figure><div class="para" id="exam2-q2-a-2-5">
+<em class="emphasis">Grading.</em> 1 point for the correct outer and middle limits (the projection), 1 point for the inner limits.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-a-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.2.a.1"><a href="#exam2-q2-a-2" title="Copy heading and permalink for Solution 3.12.2.a.1" aria-label="Copy heading and permalink for Solution 3.12.2.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.12.2.a"><a href="#exam2-q2-a" title="Copy heading and permalink for Task 3.12.2.a" aria-label="Copy heading and permalink for Task 3.12.2.a">🔗</a></div></article><article class="task exercise-like" id="exam2-q2-b"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exam2-q2-b-1-1">
+<span class="process-math">\(\displaystyle\iiint_R f(x,y,z)\,dx\,dy\,dz\)</span> (2 points)<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q2-b-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exam2-q2-b-2-1">
+<div class="para">With <span class="process-math">\(R\)</span> as in the solution of part (a), the outer variable is now <span class="process-math">\(z\text{,}\)</span> with <span class="process-math">\(0 \le z \le 1\)</span> in all; for a fixed <span class="process-math">\(z\text{,}\)</span> <span class="process-math">\(y\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(\sqrt{1-z}\)</span> (the projection of <span class="process-math">\(R\)</span> onto the <span class="process-math">\(yz\)</span>-plane is the region under <span class="process-math">\(z = 1 - y^2\text{,}\)</span> <span class="process-math">\(0 \le y \le 1\text{,}\)</span> <a href="sec-exercises-exam-2.html#fig-exam2-q2-yz" class="internal" title="Figure 3.12.4">Figure 3.12.4</a>), and then the inner variable <span class="process-math">\(x\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(y\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-exam2-q2-yz.html" id="exam2-q2-b-2-1-16">
+\begin{equation*}
+\iiint_R f\,dx\,dy\,dz
+= \int_0^1\!\!\int_0^{\sqrt{1-z}}\!\!\int_0^{y} f(x,y,z)\,dx\,dy\,dz .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-b-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q2-yz"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-exam2-q2-yz-diagcess.svg" data-cml="generated/prefigure/prefigure-exam2-q2-yz-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The projection of <span class="process-math">\(R\)</span> onto the <span class="process-math">\(yz\)</span>-plane: the region under <span class="process-math">\(z = 1 - y^2\text{,}\)</span> <span class="process-math">\(0 \le y \le 1\text{.}\)</span> For a fixed <span class="process-math">\(z\text{,}\)</span> <span class="process-math">\(y\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(\sqrt{1-z}\text{;}\)</span> above each of its points, <span class="process-math">\(x\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.4"><a href="#fig-exam2-q2-yz" title="Copy heading and permalink for Figure 3.12.4" aria-label="Copy heading and permalink for Figure 3.12.4">🔗</a></div></figcaption></figure><div class="para" id="exam2-q2-b-2-3">
+<em class="emphasis">Check</em> (not required): with <span class="process-math">\(f = 1\)</span> all three orders give the volume <span class="process-math">\(\int_0^1 y\left(1 - y^2\right) dy = \frac14\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-b-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q2-b-2-4">
+<em class="emphasis">Grading.</em> 1 point for the correct outer and middle limits (the projection), 1 point for the inner limits.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q2-b-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.2.b.1"><a href="#exam2-q2-b-2" title="Copy heading and permalink for Solution 3.12.2.b.1" aria-label="Copy heading and permalink for Solution 3.12.2.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.12.2.b"><a href="#exam2-q2-b" title="Copy heading and permalink for Task 3.12.2.b" aria-label="Copy heading and permalink for Task 3.12.2.b">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 3.12.2: (4 points)"><a href="#exam2-q2" title="Copy heading and permalink for Worksheet Exercise 3.12.2: (4 points)" aria-label="Copy heading and permalink for Worksheet Exercise 3.12.2: (4 points)">🔗</a></div></article><article class="exercise exercise-like" id="exam2-q3"><h3 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(3 points).</span>
+</h3>
+<div class="para" id="exam2-q3-2-1">Set up (<em class="alert">do not evaluate</em>) a double integral for the purpose of computing the area <em class="emphasis">inside</em> <span class="process-math">\(x^2 + y^2 = 3y\)</span> and <em class="emphasis">outside</em> <span class="process-math">\(x^2 + y^2 = y + \sqrt{x^2 + y^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exam2-q3-3-1">Both curves are simplest in polar coordinates. Since <span class="process-math">\(x^2 + y^2 = r^2\)</span> and <span class="process-math">\(y = r\sin\theta\text{,}\)</span> the first is <span class="process-math">\(r^2 = 3r\sin\theta\text{,}\)</span> that is, <span class="process-math">\(r = 3\sin\theta\text{:}\)</span> the circle of radius <span class="process-math">\(\frac32\)</span> centered at <span class="process-math">\(\left(0, \frac32\right)\text{,}\)</span> traced once as <span class="process-math">\(\theta\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(\pi\text{.}\)</span> The second is <span class="process-math">\(r^2 = r\sin\theta + r\text{,}\)</span> that is, <span class="process-math">\(r = 1 + \sin\theta\text{,}\)</span> a cardioid with its cusp at the origin, pointing down; its top point is <span class="process-math">\(r = 2\)</span> at <span class="process-math">\(\theta = \pi/2\text{,}\)</span> and it passes through <span class="process-math">\((\pm 1, 0)\)</span> at <span class="process-math">\(\theta = 0, \pi\text{.}\)</span> Both curves are symmetric about the <span class="process-math">\(y\)</span>-axis (<a href="sec-exercises-exam-2.html#fig-exam2-q3-region" class="internal" title="Figure 3.12.5">Figure 3.12.5</a>).<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q3-region"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-exam2-q3-region-diagcess.svg" data-cml="generated/prefigure/prefigure-exam2-q3-region-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-exam2-q3-region-2-description"><div class="para" id="fig-exam2-q3-region-2-2-1">Coordinate axes x and y. A blue circle of radius three halves is centered at zero comma three halves, passing through the origin and the point zero comma three. An orange cardioid, r equals one plus sine theta, has its cusp at the origin, passes through minus one comma zero and one comma zero, dips slightly below the x axis between them, and reaches up to zero comma two. The two curves cross at two points marked in black, where dashed rays from the origin at angles pi over six and five pi over six meet them. The crescent between the cardioid and the circle, above those two points, is shaded tan. A green ray from the origin at an angle theta crosses the cardioid and then the circle, with the two crossing points marked.<div class="autopermalink" data-description="Paragraph"><a href="#fig-exam2-q3-region-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circle <span class="process-math">\(r = 3\sin\theta\)</span> and the cardioid <span class="process-math">\(r = 1 + \sin\theta\)</span> of <a href="sec-exercises-exam-2.html#exam2-q3" class="internal" title="Worksheet Exercise 3.12.3: (3 points)">Worksheet Exercise 3.12.3</a>. They cross at <span class="process-math">\(\theta = \pi/6\)</span> and <span class="process-math">\(\theta = 5\pi/6\text{,}\)</span> and in between the circle lies outside the cardioid. The shaded region, inside the circle and outside the cardioid, is swept by the rays <span class="process-math">\(\pi/6 \le \theta \le 5\pi/6\text{;}\)</span> along each, <span class="process-math">\(r\)</span> runs from <span class="process-math">\(1 + \sin\theta\)</span> to <span class="process-math">\(3\sin\theta\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.5"><a href="#fig-exam2-q3-region" title="Copy heading and permalink for Figure 3.12.5" aria-label="Copy heading and permalink for Figure 3.12.5">🔗</a></div></figcaption></figure><div class="para logical" id="exam2-q3-3-3">
+<div class="para">The curves meet where <span class="process-math">\(3\sin\theta = 1 + \sin\theta\text{,}\)</span> i.e. <span class="process-math">\(\sin\theta = \frac12\text{,}\)</span> so at <span class="process-math">\(\theta = \pi/6\)</span> and <span class="process-math">\(\theta = 5\pi/6\)</span> (both with <span class="process-math">\(r = \frac32\text{:}\)</span> the points <span class="process-math">\(\left(\pm\frac{3\sqrt3}{4}, \frac34\right)\)</span>). For <span class="process-math">\(\pi/6 \le \theta \le 5\pi/6\)</span> we have <span class="process-math">\(\sin\theta \ge \frac12\text{,}\)</span> so <span class="process-math">\(3\sin\theta \ge 1 + \sin\theta\text{:}\)</span> along a ray at angle <span class="process-math">\(\theta\)</span> the region runs from the cardioid out to the circle. With <span class="process-math">\(dA = r\,dr\,d\theta\text{,}\)</span> and using the symmetry about the <span class="process-math">\(y\)</span>-axis,</div>
+<div class="displaymath process-math" id="exam2-q3-3-3-13">
+\begin{align*}
+A \amp = \int_{\pi/6}^{5\pi/6}\!\!\int_{1+\sin\theta}^{3\sin\theta} r\,dr\,d\theta\\
+\amp = 2\int_{\pi/6}^{\pi/2}\!\!\int_{1+\sin\theta}^{3\sin\theta} r\,dr\,d\theta .
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q3-3-4">
+<em class="emphasis">Value</em> (not required): <span class="process-math">\(A = \pi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q3-3-5">
+<em class="emphasis">Grading.</em> 1 point for both polar equations; 1 point for the intersection angles <span class="process-math">\(\pi/6\text{,}\)</span> <span class="process-math">\(5\pi/6\)</span> and the sketch; 1 point for the integral with <span class="process-math">\(r\,dr\,d\theta\)</span> and the correct inner order (cardioid to circle).<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.3.1"><a href="#exam2-q3-3" title="Copy heading and permalink for Solution 3.12.3.1" aria-label="Copy heading and permalink for Solution 3.12.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3.12.3: (3 points)"><a href="#exam2-q3" title="Copy heading and permalink for Worksheet Exercise 3.12.3: (3 points)" aria-label="Copy heading and permalink for Worksheet Exercise 3.12.3: (3 points)">🔗</a></div></article><article class="exercise exercise-like" id="exam2-q4"><h3 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(3 points).</span>
+</h3>
+<div class="para logical" id="exam2-q4-2-1">
+<div class="para">Rewrite (<em class="alert">do not evaluate</em>) the following integral in spherical coordinates:</div>
+<div class="displaymath process-math" id="exam2-q4-2-1-2">
+\begin{equation*}
+\int_{-3}^{0}\!\!\int_{-\sqrt{9-x^2}}^{0}\!\!
+\int_{\sqrt{(x^2+y^2)/3}}^{\sqrt{12-x^2-y^2}} yz\,dz\,dy\,dx .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exam2-q4-3-1">
+<em class="emphasis">The projection.</em> The limits <span class="process-math">\(-3 \le x \le 0\text{,}\)</span> <span class="process-math">\(-\sqrt{9 - x^2} \le y \le 0\)</span> describe the quarter of the disk <span class="process-math">\(x^2 + y^2 \le 9\)</span> with <span class="process-math">\(x \le 0\)</span> and <span class="process-math">\(y \le 0\text{,}\)</span> the third quadrant (<a href="sec-exercises-exam-2.html#fig-exam2-q4-proj" class="internal" title="Figure 3.12.6">Figure 3.12.6</a>): the rays through it have <span class="process-math">\(\pi \le \theta \le 3\pi/2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q4-proj"><div class="image-box" style="width: 42%; margin-left: 29%; margin-right: 29%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-exam2-q4-proj-diagcess.svg" data-cml="generated/prefigure/prefigure-exam2-q4-proj-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The projection of the solid of <a href="sec-exercises-exam-2.html#exam2-q4" class="internal" title="Worksheet Exercise 3.12.4: (3 points)">Worksheet Exercise 3.12.4</a> onto the <span class="process-math">\(xy\)</span>-plane: the quarter of the disk <span class="process-math">\(x^2 + y^2 \le 9\)</span> in the third quadrant, swept by <span class="process-math">\(\pi \le \theta \le 3\pi/2\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.6"><a href="#fig-exam2-q4-proj" title="Copy heading and permalink for Figure 3.12.6" aria-label="Copy heading and permalink for Figure 3.12.6">🔗</a></div></figcaption></figure><div class="para" id="exam2-q4-3-3">
+<em class="emphasis">The solid.</em> The lower limit on <span class="process-math">\(z\text{,}\)</span> <span class="process-math">\(z = \sqrt{(x^2 + y^2)/3}\text{,}\)</span> is the upper nappe of the cone <span class="process-math">\(3z^2 = x^2 + y^2\text{:}\)</span> in spherical coordinates <span class="process-math">\(\sqrt3\,\rho\cos\phi = \rho\sin\phi\text{,}\)</span> so <span class="process-math">\(\tan\phi = \sqrt3\)</span> and <span class="process-math">\(\phi = \pi/3\text{.}\)</span> The upper limit, <span class="process-math">\(z = \sqrt{12 - x^2 - y^2}\text{,}\)</span> is the upper half of the sphere <span class="process-math">\(x^2 + y^2 + z^2 = 12\text{,}\)</span> which is <span class="process-math">\(\rho = 2\sqrt3\text{.}\)</span> The solid lies above the cone and below the sphere, so it is the part of the ball <span class="process-math">\(\rho \le 2\sqrt3\)</span> with <span class="process-math">\(0 \le \phi \le \pi/3\text{,}\)</span> an ice-cream cone, cut to the quarter <span class="process-math">\(\pi \le \theta \le 3\pi/2\)</span> (<a href="sec-exercises-exam-2.html#fig-exam2-q4-solid" class="xref" data-knowl="./knowl/xref/fig-exam2-q4-solid.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.7">Figure 3.12.7</a>). As a check, the cone and the sphere meet where <span class="process-math">\(x^2 + y^2 + \frac13\left(x^2 + y^2\right) = 12\text{,}\)</span> that is, on the circle <span class="process-math">\(x^2 + y^2 = 9\)</span> (at height <span class="process-math">\(z = \sqrt3\)</span>), exactly the boundary of the projection.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q4-solid"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;">
+<img src="generated/latex-image/fig-exam2-q4-solid-2.svg" role="img" class="contained" alt="A quarter of an ice-cream cone: an orange cone with its vertex at the origin opening upward, capped by a blue piece of a sphere, cut by the two vertical planes x equals zero and y equals zero so that only the part over the third quadrant remains."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-exam2-q4-solid-2-description"><div class="para" id="fig-exam2-q4-solid-2-2-1">Coordinate axes x, y and z, seen from the side of the third quadrant. Above the xy-plane, an orange conical surface rises from the origin at sixty degrees from the positive z axis, and a blue spherical cap of radius two root three closes it from above; the two meet along a black quarter circle of radius three at height root three. Two flat gray faces, in the planes x equals zero and y equals zero, cut the solid to the quarter over the third quadrant, where x and y are both negative.<div class="autopermalink" data-description="Paragraph"><a href="#fig-exam2-q4-solid-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The solid of <a href="sec-exercises-exam-2.html#exam2-q4" class="internal" title="Worksheet Exercise 3.12.4: (3 points)">Worksheet Exercise 3.12.4</a>: the quarter, over the third quadrant, of the region inside the sphere <span class="process-math">\(\rho = 2\sqrt3\)</span> and above the cone <span class="process-math">\(\phi = \pi/3\text{.}\)</span> The two surfaces meet along the circle <span class="process-math">\(x^2 + y^2 = 9\text{,}\)</span> <span class="process-math">\(z = \sqrt3\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.7"><a href="#fig-exam2-q4-solid" title="Copy heading and permalink for Figure 3.12.7" aria-label="Copy heading and permalink for Figure 3.12.7">🔗</a></div></figcaption></figure><div class="para logical" id="exam2-q4-3-5">
+<div class="para">
+<em class="emphasis">The integral.</em> With <span class="process-math">\(y = \rho\sin\phi\sin\theta\)</span> and <span class="process-math">\(z = \rho\cos\phi\text{,}\)</span> the integrand is <span class="process-math">\(yz = \rho^2\sin\phi\cos\phi\sin\theta\text{,}\)</span> and <span class="process-math">\(dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta\text{.}\)</span> Hence</div>
+<div class="displaymath process-math" id="exam2-q4-3-5-6">
+\begin{gather*}
+\int_{-3}^{0}\!\!\int_{-\sqrt{9-x^2}}^{0}\!\!
+\int_{\sqrt{(x^2+y^2)/3}}^{\sqrt{12-x^2-y^2}} yz\,dz\,dy\,dx\\
+\quad = \int_{\pi}^{3\pi/2}\!\!\int_0^{\pi/3}\!\!\int_0^{2\sqrt3}
+\rho^4\sin^2\phi\cos\phi\,\sin\theta\,d\rho\,d\phi\,d\theta .
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q4-3-6">
+<em class="emphasis">Grading.</em> 1 point for the <span class="process-math">\(\theta\)</span>-limits; 1 point for <span class="process-math">\(\phi = \pi/3\)</span> and <span class="process-math">\(\rho = 2\sqrt3\)</span> (with the solid correctly identified as the part <em class="emphasis">above</em> the cone); 1 point for the integrand including <span class="process-math">\(\rho^2\sin\phi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.4.1"><a href="#exam2-q4-3" title="Copy heading and permalink for Solution 3.12.4.1" aria-label="Copy heading and permalink for Solution 3.12.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3.12.4: (3 points)"><a href="#exam2-q4" title="Copy heading and permalink for Worksheet Exercise 3.12.4: (3 points)" aria-label="Copy heading and permalink for Worksheet Exercise 3.12.4: (3 points)">🔗</a></div></article><article class="exercise exercise-like" id="exam2-q5"><h3 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(4 points).</span>
+</h3>
+<div class="introduction" id="exam2-q5-2"><div class="para" id="exam2-q5-2-1">
+<em class="alert">Without calculating the integrals</em>, decide whether each of the following integrals is positive, negative, or zero. Let <span class="process-math">\(S\)</span> be the solid bounded by <span class="process-math">\(z = y^2 - 1\text{,}\)</span> <span class="process-math">\(z = 1 - y^2\text{,}\)</span> <span class="process-math">\(x = 0\text{,}\)</span> and <span class="process-math">\(x = 2\text{.}\)</span> Remember to justify your responses.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exam2-q5-a"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exam2-q5-a-1-1">
+<span class="process-math">\(\displaystyle\iiint_S e^x\sin y\,dV\)</span> (2 points)<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-a-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q5-a-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exam2-q5-a-2-1">
+<div class="para">First locate <span class="process-math">\(S\text{.}\)</span> The two parabolic cylinders meet where <span class="process-math">\(y^2 - 1 = 1 - y^2\text{,}\)</span> that is, <span class="process-math">\(y^2 = 1\text{,}\)</span> so at <span class="process-math">\(y = \pm 1\text{;}\)</span> between them <span class="process-math">\(1 - y^2\)</span> lies above <span class="process-math">\(y^2 - 1\text{.}\)</span> So</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-exam2-q5-section.html" id="exam2-q5-a-2-1-7">
+\begin{equation*}
+S:\quad 0 \le x \le 2,\qquad -1 \le y \le 1,\qquad y^2 - 1 \le z \le 1 - y^2 ,
+\end{equation*}
+</div>
+<div class="para">a solid with the lens-shaped cross-section of <a href="sec-exercises-exam-2.html#fig-exam2-q5-section" class="internal" title="Figure 3.12.8">Figure 3.12.8</a> in every plane <span class="process-math">\(x = c\text{,}\)</span> <span class="process-math">\(0 \le c \le 2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-a-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-exam2-q5-section"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/prefigure-exam2-q5-section-diagcess.svg" data-cml="generated/prefigure/prefigure-exam2-q5-section-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The cross-section of the solid <span class="process-math">\(S\)</span> of <a href="sec-exercises-exam-2.html#exam2-q5" class="internal" title="Worksheet Exercise 3.12.5: (4 points)">Worksheet Exercise 3.12.5</a> by a plane <span class="process-math">\(x = c\text{:}\)</span> the region between the parabolas <span class="process-math">\(z = y^2 - 1\)</span> and <span class="process-math">\(z = 1 - y^2\text{,}\)</span> which meet at <span class="process-math">\(y = \pm 1\text{.}\)</span> It is symmetric about the <span class="process-math">\(z\)</span>-axis, that is, about the plane <span class="process-math">\(y = 0\text{.}\)</span><div class="autopermalink" data-description="Figure 3.12.8"><a href="#fig-exam2-q5-section" title="Copy heading and permalink for Figure 3.12.8" aria-label="Copy heading and permalink for Figure 3.12.8">🔗</a></div></figcaption></figure><div class="para" id="exam2-q5-a-2-3">
+<em class="alert">Zero.</em> <span class="process-math">\(S\)</span> is symmetric about the plane <span class="process-math">\(y = 0\text{:}\)</span> replacing <span class="process-math">\(y\)</span> by <span class="process-math">\(-y\)</span> changes none of its bounding surfaces, so the reflection <span class="process-math">\(y \mapsto -y\)</span> maps <span class="process-math">\(S\)</span> onto itself. The integrand is odd under that reflection, <span class="process-math">\(e^x\sin(-y) = -e^x\sin y\text{:}\)</span> it is <span class="process-math">\(\ge 0\)</span> on the half <span class="process-math">\(y \ge 0\)</span> of <span class="process-math">\(S\)</span> and <span class="process-math">\(\le 0\)</span> on the half <span class="process-math">\(y \le 0\text{,}\)</span> with the values on the two halves mirror images of each other (the factor <span class="process-math">\(e^x\)</span> is the same at mirror points). The two halves contribute opposite amounts and the integral is <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-a-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q5-a-2-4">
+<em class="emphasis">Grading.</em> 1 point for the correct sign, 1 point for the justification; a correct sign with no or wrong reasoning earns at most <span class="process-math">\(\frac12\)</span> point. The description of <span class="process-math">\(S\)</span> by inequalities is part of the justification of both parts.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-a-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.5.a.1"><a href="#exam2-q5-a-2" title="Copy heading and permalink for Solution 3.12.5.a.1" aria-label="Copy heading and permalink for Solution 3.12.5.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.12.5.a"><a href="#exam2-q5-a" title="Copy heading and permalink for Task 3.12.5.a" aria-label="Copy heading and permalink for Task 3.12.5.a">🔗</a></div></article><article class="task exercise-like" id="exam2-q5-b"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exam2-q5-b-1-1">
+<span class="process-math">\(\displaystyle\iiint_S \left(z + y^2 - 1\right) dV\)</span> (2 points)<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-b-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q5-b-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exam2-q5-b-2-1">
+<em class="alert">Negative.</em> On <span class="process-math">\(S\text{,}\)</span> described in the solution of part (a), we have <span class="process-math">\(z \le 1 - y^2\text{,}\)</span> that is, <span class="process-math">\(z + y^2 - 1 \le 0\text{,}\)</span> with equality only on the top surface <span class="process-math">\(z = 1 - y^2\text{,}\)</span> which has zero volume. An integrand that is negative throughout the solid except on a surface of zero volume has a negative integral. (Its value is <span class="process-math">\(-\frac{64}{15}\text{,}\)</span> but no calculation is expected.)<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-b-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q5-b-2-2">
+<em class="emphasis">Grading.</em> 1 point for the correct sign, 1 point for the justification; a correct sign with no or wrong reasoning earns at most <span class="process-math">\(\frac12\)</span> point. The description of <span class="process-math">\(S\)</span> by inequalities is part of the justification of both parts.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q5-b-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.5.b.1"><a href="#exam2-q5-b-2" title="Copy heading and permalink for Solution 3.12.5.b.1" aria-label="Copy heading and permalink for Solution 3.12.5.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.12.5.b"><a href="#exam2-q5-b" title="Copy heading and permalink for Task 3.12.5.b" aria-label="Copy heading and permalink for Task 3.12.5.b">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 3.12.5: (4 points)"><a href="#exam2-q5" title="Copy heading and permalink for Worksheet Exercise 3.12.5: (4 points)" aria-label="Copy heading and permalink for Worksheet Exercise 3.12.5: (4 points)">🔗</a></div></article><article class="exercise exercise-like" id="exam2-q6"><h3 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(3 points).</span>
+</h3>
+<div class="para" id="exam2-q6-2-1">
+<em class="alert">True or False?</em> If the statement is true, prove it; if it is false, give a counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="exam2-q6-2-2">
+<div class="para">Let <span class="process-math">\(E\)</span> be the solid unit ball <span class="process-math">\(E = \{(x,y,z) : x^2 + y^2 + z^2 \le 1\}\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="exam2-q6-2-2-3">
+\begin{equation*}
+\iiint_E (x + y + z)^2\,dV = \iiint_E \left(x^2 + y^2 + z^2\right) dV .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exam2-q6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exam2-q6-3-1">
+<div class="para">
+<em class="alert">True.</em> Expand the square:</div>
+<div class="displaymath process-math" id="exam2-q6-3-1-2">
+\begin{equation*}
+(x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2xz .
+\end{equation*}
+</div>
+<div class="para">So it suffices to show that</div>
+<div class="displaymath process-math" id="exam2-q6-3-1-3">
+\begin{equation*}
+\iiint_E xy\,dV = \iiint_E yz\,dV = \iiint_E xz\,dV = 0 .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q6-3-2">
+<em class="emphasis">Use symmetry.</em> The unit ball is symmetric about the plane <span class="process-math">\(x = 0\text{:}\)</span> the reflection <span class="process-math">\((x,y,z) \mapsto (-x,y,z)\)</span> maps <span class="process-math">\(E\)</span> onto itself and does not change volumes. The integrand <span class="process-math">\(xy\)</span> is odd under it, <span class="process-math">\((-x)y = -xy\text{:}\)</span> the half <span class="process-math">\(x \ge 0\)</span> of <span class="process-math">\(E\)</span> and the half <span class="process-math">\(x \le 0\)</span> contribute opposite amounts, so <span class="process-math">\(\iiint_E xy\,dV = 0\text{.}\)</span> The same reflection kills <span class="process-math">\(xz\text{,}\)</span> and the reflection <span class="process-math">\(y \mapsto -y\)</span> kills <span class="process-math">\(yz\text{.}\)</span> (Equivalently, in spherical coordinates each cross term carries a factor <span class="process-math">\(\int_0^{2\pi}\sin\theta\cos\theta\,d\theta\text{,}\)</span> <span class="process-math">\(\int_0^{2\pi}\sin\theta\,d\theta\)</span> or <span class="process-math">\(\int_0^{2\pi}\cos\theta\,d\theta\text{,}\)</span> all equal to <span class="process-math">\(0\text{.}\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exam2-q6-3-3">
+<div class="para">
+<em class="emphasis">Conclude.</em> Integrating the expansion over <span class="process-math">\(E\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="exam2-q6-3-3-3">
+\begin{align*}
+\amp \iiint_E (x + y + z)^2\,dV\\
+\amp \quad = \iiint_E \left(x^2 + y^2 + z^2\right) dV + 2 \cdot 0 + 2 \cdot 0 + 2 \cdot 0\\
+\amp \quad = \iiint_E \left(x^2 + y^2 + z^2\right) dV .
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exam2-q6-3-4">
+<div class="para">
+<em class="emphasis">Numerical value</em> (not required). In spherical coordinates,</div>
+<div class="displaymath process-math" id="exam2-q6-3-4-2">
+\begin{equation*}
+\iiint_E \rho^2 \cdot \rho^2\sin\phi\,d\rho\,d\phi\,d\theta
+= \frac15 \cdot 2 \cdot 2\pi = \frac{4\pi}{5} .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exam2-q6-3-5">
+<em class="emphasis">Grading.</em> 1 point for “True” with the expansion; 2 points for a correct symmetry (or direct spherical-coordinates) argument that the three cross terms integrate to <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exam2-q6-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.12.6.1"><a href="#exam2-q6-3" title="Copy heading and permalink for Solution 3.12.6.1" aria-label="Copy heading and permalink for Solution 3.12.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3.12.6: (3 points)"><a href="#exam2-q6" title="Copy heading and permalink for Worksheet Exercise 3.12.6: (3 points)" aria-label="Copy heading and permalink for Worksheet Exercise 3.12.6: (3 points)">🔗</a></div></article><div class="autopermalink" data-description="Worksheet 3.12: Exam 2"><a href="#sec-exercises-exam-2" title="Copy heading and permalink for Worksheet 3.12: Exam 2" aria-label="Copy heading and permalink for Worksheet 3.12: Exam 2">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-exercises-sample-past-exam-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercises-hw7-online.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<script>diagcess.Base.init()</script><script src="external/math-input-palette.js"></script><script src="external/custom.js"></script>
+</body>
+</html>

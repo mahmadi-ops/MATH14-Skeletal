@@ -1,0 +1,103 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-two-circles-figure" speech2="The lens where the circles r equals two cosine theta and r equals two sine theta overlap, split by the ray theta equals pi over four.">
+      <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-two-circles-grid-axes</active>
+        <active>prefigure-hw5o-two-circles-tc-region</active>
+        <active>prefigure-hw5o-two-circles-tc-a</active>
+        <active>prefigure-hw5o-two-circles-tc-b</active>
+        <active>prefigure-hw5o-two-circles-tc-ray</active>
+        <active>prefigure-hw5o-two-circles-tc-s1</active>
+        <active>prefigure-hw5o-two-circles-tc-s2</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-two-circles-grid-axes</active>
+        <active>prefigure-hw5o-two-circles-tc-region</active>
+        <active>prefigure-hw5o-two-circles-tc-a</active>
+        <active>prefigure-hw5o-two-circles-tc-b</active>
+        <active>prefigure-hw5o-two-circles-tc-ray</active>
+        <active>prefigure-hw5o-two-circles-tc-s1</active>
+        <active>prefigure-hw5o-two-circles-tc-s2</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw5o-two-circles-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-two-circles-grid</active>
+        <active>prefigure-hw5o-two-circles-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-two-circles-grid</active>
+        <active>prefigure-hw5o-two-circles-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-grid" speech2="The coordinate grid">
+      <active>prefigure-hw5o-two-circles-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-axes" speech2="The coordinate axes">
+      <active>prefigure-hw5o-two-circles-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-tc-region" speech2="The shaded region R, inside both circles.">
+      <active>prefigure-hw5o-two-circles-tc-region</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-tc-a" speech2="The circle r equals two cosine theta, of radius one centered at one comma zero." sonify="yes">
+      <active>prefigure-hw5o-two-circles-tc-a</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-two-circles-tc-a</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-tc-b" speech2="The circle r equals two sine theta, of radius one centered at zero comma one." sonify="yes">
+      <active>prefigure-hw5o-two-circles-tc-b</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-two-circles-tc-b</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-tc-ray" speech2="The dashed ray theta equals pi over four through one comma one, where the two circles cross.">
+      <active>prefigure-hw5o-two-circles-tc-ray</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-tc-s1" speech2="A ray below the diagonal, which leaves R on the circle r equals two sine theta.">
+      <active>prefigure-hw5o-two-circles-tc-s1</active>
+      <position>6</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-two-circles-tc-s2" speech2="A ray above the diagonal, which leaves R on the circle r equals two cosine theta.">
+      <active>prefigure-hw5o-two-circles-tc-s2</active>
+      <position>7</position>
+      <parents>
+        <grouped>prefigure-hw5o-two-circles-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

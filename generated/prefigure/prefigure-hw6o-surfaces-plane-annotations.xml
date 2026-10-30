@@ -1,0 +1,42 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw6o-surfaces-plane-figure" speech2="The line x equals root three y in the xy-plane, the trace of the vertical plane.">
+      <grouped>prefigure-hw6o-surfaces-plane-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw6o-surfaces-plane-sp-line</active>
+        <active>prefigure-hw6o-surfaces-plane-sp-arc1</active>
+        <active>prefigure-hw6o-surfaces-plane-sp-arc2</active>
+      </children>
+      <components>
+        <active>prefigure-hw6o-surfaces-plane-sp-line</active>
+        <active>prefigure-hw6o-surfaces-plane-sp-arc1</active>
+        <active>prefigure-hw6o-surfaces-plane-sp-arc2</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw6o-surfaces-plane-sp-line" speech2="The line through the origin at angle pi over six to the x axis." sonify="yes">
+      <active>prefigure-hw6o-surfaces-plane-sp-line</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw6o-surfaces-plane-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw6o-surfaces-plane-sp-line</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw6o-surfaces-plane-sp-arc1" speech2="The angle theta equals pi over six, from the positive x axis to the ray in the first quadrant.">
+      <active>prefigure-hw6o-surfaces-plane-sp-arc1</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw6o-surfaces-plane-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-surfaces-plane-sp-arc2" speech2="The angle theta equals seven pi over six, from the positive x axis around to the opposite ray.">
+      <active>prefigure-hw6o-surfaces-plane-sp-arc2</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw6o-surfaces-plane-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

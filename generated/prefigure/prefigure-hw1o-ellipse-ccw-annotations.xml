@@ -1,0 +1,82 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw1o-ellipse-ccw-figure" speech2="The ellipse traced counterclockwise, starting at two comma zero and returning there after one second">
+      <grouped>prefigure-hw1o-ellipse-ccw-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw1o-ellipse-ccw-grid-axes</active>
+        <active>prefigure-hw1o-ellipse-ccw-grid</active>
+        <active>prefigure-hw1o-ellipse-ccw-axes</active>
+        <active>prefigure-hw1o-ellipse-ccw-curve</active>
+        <active>prefigure-hw1o-ellipse-ccw-quarters</active>
+      </children>
+      <components>
+        <active>prefigure-hw1o-ellipse-ccw-grid-axes</active>
+        <active>prefigure-hw1o-ellipse-ccw-grid</active>
+        <active>prefigure-hw1o-ellipse-ccw-axes</active>
+        <active>prefigure-hw1o-ellipse-ccw-curve</active>
+        <active>prefigure-hw1o-ellipse-ccw-quarters</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw1o-ellipse-ccw-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw1o-ellipse-ccw-grid</active>
+        <active>prefigure-hw1o-ellipse-ccw-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw1o-ellipse-ccw-grid</active>
+        <active>prefigure-hw1o-ellipse-ccw-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-grid" speech2="The coordinate grid">
+      <active>prefigure-hw1o-ellipse-ccw-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-axes" speech2="The coordinate axes">
+      <active>prefigure-hw1o-ellipse-ccw-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-grid" speech2="The coordinate grid">
+      <active>prefigure-hw1o-ellipse-ccw-grid</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-axes" speech2="The coordinate axes">
+      <active>prefigure-hw1o-ellipse-ccw-axes</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-curve" speech2="The ellipse, traced counterclockwise" sonify="yes">
+      <active>prefigure-hw1o-ellipse-ccw-curve</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw1o-ellipse-ccw-curve</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-ccw-quarters" speech2="Four dots marking the positions at t equals zero and one, at two comma zero; t equals one quarter, at zero comma one; t equals one half, at minus two comma zero; and t equals three quarters, at zero comma minus one">
+      <active>prefigure-hw1o-ellipse-ccw-quarters</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-ccw-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>
