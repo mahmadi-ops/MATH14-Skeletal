@@ -75,8 +75,9 @@ TOPICS = {
     "sec-exercises-hw5-online": "hw5-online.ptx",
     "sec-exercises-hw6-online": "hw6-online.ptx",
     "sec-exercises-hw7-online": "hw7-online.ptx",
-    "sec-exercises-hw8-online": "hw8-online.ptx",
-    "sec-exercises-hw9-online": "hw9-online.ptx",
+    # Retain the original topic ids when renumbering Assignments 8 and 9.
+    "sec-exercises-hw9-online": "hw8-online.ptx",
+    "sec-exercises-hw8-online": "hw9-online.ptx",
     "sec-exercises-hw10-online": "hw10-online.ptx",
     "sec-exercises-review1-practice": "review1-practice.ptx",
     "sec-exercises-sample-past-exam-1": "sample-past-exam-1.ptx",
