@@ -33,14 +33,12 @@
       <xi:include href="surface-integrals.ptx" />
     </chapter>
 
-    <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-integral-theorems">
       <title>The Big Theorems</title>
       <xi:include href="greens-theorem.ptx" />
-      <xi:include href="stokes-theorem.ptx" />
-      <xi:include href="divergence-theorem.ptx" />
+      <!-- UNPOSTED <xi:include href="stokes-theorem.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="divergence-theorem.ptx" /> UNPOSTED -->
     </chapter>
-    HIDDEN-CHAPTER-END -->
 
     <!-- The fourth chapter, "Assignments and Review Problems", is web-only:
          its problems are Runestone fill-in exercises whose print form shows

@@ -30,14 +30,12 @@
       <xi:include href="surface-integrals.ptx" />
     </chapter>
 
-    <!-- HIDDEN-CHAPTER-BEGIN
     <chapter xml:id="ch-integral-theorems">
       <title>The Big Theorems</title>
       <xi:include href="greens-theorem.ptx" />
-      <xi:include href="stokes-theorem.ptx" />
-      <xi:include href="divergence-theorem.ptx" />
+      <!-- UNPOSTED <xi:include href="stokes-theorem.ptx" /> UNPOSTED -->
+      <!-- UNPOSTED <xi:include href="divergence-theorem.ptx" /> UNPOSTED -->
     </chapter>
-    HIDDEN-CHAPTER-END -->
 
     <!-- The written assignments are hidden from the build.  The same       -->
     <!-- problems are auto-graded in "Assignments and Review Problems",     -->
