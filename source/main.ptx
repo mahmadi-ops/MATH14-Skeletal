@@ -33,7 +33,7 @@
     <chapter xml:id="ch-integral-theorems">
       <title>The Big Theorems</title>
       <xi:include href="greens-theorem.ptx" />
-      <!-- UNPOSTED <xi:include href="stokes-theorem.ptx" /> UNPOSTED -->
+      <xi:include href="stokes-theorem.ptx" />
       <!-- UNPOSTED <xi:include href="divergence-theorem.ptx" /> UNPOSTED -->
     </chapter>
 
@@ -287,7 +287,7 @@
       <xi:include href="exam-2.ptx" />
       <xi:include href="hw7-online.ptx" />
       <xi:include href="hw8-online.ptx" />
-      <!-- UNPOSTED <xi:include href="hw9-online.ptx" /> UNPOSTED -->
+      <xi:include href="hw9-online.ptx" />
       <xi:include href="review3-practice.ptx" />
       <!-- UNPOSTED <xi:include href="hw10-online.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="review4-practice.ptx" /> UNPOSTED -->

@@ -36,7 +36,7 @@
     <chapter xml:id="ch-integral-theorems">
       <title>The Big Theorems</title>
       <xi:include href="greens-theorem.ptx" />
-      <!-- UNPOSTED <xi:include href="stokes-theorem.ptx" /> UNPOSTED -->
+      <xi:include href="stokes-theorem.ptx" />
       <!-- UNPOSTED <xi:include href="divergence-theorem.ptx" /> UNPOSTED -->
     </chapter>
 
