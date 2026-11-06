@@ -288,7 +288,7 @@
       <xi:include href="hw7-online.ptx" />
       <xi:include href="hw8-online.ptx" />
       <!-- UNPOSTED <xi:include href="hw9-online.ptx" /> UNPOSTED -->
-      <!-- UNPOSTED <xi:include href="review3-practice.ptx" /> UNPOSTED -->
+      <xi:include href="review3-practice.ptx" />
       <!-- UNPOSTED <xi:include href="hw10-online.ptx" /> UNPOSTED -->
       <!-- UNPOSTED <xi:include href="review4-practice.ptx" /> UNPOSTED -->
     </chapter>
