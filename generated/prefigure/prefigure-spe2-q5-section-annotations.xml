@@ -1,0 +1,54 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-spe2-q5-section-figure" speech2="The lens between an upward parabola with vertex at two comma zero and a downward parabola with vertex at two comma two, which cross at x equals one and x equals three.">
+      <grouped>prefigure-spe2-q5-section-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-spe2-q5-section-q5-region</active>
+        <active>prefigure-spe2-q5-section-q5-lower</active>
+        <active>prefigure-spe2-q5-section-q5-upper</active>
+        <active>prefigure-spe2-q5-section-q5-axis</active>
+      </children>
+      <components>
+        <active>prefigure-spe2-q5-section-q5-region</active>
+        <active>prefigure-spe2-q5-section-q5-lower</active>
+        <active>prefigure-spe2-q5-section-q5-upper</active>
+        <active>prefigure-spe2-q5-section-q5-axis</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-spe2-q5-section-q5-region" speech2="The shaded cross-section of the solid S.">
+      <active>prefigure-spe2-q5-section-q5-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-spe2-q5-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-spe2-q5-section-q5-lower" speech2="The parabola z equals x minus two squared, the floor of S." sonify="yes">
+      <active>prefigure-spe2-q5-section-q5-lower</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-spe2-q5-section-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-spe2-q5-section-q5-lower</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-spe2-q5-section-q5-upper" speech2="The parabola z equals two minus x minus two squared, the roof of S." sonify="yes">
+      <active>prefigure-spe2-q5-section-q5-upper</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-spe2-q5-section-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-spe2-q5-section-q5-upper</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-spe2-q5-section-q5-axis" speech2="The line x equals two, about which the cross-section is symmetric.">
+      <active>prefigure-spe2-q5-section-q5-axis</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-spe2-q5-section-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

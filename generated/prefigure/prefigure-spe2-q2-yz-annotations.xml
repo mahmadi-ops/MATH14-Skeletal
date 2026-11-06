@@ -1,0 +1,42 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-spe2-q2-yz-figure" speech2="The projection of the solid onto the yz-plane: the triangle under the line z equals y from y equals zero to one.">
+      <grouped>prefigure-spe2-q2-yz-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-spe2-q2-yz-q2yz-region</active>
+        <active>prefigure-spe2-q2-yz-q2yz-diag</active>
+        <active>prefigure-spe2-q2-yz-q2yz-strip</active>
+      </children>
+      <components>
+        <active>prefigure-spe2-q2-yz-q2yz-region</active>
+        <active>prefigure-spe2-q2-yz-q2yz-diag</active>
+        <active>prefigure-spe2-q2-yz-q2yz-strip</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-spe2-q2-yz-q2yz-region" speech2="The shaded triangle.">
+      <active>prefigure-spe2-q2-yz-q2yz-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-spe2-q2-yz-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-spe2-q2-yz-q2yz-diag" speech2="The line z equals y." sonify="yes">
+      <active>prefigure-spe2-q2-yz-q2yz-diag</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-spe2-q2-yz-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-spe2-q2-yz-q2yz-diag</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-spe2-q2-yz-q2yz-strip" speech2="A vertical strip at a fixed y, from z equals zero to z equals y.">
+      <active>prefigure-spe2-q2-yz-q2yz-strip</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-spe2-q2-yz-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

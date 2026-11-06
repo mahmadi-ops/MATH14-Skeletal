@@ -1,0 +1,73 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-limacon-figure" speech2="The curve r equals twelve plus two cosine theta, with the point P at angle thirteen pi over twelve and the inner circle of radius ten.">
+      <grouped>prefigure-hw5o-limacon-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-limacon-grid-axes</active>
+        <active>prefigure-hw5o-limacon-lm-curve</active>
+        <active>prefigure-hw5o-limacon-lm-inner</active>
+        <active>prefigure-hw5o-limacon-lm-ray</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-limacon-grid-axes</active>
+        <active>prefigure-hw5o-limacon-lm-curve</active>
+        <active>prefigure-hw5o-limacon-lm-inner</active>
+        <active>prefigure-hw5o-limacon-lm-ray</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-limacon-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw5o-limacon-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-limacon-grid</active>
+        <active>prefigure-hw5o-limacon-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-limacon-grid</active>
+        <active>prefigure-hw5o-limacon-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw5o-limacon-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-limacon-grid" speech2="The coordinate grid">
+      <active>prefigure-hw5o-limacon-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-limacon-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-limacon-axes" speech2="The coordinate axes">
+      <active>prefigure-hw5o-limacon-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-limacon-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-limacon-lm-curve" speech2="The curve r equals twelve plus two cosine theta, a nearly circular closed curve." sonify="yes">
+      <active>prefigure-hw5o-limacon-lm-curve</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-limacon-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-limacon-lm-curve</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-limacon-lm-inner" speech2="The dashed circle r equals ten, the minimum value of r, which touches the curve at negative ten comma zero.">
+      <active>prefigure-hw5o-limacon-lm-inner</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-limacon-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-limacon-lm-ray" speech2="The segment from the origin to P at angle thirteen pi over twelve, of length about ten point zero seven.">
+      <active>prefigure-hw5o-limacon-lm-ray</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-limacon-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

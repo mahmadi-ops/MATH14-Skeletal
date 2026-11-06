@@ -1,0 +1,64 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-circle-5cos-figure" speech2="The circle x squared plus y squared equals five x, which is r equals five cosine theta.">
+      <grouped>prefigure-hw5o-circle-5cos-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-circle-5cos-grid-axes</active>
+        <active>prefigure-hw5o-circle-5cos-cc-curve</active>
+        <active>prefigure-hw5o-circle-5cos-cc-ray</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-circle-5cos-grid-axes</active>
+        <active>prefigure-hw5o-circle-5cos-cc-curve</active>
+        <active>prefigure-hw5o-circle-5cos-cc-ray</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-circle-5cos-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw5o-circle-5cos-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-circle-5cos-grid</active>
+        <active>prefigure-hw5o-circle-5cos-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-circle-5cos-grid</active>
+        <active>prefigure-hw5o-circle-5cos-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw5o-circle-5cos-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-circle-5cos-grid" speech2="The coordinate grid">
+      <active>prefigure-hw5o-circle-5cos-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-circle-5cos-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-circle-5cos-axes" speech2="The coordinate axes">
+      <active>prefigure-hw5o-circle-5cos-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-circle-5cos-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-circle-5cos-cc-curve" speech2="The circle of radius five halves centered at five halves comma zero, passing through the origin." sonify="yes">
+      <active>prefigure-hw5o-circle-5cos-cc-curve</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-circle-5cos-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-circle-5cos-cc-curve</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-circle-5cos-cc-ray" speech2="A dashed segment from the origin to a point of the circle, of length five cosine theta.">
+      <active>prefigure-hw5o-circle-5cos-cc-ray</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-circle-5cos-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

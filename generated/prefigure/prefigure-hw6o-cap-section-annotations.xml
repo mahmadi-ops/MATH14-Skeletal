@@ -1,0 +1,60 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw6o-cap-section-figure" speech2="The cross-section of the cap by the xz-plane: the part of the disk of radius two above the line z equals one.">
+      <grouped>prefigure-hw6o-cap-section-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw6o-cap-section-cap-region</active>
+        <active>prefigure-hw6o-cap-section-cap-circle</active>
+        <active>prefigure-hw6o-cap-section-cap-plane</active>
+        <active>prefigure-hw6o-cap-section-cap-ray</active>
+        <active>prefigure-hw6o-cap-section-cap-sample</active>
+      </children>
+      <components>
+        <active>prefigure-hw6o-cap-section-cap-region</active>
+        <active>prefigure-hw6o-cap-section-cap-circle</active>
+        <active>prefigure-hw6o-cap-section-cap-plane</active>
+        <active>prefigure-hw6o-cap-section-cap-ray</active>
+        <active>prefigure-hw6o-cap-section-cap-sample</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw6o-cap-section-cap-region" speech2="The shaded cross-section of the cap.">
+      <active>prefigure-hw6o-cap-section-cap-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw6o-cap-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-cap-section-cap-circle" speech2="The circle rho equals two." sonify="yes">
+      <active>prefigure-hw6o-cap-section-cap-circle</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw6o-cap-section-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw6o-cap-section-cap-circle</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw6o-cap-section-cap-plane" speech2="The line z equals one, which is rho equals secant phi.">
+      <active>prefigure-hw6o-cap-section-cap-plane</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw6o-cap-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-cap-section-cap-ray" speech2="The ray at angle pi over three from the z axis, through the corner of the region at root three comma one.">
+      <active>prefigure-hw6o-cap-section-cap-ray</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw6o-cap-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-cap-section-cap-sample" speech2="A sample ray at a smaller angle phi, inside the region from rho equals secant phi to rho equals two.">
+      <active>prefigure-hw6o-cap-section-cap-sample</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw6o-cap-section-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

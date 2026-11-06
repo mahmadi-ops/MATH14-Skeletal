@@ -1,0 +1,60 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-half-disk-figure" speech2="The region R: the right half of the upper half disk of radius nine centered at nine comma zero, with a ray showing the polar bounds.">
+      <grouped>prefigure-hw5o-half-disk-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-half-disk-hd-region</active>
+        <active>prefigure-hw5o-half-disk-hd-circle</active>
+        <active>prefigure-hw5o-half-disk-hd-wall</active>
+        <active>prefigure-hw5o-half-disk-hd-ray</active>
+        <active>prefigure-hw5o-half-disk-hd-ray2</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-half-disk-hd-region</active>
+        <active>prefigure-hw5o-half-disk-hd-circle</active>
+        <active>prefigure-hw5o-half-disk-hd-wall</active>
+        <active>prefigure-hw5o-half-disk-hd-ray</active>
+        <active>prefigure-hw5o-half-disk-hd-ray2</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-half-disk-hd-region" speech2="The shaded region R, between the line x equals nine, the x axis, and the circle.">
+      <active>prefigure-hw5o-half-disk-hd-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-half-disk-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-half-disk-hd-circle" speech2="The upper half of the circle r equals eighteen cosine theta, of radius nine centered at nine comma zero." sonify="yes">
+      <active>prefigure-hw5o-half-disk-hd-circle</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-half-disk-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-half-disk-hd-circle</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-half-disk-hd-wall" speech2="The vertical segment x equals nine from the x axis up to nine comma nine, which is r equals nine secant theta.">
+      <active>prefigure-hw5o-half-disk-hd-wall</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-half-disk-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-half-disk-hd-ray" speech2="The dashed ray theta equals pi over four through nine comma nine, where the line and the circle meet.">
+      <active>prefigure-hw5o-half-disk-hd-ray</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-half-disk-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-half-disk-hd-ray2" speech2="A ray at angle theta, which crosses R from r equals nine secant theta to r equals eighteen cosine theta.">
+      <active>prefigure-hw5o-half-disk-hd-ray2</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw5o-half-disk-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>
