@@ -61,7 +61,11 @@
                                 [not(ancestor::section[starts-with(@xml:id, 'sec-exercises-review')])]
                                 [not(ancestor::worksheet)]/solution"
                 mode="heading-birth">
-    <xsl:apply-templates select="." mode="heading-non-singleton-number"/>
+    <!-- PreTeXt 2.44 passes the heading level down; 2.37 did not. -->
+    <xsl:param name="heading-level"/>
+    <xsl:apply-templates select="." mode="heading-non-singleton-number">
+      <xsl:with-param name="heading-level" select="$heading-level"/>
+    </xsl:apply-templates>
   </xsl:template>
 
   <!-- A dynamic <fillin>/<evaluation> exercise swallows its <solution>     -->
@@ -77,6 +81,7 @@
                 mode="exercise-components">
     <xsl:param name="b-original"/>
     <xsl:param name="block-type"/>
+    <xsl:param name="heading-level"/>
     <xsl:param name="b-has-statement"/>
     <xsl:param name="b-has-hint"/>
     <xsl:param name="b-has-answer"/>
@@ -88,6 +93,7 @@
       <xsl:apply-templates select="." mode="solutions-div">
         <xsl:with-param name="b-original" select="$b-original"/>
         <xsl:with-param name="block-type" select="$block-type"/>
+        <xsl:with-param name="heading-level" select="$heading-level"/>
         <xsl:with-param name="b-has-hint" select="$b-has-hint"/>
         <xsl:with-param name="b-has-answer" select="$b-has-answer"/>
         <xsl:with-param name="b-has-solution" select="$b-has-solution"/>
