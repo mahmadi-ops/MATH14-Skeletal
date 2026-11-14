@@ -1,0 +1,39 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw8o-sol-staircase-figure" speech2="The staircase path of the problem, ten unit steps from the origin to ten comma ten and back along the top to zero comma ten, closed by the segment C 3 down the y-axis from zero comma ten to the origin. The closed curve runs counterclockwise around the shaded region R above the staircase, whose area is 55: the triangle of area 50 plus ten half-squares.">
+      <grouped>prefigure-hw8o-sol-staircase-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw8o-sol-staircase-hss-region</active>
+        <active>prefigure-hw8o-sol-staircase-hss-c3</active>
+        <active>prefigure-hw8o-sol-staircase-hss-stairs</active>
+      </children>
+      <components>
+        <active>prefigure-hw8o-sol-staircase-hss-region</active>
+        <active>prefigure-hw8o-sol-staircase-hss-c3</active>
+        <active>prefigure-hw8o-sol-staircase-hss-stairs</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-staircase-hss-region" speech2="The region R between the staircase and the top segment, of area 55.">
+      <active>prefigure-hw8o-sol-staircase-hss-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-staircase-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-staircase-hss-c3" speech2="The closing segment C 3, down the y-axis from zero comma ten to the origin.">
+      <active>prefigure-hw8o-sol-staircase-hss-c3</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-staircase-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-staircase-hss-stairs" speech2="The given path: the staircase and the top segment.">
+      <active>prefigure-hw8o-sol-staircase-hss-stairs</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-staircase-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

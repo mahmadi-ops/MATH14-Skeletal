@@ -1,0 +1,57 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-exam1-force-figure" speech2="A circle C centered at the origin O, with a small arrow on its lower right showing that it is traversed counterclockwise. At a point on its upper right, two vectors start: the unit tangent T, in blue, pointing up and to the left along the direction of motion, and the force F, in vermillion, pointing left into the circle. The angle between them is marked sixty degrees.">
+      <grouped>prefigure-exam1-force-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-exam1-force-ef-C</active>
+        <active>prefigure-exam1-force-ef-dir</active>
+        <active>prefigure-exam1-force-ef-T</active>
+        <active>prefigure-exam1-force-ef-F</active>
+        <active>prefigure-exam1-force-ef-angle</active>
+      </children>
+      <components>
+        <active>prefigure-exam1-force-ef-C</active>
+        <active>prefigure-exam1-force-ef-dir</active>
+        <active>prefigure-exam1-force-ef-T</active>
+        <active>prefigure-exam1-force-ef-F</active>
+        <active>prefigure-exam1-force-ef-angle</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-exam1-force-ef-C" speech2="The circle C, x squared plus y squared equals 9, centered at the origin.">
+      <active>prefigure-exam1-force-ef-C</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-exam1-force-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-exam1-force-ef-dir" speech2="An arrow on the circle: the motion is counterclockwise.">
+      <active>prefigure-exam1-force-ef-dir</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-exam1-force-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-exam1-force-ef-T" speech2="The unit tangent vector T, in blue, in the direction of motion.">
+      <active>prefigure-exam1-force-ef-T</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-exam1-force-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-exam1-force-ef-F" speech2="The force F, in vermillion, of magnitude 4 newtons.">
+      <active>prefigure-exam1-force-ef-F</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-exam1-force-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-exam1-force-ef-angle" speech2="The angle between T and F, sixty degrees.">
+      <active>prefigure-exam1-force-ef-angle</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-exam1-force-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

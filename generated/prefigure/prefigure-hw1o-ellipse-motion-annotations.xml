@@ -1,0 +1,91 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw1o-ellipse-motion-figure" speech2="An ellipse centered at minus two comma four, one unit wide on each side of the center and two units tall on each side, traced once counterclockwise starting from its lowest point">
+      <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw1o-ellipse-motion-grid-axes</active>
+        <active>prefigure-hw1o-ellipse-motion-grid</active>
+        <active>prefigure-hw1o-ellipse-motion-axes</active>
+        <active>prefigure-hw1o-ellipse-motion-curve</active>
+        <active>prefigure-hw1o-ellipse-motion-center</active>
+        <active>prefigure-hw1o-ellipse-motion-quarters</active>
+      </children>
+      <components>
+        <active>prefigure-hw1o-ellipse-motion-grid-axes</active>
+        <active>prefigure-hw1o-ellipse-motion-grid</active>
+        <active>prefigure-hw1o-ellipse-motion-axes</active>
+        <active>prefigure-hw1o-ellipse-motion-curve</active>
+        <active>prefigure-hw1o-ellipse-motion-center</active>
+        <active>prefigure-hw1o-ellipse-motion-quarters</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw1o-ellipse-motion-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw1o-ellipse-motion-grid</active>
+        <active>prefigure-hw1o-ellipse-motion-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw1o-ellipse-motion-grid</active>
+        <active>prefigure-hw1o-ellipse-motion-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-grid" speech2="The coordinate grid">
+      <active>prefigure-hw1o-ellipse-motion-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-axes" speech2="The coordinate axes">
+      <active>prefigure-hw1o-ellipse-motion-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-grid" speech2="The coordinate grid">
+      <active>prefigure-hw1o-ellipse-motion-grid</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-axes" speech2="The coordinate axes">
+      <active>prefigure-hw1o-ellipse-motion-axes</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-curve" speech2="The ellipse, traced counterclockwise" sonify="yes">
+      <active>prefigure-hw1o-ellipse-motion-curve</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw1o-ellipse-motion-curve</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-center" speech2="The center of the ellipse, at minus two comma four">
+      <active>prefigure-hw1o-ellipse-motion-center</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw1o-ellipse-motion-quarters" speech2="Four dots marking the positions at t equals zero, at the bottom point minus two comma two; t equals pi over two, at the right point minus one comma four; t equals pi, at the top point minus two comma six; and t equals three pi over two, at the left point minus three comma four">
+      <active>prefigure-hw1o-ellipse-motion-quarters</active>
+      <position>6</position>
+      <parents>
+        <grouped>prefigure-hw1o-ellipse-motion-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

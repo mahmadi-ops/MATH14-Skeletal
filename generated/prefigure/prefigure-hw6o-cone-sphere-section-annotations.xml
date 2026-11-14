@@ -1,0 +1,51 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw6o-cone-sphere-section-figure" speech2="The cross-section of the ice-cream cone by the xz-plane: a sector of the unit disk opening upward.">
+      <grouped>prefigure-hw6o-cone-sphere-section-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw6o-cone-sphere-section-cs-region</active>
+        <active>prefigure-hw6o-cone-sphere-section-cs-circle</active>
+        <active>prefigure-hw6o-cone-sphere-section-cs-ray-right</active>
+        <active>prefigure-hw6o-cone-sphere-section-cs-ray-left</active>
+      </children>
+      <components>
+        <active>prefigure-hw6o-cone-sphere-section-cs-region</active>
+        <active>prefigure-hw6o-cone-sphere-section-cs-circle</active>
+        <active>prefigure-hw6o-cone-sphere-section-cs-ray-right</active>
+        <active>prefigure-hw6o-cone-sphere-section-cs-ray-left</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw6o-cone-sphere-section-cs-region" speech2="The shaded sector.">
+      <active>prefigure-hw6o-cone-sphere-section-cs-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw6o-cone-sphere-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-cone-sphere-section-cs-circle" speech2="The unit circle rho equals one." sonify="yes">
+      <active>prefigure-hw6o-cone-sphere-section-cs-circle</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw6o-cone-sphere-section-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw6o-cone-sphere-section-cs-circle</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw6o-cone-sphere-section-cs-ray-right" speech2="The ray phi equals pi over four, the right edge of the cone.">
+      <active>prefigure-hw6o-cone-sphere-section-cs-ray-right</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw6o-cone-sphere-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw6o-cone-sphere-section-cs-ray-left" speech2="The left edge of the cone, also at angle pi over four from the z axis.">
+      <active>prefigure-hw6o-cone-sphere-section-cs-ray-left</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw6o-cone-sphere-section-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

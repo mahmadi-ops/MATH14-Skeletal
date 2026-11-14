@@ -1,0 +1,39 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw8o-sol-flux-figure" speech2="The vector field x plus y comma minus x y drawn as gray arrows, the unit circle bounding the lightly shaded disk R, and four magenta outward unit normals on the circle, at the points where it crosses the axes. The outward flux is the double integral over R of the divergence 1 minus x; the x-term cancels by symmetry, leaving the area pi.">
+      <grouped>prefigure-hw8o-sol-flux-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw8o-sol-flux-hfl-field</active>
+        <active>prefigure-hw8o-sol-flux-hfl-disk</active>
+        <active>prefigure-hw8o-sol-flux-hfl-n1</active>
+      </children>
+      <components>
+        <active>prefigure-hw8o-sol-flux-hfl-field</active>
+        <active>prefigure-hw8o-sol-flux-hfl-disk</active>
+        <active>prefigure-hw8o-sol-flux-hfl-n1</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-flux-hfl-field" speech2="The vector field x plus y comma minus x y.">
+      <active>prefigure-hw8o-sol-flux-hfl-field</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-flux-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-flux-hfl-disk" speech2="The unit disk R and its boundary circle.">
+      <active>prefigure-hw8o-sol-flux-hfl-disk</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-flux-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-flux-hfl-n1" speech2="An outward unit normal on the circle.">
+      <active>prefigure-hw8o-sol-flux-hfl-n1</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-flux-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

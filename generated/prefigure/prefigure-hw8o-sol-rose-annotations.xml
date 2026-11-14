@@ -1,0 +1,30 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw8o-sol-rose-figure" speech2="The four-petal rose r equals sine of 2 theta in gray, with its petal in the first quadrant shaded and outlined in blue. That petal, traced for theta from 0 to pi over 2, is the region R, and an arrowhead shows its boundary C running counterclockwise. Its area is pi over 8.">
+      <grouped>prefigure-hw8o-sol-rose-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw8o-sol-rose-hro-petal</active>
+        <active>prefigure-hw8o-sol-rose-hro-all</active>
+      </children>
+      <components>
+        <active>prefigure-hw8o-sol-rose-hro-petal</active>
+        <active>prefigure-hw8o-sol-rose-hro-all</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-rose-hro-petal" speech2="The first-quadrant petal R, for theta from 0 to pi over 2.">
+      <active>prefigure-hw8o-sol-rose-hro-petal</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-rose-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-rose-hro-all" speech2="The whole four-petal rose.">
+      <active>prefigure-hw8o-sol-rose-hro-all</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-rose-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>
