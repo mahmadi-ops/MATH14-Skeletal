@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MATH 14 Final Exam Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a lecture deck. One problem per slide, worked solution revealed one step at a time,
+   figure in a right-hand column. A reading view stacks every slide for phones and for printing to memory. */
+:root {
+  --paper: #f4f5f8;
+  --surface: #ffffff;
+  --ink: #162033;
+  --muted: #586276;
+  --rule: #d2d8e3;
+  --accent: #a11d33;
+  --accent-soft: #f7e6e9;
+  --fill: #dfe7f2;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", "STIX Two Text", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111621;
+    --surface: #19202e;
+    --ink: #e9ecf3;
+    --muted: #9ca7ba;
+    --rule: #303a4d;
+    --accent: #f27a92;
+    --accent-soft: #3a1e28;
+    --fill: #26334a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111621;
+  --surface: #19202e;
+  --ink: #e9ecf3;
+  --muted: #9ca7ba;
+  --rule: #303a4d;
+  --accent: #f27a92;
+  --accent-soft: #3a1e28;
+  --fill: #26334a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.45;
+}
+button {
+  font: 500 0.8em/1 var(--font-ui);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover { border-color: var(--muted); }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+button[disabled] { opacity: 0.4; cursor: default; }
+
+.deck { height: 100%; display: flex; flex-direction: column; font-size: 17px; }
+.deck[data-mode="present"] { font-size: clamp(14px, min(3vh, 1.75vw), 46px); }
+
+.bar {
+  display: flex; align-items: center; gap: 0.8em 1.2em; flex-wrap: wrap;
+  padding: 0.55em max(16px, 2.2vw);
+  background: var(--surface);
+  font-family: var(--font-ui);
+  font-size: 0.78em;
+}
+.bar.top { border-bottom: 1px solid var(--rule); justify-content: space-between; }
+.bar.bottom { border-top: 1px solid var(--rule); justify-content: space-between; }
+.course { font: 600 1.3em/1.2 var(--font-body); }
+.course span { color: var(--accent); }
+.group { display: flex; align-items: center; gap: 0.6em; flex-wrap: wrap; }
+.count { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 4.5em; text-align: center; }
+.clock { font-variant-numeric: tabular-nums; font-weight: 600; }
+.clock small { color: var(--muted); font-weight: 500; font-size: 1em; }
+.clock.done { color: var(--accent); }
+.progress { height: 3px; background: var(--rule); }
+.progress i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.2s; }
+
+.stage { position: relative; flex: 1; min-height: 0; }
+.slide { padding: 1.3em max(16px, 4.5vw) 1em; }
+.slide-inner { max-width: 60em; margin: 0 auto; }
+
+.deck[data-mode="present"] .slide {
+  position: absolute; inset: 0; overflow-y: auto;
+  visibility: hidden; pointer-events: none;
+}
+.deck[data-mode="present"] .slide.active { visibility: visible; pointer-events: auto; }
+.deck[data-mode="present"] .step:not(.shown) { visibility: hidden; }
+.deck[data-mode="present"] .slide.cover { display: flex; align-items: center; }
+.deck[data-mode="present"] .slide.cover .slide-inner { width: 100%; }
+
+.deck[data-mode="read"] .stage { overflow-y: auto; }
+.deck[data-mode="read"] .slide { border-bottom: 1px solid var(--rule); padding-top: 1.8em; padding-bottom: 1.8em; }
+.deck[data-mode="read"] .bar.bottom .nav { display: none; }
+.deck[data-mode="read"] .progress { display: none; }
+
+.eyebrow {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em 0.9em;
+  margin: 0 0 0.5em;
+  font: 400 0.82em/1.2 var(--font-body);
+  color: var(--muted);
+}
+.eyebrow .tag { font-weight: 600; color: var(--surface); background: var(--accent); padding: 0.35em 0.6em; border-radius: 4px; }
+.eyebrow .tag.sol { color: var(--accent); background: var(--accent-soft); }
+h1, h2 { font-family: var(--font-body); font-weight: 600; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.55em; margin-bottom: 0.55em; }
+.lede { font-size: 1.1em; color: var(--muted); margin: 0.4em 0 0.9em; max-width: 34em; }
+p { margin: 0 0 0.6em; }
+.body { max-width: 46em; }
+.cols { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 1.2em 2em; align-items: start; }
+.cols .body { max-width: none; }
+.body.wide { max-width: 56em; }
+figcaption { color: var(--muted); font-size: 0.8em; text-align: center; max-width: 22em; }
+@media (max-width: 760px) { .cols { grid-template-columns: 1fr; } h1 { font-size: 1.9em; } }
+
+ol.parts { list-style: none; padding: 0; margin: 0.4em 0 0; display: grid; gap: 0.5em; }
+ol.parts > li { display: grid; grid-template-columns: 1.6em minmax(0, 1fr); }
+ol.parts > li::before { content: attr(data-p) "."; font: 600 1em/1.45 var(--font-body); color: var(--accent); }
+.steps { display: grid; gap: 0.45em; counter-reset: s; }
+.step { display: grid; grid-template-columns: 1.7em minmax(0, 1fr); }
+.step::before {
+  counter-increment: s; content: counter(s);
+  font: 600 0.68em/1 var(--font-ui);
+  width: 1.75em; height: 1.75em; border-radius: 50%;
+  display: grid; place-items: center; margin-top: 0.4em;
+  border: 1px solid var(--rule); color: var(--muted);
+}
+.step > div > :last-child { margin-bottom: 0; }
+.step.answer > div {
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  padding: 0.5em 0.8em; border-radius: 0 6px 6px 0;
+}
+.step.answer::before { border-color: var(--accent); color: var(--accent); }
+.note { color: var(--muted); font-size: 0.88em; }
+strong { font-weight: 600; }
+
+mjx-container { color: inherit; }
+mjx-container[display="true"] { margin: 0.45em 0 !important; overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+
+table.plan { border-collapse: collapse; width: 100%; max-width: 38em; font-size: 0.98em; }
+table.plan th, table.plan td { text-align: left; padding: 0.3em 0.6em; border-bottom: 1px solid var(--rule); }
+table.plan th { font: 400 0.82em/1.2 var(--font-body); color: var(--muted); }
+table.plan td.n, table.plan th.n { text-align: right; font-variant-numeric: tabular-nums; }
+table.plan td.k { font: 600 1em/1.2 var(--font-body); color: var(--accent); width: 2em; }
+table.plan tbody tr:last-child td { border-bottom: 0; }
+table.plan tr.grp td { padding-top: 0.8em; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--rule); }
+table.plan tr.grp:first-child td { padding-top: 0.2em; }
+.sessions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5em 2.5em; align-items: start; }
+.sessions table.plan { max-width: none; }
+@media (max-width: 760px) { .sessions { grid-template-columns: 1fr; } }
+figure.pf.narrow img, figure.narrow .asybox { max-width: 10.5em; }
+figure.pf.mid img, figure.mid .asybox { max-width: 13em; }
+.deck[data-mode="present"] .slide.cover .slide-inner h1 { margin-top: 0.1em; }
+.table-wrap { overflow-x: auto; }
+
+ul.check { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55em; }
+ul.check li { padding-left: 1.3em; position: relative; }
+ul.check li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 0.55em; height: 0.55em; background: var(--accent); border-radius: 2px; }
+
+figure { margin: 0; display: grid; gap: 0.6em; justify-items: center; }
+figure.pair { grid-template-columns: 1fr; }
+figure.small .fig { max-width: 16em; }
+.fig { width: 100%; max-width: 21em; height: auto; display: block; overflow: visible; }
+.fg-axis { stroke: var(--muted); stroke-width: 1; fill: none; }
+.fg-axhead { fill: var(--muted); }
+.fg-thin { stroke: var(--rule); stroke-width: 1.2; fill: none; }
+.fg-dash { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 4 3; fill: none; }
+.fg-curve { stroke: var(--ink); stroke-width: 2; fill: none; stroke-linejoin: round; }
+.fg-fill { fill: var(--fill); stroke: none; }
+.fg-accent { stroke: var(--accent); stroke-width: 2.4; fill: none; stroke-linejoin: round; }
+.fg-accent-thin { stroke: var(--accent); stroke-width: 1.3; fill: none; }
+.fg-head, .fg-dot { fill: var(--ink); }
+.fg-achead, .fg-adot { fill: var(--accent); }
+.fg-label { fill: var(--ink); font: 400 13px var(--font-body); }
+.fg-alabel { fill: var(--accent); font: 600 13px var(--font-body); }
+.fg-var { fill: var(--ink); font: italic 400 14px var(--font-body); }
+.fg-num { fill: var(--muted); font: 400 11.5px var(--font-body); }
+
+figure.pf { background: #ffffff; border: 1px solid var(--rule); border-radius: 10px; padding: 0.6em; }
+figure.pf img { display: block; width: 100%; max-width: 21em; height: auto; }
+figure.pf.small img { max-width: 15em; }
+figure.pf.tall img { max-width: 17em; }
+
+.asybox { position: relative; width: 100%; max-width: 21em; }
+figure.tall .asybox { max-width: 15em; }
+.asybox img { max-width: none; }
+.asyframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; opacity: 0; pointer-events: none; background: #ffffff; }
+figure.asy3d.live .asybox img { visibility: hidden; }
+figure.asy3d.live .asyframe { opacity: 1; pointer-events: auto; }
+figure.asy3d figcaption { opacity: 0; }
+figure.asy3d.live figcaption { opacity: 1; }
+
+.xrefs { margin-top: 0.5em; font-size: 0.92em; }
+a.xref { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+a.xref:hover { border-bottom-width: 2px; }
+figure.pf.stack { gap: 0.3em; }
+figure.pf.stack img { max-width: 12em; }
+
+@media (prefers-reduced-motion: reduce) { .progress i { transition: none; } }
+</style>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]] },
+  svg: { fontCache: "global" },
+  options: { enableMenu: false }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+</head>
+<body>
+<div class="deck" id="deck" data-mode="present">
+
+<header class="bar top">
+  <div class="course">MATH 14 <span>/</span> Final Exam Review</div>
+  <div class="group">
+    <button type="button" id="btn-mode">Read all</button>
+    <button type="button" id="btn-full">Full screen</button>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
+
+<main class="stage" id="stage">
+
+<section class="slide cover" id="start" data-session="1">
+  <div class="slide-inner">
+    <p class="eyebrow"><span>MATH 14, Calculus and Analytic Geometry IV</span></p>
+    <h1>Final Exam Review</h1>
+    <p class="lede">Two sessions, six problems each. Try each one before the solution goes up.</p>
+    <div class="sessions">
+      <div class="table-wrap">
+      <table class="plan">
+        <tbody>
+          <tr class="grp"><td colspan="2">Session 1: Problems 1&ndash;6</td></tr>
+          <tr><td colspan="2">Curves, line integrals and multiple integrals</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="table-wrap">
+      <table class="plan">
+        <tbody>
+          <tr class="grp"><td colspan="2">Session 2: Problems 7&ndash;12</td></tr>
+          <tr><td colspan="2">Applications and the big theorems</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Problem 1 ============ -->
+<section class="slide" id="p1" data-session="1" data-problem="1" data-min="10">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 1</span><span>10 min</span></p>
+    <h2>A spiral on a cone</h2>
+    <div class="body">
+      <p>Consider the curve</p>
+      \[ \mathbf r(t)=\langle e^t\cos t,\; e^t\sin t,\; e^t\rangle, \qquad -\infty\lt t\lt\infty. \]
+      <ol class="parts">
+        <li data-p="a"><div>Show that the curve lies on the cone \(z=\sqrt{x^2+y^2}.\)</div></li>
+        <li data-p="b"><div>Find the length of the curve from \((1,0,1)\) up to the point where \(z=3.\)</div></li>
+        <li data-p="c"><div>As \(t\to-\infty,\) the curve winds around the cone infinitely many times while it approaches the origin. Is the length of the part of the curve with \(t\le 0\) finite or infinite? Justify your answer.</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 2 ============ -->
+<section class="slide" id="p2" data-session="1" data-problem="2" data-min="12">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 2</span><span>12 min</span></p>
+    <h2>A vector field and a circle</h2>
+    <div class="body">
+      <p>Let \(C\) be the circle \(x^2+y^2=4,\) traversed counterclockwise, and let</p>
+      \[ \mathbf F=\langle x-y,\;x\rangle. \]
+      <ol class="parts">
+        <li data-p="a"><div>Compute the circulation of \(\mathbf F\) around \(C,\) \(\displaystyle\oint_C \mathbf F\cdot\mathbf T\,ds.\)</div></li>
+        <li data-p="b"><div>Compute the outward flux of \(\mathbf F\) across \(C,\) \(\displaystyle\oint_C \mathbf F\cdot\mathbf n\,ds.\)</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 3 ============ -->
+<section class="slide" id="p3" data-session="1" data-problem="3" data-min="10">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 3</span><span>10 min</span></p>
+    <h2>A field with an unknown constant</h2>
+    <div class="body">
+      <p>Let \(a\) be a constant and</p>
+      \[ \mathbf F=(2xz+y^2)\,\mathbf i+a\,xy\,\mathbf j+(x^2+3z^2)\,\mathbf k. \]
+      <ol class="parts">
+        <li data-p="a"><div>Find the value of \(a\) for which \(\mathbf F\) is conservative.</div></li>
+        <li data-p="b"><div>For that value of \(a,\) find a potential function \(f\) with \(\nabla f=\mathbf F.\)</div></li>
+        <li data-p="c"><div>For that value of \(a,\) find the work done by \(\mathbf F\) along the curve
+          \[ \mathbf r(t)=\left\langle 1+t,\;\cos(\pi t),\;\sin\!\left(\tfrac{\pi t}{2}\right)\right\rangle, \qquad 0\le t\le 1. \]</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 4 ============ -->
+<section class="slide" id="p4" data-session="1" data-problem="4" data-min="10">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 4</span><span>10 min</span></p>
+    <h2>An iterated integral</h2>
+    <div class="body">
+      <p>Evaluate</p>
+      \[ \int_{0}^{4}\!\int_{\sqrt y}^{2} \sin\!\left(x^3\right)\,dx\,dy. \]
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 5 ============ -->
+<section class="slide" id="p5" data-session="1" data-problem="5" data-min="10">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 5</span><span>10 min</span></p>
+    <h2>Another iterated integral</h2>
+    <div class="body">
+      <p>Evaluate</p>
+      \[ \int_{0}^{\sqrt2}\!\int_{y}^{\sqrt{4-y^2}} \frac{1}{1+x^2+y^2}\;dx\,dy. \]
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 6 ============ -->
+<section class="slide" id="p6" data-session="1" data-problem="6" data-min="13">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 6</span><span>13 min</span></p>
+    <h2>A solid between a cone and a sphere</h2>
+    <div class="body">
+      <p>Let \(E\) be the solid inside the sphere \(x^2+y^2+z^2=4\) and above the cone \(z=\sqrt{x^2+y^2}.\)</p>
+      <ol class="parts">
+        <li data-p="a"><div>Set up the volume of \(E\) as an iterated triple integral in two different coordinate systems.</div></li>
+        <li data-p="b"><div>Find the volume of \(E.\)</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Session 2 ============ -->
+<section class="slide cover" id="session-2" data-session="2">
+  <div class="slide-inner">
+    <p class="eyebrow"><span>MATH 14 Final Exam Review</span></p>
+    <h1>Session 2</h1>
+    <p class="lede">Problems 7&ndash;12: applications and the big theorems. Try each one before the solution goes up.</p>
+  </div>
+</section>
+
+<!-- ============ Problem 7 ============ -->
+<section class="slide" id="p7" data-session="2" data-problem="7" data-min="11">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 7</span><span>11 min</span></p>
+    <h2>The balance point of a solid</h2>
+    <div class="body">
+      <p>A solid of constant density \(\delta=1\) occupies the region inside the cylinder \(x^2+y^2=1,\) above the plane \(z=0\) and below the paraboloid \(z=4-x^2-y^2.\) Find its center of mass.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 8 ============ -->
+<section class="slide" id="p8" data-session="2" data-problem="8" data-min="10">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 8</span><span>10 min</span></p>
+    <h2>Integrals over an ellipse</h2>
+    <div class="body">
+      <p>Let \(R\) be the region inside the ellipse \(\dfrac{x^2}{9}+\dfrac{y^2}{4}=1.\)</p>
+      <ol class="parts">
+        <li data-p="a"><div>Find the area of \(R.\)</div></li>
+        <li data-p="b"><div>Evaluate \(\displaystyle\iint_R x^2\;dA.\)</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 9 ============ -->
+<section class="slide" id="p9" data-session="2" data-problem="9" data-min="11">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 9</span><span>11 min</span></p>
+    <h2>A saddle-shaped surface</h2>
+    <div class="body">
+      <p>Let \(S\) be the part of the surface \(z=xy\) that lies inside the cylinder \(x^2+y^2=1,\) oriented by its upward unit normal \(\hat{\mathbf n}.\)</p>
+      <ol class="parts">
+        <li data-p="a"><div>Find the area of \(S.\)</div></li>
+        <li data-p="b"><div>Find the flux of \(\mathbf F=\langle -y,\;x,\;3\rangle\) through \(S,\) \(\displaystyle\iint_S \mathbf F\cdot\hat{\mathbf n}\;d\sigma.\)</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Problem 10 ============ -->
+<section class="slide" id="p10" data-session="2" data-problem="10" data-min="12">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 10</span><span>12 min</span></p>
+    <h2>A vector field and a triangle</h2>
+    <div class="body">
+      <p>Let \(C\) be the boundary of the triangle with vertices \((0,0),\) \((2,0),\) \((0,2),\) traversed counterclockwise, and let</p>
+      \[ \mathbf F=\langle x^2+y,\;3x+y^2\rangle. \]
+      <ol class="parts">
+        <li data-p="a"><div>Find the circulation of \(\mathbf F\) around \(C,\) \(\displaystyle\oint_C \mathbf F\cdot d\mathbf r.\)</div></li>
+        <li data-p="b"><div>Find the outward flux of \(\mathbf F\) across \(C,\) \(\displaystyle\oint_C \mathbf F\cdot\mathbf n\,ds.\)</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ Problem 11 ============ -->
+<section class="slide" id="p11" data-session="2" data-problem="11" data-min="11">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 11</span><span>11 min</span></p>
+    <h2>A curve on a paraboloid</h2>
+    <div class="body">
+      <p>Let \(C\) be the curve where the plane \(z=2y\) meets the paraboloid \(z=x^2+y^2,\) oriented counterclockwise when viewed from above. Evaluate</p>
+      \[ \oint_C \mathbf F\cdot d\mathbf r \qquad\text{for}\qquad \mathbf F=\langle z^2,\;x,\;y\rangle. \]
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ Problem 12 ============ -->
+<section class="slide" id="p12" data-session="2" data-problem="12" data-min="10">
+  <div class="slide-inner">
+    <p class="eyebrow"><span class="tag">Problem 12</span><span>10 min</span></p>
+    <h2>Flux out of a closed cylinder</h2>
+    <div class="body">
+      <p>Let \(E\) be the solid cylinder \(x^2+y^2\le 4,\) \(0\le z\le 3,\) and let \(S\) be its boundary (side, top and bottom), oriented outward. Let</p>
+      \[ \mathbf F=\langle x,\;y,\;z^2\rangle. \]
+      <ol class="parts">
+        <li data-p="a"><div>Find the outward flux of \(\mathbf F\) through \(S.\)</div></li>
+        <li data-p="b"><div>Find the outward flux of \(\mathbf F\) through the side of the cylinder alone.</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="bar bottom">
+  <div class="group nav">
+    <button type="button" id="btn-prev">Back</button>
+    <span class="count" id="count">1 / 1</span>
+    <button type="button" id="btn-next" class="primary">Next</button>
+  </div>
+  <div class="group">
+    <span class="clock" id="pclock" hidden></span>
+    <button type="button" id="btn-ptimer" hidden>Start</button>
+    <button type="button" id="btn-preset" hidden>Reset</button>
+    <span class="clock" id="sclock">Session 1 00:00 <small>of 65:00</small></span>
+    <button type="button" id="btn-session">Start session</button>
+  </div>
+</footer>
+</div>
+
+<script>
+(function () {
+  var deck = document.getElementById("deck");
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var el = function (id) { return document.getElementById(id); };
+  var i = 0;
+
+  function mode() { return deck.getAttribute("data-mode"); }
+  function setMode(m) {
+    deck.setAttribute("data-mode", m);
+    el("btn-mode").textContent = m === "present" ? "Read all" : "Present";
+    if (m === "read") slides[i].scrollIntoView();
+    else el("stage").scrollTop = 0;
+    render();
+  }
+  function pendingStep() { return slides[i].querySelector(".step:not(.shown)"); }
+  function render() {
+    slides.forEach(function (s, k) { s.classList.toggle("active", k === i); });
+    el("count").textContent = (i + 1) + " / " + slides.length;
+    el("bar").style.width = (100 * i / (slides.length - 1)) + "%";
+    el("btn-prev").disabled = i === 0 && !slides[i].querySelector(".step.shown");
+    var more = pendingStep();
+    el("btn-next").textContent = more ? "Next step" : "Next";
+    el("btn-next").disabled = !more && i === slides.length - 1;
+    syncProblem();
+  }
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides[i].scrollTop = 0;
+    try { history.replaceState(null, "", "#" + slides[i].id); } catch (e) {}
+    render();
+  }
+  function next() {
+    var more = pendingStep();
+    if (more) { more.classList.add("shown"); render(); }
+    else if (i < slides.length - 1) show(i + 1);
+  }
+  function prev() {
+    var shown = slides[i].querySelectorAll(".step.shown");
+    if (shown.length) { shown[shown.length - 1].classList.remove("shown"); render(); }
+    else if (i > 0) show(i - 1);
+  }
+  function revealAll() {
+    Array.prototype.forEach.call(slides[i].querySelectorAll(".step"), function (s) { s.classList.add("shown"); });
+    render();
+  }
+
+  /* timers */
+  var prob = null, allot = 0, remain = 0, pRun = false, sessT = {}, sRun = false, last = Date.now();
+  function cur() { return slides[i].getAttribute("data-session") || "1"; }
+  function fmt(s) {
+    s = Math.max(0, Math.round(s));
+    var m = Math.floor(s / 60), r = s % 60;
+    return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
+  }
+  function syncProblem() {
+    var p = slides[i].getAttribute("data-problem");
+    if (p !== prob) {
+      prob = p; pRun = false;
+      allot = p ? 60 * Number(slides[i].getAttribute("data-min")) : 0;
+      remain = allot;
+    }
+    paint();
+  }
+  function paint() {
+    var has = !!prob;
+    el("pclock").hidden = el("btn-ptimer").hidden = el("btn-preset").hidden = !has;
+    if (has) {
+      el("pclock").textContent = "Problem " + prob + "  " + fmt(remain);
+      el("pclock").classList.toggle("done", remain <= 0);
+      el("btn-ptimer").textContent = pRun ? "Pause" : "Start";
+      el("btn-ptimer").disabled = remain <= 0;
+    }
+    var sess = sessT[cur()] || 0;
+    el("sclock").innerHTML = "Session " + cur() + " " + fmt(sess) + " <small>of 65:00</small>";
+    el("sclock").classList.toggle("done", sess >= 65 * 60);
+    el("btn-session").textContent = sRun ? "Pause session" : (sess > 0 ? "Resume session" : "Start session");
+  }
+  setInterval(function () {
+    var now = Date.now(), d = (now - last) / 1000; last = now;
+    if (sRun) sessT[cur()] = (sessT[cur()] || 0) + d;
+    if (pRun) { remain -= d; if (remain <= 0) { remain = 0; pRun = false; } }
+    if (sRun || pRun) paint();
+  }, 250);
+  el("btn-ptimer").addEventListener("click", function () { pRun = !pRun; if (pRun) sRun = true; last = Date.now(); paint(); });
+  el("btn-preset").addEventListener("click", function () { pRun = false; remain = allot; paint(); });
+  el("btn-session").addEventListener("click", function () { sRun = !sRun; last = Date.now(); paint(); });
+
+  /* controls */
+  el("btn-next").addEventListener("click", next);
+  el("btn-prev").addEventListener("click", prev);
+  el("btn-mode").addEventListener("click", function () { setMode(mode() === "present" ? "read" : "present"); });
+  el("btn-full").addEventListener("click", function () {
+    try {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen().catch(function () {});
+    } catch (e) {}
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var k = e.key;
+    if (k === "o" || k === "O") { setMode(mode() === "present" ? "read" : "present"); return; }
+    if (mode() !== "present") return;
+    if (k === "ArrowRight" || k === "PageDown" || k === " " || k === "Enter") {
+      if ((k === " " || k === "Enter") && e.target.tagName === "BUTTON") return;
+      e.preventDefault(); next();
+    }
+    else if (k === "ArrowLeft" || k === "PageUp" || k === "Backspace") { e.preventDefault(); prev(); }
+    else if (k === "Home") { e.preventDefault(); show(0); }
+    else if (k === "End") { e.preventDefault(); show(slides.length - 1); }
+    else if (k === "s" || k === "S") revealAll();
+  });
+  var tx = null, ty = null;
+  el("stage").addEventListener("touchstart", function (e) { tx = e.changedTouches[0].clientX; ty = e.changedTouches[0].clientY; }, { passive: true });
+  el("stage").addEventListener("touchend", function (e) {
+    if (tx === null || mode() !== "present") return;
+    var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty; tx = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) { if (dx < 0) next(); else prev(); }
+  }, { passive: true });
+
+
+  /* rotatable Asymptote figures: each loads in its own frame and replaces the static image once WebGL is running */
+  var frames = Array.prototype.slice.call(document.querySelectorAll("iframe.asyframe"));
+  frames.forEach(function (f) {
+    try {
+      var b = atob(document.getElementById("asy-" + f.getAttribute("data-asy")).textContent.trim());
+      var bytes = new Uint8Array(b.length);
+      for (var k = 0; k < b.length; k++) bytes[k] = b.charCodeAt(k);
+      f.srcdoc = new TextDecoder("utf-8").decode(bytes);
+    } catch (e) {}
+  });
+  window.addEventListener("message", function (e) {
+    var d = e.data;
+    if (!d || !d.asy) return;
+    var f = frames.filter(function (x) { return x.contentWindow === e.source; })[0];
+    if (!f) return;
+    if (d.asy === "ready") f.closest("figure").classList.add("live");
+    else if (d.asy === "key" && mode() === "present") {
+      if (d.key === "ArrowRight" || d.key === "PageDown" || d.key === " ") next();
+      else if (d.key === "ArrowLeft" || d.key === "PageUp") prev();
+    }
+  });
+
+
+  /* cross-links between slides: jump to the target slide with all its steps shown */
+  function gotoSlide(id) {
+    for (var k = 0; k < slides.length; k++) {
+      if (slides[k].id !== id) continue;
+      if (mode() === "read") slides[k].scrollIntoView();
+      else { show(k); revealAll(); }
+      return true;
+    }
+    return false;
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a.xref") : null;
+    if (!a) return;
+    if (gotoSlide((a.getAttribute("href") || "").replace("#", ""))) e.preventDefault();
+  });
+  window.addEventListener("hashchange", function () { gotoSlide((location.hash || "").replace("#", "")); });
+
+  var start = 0, h = (location.hash || "").replace("#", "");
+  slides.forEach(function (s, k) { if (s.id === h) start = k; });
+  i = start;
+  if (window.innerWidth < 720) setMode("read"); else render();
+})();
+</script>
+</body>
+</html>

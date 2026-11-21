@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefigure-hw8o-sol-flux-figure" width="340" height="340" viewBox="0 0 340 340">
+  <defs>
+    <clipPath id="prefigure-hw8o-sol-flux-__clipPath-0">
+      <rect x="10.0" y="10.0" width="320.0" height="320.0"/>
+    </clipPath>
+    <clipPath id="prefigure-hw8o-sol-flux-__clipPath-1">
+      <rect x="10.0" y="10.0" width="320.0" height="320.0"/>
+    </clipPath>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-black" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto" refX="6.5" refY="4.0">
+      <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="black" stroke="none"/>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-black-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto" refX="8.5" refY="6.0">
+      <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto" refX="6.5" refY="4.0">
+      <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="#9a9a9a" stroke="none"/>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto" refX="8.5" refY="6.0">
+      <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-end-3_None_24_60-hCC0077" markerWidth="13.5" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto" refX="9.8" refY="6.0">
+      <path d="M 13.5 6.0L 0.0 12.0L 2.6 7.5L 2.6 4.5L 0.0 0.0Z" fill="#CC0077" stroke="none"/>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-end-3_None_24_60-hCC0077-outline" markerWidth="17.5" markerHeight="16.0" markerUnits="userSpaceOnUse" orient="auto" refX="11.8" refY="8.0">
+      <path d="M 16.3 9.8 L 2.8 15.8 A 2 2 0 0 1 0.0 14.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 16.3 6.2 A 2 2 0 0 1 16.3 9.8 Z" fill="white" stroke="none"/>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-start-2_None_24_60-black" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto" refX="2.5" refY="4.0">
+      <g transform="rotate(180, 4.5, 4.0)">
+        <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="black" stroke="none"/>
+      </g>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-start-2_None_24_60-black-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto" refX="4.5" refY="6.0">
+      <g transform="rotate(180, 6.5, 6.0)">
+        <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
+      </g>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-start-2_None_24_60-h9a9a9a" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto" refX="2.5" refY="4.0">
+      <g transform="rotate(180, 4.5, 4.0)">
+        <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="#9a9a9a" stroke="none"/>
+      </g>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-start-2_None_24_60-h9a9a9a-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto" refX="4.5" refY="6.0">
+      <g transform="rotate(180, 6.5, 6.0)">
+        <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
+      </g>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-start-3_None_24_60-hCC0077" markerWidth="13.5" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto" refX="3.6999999999999993" refY="6.0">
+      <g transform="rotate(180, 6.75, 6.0)">
+        <path d="M 13.5 6.0L 0.0 12.0L 2.6 7.5L 2.6 4.5L 0.0 0.0Z" fill="#CC0077" stroke="none"/>
+      </g>
+    </marker>
+    <marker id="prefigure-hw8o-sol-flux-arrow-head-start-3_None_24_60-hCC0077-outline" markerWidth="17.5" markerHeight="16.0" markerUnits="userSpaceOnUse" orient="auto" refX="5.699999999999999" refY="8.0">
+      <g transform="rotate(180, 8.75, 8.0)">
+        <path d="M 16.3 9.8 L 2.8 15.8 A 2 2 0 0 1 0.0 14.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 16.3 6.2 A 2 2 0 0 1 16.3 9.8 Z" fill="white" stroke="none"/>
+      </g>
+    </marker>
+  </defs>
+  <path id="prefigure-hw8o-sol-flux-hfl-disk" d="M 242.7 170.0 L 242.6 165.4 L 242.2 160.9 L 241.4 156.4 L 240.4 151.9 L 239.2 147.5 L 237.6 143.2 L 235.8 139.0 L 233.7 135.0 L 231.4 131.0 L 228.8 127.3 L 226.0 123.6 L 223.0 120.2 L 219.8 117.0 L 216.4 114.0 L 212.7 111.2 L 209.0 108.6 L 205.0 106.3 L 201.0 104.2 L 196.8 102.4 L 192.5 100.8 L 188.1 99.6 L 183.6 98.6 L 179.1 97.8 L 174.6 97.4 L 170.0 97.3 L 165.4 97.4 L 160.9 97.8 L 156.4 98.6 L 151.9 99.6 L 147.5 100.8 L 143.2 102.4 L 139.0 104.2 L 135.0 106.3 L 131.0 108.6 L 127.3 111.2 L 123.6 114.0 L 120.2 117.0 L 117.0 120.2 L 114.0 123.6 L 111.2 127.3 L 108.6 131.0 L 106.3 135.0 L 104.2 139.0 L 102.4 143.2 L 100.8 147.5 L 99.6 151.9 L 98.6 156.4 L 97.8 160.9 L 97.4 165.4 L 97.3 170.0 L 97.4 174.6 L 97.8 179.1 L 98.6 183.6 L 99.6 188.1 L 100.8 192.5 L 102.4 196.8 L 104.2 201.0 L 106.3 205.0 L 108.6 209.0 L 111.2 212.7 L 114.0 216.4 L 117.0 219.8 L 120.2 223.0 L 123.6 226.0 L 127.3 228.8 L 131.0 231.4 L 135.0 233.7 L 139.0 235.8 L 143.2 237.6 L 147.5 239.2 L 151.9 240.4 L 156.4 241.4 L 160.9 242.2 L 165.4 242.6 L 170.0 242.7 L 174.6 242.6 L 179.1 242.2 L 183.6 241.4 L 188.1 240.4 L 192.5 239.2 L 196.8 237.6 L 201.0 235.8 L 205.0 233.7 L 209.0 231.4 L 212.7 228.8 L 216.4 226.0 L 219.8 223.0 L 223.0 219.8 L 226.0 216.4 L 228.8 212.7 L 231.4 209.0 L 233.7 205.0 L 235.8 201.0 L 237.6 196.8 L 239.2 192.5 L 240.4 188.1 L 241.4 183.6 L 242.2 179.1 L 242.6 174.6 Z" stroke="#0072B2" stroke-width="2.5" fill="#e4eef8"/>
+  <g id="prefigure-hw8o-sol-flux-hfl-axes" stroke="black" stroke-width="2">
+    <line id="prefigure-hw8o-sol-flux-__line-0" x1="10.0" y1="170.0" x2="330.0" y2="170.0" stroke="black" stroke-width="2" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-black)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-1" x1="170.0" y1="330.0" x2="170.0" y2="10.0" stroke="black" stroke-width="2" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-black)"/>
+  </g>
+  <g id="prefigure-hw8o-sol-flux-__label-0" transform="translate(324.0,164.0) translate(-10.4,-8.2)">
+    <g id="prefigure-hw8o-sol-flux-__g-0">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.200px" width="10.352px" height="8.200px" role="img" focusable="false" viewBox="0 -442 572 453" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-hw8o-sol-flux-MJX-2-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="x">
+              <use data-c="1D465" xlink:href="#prefigure-hw8o-sol-flux-MJX-2-TEX-I-1D465"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="prefigure-hw8o-sol-flux-__label-1" transform="translate(176.0,16.0) translate(0.0,-0.0)">
+    <g id="prefigure-hw8o-sol-flux-__g-1">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -3.712px" width="8.872px" height="11.712px" role="img" focusable="false" viewBox="0 -442 490 647" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-hw8o-sol-flux-MJX-3-TEX-I-1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="y">
+              <use data-c="1D466" xlink:href="#prefigure-hw8o-sol-flux-MJX-3-TEX-I-1D466"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="prefigure-hw8o-sol-flux-hfl-field">
+    <line id="prefigure-hw8o-sol-flux-__line-2" x1="24.5" y1="315.5" x2="-2.8" y2="342.8" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-3" x1="24.5" y1="279.1" x2="1.0" y2="299.3" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-4" x1="24.5" y1="242.7" x2="4.7" y2="255.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-5" x1="24.5" y1="206.4" x2="8.7" y2="212.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-6" x1="24.5" y1="170.0" x2="12.4" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-7" x1="24.5" y1="133.6" x2="15.6" y2="127.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-8" x1="24.5" y1="97.3" x2="18.4" y2="84.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-9" x1="24.5" y1="60.9" x2="21.3" y2="41.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-10" x1="24.5" y1="24.5" x2="24.5" y2="-2.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-11" x1="60.9" y1="315.5" x2="37.4" y2="335.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-12" x1="60.9" y1="279.1" x2="41.1" y2="294.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-13" x1="60.9" y1="242.7" x2="44.8" y2="252.3" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-14" x1="60.9" y1="206.4" x2="48.7" y2="210.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-15" x1="60.9" y1="170.0" x2="52.4" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-16" x1="60.9" y1="133.6" x2="55.6" y2="129.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-17" x1="60.9" y1="97.3" x2="58.1" y2="88.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-18" x1="60.9" y1="60.9" x2="60.9" y2="46.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-19" x1="60.9" y1="24.5" x2="64.1" y2="5.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-20" x1="97.3" y1="315.5" x2="77.5" y2="328.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-21" x1="97.3" y1="279.1" x2="81.2" y2="288.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-22" x1="97.3" y1="242.7" x2="84.9" y2="248.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-23" x1="97.3" y1="206.4" x2="88.7" y2="209.2" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-24" x1="97.3" y1="170.0" x2="92.4" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-25" x1="97.3" y1="133.6" x2="95.4" y2="131.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-26" x1="97.3" y1="97.3" x2="97.3" y2="92.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-27" x1="97.3" y1="60.9" x2="100.1" y2="52.3" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-28" x1="97.3" y1="24.5" x2="103.4" y2="12.2" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-29" x1="133.6" y1="315.5" x2="117.8" y2="321.8" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-30" x1="133.6" y1="279.1" x2="121.4" y2="283.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-31" x1="133.6" y1="242.7" x2="125.0" y2="245.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-32" x1="133.6" y1="206.4" x2="128.8" y2="207.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-33" x1="133.6" y1="170.0" x2="132.4" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-34" x1="133.6" y1="97.3" x2="135.6" y2="95.3" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-35" x1="133.6" y1="60.9" x2="138.9" y2="57.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-36" x1="133.6" y1="24.5" x2="142.5" y2="18.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-37" x1="170.0" y1="315.5" x2="157.9" y2="315.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-38" x1="170.0" y1="279.1" x2="161.5" y2="279.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-39" x1="170.0" y1="242.7" x2="165.1" y2="242.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-40" x1="170.0" y1="206.4" x2="168.8" y2="206.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-41" x1="170.0" y1="133.6" x2="171.2" y2="133.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-42" x1="170.0" y1="97.3" x2="174.9" y2="97.3" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-43" x1="170.0" y1="60.9" x2="178.5" y2="60.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-44" x1="170.0" y1="24.5" x2="182.1" y2="24.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-45" x1="206.4" y1="315.5" x2="197.5" y2="309.6" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-46" x1="206.4" y1="279.1" x2="201.1" y2="275.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-47" x1="206.4" y1="242.7" x2="204.5" y2="240.8" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-48" x1="206.4" y1="170.0" x2="207.6" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-49" x1="206.4" y1="133.6" x2="211.2" y2="134.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-50" x1="206.4" y1="97.3" x2="215.0" y2="100.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-51" x1="206.4" y1="60.9" x2="218.6" y2="65.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-52" x1="206.4" y1="24.5" x2="222.2" y2="30.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-53" x1="242.7" y1="315.5" x2="236.6" y2="303.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-54" x1="242.7" y1="279.1" x2="239.9" y2="270.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-55" x1="242.7" y1="242.7" x2="242.7" y2="237.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-56" x1="242.7" y1="206.4" x2="244.7" y2="204.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-57" x1="242.7" y1="170.0" x2="247.6" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-58" x1="242.7" y1="133.6" x2="251.3" y2="136.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-59" x1="242.7" y1="97.3" x2="255.1" y2="103.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-60" x1="242.7" y1="60.9" x2="258.8" y2="70.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-61" x1="242.7" y1="24.5" x2="262.5" y2="37.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-62" x1="279.1" y1="315.5" x2="275.9" y2="296.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-63" x1="279.1" y1="279.1" x2="279.1" y2="265.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-64" x1="279.1" y1="242.7" x2="281.9" y2="234.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-65" x1="279.1" y1="206.4" x2="284.4" y2="202.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-66" x1="279.1" y1="170.0" x2="287.6" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-67" x1="279.1" y1="133.6" x2="291.3" y2="138.2" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-68" x1="279.1" y1="97.3" x2="295.2" y2="106.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-69" x1="279.1" y1="60.9" x2="298.9" y2="75.8" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-70" x1="279.1" y1="24.5" x2="302.6" y2="44.8" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-71" x1="315.5" y1="315.5" x2="315.5" y2="288.8" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-72" x1="315.5" y1="279.1" x2="318.7" y2="259.7" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-73" x1="315.5" y1="242.7" x2="321.6" y2="230.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-74" x1="315.5" y1="206.4" x2="324.4" y2="200.5" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-75" x1="315.5" y1="170.0" x2="327.6" y2="170.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-76" x1="315.5" y1="133.6" x2="331.3" y2="140.0" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-77" x1="315.5" y1="97.3" x2="335.3" y2="110.4" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-78" x1="315.5" y1="60.9" x2="339.0" y2="81.1" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+    <line id="prefigure-hw8o-sol-flux-__line-79" x1="315.5" y1="24.5" x2="342.8" y2="51.9" stroke="#9a9a9a" stroke-width="2" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-2_None_24_60-h9a9a9a)"/>
+  </g>
+  <path id="prefigure-hw8o-sol-flux-hfl-n1" stroke="#CC0077" stroke-width="3" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-3_None_24_60-hCC0077)" d="M 242.7 170.0 L 279.1 170.0"/>
+  <path id="prefigure-hw8o-sol-flux-hfl-n2" stroke="#CC0077" stroke-width="3" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-3_None_24_60-hCC0077)" d="M 170.0 97.3 L 170.0 60.9"/>
+  <path id="prefigure-hw8o-sol-flux-hfl-n3" stroke="#CC0077" stroke-width="3" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-3_None_24_60-hCC0077)" d="M 97.3 170.0 L 60.9 170.0"/>
+  <path id="prefigure-hw8o-sol-flux-hfl-n4" stroke="#CC0077" stroke-width="3" fill="none" marker-end="url(#prefigure-hw8o-sol-flux-arrow-head-end-3_None_24_60-hCC0077)" d="M 170.0 242.7 L 170.0 279.1"/>
+  <g id="prefigure-hw8o-sol-flux-hfl-n-label" transform="translate(286.7,166.0) translate(0.0,-14.8)">
+    <rect x="-2" y="-2" width="15.568" height="18.808" stroke="none" fill="white"/>
+    <g id="prefigure-hw8o-sol-flux-__g-2">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px; color:#CC0077" width="11.568px" height="14.808px" role="img" focusable="false" viewBox="0 -818 639 818" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-hw8o-sol-flux-MJX-4-TEX-B-1D427" d="M40 442Q217 450 218 450H224V407L225 365Q233 378 245 391T289 422T362 448Q374 450 398 450Q428 450 448 447T491 434T529 402T551 346Q553 335 554 198V62H623V0H614Q596 3 489 3Q374 3 365 0H356V62H425V194V275Q425 348 416 373T371 399Q326 399 288 370T238 290Q236 281 235 171V62H304V0H295Q277 3 171 3Q64 3 46 0H37V62H106V210V303Q106 353 104 363T91 376Q77 380 50 380H37V442H40Z"/>
+          <path id="prefigure-hw8o-sol-flux-MJX-4-TEX-N-5E" d="M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="TeXAtom" data-mjx-texclass="ORD">
+              <g data-mml-node="mover" data-semantic-type="overscore" data-semantic-role="latinletter" data-semantic-id="2" data-semantic-children="0,1" data-semantic-attributes="texclass:ORD" data-semantic-speech="ModifyingAbove bold n With caret">
+                <g data-mml-node="TeXAtom" data-mjx-texclass="ORD">
+                  <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="bold" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="2" data-semantic-attributes="texclass:ORD" data-semantic-speech="bold n" data-semantic-prefix="Base">
+                    <use data-c="1D427" xlink:href="#prefigure-hw8o-sol-flux-MJX-4-TEX-B-1D427"/>
+                  </g>
+                </g>
+                <g data-mml-node="mo" data-semantic-type="operator" data-semantic-role="overaccent" data-semantic-annotation="accent:unknown" data-semantic-id="1" data-semantic-parent="2" data-semantic-speech="caret" data-semantic-prefix="Overscript" transform="translate(319.5,24) translate(-250 0)">
+                  <use data-c="5E" xlink:href="#prefigure-hw8o-sol-flux-MJX-4-TEX-N-5E"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+  <g id="prefigure-hw8o-sol-flux-hfl-R" transform="translate(137.3,140.9) translate(-6.9,-6.4)">
+    <rect x="-2" y="-2" width="17.736" height="16.744" stroke="none" fill="white"/>
+    <g id="prefigure-hw8o-sol-flux-__g-3">
+      <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.384px" width="13.736px" height="12.744px" role="img" focusable="false" viewBox="0 -683 759 704" x="0.0" y="0.0">
+        <defs>
+          <path id="prefigure-hw8o-sol-flux-MJX-5-TEX-I-1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"/>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+          <g data-mml-node="math">
+            <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="upper R">
+              <use data-c="1D445" xlink:href="#prefigure-hw8o-sol-flux-MJX-5-TEX-I-1D445"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </g>
+  </g>
+</svg>

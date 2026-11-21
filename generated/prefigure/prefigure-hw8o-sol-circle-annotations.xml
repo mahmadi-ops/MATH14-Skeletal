@@ -1,0 +1,30 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw8o-sol-circle-figure" speech2="The unit circle C, traversed counterclockwise, around the shaded unit disk R. A radius of length r at angle theta from the positive x-axis shows the polar coordinates in which the double integral of y squared over R is computed, with r from 0 to 1 and theta from 0 to 2 pi.">
+      <grouped>prefigure-hw8o-sol-circle-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw8o-sol-circle-hci-disk</active>
+        <active>prefigure-hw8o-sol-circle-hci-radius</active>
+      </children>
+      <components>
+        <active>prefigure-hw8o-sol-circle-hci-disk</active>
+        <active>prefigure-hw8o-sol-circle-hci-radius</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-circle-hci-disk" speech2="The unit disk R bounded by C.">
+      <active>prefigure-hw8o-sol-circle-hci-disk</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-circle-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw8o-sol-circle-hci-radius" speech2="A radius of length r at angle theta.">
+      <active>prefigure-hw8o-sol-circle-hci-radius</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw8o-sol-circle-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

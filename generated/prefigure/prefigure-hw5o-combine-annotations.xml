@@ -1,0 +1,103 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw5o-combine-figure" speech2="The sector of the annulus between radii one and two and between the x axis and the line y equals x, split into the three regions of the given integrals.">
+      <grouped>prefigure-hw5o-combine-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-combine-grid-axes</active>
+        <active>prefigure-hw5o-combine-cb-region</active>
+        <active>prefigure-hw5o-combine-cb-inner</active>
+        <active>prefigure-hw5o-combine-cb-outer</active>
+        <active>prefigure-hw5o-combine-cb-diag</active>
+        <active>prefigure-hw5o-combine-cb-split1</active>
+        <active>prefigure-hw5o-combine-cb-split2</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-combine-grid-axes</active>
+        <active>prefigure-hw5o-combine-cb-region</active>
+        <active>prefigure-hw5o-combine-cb-inner</active>
+        <active>prefigure-hw5o-combine-cb-outer</active>
+        <active>prefigure-hw5o-combine-cb-diag</active>
+        <active>prefigure-hw5o-combine-cb-split1</active>
+        <active>prefigure-hw5o-combine-cb-split2</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw5o-combine-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw5o-combine-grid</active>
+        <active>prefigure-hw5o-combine-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw5o-combine-grid</active>
+        <active>prefigure-hw5o-combine-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-grid" speech2="The coordinate grid">
+      <active>prefigure-hw5o-combine-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-axes" speech2="The coordinate axes">
+      <active>prefigure-hw5o-combine-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-cb-region" speech2="The shaded region, the union of the three regions of integration.">
+      <active>prefigure-hw5o-combine-cb-region</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-cb-inner" speech2="The inner circle r equals one." sonify="yes">
+      <active>prefigure-hw5o-combine-cb-inner</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-combine-cb-inner</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-cb-outer" speech2="The outer circle r equals two." sonify="yes">
+      <active>prefigure-hw5o-combine-cb-outer</active>
+      <position>4</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-hw5o-combine-cb-outer</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-cb-diag" speech2="The line y equals x, which is the ray theta equals pi over four.">
+      <active>prefigure-hw5o-combine-cb-diag</active>
+      <position>5</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-cb-split1" speech2="The dashed line x equals one, between regions one and two.">
+      <active>prefigure-hw5o-combine-cb-split1</active>
+      <position>6</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw5o-combine-cb-split2" speech2="The dashed line x equals root two, between regions two and three.">
+      <active>prefigure-hw5o-combine-cb-split2</active>
+      <position>7</position>
+      <parents>
+        <grouped>prefigure-hw5o-combine-figure</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

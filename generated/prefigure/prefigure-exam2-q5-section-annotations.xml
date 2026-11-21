@@ -1,0 +1,45 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-exam2-q5-section-figure" speech2="The lens between an upward parabola with vertex at zero comma minus one and a downward parabola with vertex at zero comma one, which cross at y equals minus one and y equals one.">
+      <grouped>prefigure-exam2-q5-section-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-exam2-q5-section-q5-region</active>
+        <active>prefigure-exam2-q5-section-q5-lower</active>
+        <active>prefigure-exam2-q5-section-q5-upper</active>
+      </children>
+      <components>
+        <active>prefigure-exam2-q5-section-q5-region</active>
+        <active>prefigure-exam2-q5-section-q5-lower</active>
+        <active>prefigure-exam2-q5-section-q5-upper</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-exam2-q5-section-q5-region" speech2="The shaded cross-section of the solid S.">
+      <active>prefigure-exam2-q5-section-q5-region</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-exam2-q5-section-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-exam2-q5-section-q5-lower" speech2="The parabola z equals y squared minus one, the floor of S." sonify="yes">
+      <active>prefigure-exam2-q5-section-q5-lower</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-exam2-q5-section-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-exam2-q5-section-q5-lower</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="prefigure-exam2-q5-section-q5-upper" speech2="The parabola z equals one minus y squared, the roof of S." sonify="yes">
+      <active>prefigure-exam2-q5-section-q5-upper</active>
+      <position>3</position>
+      <parents>
+        <grouped>prefigure-exam2-q5-section-figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>prefigure-exam2-q5-section-q5-upper</ACTIVE>
+      </sonification>
+    </annotation>
+  </annotations>
+</diagram>

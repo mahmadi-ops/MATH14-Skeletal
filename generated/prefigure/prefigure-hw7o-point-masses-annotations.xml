@@ -1,0 +1,43 @@
+<diagram>
+  <annotations>
+    <annotation id="prefigure-hw7o-point-masses-figure" speech2="Four point masses in the plane and the two centers of mass.">
+      <grouped>prefigure-hw7o-point-masses-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw7o-point-masses-grid-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw7o-point-masses-grid-axes</active>
+      </components>
+    </annotation>
+    <annotation id="prefigure-hw7o-point-masses-grid-axes" speech2="The coordinate grid and axes">
+      <grouped>prefigure-hw7o-point-masses-grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>prefigure-hw7o-point-masses-grid</active>
+        <active>prefigure-hw7o-point-masses-axes</active>
+      </children>
+      <components>
+        <active>prefigure-hw7o-point-masses-grid</active>
+        <active>prefigure-hw7o-point-masses-axes</active>
+      </components>
+      <parents>
+        <grouped>prefigure-hw7o-point-masses-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw7o-point-masses-grid" speech2="The coordinate grid">
+      <active>prefigure-hw7o-point-masses-grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>prefigure-hw7o-point-masses-grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="prefigure-hw7o-point-masses-axes" speech2="The coordinate axes">
+      <active>prefigure-hw7o-point-masses-axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>prefigure-hw7o-point-masses-grid-axes</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>
